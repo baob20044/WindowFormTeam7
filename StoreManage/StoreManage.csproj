@@ -75,6 +75,7 @@
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
@@ -190,6 +191,64 @@
     <Compile Include="Components\ShopItem.Designer.cs">
       <DependentUpon>ShopItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerValidation\MinAgeAttribute.cs" />
+    <Compile Include="DTOs\Account\AdminRegisterDto.cs" />
+    <Compile Include="DTOs\Account\CustomerRegisterDto.cs" />
+    <Compile Include="DTOs\Account\EmployeeRegisterDto.cs" />
+    <Compile Include="DTOs\Account\LoginDto.cs" />
+    <Compile Include="DTOs\Account\NewPasswordDto.cs" />
+    <Compile Include="DTOs\Category\CategoryCreateDto.cs" />
+    <Compile Include="DTOs\Category\CategoryDto.cs" />
+    <Compile Include="DTOs\Category\CategoryUpdateDto.cs" />
+    <Compile Include="DTOs\Customer\CustomerCreateDto.cs" />
+    <Compile Include="DTOs\Customer\CustomerDetailsDto.cs" />
+    <Compile Include="DTOs\Customer\CustomerDto.cs" />
+    <Compile Include="DTOs\Customer\CustomerPersonalInfo.cs" />
+    <Compile Include="DTOs\Customer\CustomerUpdateDto.cs" />
+    <Compile Include="DTOs\Employee\EmployeeCreateDto.cs" />
+    <Compile Include="DTOs\Employee\EmployeeDto.cs" />
+    <Compile Include="DTOs\Employee\EmployeePersonalInfo.cs" />
+    <Compile Include="DTOs\Employee\EmployeeUpdateDto.cs" />
+    <Compile Include="DTOs\Inventory\InventoryAllDto.cs" />
+    <Compile Include="DTOs\Inventory\InventoryCreateDto.cs" />
+    <Compile Include="DTOs\Inventory\InventoryDto.cs" />
+    <Compile Include="DTOs\Inventory\InventoryUpdateDto.cs" />
+    <Compile Include="DTOs\Inventory\ProductInventoryCreateDto.cs" />
+    <Compile Include="DTOs\OrderDetail\OrderDetailCreateDto.cs" />
+    <Compile Include="DTOs\OrderDetail\OrderDetailDto.cs" />
+    <Compile Include="DTOs\Order\OrderCreateDto.cs" />
+    <Compile Include="DTOs\Order\OrderDto.cs" />
+    <Compile Include="DTOs\Order\OrderUpdateDto.cs" />
+    <Compile Include="DTOs\PColor\ColorCreateDto.cs" />
+    <Compile Include="DTOs\PColor\ColorDto.cs" />
+    <Compile Include="DTOs\PColor\ColorToProductDto.cs" />
+    <Compile Include="DTOs\PColor\ColorUpdateDto.cs" />
+    <Compile Include="DTOs\PImage\ImageCreateDto.cs" />
+    <Compile Include="DTOs\PImage\ImageCreateToProductDto.cs" />
+    <Compile Include="DTOs\PImage\ImageDto.cs" />
+    <Compile Include="DTOs\PImage\ImageUpdateDto.cs" />
+    <Compile Include="DTOs\ProductColor\ProductColorCreateDto.cs" />
+    <Compile Include="DTOs\ProductColor\ProductColorDto.cs" />
+    <Compile Include="DTOs\ProductSize\ProductSizeCreateDto.cs" />
+    <Compile Include="DTOs\ProductSize\ProductSizeDto.cs" />
+    <Compile Include="DTOs\Product\ProductCreateDto.cs" />
+    <Compile Include="DTOs\Product\ProductDto.cs" />
+    <Compile Include="DTOs\Product\ProductUpdateAmountDto.cs" />
+    <Compile Include="DTOs\Product\ProductUpdateDto.cs" />
+    <Compile Include="DTOs\Providerr\ProviderCreateDto.cs" />
+    <Compile Include="DTOs\Providerr\ProviderDto.cs" />
+    <Compile Include="DTOs\Providerr\ProviderUpdateDto.cs" />
+    <Compile Include="DTOs\PSize\SizeOfColorDto.cs" />
+    <Compile Include="DTOs\Size\SizeCreateDto.cs" />
+    <Compile Include="DTOs\Size\SizeDto.cs" />
+    <Compile Include="DTOs\Size\SizeUpdateDto.cs" />
+    <Compile Include="DTOs\Subcategory\SubcategoryCreateDto.cs" />
+    <Compile Include="DTOs\Subcategory\SubcategoryDto.cs" />
+    <Compile Include="DTOs\Subcategory\SubcategoryUpdateDto.cs" />
+    <Compile Include="DTOs\TargerCustomer\TargetCustomerCreateDto.cs" />
+    <Compile Include="DTOs\TargerCustomer\TargetCustomerDto.cs" />
+    <Compile Include="DTOs\TargerCustomer\TargetCustomerUpdateDto.cs" />
+    <Compile Include="DTOs\Token\TokenDto.cs" />
     <Compile Include="Forms\Authentication\ForgotPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,7 +291,7 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DTOs\Interface.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\Authentication\SignupForm.cs">
@@ -241,6 +300,7 @@
     <Compile Include="Forms\Authentication\SignupForm.Designer.cs">
       <DependentUpon>SignupForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\ApiService.cs" />
     <EmbeddedResource Include="AdminForms\Authentication\AdminLoginForm.resx">
       <DependentUpon>AdminLoginForm.cs</DependentUpon>
     </EmbeddedResource>
