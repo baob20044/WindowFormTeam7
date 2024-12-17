@@ -35,16 +35,16 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.controlboxMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.controlboxTurnOff = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnProfile = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnCart = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnCategory = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnHome = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1.SuspendLayout();
+            this.btnHome = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // controlboxMinimize
@@ -54,7 +54,7 @@
             this.controlboxMinimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
             this.controlboxMinimize.HoverState.Parent = this.controlboxMinimize;
             this.controlboxMinimize.IconColor = System.Drawing.Color.White;
-            this.controlboxMinimize.Location = new System.Drawing.Point(1224, 12);
+            this.controlboxMinimize.Location = new System.Drawing.Point(1270, 12);
             this.controlboxMinimize.Name = "controlboxMinimize";
             this.controlboxMinimize.ShadowDecoration.Parent = this.controlboxMinimize;
             this.controlboxMinimize.Size = new System.Drawing.Size(32, 27);
@@ -67,31 +67,18 @@
             this.controlboxTurnOff.HoverState.FillColor = System.Drawing.Color.Red;
             this.controlboxTurnOff.HoverState.Parent = this.controlboxTurnOff;
             this.controlboxTurnOff.IconColor = System.Drawing.Color.White;
-            this.controlboxTurnOff.Location = new System.Drawing.Point(1262, 12);
+            this.controlboxTurnOff.Location = new System.Drawing.Point(1308, 12);
             this.controlboxTurnOff.Name = "controlboxTurnOff";
             this.controlboxTurnOff.ShadowDecoration.Parent = this.controlboxTurnOff;
             this.controlboxTurnOff.Size = new System.Drawing.Size(32, 27);
             this.controlboxTurnOff.TabIndex = 10;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(175)))), ((int)(((byte)(23)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btnProfile);
-            this.panel1.Controls.Add(this.btnCart);
-            this.panel1.Controls.Add(this.btnCategory);
-            this.panel1.Controls.Add(this.btnHome);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(274, 723);
-            this.panel1.TabIndex = 12;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(74, 58);
+            this.label1.Location = new System.Drawing.Point(79, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(188, 38);
             this.label1.TabIndex = 18;
@@ -100,8 +87,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 66);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(79, 72);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -155,7 +143,7 @@
             this.btnProfile.IdleIconLeftImage = null;
             this.btnProfile.IdleIconRightImage = null;
             this.btnProfile.IndicateFocus = true;
-            this.btnProfile.Location = new System.Drawing.Point(51, 420);
+            this.btnProfile.Location = new System.Drawing.Point(49, 448);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnProfile.OnDisabledState.BorderRadius = 35;
@@ -245,7 +233,7 @@
             this.btnCart.IdleIconLeftImage = null;
             this.btnCart.IdleIconRightImage = null;
             this.btnCart.IndicateFocus = true;
-            this.btnCart.Location = new System.Drawing.Point(51, 344);
+            this.btnCart.Location = new System.Drawing.Point(49, 372);
             this.btnCart.Name = "btnCart";
             this.btnCart.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCart.OnDisabledState.BorderRadius = 35;
@@ -335,7 +323,7 @@
             this.btnCategory.IdleIconLeftImage = null;
             this.btnCategory.IdleIconRightImage = null;
             this.btnCategory.IndicateFocus = true;
-            this.btnCategory.Location = new System.Drawing.Point(51, 268);
+            this.btnCategory.Location = new System.Drawing.Point(49, 296);
             this.btnCategory.Name = "btnCategory";
             this.btnCategory.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCategory.OnDisabledState.BorderRadius = 35;
@@ -377,6 +365,14 @@
             this.btnCategory.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnCategory.UseDefaultRadiusAndThickness = true;
             this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
+            // 
+            // flowLayoutPanel
+            // 
+            this.flowLayoutPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.flowLayoutPanel.Location = new System.Drawing.Point(268, -8);
+            this.flowLayoutPanel.Name = "flowLayoutPanel";
+            this.flowLayoutPanel.Size = new System.Drawing.Size(996, 814);
+            this.flowLayoutPanel.TabIndex = 13;
             // 
             // btnHome
             // 
@@ -425,7 +421,7 @@
             this.btnHome.IdleIconLeftImage = null;
             this.btnHome.IdleIconRightImage = null;
             this.btnHome.IndicateFocus = true;
-            this.btnHome.Location = new System.Drawing.Point(51, 192);
+            this.btnHome.Location = new System.Drawing.Point(49, 220);
             this.btnHome.Name = "btnHome";
             this.btnHome.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnHome.OnDisabledState.BorderRadius = 35;
@@ -468,20 +464,33 @@
             this.btnHome.UseDefaultRadiusAndThickness = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // flowLayoutPanel
+            // bunifuPanel1
             // 
-            this.flowLayoutPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(268, -11);
-            this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(1034, 734);
-            this.flowLayoutPanel.TabIndex = 13;
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(175)))), ((int)(((byte)(23)))));
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel1.BorderRadius = 3;
+            this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.label1);
+            this.bunifuPanel1.Controls.Add(this.btnCategory);
+            this.bunifuPanel1.Controls.Add(this.pictureBox1);
+            this.bunifuPanel1.Controls.Add(this.btnHome);
+            this.bunifuPanel1.Controls.Add(this.btnProfile);
+            this.bunifuPanel1.Controls.Add(this.btnCart);
+            this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(271, 798);
+            this.bunifuPanel1.TabIndex = 14;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1301, 720);
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(1347, 798);
+            this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.controlboxMinimize);
             this.Controls.Add(this.controlboxTurnOff);
             this.Controls.Add(this.flowLayoutPanel);
@@ -491,9 +500,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.bunifuPanel1.ResumeLayout(false);
+            this.bunifuPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -502,13 +511,13 @@
 
         private Guna.UI2.WinForms.Guna2ControlBox controlboxMinimize;
         private Guna.UI2.WinForms.Guna2ControlBox controlboxTurnOff;
-        private System.Windows.Forms.Panel panel1;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnHome;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnProfile;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCart;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCategory;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnHome;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
     }
 }
