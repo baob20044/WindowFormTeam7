@@ -34,9 +34,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Name = "CategoryPage";
-            this.Size = new System.Drawing.Size(1034, 751);
+            this.Size = new System.Drawing.Size(996, 814);
+            this.Load += new System.EventHandler(this.CategoryPage_Load);
             this.ResumeLayout(false);
 
         }

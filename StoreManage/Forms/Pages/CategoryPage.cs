@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StoreManage.Components;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace StoreManage.Forms.Pages
         public CategoryPage()
         {
             InitializeComponent();
+        }
+
+        private void CategoryPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

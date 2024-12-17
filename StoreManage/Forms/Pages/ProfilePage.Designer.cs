@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
             this.Name = "ProfilePage";
-            this.Size = new System.Drawing.Size(1034, 751);
+            this.Size = new System.Drawing.Size(950, 734);
             this.ResumeLayout(false);
 
         }

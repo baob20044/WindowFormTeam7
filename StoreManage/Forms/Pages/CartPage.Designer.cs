@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Name = "CartPage";
-            this.Size = new System.Drawing.Size(1034, 751);
+            this.Size = new System.Drawing.Size(950, 734);
             this.ResumeLayout(false);
 
         }
