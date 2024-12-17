@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,13 @@ namespace StoreManage
         public MainForm()
         {
             InitializeComponent();
+
+            btnHome.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Resources", "Icon", "home.png"));
+            btnCategory.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Resources", "Icon", "category-100.png"));
+            btnCart.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Resources", "Icon", "cart-64.png"));
+            btnProfile.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Resources", "Icon", "user-profile.png"));
+
+
         }
 
         private void MainForm_Load(object sender, EventArgs e)
