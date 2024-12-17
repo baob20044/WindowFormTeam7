@@ -13,7 +13,7 @@ namespace StoreManage.DTOs.Product
         public decimal Price { get; set; }
 
         [MaxLength(500, ErrorMessage = "Description cannot exceed 500 characters.")]
-        public string? Description { get; set; }
+        public string Description { get; set; }
 
         [Required(ErrorMessage = "DiscountPercentage is required.")]
         [Range(0.01, 0.9, ErrorMessage = "DiscountPercentage must be a positive value.")]
