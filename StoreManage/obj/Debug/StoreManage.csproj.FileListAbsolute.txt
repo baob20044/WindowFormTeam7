@@ -36,7 +36,6 @@ D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\obj\Debug\StoreManag
 D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\obj\Debug\StoreManage.ForgotPasswordForm.resources
 D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\obj\Debug\StoreManage.MainForm.resources
 D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
-D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\bin\Debug\Bunifu.Licensing.dll
 D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\obj\Debug\StoreManage.AdminLoginForm.resources
 D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\obj\Debug\StoreManage.AdminForms.Pages.AdminCategoryPage.resources
 D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\obj\Debug\StoreManage.exe.licenses
@@ -44,3 +43,10 @@ D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\obj\Debug\StoreManag
 D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\obj\Debug\StoreManage.Forms.Pages.CategoryPage.resources
 D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\obj\Debug\StoreManage.Forms.Pages.HomePage.resources
 D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\obj\Debug\StoreManage.Forms.Pages.ProfilePage.resources
+D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\obj\Debug\StoreManage.Components.CartItem.resources
+D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\bin\Debug\Newtonsoft.Json.dll
+D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\bin\Debug\Newtonsoft.Json.xml
+D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\obj\Debug\StoreManage.csproj.SuggestedBindingRedirects.cache
+D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\obj\Debug\StoreManage.exe.config
+D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\bin\Debug\Bunifu.UI.WinForms.BunifuPanel.dll
