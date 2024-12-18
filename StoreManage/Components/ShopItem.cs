@@ -37,6 +37,7 @@ namespace StoreManage.Components
             }
         }
         
+        
 
         private void ShopItem_Load(object sender, EventArgs e)
         {
@@ -99,6 +100,7 @@ namespace StoreManage.Components
                     }
                 
         }
+
 
 
         public string ItemLabel
