@@ -20,13 +20,14 @@ namespace StoreManage.Forms.Pages
         public CategoryPage()
         {
             InitializeComponent();
+            InitializeShopItems();
+            filteredItems = new List<ShopItem>(shopItems); // Initially, no filtering
+            LoadPage();
         }
 
         private void CategoryPage_Load(object sender, EventArgs e)
         {
-            InitializeShopItems();
-            filteredItems = new List<ShopItem>(shopItems); // Initially, no filtering
-            LoadPage();
+
         }
         private void InitializeShopItems()
         {
@@ -113,12 +114,39 @@ namespace StoreManage.Forms.Pages
         {
             flowLayout.Controls.Clear(); // Clear previous controls
 
-            // Add filtered items to the flow layout
-            foreach (var item in filteredItems)
+            if (filteredItems.Count == 0) // If no items match the filter
             {
-                flowLayout.Controls.Add(item);
+                Label noProductLabel = new Label
+                {
+                    Text = "No product found",
+                    Font = new Font("Arial", 16, FontStyle.Bold), // Big text
+                    ForeColor = Color.OrangeRed, // Warning color
+                    AutoSize = false, // Allows custom size and alignment
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    Dock = DockStyle.None,
+                    Size = new Size(flowLayout.Width, 50), // Width matches the flow layout
+                    Margin = new Padding(0) // Remove additional margins
+                };
+
+                // Manually center the label in the flow layout
+                noProductLabel.Location = new Point(
+                    (flowLayout.Width - noProductLabel.Width) / 2,
+                    (flowLayout.Height - noProductLabel.Height) / 2
+                );
+
+                flowLayout.Controls.Add(noProductLabel);
+            }
+            else
+            {
+                // Add filtered items to the flow layout
+                foreach (var item in filteredItems)
+                {
+                    flowLayout.Controls.Add(item);
+                }
             }
         }
+
+
         private void cbBlack_CheckedChanged(object sender, EventArgs e)
         {
             ApplyCategoryFilters();  // Apply the filter logic
