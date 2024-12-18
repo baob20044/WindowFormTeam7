@@ -23,11 +23,11 @@ namespace StoreManage.Components
         public ProductInfoDto ProductInfo { get; private set; }
         public int ProductId { get; } // Property to hold product ID
         public event Action<int> OnShopItemClick; // Event to notify when the item is clicked
-        public ShopItem(ProductInfoDto product)
+        public ShopItem(ProductDto product)
         {
             InitializeComponent();
             ProductId = product.ProductId;
-            ProductInfo = product;
+            LoadedProduct = product;
             LoadProductData(product);
 
             this.Click += (s, e) => OnShopItemClick?.Invoke(ProductId);
@@ -75,7 +75,7 @@ namespace StoreManage.Components
             }
         }
 
-        private async void LoadProductData(ProductInfoDto product)
+        private async void LoadProductData(ProductDto product)
         {
                     if (product != null)
                     {
@@ -84,7 +84,7 @@ namespace StoreManage.Components
                         ItemPrice = $"{product.Price:N0} VND";
 
                         // Load the product image based on the first available color
-                        var imageUrl = product.FirstPicture;
+                        var imageUrl = product.Colors.FirstOrDefault().Images.FirstOrDefault().Url;
                         if (!string.IsNullOrEmpty(imageUrl))
                         {
                             await LoadProductImage(imageUrl);
@@ -98,7 +98,6 @@ namespace StoreManage.Components
                     {
                         ShowFallbackImage();
                     }
-                
         }
 
 
