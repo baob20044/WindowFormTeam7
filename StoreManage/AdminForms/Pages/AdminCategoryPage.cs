@@ -243,20 +243,32 @@ namespace StoreManage.AdminForms.Pages
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            // Create an instance of the CategoryAdd UserControl
-            var addCategory = new CategoryAdd();
+            // Check if the CategoryAdd UserControl already exists
+            var existingCategoryAdd = this.Controls.OfType<CategoryAdd>().FirstOrDefault();
 
-            // Add the CategoryAdd UserControl to the same container
-            this.Controls.Add(addCategory);
-            addCategory.Dock = DockStyle.None;
+            if (existingCategoryAdd == null)
+            {
+                // Create an instance of the CategoryAdd UserControl
+                var addCategory = new CategoryAdd();
 
-            // Position the CategoryAdd UserControl in the center
-            addCategory.Location = new Point(
-                (this.Width - addCategory.Width) / 2,
-                (this.Height - addCategory.Height) / 2
-            );
-            addCategory.BringToFront();
+                // Add the CategoryAdd UserControl to the same container
+                this.Controls.Add(addCategory);
+                addCategory.Dock = DockStyle.None;
+
+                // Position the CategoryAdd UserControl in the center
+                addCategory.Location = new Point(
+                    (this.Width - addCategory.Width) / 2,
+                    (this.Height - addCategory.Height) / 2
+                );
+                addCategory.BringToFront();
+            }
+            else
+            {
+                // If it already exists, just bring it to the front
+                existingCategoryAdd.BringToFront();
+            }
         }
+
 
 
         private void EditCategory(int categoryId)
