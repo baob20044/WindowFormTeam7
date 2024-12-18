@@ -26,7 +26,9 @@ namespace StoreManage.Components
         {
             InitializeComponent();
             ProductId = productId;
-            LoadProductData(productId);
+
+            // Trigger asynchronous initialization
+            InitializeShopItem(productId);
 
             this.Click += (s, e) => OnShopItemClick?.Invoke(ProductId);
             foreach (Control control in this.Controls)
@@ -34,6 +36,11 @@ namespace StoreManage.Components
                 control.Click += (s, e) => OnShopItemClick?.Invoke(ProductId);
             }
         }
+        public async Task InitializeShopItem(int productId)
+        {
+            await LoadProductData(productId);
+        }
+
         private void ShopItem_Load(object sender, EventArgs e)
         {
 
@@ -70,7 +77,7 @@ namespace StoreManage.Components
             }
         }
 
-        private async void LoadProductData(int productId)
+        private async Task LoadProductData(int productId)
         {
             try
             {
@@ -116,6 +123,7 @@ namespace StoreManage.Components
                 ShowFallbackImage();
             }
         }
+
 
         public string ItemLabel
         {

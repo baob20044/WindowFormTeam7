@@ -17,7 +17,11 @@ namespace StoreManage
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new AdminMainForm());
+<<<<<<< HEAD
             //Application.Run(new MainForm());
+=======
+            Application.Run(new MainForm());
+>>>>>>> origin/Bao
             //Application.Run(new LoginForm());
             Application.Run(new AdminLoginForm());
 
