@@ -1,23 +1,13 @@
-
+# Ignore Visual Studio folders
 .vs/
 StoreManage\.vs/
-=======
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
 
-/.vs/StoreManage
-        .vs/StoreManage/v17/.suo
-        .vs/StoreManage/v17/DocumentLayout.backup.json
-        .vs/StoreManage/v17/DocumentLayout.json
-        StoreManage/bin/Debug/StoreManage.exe
-        StoreManage/bin/Debug/StoreManage.pdb
-        StoreManage/obj/Debug/DesignTimeResolveAssemblyReferences.cache
-        StoreManage/obj/Debug/StoreManage.csproj.AssemblyReference.cache
-        StoreManage/obj/Debug/StoreManage.csproj.GenerateResource.cache
-        StoreManage/obj/Debug/StoreManage.exe
-        StoreManage/obj/Debug/StoreManage.pdb
+# Ignore build output folders (obj, bin)
+/StoreManage/obj/
+/StoreManage/bin/
 
-StoreManage/DTOs/Product/ProductCreateDto.cs
-StoreManage/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
-StoreManage/obj/Debug/StoreManage.csproj.AssemblyReference.cache
+# Ignore DesignTimeResolveAssemblyReferencesInput.cache
+/StoreManage/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+
+# Ignore AssemblyReference.cache
+/StoreManage/obj/Debug/StoreManage.csproj.AssemblyReference.cache
