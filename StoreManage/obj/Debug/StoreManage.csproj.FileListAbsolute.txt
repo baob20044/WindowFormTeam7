@@ -101,3 +101,5 @@ D:\C#\Project\WindowFormTeam7\StoreManage\bin\Debug\System.Text.Json.xml
 D:\C#\Project\WindowFormTeam7\StoreManage\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\C#\Project\WindowFormTeam7\StoreManage\bin\Debug\System.ValueTuple.xml
 D:\C#\Project\WindowFormTeam7\StoreManage\obj\Debug\StoreMan.D8B16C23.Up2Date
+D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
+D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\obj\Debug\StoreManage.Components.DetailItem.resources

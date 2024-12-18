@@ -21,11 +21,18 @@ namespace StoreManage.Components
     {
         public ProductDto LoadedProduct { get; private set; } // Expose the product
         public int ProductId { get; } // Property to hold product ID
+        public event Action<int> OnShopItemClick; // Event to notify when the item is clicked
         public ShopItem(int productId)
         {
             InitializeComponent();
             ProductId = productId;
             LoadProductData(productId);
+
+            this.Click += (s, e) => OnShopItemClick?.Invoke(ProductId);
+            foreach (Control control in this.Controls)
+            {
+                control.Click += (s, e) => OnShopItemClick?.Invoke(ProductId);
+            }
         }
 
         private void ShowFallbackImage()

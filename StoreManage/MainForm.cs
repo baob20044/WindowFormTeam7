@@ -1,4 +1,5 @@
 ﻿using StoreManage.AdminForms.Pages;
+using StoreManage.Components;
 using StoreManage.Forms.Pages;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace StoreManage
 {
@@ -54,6 +56,11 @@ namespace StoreManage
             profileInterface = new ProfilePage();
             flowLayoutPanel.Controls.Clear();
             flowLayoutPanel.Controls.Add(profileInterface);
+        }
+        public void handleClickedShopItem(DetailItem detail)
+        {
+            flowLayoutPanel.Controls.Clear(); // Clear existing details
+            flowLayoutPanel.Controls.Add(detail); // Add the new detail view
         }
     }
 }

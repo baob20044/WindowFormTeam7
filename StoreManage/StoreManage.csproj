@@ -52,6 +52,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
       <HintPath>..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\..\..\Bai_tap_thay_Toan\StoreManagerPro\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
       <HintPath>..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
     </Reference>
@@ -312,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\CartItem.resx">
       <DependentUpon>CartItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\DetailItem.resx">
+      <DependentUpon>DetailItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\ShopItem.resx">
       <DependentUpon>ShopItem.cs</DependentUpon>

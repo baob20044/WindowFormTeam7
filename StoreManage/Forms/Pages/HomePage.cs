@@ -19,6 +19,7 @@ namespace StoreManage.Forms.Pages
         private int currentPage = 0;      // Current page index
         private int pageSize = 15;         // Number of items per page
         private int totalProduct = 50;
+
         public HomePage()
         {
             InitializeComponent();
@@ -36,7 +37,7 @@ namespace StoreManage.Forms.Pages
             for (int i = 1; i <= totalProduct; i++) // Inclusive range to handle all products
             {
                 var shopItem = new ShopItem(i);
-                //shopItem.OnShopItemClick += HandleShopItemClick; // Subscribe to the click event
+                shopItem.OnShopItemClick += HandleShopItemClick; // Subscribe to the click event
                 shopItems.Add(shopItem); // Add to the list
                 flowLayoutPanel.Controls.Add(shopItem);
             }
@@ -91,6 +92,13 @@ namespace StoreManage.Forms.Pages
             // Reset current page and reload the page
             currentPage = 0;
             LoadPage(currentPage);
+        }
+
+        public void HandleShopItemClick(int productId)
+        {
+            var mainForm = this.FindForm() as MainForm;
+            DetailItem detail = new DetailItem(productId, flowLayoutPanel);
+            mainForm?.handleClickedShopItem(detail);
         }
     }
 }
