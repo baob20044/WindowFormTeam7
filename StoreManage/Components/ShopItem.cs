@@ -36,6 +36,8 @@ namespace StoreManage.Components
                 control.Click += (s, e) => OnShopItemClick?.Invoke(ProductId);
             }
         }
+        
+
         private void ShopItem_Load(object sender, EventArgs e)
         {
 
@@ -97,6 +99,7 @@ namespace StoreManage.Components
                     }
                 
         }
+
 
         public string ItemLabel
         {
