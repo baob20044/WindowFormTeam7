@@ -43,7 +43,7 @@ namespace StoreManage.Forms.Pages
         private void LoadPage()
         {
             flowLayout.Controls.Clear(); 
-            for (int i = 1; i < totalProduct; i++)
+            for (int i = 0; i < totalProduct; i++)
             {
                 flowLayout.Controls.Add(filteredItems[i]);
             }
