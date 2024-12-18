@@ -256,6 +256,7 @@
     <Compile Include="DTOs\ProductSize\ProductSizeDto.cs" />
     <Compile Include="DTOs\Product\ProductCreateDto.cs" />
     <Compile Include="DTOs\Product\ProductDto.cs" />
+    <Compile Include="DTOs\Product\ProductInfoDto.cs" />
     <Compile Include="DTOs\Product\ProductUpdateAmountDto.cs" />
     <Compile Include="DTOs\Product\ProductUpdateDto.cs" />
     <Compile Include="DTOs\Providerr\ProviderCreateDto.cs" />

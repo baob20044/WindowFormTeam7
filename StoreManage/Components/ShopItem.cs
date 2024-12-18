@@ -20,13 +20,15 @@ namespace StoreManage.Components
     public partial class ShopItem : UserControl
     {
         public ProductDto LoadedProduct { get; private set; } // Expose the product
+        public ProductInfoDto ProductInfo { get; private set; }
         public int ProductId { get; } // Property to hold product ID
         public event Action<int> OnShopItemClick; // Event to notify when the item is clicked
-        public ShopItem(int productId)
+        public ShopItem(ProductInfoDto product)
         {
             InitializeComponent();
-            ProductId = productId;
-            LoadProductData(productId);
+            ProductId = product.ProductId;
+            ProductInfo = product;
+            LoadProductData(product);
 
             this.Click += (s, e) => OnShopItemClick?.Invoke(ProductId);
             foreach (Control control in this.Controls)
@@ -70,28 +72,16 @@ namespace StoreManage.Components
             }
         }
 
-        private async void LoadProductData(int productId)
+        private async void LoadProductData(ProductInfoDto product)
         {
-            try
-            {
-                var client = new RestClient("http://localhost:5254");
-                var request = new RestRequest($"/api/products/{productId}", Method.Get);
-                request.AddHeader("accept", "*/*");
-
-                var response = await client.ExecuteAsync(request);
-
-                if (response.IsSuccessful)
-                {
-                    LoadedProduct = JsonConvert.DeserializeObject<ProductDto>(response.Content);
-
-                    if (LoadedProduct != null)
+                    if (product != null)
                     {
                         // Set product details
-                        ItemLabel = LoadedProduct.Name;
-                        ItemPrice = $"{LoadedProduct.Price:N0} VND";
+                        ItemLabel = product.Name;
+                        ItemPrice = $"{product.Price:N0} VND";
 
                         // Load the product image based on the first available color
-                        var imageUrl = LoadedProduct.Colors?.FirstOrDefault()?.Images?.FirstOrDefault()?.Url;
+                        var imageUrl = product.FirstPicture;
                         if (!string.IsNullOrEmpty(imageUrl))
                         {
                             await LoadProductImage(imageUrl);
@@ -105,16 +95,7 @@ namespace StoreManage.Components
                     {
                         ShowFallbackImage();
                     }
-                }
-                else
-                {
-                    ShowFallbackImage();
-                }
-            }
-            catch
-            {
-                ShowFallbackImage();
-            }
+                
         }
 
         public string ItemLabel
