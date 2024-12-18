@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\thanh\\Desktop\\New folder\\WindowFormTeam7\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|C:\\Users\\thanh\\Desktop\\New folder\\WindowFormTeam7\\storemanage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|C:\\Users\\thanh\\Desktop\\New folder\\WindowFormTeam7\\storemanage\\adminforms\\authentication\\adminloginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\adminforms\\authentication\\adminloginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|c:\\users\\thanh\\desktop\\new folder\\windowformteam7\\storemanage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|c:\\users\\thanh\\desktop\\new folder\\windowformteam7\\storemanage\\adminmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|C:\\Users\\thanh\\Desktop\\New folder\\WindowFormTeam7\\storemanage\\adminmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\adminmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|C:\\Users\\thanh\\Desktop\\New folder\\WindowFormTeam7\\storemanage\\adminforms\\authentication\\adminloginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\adminforms\\authentication\\adminloginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|C:\\Users\\thanh\\Desktop\\New folder\\WindowFormTeam7\\storemanage\\adminforms\\authentication\\adminloginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\adminforms\\authentication\\adminloginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|C:\\Users\\thanh\\Desktop\\New folder\\WindowFormTeam7\\storemanage\\adminforms\\authentication\\adminloginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -157,17 +157,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdminLoginForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\thanh\\Desktop\\New folder\\WindowFormTeam7\\StoreManage\\AdminForms\\Authentication\\AdminLoginForm.cs",
-              "RelativeDocumentMoniker": "StoreManage\\AdminForms\\Authentication\\AdminLoginForm.cs",
-              "ToolTip": "C:\\Users\\thanh\\Desktop\\New folder\\WindowFormTeam7\\StoreManage\\AdminForms\\Authentication\\AdminLoginForm.cs [Design]",
-              "RelativeToolTip": "StoreManage\\AdminForms\\Authentication\\AdminLoginForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T14:49:32.746Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
               "Title": "AdminLoginForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\thanh\\Desktop\\New folder\\WindowFormTeam7\\StoreManage\\AdminForms\\Authentication\\AdminLoginForm.Designer.cs",
@@ -176,44 +165,57 @@
               "RelativeToolTip": "StoreManage\\AdminForms\\Authentication\\AdminLoginForm.Designer.cs",
               "ViewState": "AgIAAEcAAAAAAAAAAAAnwFsAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T14:48:28.943Z"
+              "WhenOpened": "2024-12-18T14:48:28.943Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AdminMainForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\thanh\\Desktop\\New folder\\WindowFormTeam7\\StoreManage\\AdminMainForm.cs",
               "RelativeDocumentMoniker": "StoreManage\\AdminMainForm.cs",
               "ToolTip": "C:\\Users\\thanh\\Desktop\\New folder\\WindowFormTeam7\\StoreManage\\AdminMainForm.cs [Design]",
               "RelativeToolTip": "StoreManage\\AdminMainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T14:46:22.29Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-18T14:46:22.29Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\thanh\\Desktop\\New folder\\WindowFormTeam7\\StoreManage\\Program.cs",
               "RelativeDocumentMoniker": "StoreManage\\Program.cs",
               "ToolTip": "C:\\Users\\thanh\\Desktop\\New folder\\WindowFormTeam7\\StoreManage\\Program.cs",
               "RelativeToolTip": "StoreManage\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-18T14:46:22.294Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "AdminLoginForm.cs",
               "DocumentMoniker": "C:\\Users\\thanh\\Desktop\\New folder\\WindowFormTeam7\\StoreManage\\AdminForms\\Authentication\\AdminLoginForm.cs",
               "RelativeDocumentMoniker": "StoreManage\\AdminForms\\Authentication\\AdminLoginForm.cs",
               "ToolTip": "C:\\Users\\thanh\\Desktop\\New folder\\WindowFormTeam7\\StoreManage\\AdminForms\\Authentication\\AdminLoginForm.cs",
               "RelativeToolTip": "StoreManage\\AdminForms\\Authentication\\AdminLoginForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAowE4AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T14:49:46.13Z"
+              "WhenOpened": "2024-12-18T14:49:46.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminLoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\thanh\\Desktop\\New folder\\WindowFormTeam7\\StoreManage\\AdminForms\\Authentication\\AdminLoginForm.cs",
+              "RelativeDocumentMoniker": "StoreManage\\AdminForms\\Authentication\\AdminLoginForm.cs",
+              "ToolTip": "C:\\Users\\thanh\\Desktop\\New folder\\WindowFormTeam7\\StoreManage\\AdminForms\\Authentication\\AdminLoginForm.cs [Design]",
+              "RelativeToolTip": "StoreManage\\AdminForms\\Authentication\\AdminLoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T14:49:32.746Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
