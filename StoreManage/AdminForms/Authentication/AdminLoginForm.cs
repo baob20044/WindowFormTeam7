@@ -1,13 +1,6 @@
 ﻿using StoreManage.Controllers;
 using StoreManage.Services;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StoreManage
@@ -86,10 +79,10 @@ namespace StoreManage
                 this.Hide();
 
                 // Open SignupForm
-                MainForm mainPage = new MainForm();
-                mainPage.StartPosition = FormStartPosition.CenterScreen;
-                mainPage.Location = this.Location;
-                mainPage.ShowDialog();  // Show the new form
+                AdminMainForm adminPage = new AdminMainForm();
+                adminPage.StartPosition = FormStartPosition.CenterScreen;
+                adminPage.Location = this.Location;
+                adminPage.ShowDialog();  // Show the new form
 
                 // After showing the new form, dispose of the current form
                 this.Close(); // Close the form
