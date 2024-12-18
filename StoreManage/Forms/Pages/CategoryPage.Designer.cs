@@ -95,7 +95,7 @@
             // 
             this.cbWhite.AutoSize = true;
             this.cbWhite.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbWhite.Location = new System.Drawing.Point(835, 77);
+            this.cbWhite.Location = new System.Drawing.Point(835, 88);
             this.cbWhite.Name = "cbWhite";
             this.cbWhite.Size = new System.Drawing.Size(18, 17);
             this.cbWhite.TabIndex = 50;
@@ -106,7 +106,7 @@
             // 
             this.cbBrown.AutoSize = true;
             this.cbBrown.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbBrown.Location = new System.Drawing.Point(754, 77);
+            this.cbBrown.Location = new System.Drawing.Point(754, 88);
             this.cbBrown.Name = "cbBrown";
             this.cbBrown.Size = new System.Drawing.Size(18, 17);
             this.cbBrown.TabIndex = 49;
@@ -117,7 +117,7 @@
             // 
             this.cbPurple.AutoSize = true;
             this.cbPurple.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbPurple.Location = new System.Drawing.Point(673, 77);
+            this.cbPurple.Location = new System.Drawing.Point(673, 88);
             this.cbPurple.Name = "cbPurple";
             this.cbPurple.Size = new System.Drawing.Size(18, 17);
             this.cbPurple.TabIndex = 48;
@@ -155,15 +155,15 @@
             this.panel9.Controls.Add(this.label24);
             this.panel9.Controls.Add(this.label21);
             this.panel9.Controls.Add(this.label22);
-            this.panel9.Location = new System.Drawing.Point(19, 25);
+            this.panel9.Location = new System.Drawing.Point(19, 14);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(953, 143);
+            this.panel9.Size = new System.Drawing.Size(953, 123);
             this.panel9.TabIndex = 56;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(826, 47);
+            this.label25.Location = new System.Drawing.Point(826, 58);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(43, 16);
             this.label25.TabIndex = 36;
@@ -173,7 +173,7 @@
             // 
             this.cbPink.AutoSize = true;
             this.cbPink.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbPink.Location = new System.Drawing.Point(592, 77);
+            this.cbPink.Location = new System.Drawing.Point(592, 88);
             this.cbPink.Name = "cbPink";
             this.cbPink.Size = new System.Drawing.Size(18, 17);
             this.cbPink.TabIndex = 47;
@@ -184,7 +184,7 @@
             // 
             this.cbGray.AutoSize = true;
             this.cbGray.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbGray.Location = new System.Drawing.Point(511, 77);
+            this.cbGray.Location = new System.Drawing.Point(511, 88);
             this.cbGray.Name = "cbGray";
             this.cbGray.Size = new System.Drawing.Size(18, 17);
             this.cbGray.TabIndex = 46;
@@ -194,7 +194,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(746, 47);
+            this.label26.Location = new System.Drawing.Point(746, 58);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(32, 16);
             this.label26.TabIndex = 34;
@@ -204,7 +204,7 @@
             // 
             this.cbOrange.AutoSize = true;
             this.cbOrange.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbOrange.Location = new System.Drawing.Point(430, 77);
+            this.cbOrange.Location = new System.Drawing.Point(430, 88);
             this.cbOrange.Name = "cbOrange";
             this.cbOrange.Size = new System.Drawing.Size(18, 17);
             this.cbOrange.TabIndex = 45;
@@ -215,7 +215,7 @@
             // 
             this.cbYellow.AutoSize = true;
             this.cbYellow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbYellow.Location = new System.Drawing.Point(349, 77);
+            this.cbYellow.Location = new System.Drawing.Point(349, 88);
             this.cbYellow.Name = "cbYellow";
             this.cbYellow.Size = new System.Drawing.Size(18, 17);
             this.cbYellow.TabIndex = 44;
@@ -225,7 +225,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(664, 47);
+            this.label27.Location = new System.Drawing.Point(664, 58);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(30, 16);
             this.label27.TabIndex = 32;
@@ -235,7 +235,7 @@
             // 
             this.cbRed.AutoSize = true;
             this.cbRed.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbRed.Location = new System.Drawing.Point(268, 77);
+            this.cbRed.Location = new System.Drawing.Point(268, 88);
             this.cbRed.Name = "cbRed";
             this.cbRed.Size = new System.Drawing.Size(18, 17);
             this.cbRed.TabIndex = 43;
@@ -246,7 +246,7 @@
             // 
             this.cbBlack.AutoSize = true;
             this.cbBlack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbBlack.Location = new System.Drawing.Point(189, 77);
+            this.cbBlack.Location = new System.Drawing.Point(189, 88);
             this.cbBlack.Name = "cbBlack";
             this.cbBlack.Size = new System.Drawing.Size(18, 17);
             this.cbBlack.TabIndex = 42;
@@ -256,7 +256,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(583, 47);
+            this.label28.Location = new System.Drawing.Point(583, 58);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(40, 16);
             this.label28.TabIndex = 30;
@@ -276,7 +276,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(502, 47);
+            this.label23.Location = new System.Drawing.Point(502, 58);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(34, 16);
             this.label23.TabIndex = 26;
@@ -285,7 +285,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(182, 47);
+            this.label20.Location = new System.Drawing.Point(182, 58);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(31, 16);
             this.label20.TabIndex = 14;
@@ -294,7 +294,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(421, 47);
+            this.label24.Location = new System.Drawing.Point(421, 58);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(35, 16);
             this.label24.TabIndex = 24;
@@ -303,7 +303,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(263, 47);
+            this.label21.Location = new System.Drawing.Point(263, 58);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(24, 16);
             this.label21.TabIndex = 16;
@@ -312,7 +312,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(340, 47);
+            this.label22.Location = new System.Drawing.Point(340, 58);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(39, 16);
             this.label22.TabIndex = 20;
@@ -460,9 +460,9 @@
             this.panel10.Controls.Add(this.cbSizeM);
             this.panel10.Controls.Add(this.cbSizeS);
             this.panel10.Controls.Add(this.label30);
-            this.panel10.Location = new System.Drawing.Point(19, 174);
+            this.panel10.Location = new System.Drawing.Point(19, 143);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(953, 143);
+            this.panel10.Size = new System.Drawing.Size(953, 120);
             this.panel10.TabIndex = 57;
             // 
             // cbSizeM
@@ -502,7 +502,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(12, 26);
+            this.label31.Location = new System.Drawing.Point(12, 9);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(87, 28);
             this.label31.TabIndex = 13;
@@ -519,16 +519,16 @@
             this.panel11.Controls.Add(this.cbMiddle);
             this.panel11.Controls.Add(this.cbBelow350);
             this.panel11.Controls.Add(this.label31);
-            this.panel11.Location = new System.Drawing.Point(19, 323);
+            this.panel11.Location = new System.Drawing.Point(19, 269);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(953, 143);
+            this.panel11.Size = new System.Drawing.Size(953, 53);
             this.panel11.TabIndex = 58;
             // 
             // label34
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(224, 84);
+            this.label34.Location = new System.Drawing.Point(701, 14);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(116, 23);
             this.label34.TabIndex = 54;
@@ -539,7 +539,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(224, 49);
+            this.label33.Location = new System.Drawing.Point(423, 14);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(187, 23);
             this.label33.TabIndex = 53;
@@ -561,7 +561,7 @@
             // 
             this.cbAbove750.AutoSize = true;
             this.cbAbove750.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbAbove750.Location = new System.Drawing.Point(189, 88);
+            this.cbAbove750.Location = new System.Drawing.Point(667, 18);
             this.cbAbove750.Name = "cbAbove750";
             this.cbAbove750.Size = new System.Drawing.Size(18, 17);
             this.cbAbove750.TabIndex = 45;
@@ -572,7 +572,7 @@
             // 
             this.cbMiddle.AutoSize = true;
             this.cbMiddle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbMiddle.Location = new System.Drawing.Point(189, 53);
+            this.cbMiddle.Location = new System.Drawing.Point(388, 20);
             this.cbMiddle.Name = "cbMiddle";
             this.cbMiddle.Size = new System.Drawing.Size(18, 17);
             this.cbMiddle.TabIndex = 44;
@@ -596,9 +596,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayout.AutoScroll = true;
-            this.flowLayout.Location = new System.Drawing.Point(19, 472);
+            this.flowLayout.Location = new System.Drawing.Point(19, 328);
             this.flowLayout.Name = "flowLayout";
-            this.flowLayout.Size = new System.Drawing.Size(953, 299);
+            this.flowLayout.Size = new System.Drawing.Size(953, 443);
             this.flowLayout.TabIndex = 59;
             this.flowLayout.WrapContents = false;
             // 
@@ -611,7 +611,7 @@
             this.bunifuPictureBox9.BorderRadius = 12;
             this.bunifuPictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox9.Image")));
             this.bunifuPictureBox9.IsCircle = true;
-            this.bunifuPictureBox9.Location = new System.Drawing.Point(833, 14);
+            this.bunifuPictureBox9.Location = new System.Drawing.Point(833, 15);
             this.bunifuPictureBox9.Name = "bunifuPictureBox9";
             this.bunifuPictureBox9.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -628,7 +628,7 @@
             this.bunifuPictureBox10.BorderRadius = 12;
             this.bunifuPictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox10.Image")));
             this.bunifuPictureBox10.IsCircle = true;
-            this.bunifuPictureBox10.Location = new System.Drawing.Point(752, 14);
+            this.bunifuPictureBox10.Location = new System.Drawing.Point(752, 15);
             this.bunifuPictureBox10.Name = "bunifuPictureBox10";
             this.bunifuPictureBox10.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -645,7 +645,7 @@
             this.bunifuPictureBox11.BorderRadius = 12;
             this.bunifuPictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox11.Image")));
             this.bunifuPictureBox11.IsCircle = true;
-            this.bunifuPictureBox11.Location = new System.Drawing.Point(671, 14);
+            this.bunifuPictureBox11.Location = new System.Drawing.Point(671, 15);
             this.bunifuPictureBox11.Name = "bunifuPictureBox11";
             this.bunifuPictureBox11.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -662,7 +662,7 @@
             this.bunifuPictureBox12.BorderRadius = 12;
             this.bunifuPictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox12.Image")));
             this.bunifuPictureBox12.IsCircle = true;
-            this.bunifuPictureBox12.Location = new System.Drawing.Point(590, 14);
+            this.bunifuPictureBox12.Location = new System.Drawing.Point(590, 15);
             this.bunifuPictureBox12.Name = "bunifuPictureBox12";
             this.bunifuPictureBox12.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -679,7 +679,7 @@
             this.bunifuPictureBox5.BorderRadius = 12;
             this.bunifuPictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox5.Image")));
             this.bunifuPictureBox5.IsCircle = true;
-            this.bunifuPictureBox5.Location = new System.Drawing.Point(266, 14);
+            this.bunifuPictureBox5.Location = new System.Drawing.Point(266, 15);
             this.bunifuPictureBox5.Name = "bunifuPictureBox5";
             this.bunifuPictureBox5.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -696,7 +696,7 @@
             this.bunifuPictureBox4.BorderRadius = 12;
             this.bunifuPictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox4.Image")));
             this.bunifuPictureBox4.IsCircle = true;
-            this.bunifuPictureBox4.Location = new System.Drawing.Point(185, 14);
+            this.bunifuPictureBox4.Location = new System.Drawing.Point(185, 15);
             this.bunifuPictureBox4.Name = "bunifuPictureBox4";
             this.bunifuPictureBox4.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -713,7 +713,7 @@
             this.bunifuPictureBox7.BorderRadius = 12;
             this.bunifuPictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox7.Image")));
             this.bunifuPictureBox7.IsCircle = true;
-            this.bunifuPictureBox7.Location = new System.Drawing.Point(509, 14);
+            this.bunifuPictureBox7.Location = new System.Drawing.Point(509, 15);
             this.bunifuPictureBox7.Name = "bunifuPictureBox7";
             this.bunifuPictureBox7.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -730,7 +730,7 @@
             this.bunifuPictureBox8.BorderRadius = 12;
             this.bunifuPictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox8.Image")));
             this.bunifuPictureBox8.IsCircle = true;
-            this.bunifuPictureBox8.Location = new System.Drawing.Point(428, 14);
+            this.bunifuPictureBox8.Location = new System.Drawing.Point(428, 15);
             this.bunifuPictureBox8.Name = "bunifuPictureBox8";
             this.bunifuPictureBox8.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -747,7 +747,7 @@
             this.bunifuPictureBox6.BorderRadius = 12;
             this.bunifuPictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox6.Image")));
             this.bunifuPictureBox6.IsCircle = true;
-            this.bunifuPictureBox6.Location = new System.Drawing.Point(347, 14);
+            this.bunifuPictureBox6.Location = new System.Drawing.Point(347, 15);
             this.bunifuPictureBox6.Name = "bunifuPictureBox6";
             this.bunifuPictureBox6.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
