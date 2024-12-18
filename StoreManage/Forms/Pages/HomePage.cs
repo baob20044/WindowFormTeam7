@@ -17,7 +17,7 @@ namespace StoreManage.Forms.Pages
 {
     public partial class HomePage : UserControl
     {
-        private List<ProductInfoDto> products = new List<ProductInfoDto>();
+        private List<ProductDto> products = new List<ProductDto>();
         private List<ShopItem> shopItems; // All items
         private List<ShopItem> filteredItems; // Filtered items based on search
         private int currentPage = 0;      // Current page index
@@ -42,14 +42,14 @@ namespace StoreManage.Forms.Pages
             try
             {
                 var client = new RestClient("http://localhost:5254");
-                var request = new RestRequest($"api/products/product-info", Method.Get);
+                var request = new RestRequest($"/api/products/", Method.Get);
                 request.AddHeader("accept", "*/*");
 
                 var response = await client.ExecuteAsync(request);
 
                 if (response.IsSuccessful)
                 {
-                    products = JsonConvert.DeserializeObject<List<ProductInfoDto>>(response.Content);
+                    products = JsonConvert.DeserializeObject<List<ProductDto>>(response.Content);
                 }
                 else Console.WriteLine("Wrong");
                  

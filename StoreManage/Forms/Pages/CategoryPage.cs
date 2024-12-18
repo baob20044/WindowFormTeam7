@@ -1,4 +1,7 @@
-﻿using StoreManage.Components;
+﻿using Newtonsoft.Json;
+using RestSharp;
+using StoreManage.Components;
+using StoreManage.DTOs.Product;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +17,7 @@ namespace StoreManage.Forms.Pages
 {
     public partial class CategoryPage : UserControl
     {
+        private List<ProductDto> products = new List<ProductDto>();
         private List<ShopItem> shopItems; // All items
         private List<ShopItem> filteredItems; // Filtered items based on search
         private int totalProduct = 50;
@@ -22,22 +26,42 @@ namespace StoreManage.Forms.Pages
             InitializeComponent();
             InitializeShopItems();
             filteredItems = new List<ShopItem>(shopItems); // Initially, no filtering
-            LoadPage();
+            //LoadPage();
         }
 
         private void CategoryPage_Load(object sender, EventArgs e)
         {
 
         }
-        private void InitializeShopItems()
+        private async void InitializeShopItems()
         {
             shopItems = new List<ShopItem>();
-            for (int i = 1; i <= totalProduct; i++) // Inclusive range to handle all products
+            try
             {
-                var shopItem = new ShopItem(i);
-                shopItem.OnShopItemClick += HandleShopItemClick; // Subscribe to the click event
-                shopItems.Add(shopItem); // Add to the list
-                flowLayout.Controls.Add(shopItem);
+                var client = new RestClient("http://localhost:5254");
+                var request = new RestRequest($"/api/products/", Method.Get);
+                request.AddHeader("accept", "*/*");
+
+                var response = await client.ExecuteAsync(request);
+
+                if (response.IsSuccessful)
+                {
+                    products = JsonConvert.DeserializeObject<List<ProductDto>>(response.Content);
+                }
+                else Console.WriteLine("Wrong");
+
+                foreach (var item in products)
+                {
+                    Console.WriteLine("Hi" + item);
+                    var shopItem = new ShopItem(item);
+                    shopItem.OnShopItemClick += HandleShopItemClick; // Subscribe to the click event
+                    shopItems.Add(shopItem); // Add to the list
+                    flowLayout.Controls.Add(shopItem);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
         private void LoadPage()
