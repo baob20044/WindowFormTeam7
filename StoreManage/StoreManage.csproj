@@ -76,6 +76,7 @@
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
@@ -191,6 +192,7 @@
     <Compile Include="Components\ShopItem.Designer.cs">
       <DependentUpon>ShopItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="CustomerValidation\MinAgeAttribute.cs" />
     <Compile Include="DTOs\Account\AdminRegisterDto.cs" />
     <Compile Include="DTOs\Account\CustomerRegisterDto.cs" />
@@ -301,6 +303,7 @@
       <DependentUpon>SignupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\ApiService.cs" />
+    <Compile Include="Services\TokenManager.cs" />
     <EmbeddedResource Include="AdminForms\Authentication\AdminLoginForm.resx">
       <DependentUpon>AdminLoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -419,5 +422,6 @@
     <Content Include="Resources\Images\Yellow.png" />
     <Content Include="Resources\Images\zalopay.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
