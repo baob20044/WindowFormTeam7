@@ -3,6 +3,7 @@ using RestSharp;
 using StoreManage.DTOs.PColor;
 using StoreManage.DTOs.Product;
 using StoreManage.DTOs.Size;
+using StoreManage.Forms.Pages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,13 +22,16 @@ namespace StoreManage.Components
     {
         private Dictionary<string, ColorDto> colorMap; // Map color names to Color objects
         private int productId;  // Store productId for CartItem
-        private FlowLayoutPanel flowLayoutCart; // Reference to the parent's FlowLayoutPanel
-        public DetailItem(int productId, FlowLayoutPanel flowLayoutCart = null)
+        private MainForm _mainForm;
+        public DetailItem(int productId,MainForm mainForm )
         {
             InitializeComponent();
             this.productId = productId;
-            this.flowLayoutCart = flowLayoutCart;
 
+            _mainForm = mainForm;
+        }
+        private void DetailItem_Load(object sender, EventArgs e)
+        {
             LoadProductDetails(productId);
             DropdownColor.SelectedIndexChanged += DropdownColor_SelectedIndexChanged; // Attach event handler
         }
@@ -163,6 +167,71 @@ namespace StoreManage.Components
                     await LoadProductImage(selectedColor);
                 }
             }
+        }
+        public void HandleCartItemClick(int productId)
+        {
+            DetailItem detail = new DetailItem(productId,_mainForm);
+            _mainForm.handleClickedShopItem(detail);
+        }
+        private void AddToCart()
+        {
+            // Ensure MainForm is available
+            if (_mainForm == null || _mainForm.cartInterface == null)
+            {
+                MessageBox.Show("Cart interface not available.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string selectedColorName = DropdownColor.SelectedItem?.ToString();
+            string selectedSize = DropdownSize.SelectedItem?.ToString();
+
+            if (string.IsNullOrEmpty(selectedColorName) || string.IsNullOrEmpty(selectedSize))
+            {
+                MessageBox.Show("Please select a color and size.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var cartPage = _mainForm.cartInterface;
+            bool productExistsInCart = false;
+
+            foreach (Control control in cartPage.CartFlowLayout.Controls)
+            {
+                if (control is CartItem existingItem &&
+                    existingItem.ProductId == productId &&
+                    existingItem.SelectedColorName == selectedColorName &&
+                    existingItem.SelectedSize == selectedSize)
+                {
+                    existingItem.NumericValue += NumericUpDown1.Value;
+                    productExistsInCart = true;
+                    break;
+                }
+            }
+
+            if (!productExistsInCart)
+            {
+                var newCartItem = new CartItem(productId, selectedColorName, selectedSize, _mainForm)
+                {
+                    ItemLabel = lbName.Text,
+                    ItemPrice = lbPrice.Text,
+                    ProductImage = pBProduct.Image,
+                    NumericValue = NumericUpDown1.Value
+                };
+                newCartItem.OnCartItemClick += HandleCartItemClick; // Subscribe to the click event
+                cartPage.CartFlowLayout.Controls.Add(newCartItem);
+            }
+
+            cartPage.UpdateCartTotals();
+        }
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+            AddToCart();
+            _mainForm.ChangeToCart();
+        }
+
+        private void btnAddToCart_Click(object sender, EventArgs e)
+        {
+            AddToCart();
+            MessageBox.Show("Product added to cart!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"CustomColumnOrderings":{"name":0,"file-path":1,"file-name":2,"neutral-value":3,"neutral-comment":4,"type":5},"ShowValidationErrors":true,"SelectedResourceGroups":[],"VisibleColumnKeys":["name","neutral-value"]}
-=======
-{"CustomColumnOrderings":{"name":0,"file-path":1,"file-name":2,"neutral-value":3,"neutral-comment":4,"type":5},"ShowValidationErrors":true,"SelectedResourceGroups":["D:\\C#\\Project\\WindowFormTeam7\\StoreManage\\Forms\\Authentication\\SignupForm.resx"],"VisibleColumnKeys":["name","neutral-value"]}
->>>>>>> 8652dba279590d5f399dea00c686168e67192229
+{"CustomColumnOrderings":{"name":0,"file-path":1,"file-name":2,"neutral-value":3,"neutral-comment":4,"type":5},"ShowValidationErrors":true,"SelectedResourceGroups":["D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\Forms\\Authentication\\LoginForm.resx"],"VisibleColumnKeys":["name","neutral-value"]}

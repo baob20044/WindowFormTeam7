@@ -16,13 +16,15 @@ namespace StoreManage
 {
     public partial class MainForm : Form
     {
-        private HomePage homeInterface; 
+        public HomePage homeInterface { get; private set; }
         private CategoryPage categoryInterface;
-        private CartPage cartInterface;
+        public CartPage cartInterface { get; private set; }
         private ProfilePage profileInterface;
         public MainForm()
         {
             InitializeComponent();
+            cartInterface = new CartPage();
+            homeInterface = new HomePage();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -43,12 +45,14 @@ namespace StoreManage
             flowLayoutPanel.Controls.Clear();
             flowLayoutPanel.Controls.Add(categoryInterface);
         }
-
-        private void btnCart_Click(object sender, EventArgs e)
+        public void ChangeToCart()
         {
-            cartInterface = new CartPage();
             flowLayoutPanel.Controls.Clear();
             flowLayoutPanel.Controls.Add(cartInterface);
+        }
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            ChangeToCart();
         }
 
         private void btnProfile_Click(object sender, EventArgs e)

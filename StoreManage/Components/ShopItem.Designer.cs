@@ -78,12 +78,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.pBImage);
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.lbPrice);
             this.Name = "ShopItem";
-            this.Size = new System.Drawing.Size(312, 270);
+            this.Size = new System.Drawing.Size(310, 268);
+            this.Load += new System.EventHandler(this.ShopItem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pBImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
