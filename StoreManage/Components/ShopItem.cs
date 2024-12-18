@@ -34,7 +34,10 @@ namespace StoreManage.Components
                 control.Click += (s, e) => OnShopItemClick?.Invoke(ProductId);
             }
         }
+        private void ShopItem_Load(object sender, EventArgs e)
+        {
 
+        }
         private void ShowFallbackImage()
         {
             pBImage.Image = global::StoreManage.Properties.Resources.cart; // Default fallback image
