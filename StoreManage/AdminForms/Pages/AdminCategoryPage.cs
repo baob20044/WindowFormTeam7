@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
 using StoreManage.Components;
+using StoreManage.Controllers;
 using StoreManage.DTOs.Category;
+using StoreManage.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,43 +19,60 @@ namespace StoreManage.AdminForms.Pages
     public partial class AdminCategoryPage : UserControl
     {
         List<CategoryDto> categories;
+        private readonly CategoryController _categoryController;
         public AdminCategoryPage()
         {
             InitializeComponent();
+            _categoryController = new CategoryController(new ApiService());
         }
 
         private async void AdminCategoryPage_Load(object sender, EventArgs e)
         {
-            categories = await FetchCategoriesAsync();
-            DisplayCategories(categories);
-        }
-        private async Task<List<CategoryDto>> FetchCategoriesAsync()
-        {
-            var client = new RestClient("http://localhost:5254");
-            var request = new RestRequest("/api/categories", Method.Get);
-            request.AddHeader("accept", "application/json");
-
+            //categories = await FetchCategoriesAsync();
             try
             {
-                var response = await client.ExecuteAsync(request);
+                categories = await _categoryController.GetAllAsync();
 
-                if (response.IsSuccessful && response.Content != null)
+                if (categories == null)
                 {
-                    var categories = JsonConvert.DeserializeObject<List<CategoryDto>>(response.Content);
-                    return categories ?? new List<CategoryDto>();
+                    MessageBox.Show("No categories found.");
+                    return;
                 }
-                else
-                {
-                    MessageBox.Show("Failed to fetch categories.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return new List<CategoryDto>();
-                }
+                DisplayCategories(categories);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error fetching categories: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return new List<CategoryDto>();
+                MessageBox.Show($"An error occurred: {ex.Message}");
             }
+
         }
+        //private async Task<List<CategoryDto>> FetchCategoriesAsync()
+        //{
+        //    var client = new RestClient("http://localhost:5254");
+        //    var request = new RestRequest("/api/categories", Method.Get);
+        //    request.AddHeader("accept", "application/json");
+
+        //    try
+        //    {
+        //        var response = await client.ExecuteAsync(request);
+
+        //        if (response.IsSuccessful && response.Content != null)
+        //        {
+        //            var categories = JsonConvert.DeserializeObject<List<CategoryDto>>(response.Content);
+        //            return categories ?? new List<CategoryDto>();
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("Failed to fetch categories.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //            return new List<CategoryDto>();
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"Error fetching categories: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        return new List<CategoryDto>();
+        //    }
+        //}
         private void DisplayCategories(List<CategoryDto> categories)
         {
             flowLayoutPanel.Controls.Clear(); // Clear previous controls

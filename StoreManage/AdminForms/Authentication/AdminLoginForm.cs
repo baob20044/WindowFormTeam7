@@ -121,5 +121,11 @@ namespace StoreManage
                 Application.DoEvents(); // Allow UI to refresh and clear pending events
             }
         }
+
+        private void lbforgot_Click(object sender, EventArgs e)
+        {
+            NavigateToForgotPass();
+
+        }
     }
 }

@@ -71,6 +71,7 @@
             this.lbforgot.Size = new System.Drawing.Size(125, 17);
             this.lbforgot.TabIndex = 8;
             this.lbforgot.Text = "Forgot password ?";
+            this.lbforgot.Click += new System.EventHandler(this.lbforgot_Click);
             // 
             // btnLogin
             // 

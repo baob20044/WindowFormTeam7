@@ -61,7 +61,7 @@ namespace StoreManage.Services
         }    
 
         // GET method cho tất cả các model
-        public async Task<T> GetAsync<T>(string endpoint)
+        public async Task<T> GetAllAsync<T>(string endpoint)
         {
             var request = new RestRequest(endpoint, Method.Get);
             var response = await _client.ExecuteAsync(request);
@@ -75,10 +75,13 @@ namespace StoreManage.Services
         }
 
         // POST method cho tất cả các model
-        public async Task<T> PostAsync<T>(string endpoint, object data)
+        public async Task<T> PostAsync<T>(string endpoint, object data, string accessToken = null)
         {
             var request = new RestRequest(endpoint, Method.Post)
                 .AddJsonBody(data);
+
+            if (!string.IsNullOrEmpty(accessToken))
+                request.AddHeader("Authorization", $"Bearer {accessToken}");
 
             var response = await _client.ExecuteAsync(request);
 

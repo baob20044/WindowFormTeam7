@@ -214,6 +214,8 @@
       <DependentUpon>ShopItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ProviderController.cs" />
     <Compile Include="CustomerValidation\MinAgeAttribute.cs" />
     <Compile Include="DTOs\Account\AdminRegisterDto.cs" />
     <Compile Include="DTOs\Account\CustomerRegisterDto.cs" />
