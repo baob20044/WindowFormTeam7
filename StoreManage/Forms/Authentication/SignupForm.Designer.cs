@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation6 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignupForm));
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             this.lbError = new System.Windows.Forms.Label();
@@ -64,32 +64,34 @@
             // guna2Transition1
             // 
             this.guna2Transition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation1;
+            animation6.AnimateOnlyDifferences = true;
+            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
+            animation6.LeafCoeff = 0F;
+            animation6.MaxTime = 1F;
+            animation6.MinTime = 0F;
+            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
+            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
+            animation6.MosaicSize = 0;
+            animation6.Padding = new System.Windows.Forms.Padding(0);
+            animation6.RotateCoeff = 0F;
+            animation6.RotateLimit = 0F;
+            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
+            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
+            animation6.TimeCoeff = 0F;
+            animation6.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation6;
             // 
             // lbError
             // 
             this.lbError.AutoSize = true;
+            this.lbError.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.lbError, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lbError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbError.ForeColor = System.Drawing.Color.Red;
-            this.lbError.Location = new System.Drawing.Point(186, 135);
+            this.lbError.Location = new System.Drawing.Point(315, 144);
             this.lbError.MaximumSize = new System.Drawing.Size(500, 0);
             this.lbError.Name = "lbError";
-            this.lbError.Size = new System.Drawing.Size(89, 16);
+            this.lbError.Size = new System.Drawing.Size(114, 20);
             this.lbError.TabIndex = 19;
             this.lbError.Text = "Error Checker";
             this.lbError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -100,21 +102,22 @@
             this.lbLoginHere.AutoSize = true;
             this.lbLoginHere.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Transition1.SetDecoration(this.lbLoginHere, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lbLoginHere.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLoginHere.Location = new System.Drawing.Point(403, 529);
+            this.lbLoginHere.Font = new System.Drawing.Font("Segoe UI", 9.792F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLoginHere.Location = new System.Drawing.Point(383, 679);
             this.lbLoginHere.Name = "lbLoginHere";
-            this.lbLoginHere.Size = new System.Drawing.Size(74, 19);
+            this.lbLoginHere.Size = new System.Drawing.Size(91, 23);
             this.lbLoginHere.TabIndex = 18;
             this.lbLoginHere.Text = "Login here";
+            this.lbLoginHere.Click += new System.EventHandler(this.lbLoginHere_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.guna2Transition1.SetDecoration(this.label3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(225, 529);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(160, 679);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(165, 19);
+            this.label3.Size = new System.Drawing.Size(206, 23);
             this.label3.TabIndex = 17;
             this.label3.Text = "Already have an account?";
             // 
@@ -126,9 +129,10 @@
             this.CbAcceptTerm.CheckedState.BorderThickness = 0;
             this.CbAcceptTerm.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2Transition1.SetDecoration(this.CbAcceptTerm, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.CbAcceptTerm.Location = new System.Drawing.Point(29, 450);
+            this.CbAcceptTerm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbAcceptTerm.Location = new System.Drawing.Point(29, 523);
             this.CbAcceptTerm.Name = "CbAcceptTerm";
-            this.CbAcceptTerm.Size = new System.Drawing.Size(272, 20);
+            this.CbAcceptTerm.Size = new System.Drawing.Size(340, 24);
             this.CbAcceptTerm.TabIndex = 16;
             this.CbAcceptTerm.Text = "I accept the Terms of Use & Privacy Policy";
             this.CbAcceptTerm.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -147,7 +151,7 @@
             this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
             this.btnSubmit.HoverState.Parent = this.btnSubmit;
-            this.btnSubmit.Location = new System.Drawing.Point(29, 481);
+            this.btnSubmit.Location = new System.Drawing.Point(61, 602);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.ShadowDecoration.Parent = this.btnSubmit;
             this.btnSubmit.Size = new System.Drawing.Size(633, 45);
@@ -158,9 +162,10 @@
             // 
             this.lbGender.AutoSize = true;
             this.guna2Transition1.SetDecoration(this.lbGender, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lbGender.Location = new System.Drawing.Point(353, 395);
+            this.lbGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.096F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGender.Location = new System.Drawing.Point(383, 471);
             this.lbGender.Name = "lbGender";
-            this.lbGender.Size = new System.Drawing.Size(52, 16);
+            this.lbGender.Size = new System.Drawing.Size(83, 25);
             this.lbGender.TabIndex = 14;
             this.lbGender.Text = "Gender";
             // 
@@ -168,18 +173,20 @@
             // 
             this.lbBirthday.AutoSize = true;
             this.guna2Transition1.SetDecoration(this.lbBirthday, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lbBirthday.Location = new System.Drawing.Point(353, 346);
+            this.lbBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.096F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBirthday.Location = new System.Drawing.Point(383, 395);
             this.lbBirthday.Name = "lbBirthday";
-            this.lbBirthday.Size = new System.Drawing.Size(78, 16);
+            this.lbBirthday.Size = new System.Drawing.Size(129, 25);
             this.lbBirthday.TabIndex = 13;
             this.lbBirthday.Text = "Date of birth";
             // 
             // dtpBirthday
             // 
             this.guna2Transition1.SetDecoration(this.dtpBirthday, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.dtpBirthday.Location = new System.Drawing.Point(356, 365);
+            this.dtpBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBirthday.Location = new System.Drawing.Point(387, 423);
             this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(306, 22);
+            this.dtpBirthday.Size = new System.Drawing.Size(306, 27);
             this.dtpBirthday.TabIndex = 12;
             // 
             // rBMale
@@ -192,9 +199,10 @@
             this.rBMale.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rBMale.CheckedState.InnerOffset = -4;
             this.guna2Transition1.SetDecoration(this.rBMale, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.rBMale.Location = new System.Drawing.Point(356, 418);
+            this.rBMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rBMale.Location = new System.Drawing.Point(489, 473);
             this.rBMale.Name = "rBMale";
-            this.rBMale.Size = new System.Drawing.Size(58, 20);
+            this.rBMale.Size = new System.Drawing.Size(66, 24);
             this.rBMale.TabIndex = 10;
             this.rBMale.TabStop = true;
             this.rBMale.Text = "Male";
@@ -214,9 +222,10 @@
             this.rbFemale.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbFemale.CheckedState.InnerOffset = -4;
             this.guna2Transition1.SetDecoration(this.rbFemale, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.rbFemale.Location = new System.Drawing.Point(438, 418);
+            this.rbFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFemale.Location = new System.Drawing.Point(594, 473);
             this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(74, 20);
+            this.rbFemale.Size = new System.Drawing.Size(85, 24);
             this.rbFemale.TabIndex = 11;
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Female";
@@ -244,7 +253,7 @@
             this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddress.HoverState.Parent = this.txtAddress;
-            this.txtAddress.Location = new System.Drawing.Point(356, 293);
+            this.txtAddress.Location = new System.Drawing.Point(388, 336);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PasswordChar = '\0';
@@ -263,7 +272,7 @@
             this.controlboxMinimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
             this.controlboxMinimize.HoverState.Parent = this.controlboxMinimize;
             this.controlboxMinimize.IconColor = System.Drawing.Color.White;
-            this.controlboxMinimize.Location = new System.Drawing.Point(208, 3);
+            this.controlboxMinimize.Location = new System.Drawing.Point(312, 3);
             this.controlboxMinimize.Name = "controlboxMinimize";
             this.controlboxMinimize.ShadowDecoration.Parent = this.controlboxMinimize;
             this.controlboxMinimize.Size = new System.Drawing.Size(32, 27);
@@ -277,7 +286,7 @@
             this.controlboxTurnOff.HoverState.FillColor = System.Drawing.Color.Red;
             this.controlboxTurnOff.HoverState.Parent = this.controlboxTurnOff;
             this.controlboxTurnOff.IconColor = System.Drawing.Color.White;
-            this.controlboxTurnOff.Location = new System.Drawing.Point(246, 3);
+            this.controlboxTurnOff.Location = new System.Drawing.Point(350, 3);
             this.controlboxTurnOff.Name = "controlboxTurnOff";
             this.controlboxTurnOff.ShadowDecoration.Parent = this.controlboxTurnOff;
             this.controlboxTurnOff.Size = new System.Drawing.Size(32, 27);
@@ -290,19 +299,19 @@
             this.panel1.Controls.Add(this.guna2PictureBox2);
             this.guna2Transition1.SetDecoration(this.panel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(700, 0);
+            this.panel1.Location = new System.Drawing.Point(751, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(281, 593);
+            this.panel1.Size = new System.Drawing.Size(385, 747);
             this.panel1.TabIndex = 7;
             // 
             // guna2PictureBox2
             // 
             this.guna2Transition1.SetDecoration(this.guna2PictureBox2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.Location = new System.Drawing.Point(-135, -37);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(-143, -42);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(523, 677);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(644, 852);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox2.TabIndex = 1;
             this.guna2PictureBox2.TabStop = false;
@@ -325,7 +334,7 @@
             this.txtLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
             this.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLastName.HoverState.Parent = this.txtLastName;
-            this.txtLastName.Location = new System.Drawing.Point(356, 242);
+            this.txtLastName.Location = new System.Drawing.Point(388, 264);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.PasswordChar = '\0';
@@ -354,7 +363,7 @@
             this.txtFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
             this.txtFirstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFirstName.HoverState.Parent = this.txtFirstName;
-            this.txtFirstName.Location = new System.Drawing.Point(356, 191);
+            this.txtFirstName.Location = new System.Drawing.Point(388, 202);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.PasswordChar = '\0';
@@ -383,7 +392,7 @@
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.HoverState.Parent = this.txtEmail;
-            this.txtEmail.Location = new System.Drawing.Point(29, 344);
+            this.txtEmail.Location = new System.Drawing.Point(29, 395);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -413,7 +422,7 @@
             this.txtConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtConfirmPassword.HoverState.Parent = this.txtConfirmPassword;
             this.txtConfirmPassword.IconRight = ((System.Drawing.Image)(resources.GetObject("txtConfirmPassword.IconRight")));
-            this.txtConfirmPassword.Location = new System.Drawing.Point(29, 293);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(29, 330);
             this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '*';
@@ -443,7 +452,7 @@
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.HoverState.Parent = this.txtPassword;
             this.txtPassword.IconRight = ((System.Drawing.Image)(resources.GetObject("txtPassword.IconRight")));
-            this.txtPassword.Location = new System.Drawing.Point(29, 242);
+            this.txtPassword.Location = new System.Drawing.Point(29, 264);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -471,7 +480,7 @@
             this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.HoverState.Parent = this.txtUsername;
-            this.txtUsername.Location = new System.Drawing.Point(29, 191);
+            this.txtUsername.Location = new System.Drawing.Point(29, 202);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
@@ -484,9 +493,10 @@
             // 
             // guna2PictureBox1
             // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.Location = new System.Drawing.Point(247, 12);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(277, -12);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
             this.guna2PictureBox1.Size = new System.Drawing.Size(197, 141);
@@ -512,7 +522,7 @@
             this.txtPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
             this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhoneNumber.HoverState.Parent = this.txtPhoneNumber;
-            this.txtPhoneNumber.Location = new System.Drawing.Point(29, 395);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(29, 454);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.PasswordChar = '\0';
@@ -550,14 +560,14 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(712, 593);
+            this.guna2Panel1.Size = new System.Drawing.Size(758, 747);
             this.guna2Panel1.TabIndex = 6;
             // 
             // SignupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 593);
+            this.ClientSize = new System.Drawing.Size(1136, 747);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2Panel1);
             this.guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
