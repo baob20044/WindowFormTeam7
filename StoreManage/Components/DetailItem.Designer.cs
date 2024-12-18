@@ -66,7 +66,7 @@
             // NumericUpDown1
             // 
             this.NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
-            this.NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NumericUpDown1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.NumericUpDown1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.NumericUpDown1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.NumericUpDown1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -188,6 +188,7 @@
             // btnBuy
             // 
             this.btnBuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(204)))), ((int)(((byte)(21)))));
+            this.btnBuy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuy.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuy.Location = new System.Drawing.Point(554, 502);
             this.btnBuy.Name = "btnBuy";
@@ -195,6 +196,7 @@
             this.btnBuy.TabIndex = 38;
             this.btnBuy.Text = "Mua ngay";
             this.btnBuy.UseVisualStyleBackColor = false;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
             // lbQuantity
             // 
@@ -209,6 +211,7 @@
             // 
             // btnAddToCart
             // 
+            this.btnAddToCart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddToCart.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddToCart.Location = new System.Drawing.Point(672, 456);
             this.btnAddToCart.Name = "btnAddToCart";
@@ -216,6 +219,7 @@
             this.btnAddToCart.TabIndex = 36;
             this.btnAddToCart.Text = "Thêm vào giỏ hàng";
             this.btnAddToCart.UseVisualStyleBackColor = true;
+            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
             // 
             // lbSize
             // 
@@ -264,6 +268,7 @@
             // 
             // guna2RatingStar1
             // 
+            this.guna2RatingStar1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2RatingStar1.Location = new System.Drawing.Point(554, 120);
             this.guna2RatingStar1.Name = "guna2RatingStar1";
             this.guna2RatingStar1.Size = new System.Drawing.Size(166, 22);
@@ -285,7 +290,7 @@
             // 
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(551, 30);
+            this.lbName.Location = new System.Drawing.Point(550, 22);
             this.lbName.MaximumSize = new System.Drawing.Size(400, 0);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(200, 38);
@@ -294,9 +299,9 @@
             // 
             // pBProduct
             // 
-            this.pBProduct.Location = new System.Drawing.Point(28, 15);
+            this.pBProduct.Location = new System.Drawing.Point(28, 26);
             this.pBProduct.Name = "pBProduct";
-            this.pBProduct.Size = new System.Drawing.Size(499, 631);
+            this.pBProduct.Size = new System.Drawing.Size(499, 620);
             this.pBProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBProduct.TabIndex = 28;
             this.pBProduct.TabStop = false;
@@ -308,6 +313,7 @@
             this.DropdownColor.BorderColor = System.Drawing.Color.Silver;
             this.DropdownColor.BorderRadius = 1;
             this.DropdownColor.Color = System.Drawing.Color.Silver;
+            this.DropdownColor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DropdownColor.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.DropdownColor.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.DropdownColor.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -350,6 +356,7 @@
             this.DropdownSize.BorderColor = System.Drawing.Color.Silver;
             this.DropdownSize.BorderRadius = 1;
             this.DropdownSize.Color = System.Drawing.Color.Silver;
+            this.DropdownSize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DropdownSize.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.DropdownSize.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.DropdownSize.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -408,6 +415,7 @@
             this.Controls.Add(this.pBProduct);
             this.Name = "DetailItem";
             this.Size = new System.Drawing.Size(996, 814);
+            this.Load += new System.EventHandler(this.DetailItem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NumericUpDown1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();

@@ -97,7 +97,7 @@ namespace StoreManage.Forms.Pages
         public void HandleShopItemClick(int productId)
         {
             var mainForm = this.FindForm() as MainForm;
-            DetailItem detail = new DetailItem(productId, flowLayoutPanel);
+            DetailItem detail = new DetailItem(productId,mainForm);
             mainForm?.handleClickedShopItem(detail);
         }
     }

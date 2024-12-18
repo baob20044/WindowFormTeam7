@@ -143,7 +143,7 @@
             this.btnProfile.IdleIconLeftImage = null;
             this.btnProfile.IdleIconRightImage = null;
             this.btnProfile.IndicateFocus = true;
-            this.btnProfile.Location = new System.Drawing.Point(49, 448);
+            this.btnProfile.Location = new System.Drawing.Point(45, 449);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnProfile.OnDisabledState.BorderRadius = 35;
@@ -233,7 +233,7 @@
             this.btnCart.IdleIconLeftImage = null;
             this.btnCart.IdleIconRightImage = null;
             this.btnCart.IndicateFocus = true;
-            this.btnCart.Location = new System.Drawing.Point(49, 372);
+            this.btnCart.Location = new System.Drawing.Point(45, 373);
             this.btnCart.Name = "btnCart";
             this.btnCart.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCart.OnDisabledState.BorderRadius = 35;
@@ -323,7 +323,7 @@
             this.btnCategory.IdleIconLeftImage = null;
             this.btnCategory.IdleIconRightImage = null;
             this.btnCategory.IndicateFocus = true;
-            this.btnCategory.Location = new System.Drawing.Point(49, 296);
+            this.btnCategory.Location = new System.Drawing.Point(45, 297);
             this.btnCategory.Name = "btnCategory";
             this.btnCategory.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCategory.OnDisabledState.BorderRadius = 35;
@@ -421,7 +421,7 @@
             this.btnHome.IdleIconLeftImage = null;
             this.btnHome.IdleIconRightImage = null;
             this.btnHome.IndicateFocus = true;
-            this.btnHome.Location = new System.Drawing.Point(49, 220);
+            this.btnHome.Location = new System.Drawing.Point(45, 221);
             this.btnHome.Name = "btnHome";
             this.btnHome.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnHome.OnDisabledState.BorderRadius = 35;
@@ -478,10 +478,10 @@
             this.bunifuPanel1.Controls.Add(this.btnHome);
             this.bunifuPanel1.Controls.Add(this.btnProfile);
             this.bunifuPanel1.Controls.Add(this.btnCart);
-            this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPanel1.Location = new System.Drawing.Point(-5, -8);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(271, 798);
+            this.bunifuPanel1.Size = new System.Drawing.Size(276, 806);
             this.bunifuPanel1.TabIndex = 14;
             // 
             // MainForm
