@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|d:\\code\\repoteam10_laptrinhtrucquan\\storemanage\\storemanage\\components\\detailitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+=======
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|d:\\code\\repoteam10_laptrinhtrucquan\\storemanage\\storemanage\\dtos\\product\\productupdateamountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\dtos\\product\\productupdateamountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\storemanage\\components\\detailitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+>>>>>>> main
       "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\components\\detailitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -11,10 +19,13 @@
       "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\components\\detailitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\storemanage\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+=======
+>>>>>>> main
       "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\storemanage\\components\\detailitem.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\components\\detailitem.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -63,6 +74,7 @@
       "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\forms\\pages\\categorypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\storemanage\\dtos\\product\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\dtos\\product\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -93,6 +105,38 @@
     {
       "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\storemanage\\dtos\\pcolor\\colorcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\dtos\\pcolor\\colorcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\Services\\ApiService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:StoreManage\\Services\\ApiService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\PColor\\ColorDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:StoreManage\\DTOs\\PColor\\ColorDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\Product\\ProductUpdateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:StoreManage\\DTOs\\Product\\ProductUpdateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\Product\\ProductCreateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:StoreManage\\DTOs\\Product\\ProductCreateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\PColor\\ColorUpdateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:StoreManage\\DTOs\\PColor\\ColorUpdateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\Product\\ProductDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:StoreManage\\DTOs\\Product\\ProductDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\PColor\\ColorToProductDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:StoreManage\\DTOs\\PColor\\ColorToProductDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\PColor\\ColorCreateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:StoreManage\\DTOs\\PColor\\ColorCreateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> main
     }
   ],
   "DocumentGroupContainers": [
@@ -147,14 +191,138 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
+=======
+              "Title": "ProductUpdateAmountDto.cs",
+              "DocumentMoniker": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\Product\\ProductUpdateAmountDto.cs",
+              "RelativeDocumentMoniker": "StoreManage\\DTOs\\Product\\ProductUpdateAmountDto.cs",
+              "ToolTip": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\Product\\ProductUpdateAmountDto.cs",
+              "RelativeToolTip": "StoreManage\\DTOs\\Product\\ProductUpdateAmountDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T16:20:12.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ApiService.cs",
+              "DocumentMoniker": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\Services\\ApiService.cs",
+              "RelativeDocumentMoniker": "StoreManage\\Services\\ApiService.cs",
+              "ToolTip": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\Services\\ApiService.cs",
+              "RelativeToolTip": "StoreManage\\Services\\ApiService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T02:08:28.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ColorDto.cs",
+              "DocumentMoniker": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\PColor\\ColorDto.cs",
+              "RelativeDocumentMoniker": "StoreManage\\DTOs\\PColor\\ColorDto.cs",
+              "ToolTip": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\PColor\\ColorDto.cs",
+              "RelativeToolTip": "StoreManage\\DTOs\\PColor\\ColorDto.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAcwBsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T16:19:57.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ProductUpdateDto.cs",
+              "DocumentMoniker": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\Product\\ProductUpdateDto.cs",
+              "RelativeDocumentMoniker": "StoreManage\\DTOs\\Product\\ProductUpdateDto.cs",
+              "ToolTip": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\Product\\ProductUpdateDto.cs",
+              "RelativeToolTip": "StoreManage\\DTOs\\Product\\ProductUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T16:20:13.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ProductCreateDto.cs",
+              "DocumentMoniker": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\Product\\ProductCreateDto.cs",
+              "RelativeDocumentMoniker": "StoreManage\\DTOs\\Product\\ProductCreateDto.cs",
+              "ToolTip": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\Product\\ProductCreateDto.cs",
+              "RelativeToolTip": "StoreManage\\DTOs\\Product\\ProductCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T16:20:11.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ColorUpdateDto.cs",
+              "DocumentMoniker": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\PColor\\ColorUpdateDto.cs",
+              "RelativeDocumentMoniker": "StoreManage\\DTOs\\PColor\\ColorUpdateDto.cs",
+              "ToolTip": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\PColor\\ColorUpdateDto.cs",
+              "RelativeToolTip": "StoreManage\\DTOs\\PColor\\ColorUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T16:20:04.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ProductDto.cs",
+              "DocumentMoniker": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\Product\\ProductDto.cs",
+              "RelativeDocumentMoniker": "StoreManage\\DTOs\\Product\\ProductDto.cs",
+              "ToolTip": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\Product\\ProductDto.cs",
+              "RelativeToolTip": "StoreManage\\DTOs\\Product\\ProductDto.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwBkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T16:20:10.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ColorToProductDto.cs",
+              "DocumentMoniker": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\PColor\\ColorToProductDto.cs",
+              "RelativeDocumentMoniker": "StoreManage\\DTOs\\PColor\\ColorToProductDto.cs",
+              "ToolTip": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\PColor\\ColorToProductDto.cs",
+              "RelativeToolTip": "StoreManage\\DTOs\\PColor\\ColorToProductDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T16:20:03.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ColorCreateDto.cs",
+              "DocumentMoniker": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\PColor\\ColorCreateDto.cs",
+              "RelativeDocumentMoniker": "StoreManage\\DTOs\\PColor\\ColorCreateDto.cs",
+              "ToolTip": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\DTOs\\PColor\\ColorCreateDto.cs",
+              "RelativeToolTip": "StoreManage\\DTOs\\PColor\\ColorCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T16:20:01.218Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+>>>>>>> main
               "Title": "DetailItem.cs [Design]",
               "DocumentMoniker": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\Components\\DetailItem.cs",
               "RelativeDocumentMoniker": "StoreManage\\Components\\DetailItem.cs",
               "ToolTip": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\Components\\DetailItem.cs [Design]",
               "RelativeToolTip": "StoreManage\\Components\\DetailItem.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< HEAD
               "WhenOpened": "2024-12-18T02:09:14.168Z",
               "EditorCaption": " [Design]"
+=======
+              "WhenOpened": "2024-12-18T02:09:14.168Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+>>>>>>> main
             },
             {
               "$type": "Bookmark",
@@ -166,7 +334,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 1,
+=======
+              "DocumentIndex": 2,
+>>>>>>> main
               "Title": "DetailItem.cs",
               "DocumentMoniker": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\Components\\DetailItem.cs",
               "RelativeDocumentMoniker": "StoreManage\\Components\\DetailItem.cs",
@@ -174,6 +346,7 @@
               "RelativeToolTip": "StoreManage\\Components\\DetailItem.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAwwDMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< HEAD
               "WhenOpened": "2024-12-17T16:19:02.223Z",
               "EditorCaption": ""
             },
@@ -188,6 +361,9 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-18T02:08:28.423Z"
+=======
+              "WhenOpened": "2024-12-17T16:19:02.223Z"
+>>>>>>> main
             },
             {
               "$type": "Document",
@@ -330,6 +506,7 @@
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T16:38:37.477Z"
+<<<<<<< HEAD
             },
             {
               "$type": "Document",
@@ -426,6 +603,8 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T16:20:01.218Z"
+=======
+>>>>>>> main
             }
           ]
         },

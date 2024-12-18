@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using StoreManage.DTOs.Inventory;
@@ -15,7 +17,7 @@ namespace StoreManage.DTOs.Product
         public decimal Price { get; set; }
 
         [MaxLength(500, ErrorMessage = "Description cannot exceed 500 characters.")]
-        public string? Description { get; set; }
+        public string Description { get; set; }
 
         [Required(ErrorMessage = "Cost is required.")]
         [Range(0.01, double.MaxValue, ErrorMessage = "Cost must be a positive value.")]
@@ -24,7 +26,7 @@ namespace StoreManage.DTOs.Product
         [Required(ErrorMessage = "DiscountPercentage is required.")]
         [Range(0, 0.9, ErrorMessage = "DiscountPercentage must be a positive value.")]
         public decimal DiscountPercentage { get; set; }
-        public string? Unit { get; set; }
+        public string Unit { get; set; }
 
         [Required(ErrorMessage = "SubcategoryId is required.")]
         public int SubcategoryId { get; set; }
@@ -32,11 +34,11 @@ namespace StoreManage.DTOs.Product
         public int TargetCustomerId { get; set; }
         public int CategoryId { get; set; }
         [DefaultValue("")]
-        public string? NewCategory { get; set; } = string.Empty;
+        public string NewCategory { get; set; } = string.Empty;
         [DefaultValue("")]
-        public string? NewSubcategory { get; set; } = string.Empty;
+        public string NewSubcategory { get; set; } = string.Empty;
         [Required(ErrorMessage = "ProviderId is required.")]
         public int ProviderId { get; set; }
-        public List<ProductInventoryCreateDto> Inventory { get; set; } = [];
+        public ICollection<ProductInventoryCreateDto> Inventory { get; set; } = new List<ProductInventoryCreateDto>();
     }
 }
