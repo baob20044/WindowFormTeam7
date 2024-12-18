@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShopItem));
             this.lbPrice = new System.Windows.Forms.Label();
             this.pBImage = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -42,7 +43,7 @@
             this.lbPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(67)))), ((int)(((byte)(55)))));
             this.lbPrice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbPrice.Location = new System.Drawing.Point(114, 235);
+            this.lbPrice.Location = new System.Drawing.Point(109, 355);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(85, 35);
             this.lbPrice.TabIndex = 18;
@@ -52,9 +53,10 @@
             // 
             this.pBImage.BackColor = System.Drawing.Color.Gainsboro;
             this.pBImage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pBImage.Image = ((System.Drawing.Image)(resources.GetObject("pBImage.Image")));
             this.pBImage.Location = new System.Drawing.Point(58, 19);
             this.pBImage.Name = "pBImage";
-            this.pBImage.Size = new System.Drawing.Size(197, 162);
+            this.pBImage.Size = new System.Drawing.Size(197, 264);
             this.pBImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBImage.TabIndex = 17;
             this.pBImage.TabStop = false;
@@ -66,7 +68,7 @@
             this.lbName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(36)))), ((int)(((byte)(48)))));
-            this.lbName.Location = new System.Drawing.Point(12, 186);
+            this.lbName.Location = new System.Drawing.Point(3, 305);
             this.lbName.MaximumSize = new System.Drawing.Size(300, 0);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(143, 28);
@@ -84,7 +86,7 @@
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.lbPrice);
             this.Name = "ShopItem";
-            this.Size = new System.Drawing.Size(310, 268);
+            this.Size = new System.Drawing.Size(310, 413);
             this.Load += new System.EventHandler(this.ShopItem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pBImage)).EndInit();
             this.ResumeLayout(false);

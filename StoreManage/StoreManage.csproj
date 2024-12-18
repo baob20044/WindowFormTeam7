@@ -55,6 +55,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
       <HintPath>..\..\..\Bai_tap_thay_Toan\StoreManagerPro\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\..\Bai_tap_thay_Toan\StoreManagerPro\BunifuCrack-main\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
       <HintPath>..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
     </Reference>
@@ -174,6 +177,12 @@
     <Compile Include="AdminForms\Pages\AdminSizePage.Designer.cs">
       <DependentUpon>AdminSizePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminForms\Pages\AdminSubcategoryPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminForms\Pages\AdminSubcategoryPage.Designer.cs">
+      <DependentUpon>AdminSubcategoryPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +194,12 @@
     </Compile>
     <Compile Include="Components\CartItem.Designer.cs">
       <DependentUpon>CartItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\CategoryAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\CategoryAdd.Designer.cs">
+      <DependentUpon>CategoryAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\DetailItem.cs">
       <SubType>UserControl</SubType>
@@ -322,6 +337,9 @@
     <EmbeddedResource Include="Components\CartItem.resx">
       <DependentUpon>CartItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Components\CategoryAdd.resx">
+      <DependentUpon>CategoryAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\DetailItem.resx">
       <DependentUpon>DetailItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -390,6 +408,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Edit1.png" />
     <Content Include="Resources\Icon\Logo-Yody-Yellow-1024x878.ico" />
     <Content Include="Resources\Images\ao-khoac-nam-swm6005-bee-2.png" />
     <Content Include="Resources\Images\ao-khoac-nam-yody-AKM7015-TIT %284%29.png" />
@@ -401,7 +420,7 @@
     <Content Include="Resources\cart.png" />
     <Content Include="Resources\Images\Check Mark.png" />
     <Content Include="Resources\Images\Closed_Eye.png" />
-    <Content Include="Resources\Images\Delete.png" />
+    <Content Include="Resources\Delete.png" />
     <Content Include="Resources\Images\Delete1.png" />
     <Content Include="Resources\Images\digital-sale-banner-sign-template_30227-62.jpg" />
     <Content Include="Resources\Images\Edit.png" />

@@ -104,3 +104,5 @@ D:\C#\Project\WindowFormTeam7\StoreManage\obj\Debug\StoreMan.D8B16C23.Up2Date
 D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
 D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\obj\Debug\StoreManage.Components.DetailItem.resources
 D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll
+D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
+D:\Code\RepoTeam10_Laptrinhtrucquan\StoreManage\StoreManage\obj\Debug\StoreManage.Components.CategoryAdd.resources
