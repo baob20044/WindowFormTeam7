@@ -21,10 +21,16 @@ namespace StoreManage.Components.Add
             InitializeComponent();
             subcategoryController = new SubcategoryController(new ApiService());
 
-            for (int i = 0; i < 24; i++) 
-            { 
-                cBCategoryId.Items.Add(i);
+            // Populate the Guna2ComboBox with numbers 1 to 23
+            for (int i = 1; i < 24; i++)
+            {
+                cBCategoryId.Items.Add(i.ToString()); // Add items as strings
             }
+
+            // Configure the ComboBox to show a scroll bar when needed
+            cBCategoryId.MaxDropDownItems = 5;      // Show 5 items before scrolling
+            cBCategoryId.IntegralHeight = false;   // Ensure scroll bar appears
+            cBCategoryId.DropDownStyle = ComboBoxStyle.DropDownList; // Optional: Prevent typing
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -32,18 +38,18 @@ namespace StoreManage.Components.Add
             this.Parent.Controls.Remove(this);
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private async void btnSave_Click(object sender, EventArgs e)
         {
             string subcategoryName = txtName.Text;
             string description = txtDescription.Text;
             int categoryId = 0;
-            if (cBCategoryId.SelectedValue != null)
+            if (cBCategoryId.SelectedItem != null)
             {
                 categoryId = (int)cBCategoryId.SelectedItem;
             }
             else
             {
-                MessageBox.Show("Please select a target customer.");
+                MessageBox.Show("Please select category ID.");
                 return;
             }
 
@@ -62,7 +68,17 @@ namespace StoreManage.Components.Add
 
             try
             {
-                //var response = await subcategoryController;
+                var response = await subcategoryController.CreateAsync(subcategory);
+                if (response != null) {
+                    MessageBox.Show("Subcategory added successfully!");
+                    var adminMainForm = this.FindForm() as AdminMainForm;
+                    adminMainForm.refreshSubcategory();
+                    this.Parent.Controls.Remove(this);
+                }
+                else
+                {
+                    Console.WriteLine("Adding error");
+                }
             }
             catch (Exception ex) 
             {

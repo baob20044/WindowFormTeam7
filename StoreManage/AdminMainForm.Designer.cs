@@ -30,10 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.controlboxMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.controlboxTurnOff = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnOrder = new Guna.UI2.WinForms.Guna2Button();
             this.btnProvider = new Guna.UI2.WinForms.Guna2Button();
             this.btnEmployee = new Guna.UI2.WinForms.Guna2Button();
@@ -44,6 +40,11 @@
             this.btnCategory = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.pBAvatarEdit = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.controlboxMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.controlboxTurnOff = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.lbLogOut = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBAvatarEdit)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +52,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(37)))), ((int)(((byte)(55)))));
+            this.panel1.Controls.Add(this.lbLogOut);
             this.panel1.Controls.Add(this.btnOrder);
             this.panel1.Controls.Add(this.btnProvider);
             this.panel1.Controls.Add(this.btnEmployee);
@@ -66,52 +68,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(223, 803);
             this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(66)))), ((int)(((byte)(61)))));
-            this.label1.Location = new System.Drawing.Point(18, 150);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 32);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Administration";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // controlboxMinimize
-            // 
-            this.controlboxMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.controlboxMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.controlboxMinimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
-            this.controlboxMinimize.HoverState.Parent = this.controlboxMinimize;
-            this.controlboxMinimize.IconColor = System.Drawing.Color.White;
-            this.controlboxMinimize.Location = new System.Drawing.Point(1265, 12);
-            this.controlboxMinimize.Name = "controlboxMinimize";
-            this.controlboxMinimize.ShadowDecoration.Parent = this.controlboxMinimize;
-            this.controlboxMinimize.Size = new System.Drawing.Size(32, 27);
-            this.controlboxMinimize.TabIndex = 13;
-            // 
-            // controlboxTurnOff
-            // 
-            this.controlboxTurnOff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.controlboxTurnOff.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
-            this.controlboxTurnOff.HoverState.FillColor = System.Drawing.Color.Red;
-            this.controlboxTurnOff.HoverState.Parent = this.controlboxTurnOff;
-            this.controlboxTurnOff.IconColor = System.Drawing.Color.White;
-            this.controlboxTurnOff.Location = new System.Drawing.Point(1303, 12);
-            this.controlboxTurnOff.Name = "controlboxTurnOff";
-            this.controlboxTurnOff.ShadowDecoration.Parent = this.controlboxTurnOff;
-            this.controlboxTurnOff.Size = new System.Drawing.Size(32, 27);
-            this.controlboxTurnOff.TabIndex = 12;
-            // 
-            // flowLayoutPanel
-            // 
-            this.flowLayoutPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(228, 48);
-            this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(1129, 755);
-            this.flowLayoutPanel.TabIndex = 14;
             // 
             // btnOrder
             // 
@@ -300,6 +256,67 @@
             this.pBAvatarEdit.TabStop = false;
             this.pBAvatarEdit.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(66)))), ((int)(((byte)(61)))));
+            this.label1.Location = new System.Drawing.Point(18, 150);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(186, 32);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Administration";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // controlboxMinimize
+            // 
+            this.controlboxMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.controlboxMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.controlboxMinimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
+            this.controlboxMinimize.HoverState.Parent = this.controlboxMinimize;
+            this.controlboxMinimize.IconColor = System.Drawing.Color.White;
+            this.controlboxMinimize.Location = new System.Drawing.Point(1265, 12);
+            this.controlboxMinimize.Name = "controlboxMinimize";
+            this.controlboxMinimize.ShadowDecoration.Parent = this.controlboxMinimize;
+            this.controlboxMinimize.Size = new System.Drawing.Size(32, 27);
+            this.controlboxMinimize.TabIndex = 13;
+            // 
+            // controlboxTurnOff
+            // 
+            this.controlboxTurnOff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.controlboxTurnOff.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
+            this.controlboxTurnOff.HoverState.FillColor = System.Drawing.Color.Red;
+            this.controlboxTurnOff.HoverState.Parent = this.controlboxTurnOff;
+            this.controlboxTurnOff.IconColor = System.Drawing.Color.White;
+            this.controlboxTurnOff.Location = new System.Drawing.Point(1303, 12);
+            this.controlboxTurnOff.Name = "controlboxTurnOff";
+            this.controlboxTurnOff.ShadowDecoration.Parent = this.controlboxTurnOff;
+            this.controlboxTurnOff.Size = new System.Drawing.Size(32, 27);
+            this.controlboxTurnOff.TabIndex = 12;
+            // 
+            // flowLayoutPanel
+            // 
+            this.flowLayoutPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.flowLayoutPanel.Location = new System.Drawing.Point(228, 48);
+            this.flowLayoutPanel.Name = "flowLayoutPanel";
+            this.flowLayoutPanel.Size = new System.Drawing.Size(1129, 755);
+            this.flowLayoutPanel.TabIndex = 14;
+            // 
+            // lbLogOut
+            // 
+            this.lbLogOut.AutoSize = true;
+            this.lbLogOut.BackColor = System.Drawing.Color.Transparent;
+            this.lbLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbLogOut.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLogOut.ForeColor = System.Drawing.Color.Red;
+            this.lbLogOut.Location = new System.Drawing.Point(3, 776);
+            this.lbLogOut.Name = "lbLogOut";
+            this.lbLogOut.Size = new System.Drawing.Size(60, 19);
+            this.lbLogOut.TabIndex = 24;
+            this.lbLogOut.Text = "Log out";
+            this.lbLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbLogOut.Click += new System.EventHandler(this.lbLogOut_Click);
+            // 
             // AdminMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -339,5 +356,6 @@
         private Guna.UI2.WinForms.Guna2Button btnOrder;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
+        private System.Windows.Forms.Label lbLogOut;
     }
 }

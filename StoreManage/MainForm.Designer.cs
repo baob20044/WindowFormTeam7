@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges49 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges50 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges51 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges52 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.controlboxMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.controlboxTurnOff = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,8 +43,8 @@
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnHome = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.btnLogout = new Guna.UI2.WinForms.Guna2ImageButton();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -117,11 +117,11 @@
             this.btnProfile.ColorContrastOnClick = 45;
             this.btnProfile.ColorContrastOnHover = 45;
             this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges49.BottomLeft = true;
-            borderEdges49.BottomRight = true;
-            borderEdges49.TopLeft = true;
-            borderEdges49.TopRight = true;
-            this.btnProfile.CustomizableEdges = borderEdges49;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnProfile.CustomizableEdges = borderEdges1;
             this.btnProfile.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnProfile.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnProfile.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -207,11 +207,11 @@
             this.btnCart.ColorContrastOnClick = 45;
             this.btnCart.ColorContrastOnHover = 45;
             this.btnCart.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges50.BottomLeft = true;
-            borderEdges50.BottomRight = true;
-            borderEdges50.TopLeft = true;
-            borderEdges50.TopRight = true;
-            this.btnCart.CustomizableEdges = borderEdges50;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnCart.CustomizableEdges = borderEdges2;
             this.btnCart.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCart.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCart.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -297,11 +297,11 @@
             this.btnCategory.ColorContrastOnClick = 45;
             this.btnCategory.ColorContrastOnHover = 45;
             this.btnCategory.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges51.BottomLeft = true;
-            borderEdges51.BottomRight = true;
-            borderEdges51.TopLeft = true;
-            borderEdges51.TopRight = true;
-            this.btnCategory.CustomizableEdges = borderEdges51;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnCategory.CustomizableEdges = borderEdges3;
             this.btnCategory.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCategory.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCategory.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -395,11 +395,11 @@
             this.btnHome.ColorContrastOnClick = 45;
             this.btnHome.ColorContrastOnHover = 45;
             this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges52.BottomLeft = true;
-            borderEdges52.BottomRight = true;
-            borderEdges52.TopLeft = true;
-            borderEdges52.TopRight = true;
-            this.btnHome.CustomizableEdges = borderEdges52;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnHome.CustomizableEdges = borderEdges4;
             this.btnHome.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnHome.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnHome.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -488,6 +488,21 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(276, 806);
             this.bunifuPanel1.TabIndex = 14;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(52, 778);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 19);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Log out";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.Transparent;
@@ -503,21 +518,6 @@
             this.btnLogout.Size = new System.Drawing.Size(77, 81);
             this.btnLogout.TabIndex = 19;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(52, 778);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 19);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Log out";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // MainForm
             // 

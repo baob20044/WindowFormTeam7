@@ -50,7 +50,7 @@ namespace StoreManage.Controllers
         {
             try
             {
-                var result = await _apiService.PostAsync<SubcategoryCreateDto>("subcateogries", subcategoryCreateDto, TokenManager.GetToken());
+                var result = await _apiService.PostAsync<SubcategoryCreateDto>("subcategories", subcategoryCreateDto, TokenManager.GetToken());
                 return result;
             }
             catch (Exception ex)

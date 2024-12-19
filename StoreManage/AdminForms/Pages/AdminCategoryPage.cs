@@ -25,6 +25,7 @@ namespace StoreManage.AdminForms.Pages
         {
             InitializeComponent();
             categoryController = new CategoryController(new ApiService());
+            PopulateComboBox();
         }
 
         private async void AdminCategoryPage_Load(object sender, EventArgs e)
@@ -294,5 +295,70 @@ namespace StoreManage.AdminForms.Pages
                 // Implement your delete logic here
             }
         }
+
+        private void rBAsc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rBAsc.Checked)
+            {
+                // Sort categories in ascending order
+                categories = categories.OrderBy(c => c.CategoryId).ToList();
+                DisplayCategories(categories);
+            }
+        }
+
+        private void rBDesc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rBDesc.Checked)
+            {
+                // Sort categories in descending order
+                categories = categories.OrderByDescending(c => c.CategoryId).ToList();
+                DisplayCategories(categories);
+            }
+        }
+        private void PopulateComboBox()
+        {
+            // Add filter options
+            cBNumber.Items.Add("All");
+            for (int i = 10; i <= 100; i += 10)
+            {
+                cBNumber.Items.Add(i.ToString());
+            }
+
+            // Set default selection
+            cBNumber.SelectedIndex = 0; // "All Categories"
+        }
+        private void cBNumber_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Ensure an item is selected
+            if (cBNumber.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a valid filter option.");
+                return;
+            }
+
+            // Get the selected value
+            string selectedValue = cBNumber.SelectedItem.ToString();
+
+            if (selectedValue == "All Categories")
+            {
+                // Show all categories
+                DisplayCategories(categories);
+            }
+            else
+            {
+                // Try parsing the selected value to an integer
+                if (int.TryParse(selectedValue, out int count))
+                {
+                    // Filter categories based on the selected number
+                    var filteredCategories = categories.Take(count).ToList();
+                    DisplayCategories(filteredCategories);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid selection. Please try again.");
+                }
+            }
+        }
+
     }
 }

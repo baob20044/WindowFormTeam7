@@ -21,8 +21,6 @@ namespace StoreManage
             //Application.Run(new MainForm());
             //Application.Run(new LoginForm());
             //Application.Run(new AdminLoginForm());
-
-
         }
     }
 }
