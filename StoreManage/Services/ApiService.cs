@@ -5,6 +5,7 @@ using StoreManage.DTOs.Token;
 using System;
 using System.Threading.Tasks;
 using System.Linq;
+using System.Windows.Forms;
 
 
 
@@ -39,13 +40,13 @@ namespace StoreManage.Services
             var errorMessage = response.Content ?? $"API call failed with status: {response.StatusCode}";
             if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
             {
-                throw new Exception("Invalid username or password.");
+                throw new Exception($"{errorMessage}");
             }
 
             throw new Exception($"API call failed: {errorMessage}");
         }
 
-        public async Task<T> SignupAsync<T> (string endpoint, object data)
+        public async Task<string> SignupAsync(string endpoint, object data)
         {
             var request = new RestRequest(endpoint, Method.Post)
                .AddJsonBody(data);
@@ -54,16 +55,26 @@ namespace StoreManage.Services
 
             if (response.IsSuccessful)
             {
-                return JsonConvert.DeserializeObject<T>(response.Content);
+                return response.Content;
+            }
+
+            var errorMessage = response.Content ?? $"API call failed with status: {response.StatusCode}";
+            if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                throw new Exception($"{errorMessage}");
             }
 
             throw new Exception($"POST failed: {response.StatusCode} - {response.Content}");
-        }    
+        }
 
-        // GET method cho tất cả các model
-        public async Task<T> GetAsync<T>(string endpoint)
+        //GET method cho tất cả các model
+        public async Task<T> GetAsync<T>(string endpoint, string token = null)
         {
             var request = new RestRequest(endpoint, Method.Get);
+
+            if (!String.IsNullOrEmpty(token))
+                request.AddHeader("Authorization", $"Bearer {token}");
+
             var response = await _client.ExecuteAsync(request);
 
             if (response.IsSuccessful)
@@ -75,10 +86,13 @@ namespace StoreManage.Services
         }
 
         // POST method cho tất cả các model
-        public async Task<T> PostAsync<T>(string endpoint, object data)
+        public async Task<T> PostAsync<T>(string endpoint, object data, string token = null)
         {
             var request = new RestRequest(endpoint, Method.Post)
                 .AddJsonBody(data);
+
+            if (!String.IsNullOrEmpty(token))
+                request.AddHeader("Authorization", $"Bearer {token}");
 
             var response = await _client.ExecuteAsync(request);
 
@@ -91,10 +105,10 @@ namespace StoreManage.Services
         }
 
         // PUT method cho tất cả các model
-        public async Task<T> PutAsync<T>(string endpoint, object data)
+        public async Task<T> PutAsync<T>(string endpoint, object data, string token)
         {
-            var request = new RestRequest(endpoint, Method.Put)
-                .AddJsonBody(data);
+            var request = new RestRequest(endpoint, Method.Put).
+               AddHeader("Authorization", $"Bearer {token}").AddJsonBody(data);
 
             var response = await _client.ExecuteAsync(request);
 
@@ -107,9 +121,9 @@ namespace StoreManage.Services
         }
 
         // DELETE method cho tất cả các model
-        public async Task<bool> DeleteAsync(string endpoint)
+        public async Task<bool> DeleteAsync(string endpoint, string token)
         {
-            var request = new RestRequest(endpoint, Method.Delete);
+            var request = new RestRequest(endpoint, Method.Delete).AddHeader("Authorization", $"Bearer {token}");
             var response = await _client.ExecuteAsync(request);
 
             if (response.IsSuccessful)

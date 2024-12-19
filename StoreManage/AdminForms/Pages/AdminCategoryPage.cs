@@ -1,7 +1,10 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
 using StoreManage.Components;
+using StoreManage.Components.Edit;
+using StoreManage.Controllers;
 using StoreManage.DTOs.Category;
+using StoreManage.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,43 +19,25 @@ namespace StoreManage.AdminForms.Pages
 {
     public partial class AdminCategoryPage : UserControl
     {
+        private readonly CategoryController categoryController;
         List<CategoryDto> categories;
         public AdminCategoryPage()
         {
             InitializeComponent();
+            categoryController = new CategoryController(new ApiService());
+            PopulateComboBox();
         }
 
         private async void AdminCategoryPage_Load(object sender, EventArgs e)
         {
-            categories = await FetchCategoriesAsync();
+            //categories = await FetchCategoriesAsync();
+            categories = await categoryController.GetAllAsync();
+            if (categories == null || categories.Count < 1)
+            {
+                MessageBox.Show("Not found Category");
+                return;
+            }    
             DisplayCategories(categories);
-        }
-        private async Task<List<CategoryDto>> FetchCategoriesAsync()
-        {
-            var client = new RestClient("http://localhost:5254");
-            var request = new RestRequest("/api/categories", Method.Get);
-            request.AddHeader("accept", "application/json");
-
-            try
-            {
-                var response = await client.ExecuteAsync(request);
-
-                if (response.IsSuccessful && response.Content != null)
-                {
-                    var categories = JsonConvert.DeserializeObject<List<CategoryDto>>(response.Content);
-                    return categories ?? new List<CategoryDto>();
-                }
-                else
-                {
-                    MessageBox.Show("Failed to fetch categories.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return new List<CategoryDto>();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error fetching categories: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return new List<CategoryDto>();
-            }
         }
         private void DisplayCategories(List<CategoryDto> categories)
         {
@@ -181,7 +166,6 @@ namespace StoreManage.AdminForms.Pages
 
                 // Add controls to the row panel
                 rowPanel.Controls.Add(editIcon);
-                rowPanel.Controls.Add(deleteIcon);
                 rowPanel.Controls.Add(customerTypeLabel);
                 rowPanel.Controls.Add(nameLabel);
                 rowPanel.Controls.Add(idLabel);
@@ -273,8 +257,29 @@ namespace StoreManage.AdminForms.Pages
 
         private void EditCategory(int categoryId)
         {
-            MessageBox.Show($"Edit clicked for Category ID: {categoryId}", "Edit", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            // Implement your edit logic here
+            var existingCategoryEdit = this.Controls.OfType<CategoryEdit>().FirstOrDefault();
+
+            if (existingCategoryEdit == null)
+            {
+                // Create an instance of the CategoryAdd UserControl
+                var editCategory = new CategoryEdit(categoryId);
+
+                // Add the CategoryAdd UserControl to the same container
+                this.Controls.Add(editCategory);
+                editCategory.Dock = DockStyle.None;
+
+                // Position the CategoryAdd UserControl in the center
+                editCategory.Location = new Point(
+                    (this.Width - editCategory.Width) / 2,
+                    (this.Height - editCategory.Height) / 2
+                );
+                editCategory.BringToFront();
+            }
+            else
+            {
+                // If it already exists, just bring it to the front
+                existingCategoryEdit.BringToFront();
+            }
         }
 
         private void DeleteCategory(int categoryId)
@@ -290,5 +295,70 @@ namespace StoreManage.AdminForms.Pages
                 // Implement your delete logic here
             }
         }
+
+        private void rBAsc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rBAsc.Checked)
+            {
+                // Sort categories in ascending order
+                categories = categories.OrderBy(c => c.CategoryId).ToList();
+                DisplayCategories(categories);
+            }
+        }
+
+        private void rBDesc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rBDesc.Checked)
+            {
+                // Sort categories in descending order
+                categories = categories.OrderByDescending(c => c.CategoryId).ToList();
+                DisplayCategories(categories);
+            }
+        }
+        private void PopulateComboBox()
+        {
+            // Add filter options
+            cBNumber.Items.Add("All");
+            for (int i = 10; i <= 100; i += 10)
+            {
+                cBNumber.Items.Add(i.ToString());
+            }
+
+            // Set default selection
+            cBNumber.SelectedIndex = 0; // "All Categories"
+        }
+        private void cBNumber_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Ensure an item is selected
+            if (cBNumber.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a valid filter option.");
+                return;
+            }
+
+            // Get the selected value
+            string selectedValue = cBNumber.SelectedItem.ToString();
+
+            if (selectedValue == "All Categories")
+            {
+                // Show all categories
+                DisplayCategories(categories);
+            }
+            else
+            {
+                // Try parsing the selected value to an integer
+                if (int.TryParse(selectedValue, out int count))
+                {
+                    // Filter categories based on the selected number
+                    var filteredCategories = categories.Take(count).ToList();
+                    DisplayCategories(filteredCategories);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid selection. Please try again.");
+                }
+            }
+        }
+
     }
 }

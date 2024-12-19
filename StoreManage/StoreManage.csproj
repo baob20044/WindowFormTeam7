@@ -141,11 +141,11 @@
     <Compile Include="AdminForms\Pages\AdminColorPage.Designer.cs">
       <DependentUpon>AdminColorPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\Pages\AdminCustomerPage.cs">
+    <Compile Include="AdminForms\Pages\AdminEmployeePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AdminForms\Pages\AdminCustomerPage.Designer.cs">
-      <DependentUpon>AdminCustomerPage.cs</DependentUpon>
+    <Compile Include="AdminForms\Pages\AdminEmployeePage.Designer.cs">
+      <DependentUpon>AdminEmployeePage.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminForms\Pages\AdminHomePage.cs">
       <SubType>UserControl</SubType>
@@ -189,16 +189,28 @@
     <Compile Include="AdminMainForm.Designer.cs">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\Add\SizeAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Add\SizeAdd.Designer.cs">
+      <DependentUpon>SizeAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Add\SubcategoryAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Add\SubcategoryAdd.Designer.cs">
+      <DependentUpon>SubcategoryAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\CartItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Components\CartItem.Designer.cs">
       <DependentUpon>CartItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Components\CategoryAdd.cs">
+    <Compile Include="Components\Add\CategoryAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Components\CategoryAdd.Designer.cs">
+    <Compile Include="Components\Add\CategoryAdd.Designer.cs">
       <DependentUpon>CategoryAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\DetailItem.cs">
@@ -207,18 +219,6 @@
     <Compile Include="Components\DetailItem.Designer.cs">
       <DependentUpon>DetailItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Components\ProductAdd.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Components\ProductAdd.Designer.cs">
-      <DependentUpon>ProductAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Components\ProductDetail.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Components\ProductDetail.Designer.cs">
-      <DependentUpon>ProductDetail.cs</DependentUpon>
-    </Compile>
     <Compile Include="Components\ShopItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -226,10 +226,19 @@
       <DependentUpon>ShopItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ColorController.cs" />
+    <Compile Include="Controllers\InventoryController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProviderController.cs" />
+    <Compile Include="Controllers\SizeController.cs" />
+    <Compile Include="Controllers\SubcategoryController.cs" />
+    <Compile Include="Controllers\TargetCustomerController.cs" />
     <Compile Include="CustomerValidation\MinAgeAttribute.cs" />
     <Compile Include="DTOs\Account\AdminRegisterDto.cs" />
     <Compile Include="DTOs\Account\CustomerRegisterDto.cs" />
     <Compile Include="DTOs\Account\EmployeeRegisterDto.cs" />
+    <Compile Include="DTOs\Account\ForgotPasswordDto.cs" />
     <Compile Include="DTOs\Account\LoginDto.cs" />
     <Compile Include="DTOs\Account\NewPasswordDto.cs" />
     <Compile Include="DTOs\Category\CategoryCreateDto.cs" />
@@ -344,16 +353,19 @@
     <EmbeddedResource Include="AdminForms\Pages\AdminCategoryPage.resx">
       <DependentUpon>AdminCategoryPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\Pages\AdminProductPage.resx">
-      <DependentUpon>AdminProductPage.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AdminMainForm.resx">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Add\SizeAdd.resx">
+      <DependentUpon>SizeAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Add\SubcategoryAdd.resx">
+      <DependentUpon>SubcategoryAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\CartItem.resx">
       <DependentUpon>CartItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Components\CategoryAdd.resx">
+    <EmbeddedResource Include="Components\Add\CategoryAdd.resx">
       <DependentUpon>CategoryAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\DetailItem.resx">
@@ -364,6 +376,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\ProductDetail.resx">
       <DependentUpon>ProductDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Edit\CategoryEdit.resx">
+      <DependentUpon>CategoryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Edit\SizeEdit.resx">
+      <DependentUpon>SizeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Edit\SubcategoryEdit.resx">
+      <DependentUpon>SubcategoryEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\ShopItem.resx">
       <DependentUpon>ShopItem.cs</DependentUpon>

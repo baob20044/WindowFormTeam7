@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace StoreManage.Controllers
 {
@@ -38,6 +39,30 @@ namespace StoreManage.Controllers
             }
         }
 
+        public async Task<string> SignupAsync(EmployeeRegisterDto employeeRegisterDto)
+        {
+            try
+            {
+                return await _apiService.SignupAsync("Account/employee-register", employeeRegisterDto);
+            }
+            catch (Exception ex)
+            {
+                // Xử lý ngoại lệ, thông báo lỗi cho người dùng
+                throw new Exception(ex.Message);
+            }
+        }
 
+        public async Task<string> ForgotAsync(ForgotPasswordDto forgotPassword)
+        {
+            try
+            {
+                return await _apiService.PostAsync<string>("EmailSender/send", forgotPassword);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Forgot failed: {ex.Message}");
+                return null;
+            }
+        }
     }
 }

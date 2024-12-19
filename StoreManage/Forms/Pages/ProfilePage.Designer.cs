@@ -78,7 +78,7 @@
             this.panel14.Controls.Add(this.label36);
             this.panel14.Location = new System.Drawing.Point(293, 96);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(687, 715);
+            this.panel14.Size = new System.Drawing.Size(777, 699);
             this.panel14.TabIndex = 5;
             // 
             // btnSaveChanges
@@ -329,9 +329,9 @@
             this.panel13.Controls.Add(this.btnChooseFile);
             this.panel13.Controls.Add(this.pBAvatarEdit);
             this.panel13.Controls.Add(this.label35);
-            this.panel13.Location = new System.Drawing.Point(13, 96);
+            this.panel13.Location = new System.Drawing.Point(0, 96);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(274, 342);
+            this.panel13.Size = new System.Drawing.Size(287, 342);
             this.panel13.TabIndex = 4;
             // 
             // btnRemove
@@ -376,7 +376,7 @@
             this.pBAvatarEdit.BorderRadius = 63;
             this.pBAvatarEdit.Image = ((System.Drawing.Image)(resources.GetObject("pBAvatarEdit.Image")));
             this.pBAvatarEdit.IsCircle = true;
-            this.pBAvatarEdit.Location = new System.Drawing.Point(74, 59);
+            this.pBAvatarEdit.Location = new System.Drawing.Point(80, 59);
             this.pBAvatarEdit.Name = "pBAvatarEdit";
             this.pBAvatarEdit.Size = new System.Drawing.Size(127, 127);
             this.pBAvatarEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -390,7 +390,7 @@
             this.label35.Font = new System.Drawing.Font("Segoe UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.Location = new System.Drawing.Point(63, 18);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(148, 31);
+            this.label35.Size = new System.Drawing.Size(152, 32);
             this.label35.TabIndex = 11;
             this.label35.Text = "Profile Picture";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -399,9 +399,10 @@
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(216)))), ((int)(((byte)(228)))));
             this.panel12.Controls.Add(this.label29);
-            this.panel12.Location = new System.Drawing.Point(13, 0);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(967, 90);
+            this.panel12.Size = new System.Drawing.Size(1070, 90);
             this.panel12.TabIndex = 3;
             // 
             // label29
@@ -410,7 +411,7 @@
             this.label29.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.Location = new System.Drawing.Point(442, 24);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(82, 31);
+            this.label29.Size = new System.Drawing.Size(84, 32);
             this.label29.TabIndex = 10;
             this.label29.Text = "Profile";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -424,7 +425,7 @@
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel12);
             this.Name = "ProfilePage";
-            this.Size = new System.Drawing.Size(996, 814);
+            this.Size = new System.Drawing.Size(1070, 798);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.panel13.ResumeLayout(false);

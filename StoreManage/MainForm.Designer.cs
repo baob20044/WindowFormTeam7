@@ -43,6 +43,8 @@
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnHome = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -80,7 +82,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(79, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 38);
+            this.label1.Size = new System.Drawing.Size(196, 40);
             this.label1.TabIndex = 18;
             this.label1.Text = "Yody Fashion";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -369,9 +371,10 @@
             // flowLayoutPanel
             // 
             this.flowLayoutPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(268, -8);
+            this.flowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel.Location = new System.Drawing.Point(277, 0);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(996, 814);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(1070, 798);
             this.flowLayoutPanel.TabIndex = 13;
             // 
             // btnHome
@@ -472,6 +475,8 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 3;
             this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.label2);
+            this.bunifuPanel1.Controls.Add(this.btnLogout);
             this.bunifuPanel1.Controls.Add(this.label1);
             this.bunifuPanel1.Controls.Add(this.btnCategory);
             this.bunifuPanel1.Controls.Add(this.pictureBox1);
@@ -483,6 +488,37 @@
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(276, 806);
             this.bunifuPanel1.TabIndex = 14;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(52, 778);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 19);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Log out";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.CheckedState.Parent = this.btnLogout;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnLogout.HoverState.Parent = this.btnLogout;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnLogout.Location = new System.Drawing.Point(-6, 742);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.PressedState.Parent = this.btnLogout;
+            this.btnLogout.Size = new System.Drawing.Size(77, 81);
+            this.btnLogout.TabIndex = 19;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // MainForm
             // 
@@ -519,5 +555,7 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCategory;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnHome;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        private Guna.UI2.WinForms.Guna2ImageButton btnLogout;
+        private System.Windows.Forms.Label label2;
     }
 }
