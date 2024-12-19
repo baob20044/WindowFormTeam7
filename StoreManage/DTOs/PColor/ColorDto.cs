@@ -11,18 +11,18 @@ namespace StoreManage.DTOs.PColor
         public string Name { get; set; } = string.Empty;
         public ICollection<ImageDto> Images { get; set; }
     
-        public override bool Equals(object o)
-        {
-            if (o == null) return false;
-            if(o is ColorDto colorDto)
-                return ColorId == colorDto.ColorId && Name == colorDto.Name;
-            return false;
-        }
+        //public override bool Equals(object o)
+        //{
+        //    if (o == null) return false;
+        //    if(o is ColorDto colorDto)
+        //        return ColorId == colorDto.ColorId && Name == colorDto.Name;
+        //    return false;
+        //}
         
-        public override int GetHashCode()
-        {
-            return ColorId.GetHashCode();
-        }
+        //public override int GetHashCode()
+        //{
+        //    return ColorId.GetHashCode();
+        //}
 
     }
 }

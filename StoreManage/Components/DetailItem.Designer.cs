@@ -101,7 +101,7 @@
             this.lbDescription.Location = new System.Drawing.Point(3, 0);
             this.lbDescription.MaximumSize = new System.Drawing.Size(700, 0);
             this.lbDescription.Name = "lbDescription";
-            this.lbDescription.Size = new System.Drawing.Size(233, 38);
+            this.lbDescription.Size = new System.Drawing.Size(238, 40);
             this.lbDescription.TabIndex = 25;
             this.lbDescription.Text = "Mô tả sản phẩm ";
             // 
@@ -205,7 +205,7 @@
             this.lbQuantity.Location = new System.Drawing.Point(553, 418);
             this.lbQuantity.MaximumSize = new System.Drawing.Size(400, 0);
             this.lbQuantity.Name = "lbQuantity";
-            this.lbQuantity.Size = new System.Drawing.Size(94, 28);
+            this.lbQuantity.Size = new System.Drawing.Size(99, 30);
             this.lbQuantity.TabIndex = 37;
             this.lbQuantity.Text = "Số lượng";
             // 
@@ -228,7 +228,7 @@
             this.lbSize.Location = new System.Drawing.Point(552, 339);
             this.lbSize.MaximumSize = new System.Drawing.Size(400, 0);
             this.lbSize.Name = "lbSize";
-            this.lbSize.Size = new System.Drawing.Size(108, 28);
+            this.lbSize.Size = new System.Drawing.Size(115, 30);
             this.lbSize.TabIndex = 35;
             this.lbSize.Text = "Kích thước";
             // 
@@ -239,7 +239,7 @@
             this.lbColor.Location = new System.Drawing.Point(553, 253);
             this.lbColor.MaximumSize = new System.Drawing.Size(400, 0);
             this.lbColor.Name = "lbColor";
-            this.lbColor.Size = new System.Drawing.Size(86, 28);
+            this.lbColor.Size = new System.Drawing.Size(91, 30);
             this.lbColor.TabIndex = 34;
             this.lbColor.Text = "Màu sắc";
             // 
@@ -251,7 +251,7 @@
             this.lbCost.Location = new System.Drawing.Point(757, 152);
             this.lbCost.MaximumSize = new System.Drawing.Size(400, 0);
             this.lbCost.Name = "lbCost";
-            this.lbCost.Size = new System.Drawing.Size(63, 28);
+            this.lbCost.Size = new System.Drawing.Size(68, 30);
             this.lbCost.TabIndex = 33;
             this.lbCost.Text = "$Cost";
             // 
@@ -282,7 +282,7 @@
             this.lbPrice.Location = new System.Drawing.Point(551, 145);
             this.lbPrice.MaximumSize = new System.Drawing.Size(400, 0);
             this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(94, 38);
+            this.lbPrice.Size = new System.Drawing.Size(98, 40);
             this.lbPrice.TabIndex = 30;
             this.lbPrice.Text = "$Price";
             // 
@@ -293,7 +293,7 @@
             this.lbName.Location = new System.Drawing.Point(550, 22);
             this.lbName.MaximumSize = new System.Drawing.Size(400, 0);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(200, 38);
+            this.lbName.Size = new System.Drawing.Size(206, 40);
             this.lbName.TabIndex = 29;
             this.lbName.Text = "Product Name";
             // 
@@ -391,6 +391,7 @@
             this.DropdownSize.Text = null;
             this.DropdownSize.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.DropdownSize.TextLeftMargin = 5;
+            this.DropdownSize.SelectedIndexChanged += new System.EventHandler(this.DropdownColor_SelectedIndexChanged);
             // 
             // DetailItem
             // 
