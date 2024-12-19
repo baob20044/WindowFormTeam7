@@ -82,7 +82,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(79, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 38);
+            this.label1.Size = new System.Drawing.Size(196, 40);
             this.label1.TabIndex = 18;
             this.label1.Text = "Yody Fashion";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -371,9 +371,10 @@
             // flowLayoutPanel
             // 
             this.flowLayoutPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(268, -8);
+            this.flowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel.Location = new System.Drawing.Point(277, 0);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(996, 814);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(1070, 798);
             this.flowLayoutPanel.TabIndex = 13;
             // 
             // btnHome

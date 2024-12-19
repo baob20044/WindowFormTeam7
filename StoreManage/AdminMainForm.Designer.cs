@@ -299,6 +299,7 @@
             this.flowLayoutPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.flowLayoutPanel.Location = new System.Drawing.Point(228, 48);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
+
             this.flowLayoutPanel.Size = new System.Drawing.Size(1129, 755);
             this.flowLayoutPanel.TabIndex = 14;
             // 

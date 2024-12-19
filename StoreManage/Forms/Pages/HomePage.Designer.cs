@@ -49,7 +49,7 @@
             this.lbPageNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPageNumber.Location = new System.Drawing.Point(920, 734);
             this.lbPageNumber.Name = "lbPageNumber";
-            this.lbPageNumber.Size = new System.Drawing.Size(66, 28);
+            this.lbPageNumber.Size = new System.Drawing.Size(70, 30);
             this.lbPageNumber.TabIndex = 27;
             this.lbPageNumber.Text = "label2";
             // 
@@ -154,9 +154,9 @@
             // 
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(815, 47);
+            this.lbName.Location = new System.Drawing.Point(833, 38);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(104, 28);
+            this.lbName.Size = new System.Drawing.Size(109, 30);
             this.lbName.TabIndex = 22;
             this.lbName.Text = "Username";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -164,7 +164,7 @@
             // pBAvatar
             // 
             this.pBAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pBAvatar.Image")));
-            this.pBAvatar.Location = new System.Drawing.Point(754, 38);
+            this.pBAvatar.Location = new System.Drawing.Point(752, 38);
             this.pBAvatar.Name = "pBAvatar";
             this.pBAvatar.Size = new System.Drawing.Size(62, 44);
             this.pBAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -177,7 +177,7 @@
             this.flowLayoutPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.flowLayoutPanel.Location = new System.Drawing.Point(11, 93);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(975, 607);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(1056, 607);
             this.flowLayoutPanel.TabIndex = 21;
             // 
             // HomePage
@@ -193,7 +193,7 @@
             this.Controls.Add(this.pBAvatar);
             this.Controls.Add(this.flowLayoutPanel);
             this.Name = "HomePage";
-            this.Size = new System.Drawing.Size(996, 814);
+            this.Size = new System.Drawing.Size(1070, 798);
             this.Load += new System.EventHandler(this.HomePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pBAvatar)).EndInit();
             this.ResumeLayout(false);
