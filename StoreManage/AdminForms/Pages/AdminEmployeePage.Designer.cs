@@ -1,6 +1,6 @@
 ﻿namespace StoreManage.AdminForms.Pages
 {
-    partial class AdminCustomerPage
+    partial class AdminEmployeePage
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,8 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // AdminCustomerPage
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "AdminCustomerPage";
+            this.Size = new System.Drawing.Size(1137, 755);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -19,7 +19,7 @@ namespace StoreManage
         private AdminProductPage adminProductPage;
         private AdminSizePage adminSizePage;
         private AdminColorPage adminColorPage;
-        private AdminCustomerPage adminCustomerPage;
+        private AdminEmployeePage adminCustomerPage;
         private AdminProviderPage adminProviderPage;
         private AdminOrderPage adminOrderPage;
         public AdminMainForm()
@@ -73,9 +73,9 @@ namespace StoreManage
             flowLayoutPanel.Controls.Add(adminColorPage);
         }
 
-        private void btnCustomer_Click(object sender, EventArgs e)
+        private void btnEmployee_Click(object sender, EventArgs e)
         {
-            adminCustomerPage = new AdminCustomerPage();
+            adminCustomerPage = new AdminEmployeePage();
             flowLayoutPanel.Controls.Clear();
             flowLayoutPanel.Controls.Add(adminCustomerPage);
         }
