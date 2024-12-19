@@ -1,4 +1,6 @@
-﻿using StoreManage.Components.Edit;
+﻿using StoreManage.Components;
+using StoreManage.Components.Add;
+using StoreManage.Components.Edit;
 using StoreManage.Controllers;
 using StoreManage.DTOs.Category;
 using StoreManage.DTOs.Subcategory;
@@ -23,6 +25,9 @@ namespace StoreManage.AdminForms.Pages
         {
             InitializeComponent();
             subcategoryController = new SubcategoryController(new ApiService());
+            cBNumber.SelectedIndexChanged += cBNumber_SelectedIndexChanged;
+            rBAsc.Checked = true; // Default sorting to ascending
+            PopulateComboBox();
         }
         private async void AdminSubcategoryPage_Load(object sender, EventArgs e)
         {
@@ -147,7 +152,7 @@ namespace StoreManage.AdminForms.Pages
                     Dock = DockStyle.Right,
                     BackColor = Color.Transparent
                 };
-                editIcon.Click += (s, e) => EditCategory(subcategory.CategoryId);
+                editIcon.Click += (s, e) => EditCategory(subcategory.SubcategoryId);
 
                 // Delete Icon
                 var deleteIcon = new Guna.UI2.WinForms.Guna2ImageButton
@@ -201,14 +206,41 @@ namespace StoreManage.AdminForms.Pages
                 DisplaySubcategories(subcategories);
             }
         }
-        private void EditCategory(int categoryId)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            var existingCategoryEdit = this.Controls.OfType<CategoryEdit>().FirstOrDefault();
+            // Check if the CategoryAdd UserControl already exists
+            var existingSubcategoryAdd = this.Controls.OfType<SubcategoryAdd>().FirstOrDefault();
+
+            if (existingSubcategoryAdd == null)
+            {
+                // Create an instance of the CategoryAdd UserControl
+                var addSubcategory = new SubcategoryAdd();
+
+                // Add the CategoryAdd UserControl to the same container
+                this.Controls.Add(addSubcategory);
+                addSubcategory.Dock = DockStyle.None;
+
+                // Position the CategoryAdd UserControl in the center
+                addSubcategory.Location = new Point(
+                    (this.Width - addSubcategory.Width) / 2,
+                    (this.Height - addSubcategory.Height) / 2
+                );
+                addSubcategory.BringToFront();
+            }
+            else
+            {
+                // If it already exists, just bring it to the front
+                existingSubcategoryAdd.BringToFront();
+            }
+        }
+        private void EditCategory(int subcategoryId)
+        {
+            var existingCategoryEdit = this.Controls.OfType<SubcategoryEdit>().FirstOrDefault();
 
             if (existingCategoryEdit == null)
             {
                 // Create an instance of the CategoryAdd UserControl
-                var editCategory = new CategoryEdit(categoryId);
+                var editCategory = new SubcategoryEdit(subcategoryId);
 
                 // Add the CategoryAdd UserControl to the same container
                 this.Controls.Add(editCategory);
@@ -240,6 +272,66 @@ namespace StoreManage.AdminForms.Pages
                 MessageBox.Show($"Category ID {categoryId} deleted!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Implement your delete logic here
             }
+        }
+        private void PopulateComboBox()
+        {
+            // Add filter options
+            cBNumber.Items.Add("All");
+            for (int i = 10; i <= 100; i += 10)
+            {
+                cBNumber.Items.Add(i.ToString());
+            }
+
+            // Set default selection
+            cBNumber.SelectedIndex = 0; // Default to "All"
+        }
+
+        private void cBNumber_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ApplySortingAndFiltering();
+        }
+
+        private void SortOrderChanged(object sender, EventArgs e)
+        {
+            ApplySortingAndFiltering();
+        }
+
+        private void ApplySortingAndFiltering()
+        {
+            // Check if subcategories is initialized
+            if (subcategories == null || subcategories.Count == 0)
+            {
+                flowLayoutPanel.Controls.Clear();
+                //MessageBox.Show("No subcategories available to display.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Start with the full list of subcategories
+            var filteredSubcategories = subcategories;
+
+            // Filter based on cBNumber
+            if (cBNumber.SelectedItem != null)
+            {
+                var selectedValue = cBNumber.SelectedItem.ToString();
+                if (selectedValue != "All" && int.TryParse(selectedValue, out int maxItems))
+                {
+                    // Limit the number of items based on selection
+                    filteredSubcategories = filteredSubcategories.Take(maxItems).ToList();
+                }
+            }
+
+            // Sort based on the selected radio button
+            if (rBAsc.Checked)
+            {
+                filteredSubcategories = filteredSubcategories.OrderBy(s => s.SubcategoryId).ToList();
+            }
+            else if (rBDesc.Checked)
+            {
+                filteredSubcategories = filteredSubcategories.OrderByDescending(s => s.SubcategoryId).ToList();
+            }
+
+            // Display the filtered and sorted subcategories
+            DisplaySubcategories(filteredSubcategories);
         }
     }
 }

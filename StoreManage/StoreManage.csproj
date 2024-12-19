@@ -219,6 +219,12 @@
     <Compile Include="Components\Edit\CategoryEdit.Designer.cs">
       <DependentUpon>CategoryEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\Edit\SubcategoryEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Edit\SubcategoryEdit.Designer.cs">
+      <DependentUpon>SubcategoryEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\ShopItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -392,6 +398,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Edit\CategoryEdit.resx">
       <DependentUpon>CategoryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Edit\SubcategoryEdit.resx">
+      <DependentUpon>SubcategoryEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\ShopItem.resx">
       <DependentUpon>ShopItem.cs</DependentUpon>
