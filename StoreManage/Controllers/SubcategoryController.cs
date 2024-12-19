@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace StoreManage.Controllers
 {
@@ -44,5 +45,35 @@ namespace StoreManage.Controllers
                 return null;
             }
         }
+
+        public async Task<SubcategoryCreateDto> CreateAsync(SubcategoryCreateDto subcategoryCreateDto)
+        {
+            try
+            {
+                var result = await _apiService.PostAsync<SubcategoryCreateDto>("subcateogries", subcategoryCreateDto, TokenManager.GetToken());
+                return result;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+                return null;
+            }
+
+        }
+
+        public async Task<SubcategoryUpdateDto> UpdateAsync(int subcategoryId, SubcategoryUpdateDto subcategoryUpdateDto)
+        {
+            try
+            {
+                var result = await _apiService.PutAsync<SubcategoryUpdateDto>($"subcategories/{subcategoryId}", subcategoryUpdateDto, TokenManager.GetToken());
+                return result;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+                return null;
+            }
+        }
+
     }
 }

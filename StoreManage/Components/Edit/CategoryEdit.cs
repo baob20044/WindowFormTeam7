@@ -24,9 +24,9 @@ namespace StoreManage.Components.Edit
         public CategoryEdit(int categoryId)
         {
             InitializeComponent();
+            categoryController = new CategoryController(new ApiService());
             LoadCategory(categoryId);
             CategoryId = categoryId;
-            categoryController = new CategoryController(new ApiService());
         }
         public async void LoadCategory(int categoryId)
         {
@@ -54,33 +54,24 @@ namespace StoreManage.Components.Edit
                 return;
             }
 
-            var updateCategory = new
+            var updateCategory = new CategoryUpdateDto
             {
                 Name = newCategoryName,
             };
 
-            var client = new RestClient("http://localhost:5254");
-            var request = new RestRequest($"/api/categories/{CategoryId}", Method.Put);
-            var token = TokenManager.GetToken();
-            request.AddHeader("Authorization", $"Bearer {token}");
-            request.AddJsonBody(updateCategory);
-
             try
             {
                 // Execute the PUT request asynchronously
-                var response = await client.ExecuteAsync(request);
+                var response = await categoryController.UpdateAsync(CategoryId, updateCategory);
 
-                if (response.IsSuccessful)
+                if (response != null)
                 {
                     MessageBox.Show("Category updated successfully!");
                     var adminMainForm = this.FindForm() as AdminMainForm;
                     adminMainForm.refreshCategory();
                     this.Parent.Controls.Remove(this);
                 }
-                else
-                {
-                    MessageBox.Show("Error updating category: " + response.ErrorMessage);
-                }
+                
             }
             catch (Exception ex)
             {

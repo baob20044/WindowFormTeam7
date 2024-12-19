@@ -1,4 +1,5 @@
-﻿using StoreManage.DTOs.Category;
+﻿using StoreManage.Components;
+using StoreManage.DTOs.Category;
 using StoreManage.Services;
 using System;
 using System.Collections;
@@ -29,7 +30,7 @@ namespace StoreManage.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}");
                 return null;
             }
         }
@@ -51,7 +52,21 @@ namespace StoreManage.Controllers
         {
             try
             {
-                var result = await _apiService.GetAsync<CategoryDto>($"categories/{categoryId}", TokenManager.GetToken());
+                var result = await _apiService.GetAsync<CategoryDto>($"categories/{categoryId}");
+                return result;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+                return null;
+            }
+        }
+
+        public async Task<CategoryUpdateDto> UpdateAsync(int categoryId, CategoryUpdateDto categoryUpdateDto)
+        {
+            try
+            {
+                var result = await _apiService.PutAsync<CategoryUpdateDto>($"categories/{categoryId}", categoryUpdateDto, TokenManager.GetToken());
                 return result;
             }
             catch (Exception ex)
