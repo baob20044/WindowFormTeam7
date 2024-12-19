@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
 using StoreManage.Components;
+using StoreManage.Components.Edit;
 using StoreManage.Controllers;
 using StoreManage.DTOs.Category;
 using StoreManage.Services;
@@ -283,8 +284,29 @@ namespace StoreManage.AdminForms.Pages
 
         private void EditCategory(int categoryId)
         {
-            MessageBox.Show($"Edit clicked for Category ID: {categoryId}", "Edit", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            // Implement your edit logic here
+            var existingCategoryEdit = this.Controls.OfType<CategoryEdit>().FirstOrDefault();
+
+            if (existingCategoryEdit == null)
+            {
+                // Create an instance of the CategoryAdd UserControl
+                var editCategory = new CategoryEdit(categoryId);
+
+                // Add the CategoryAdd UserControl to the same container
+                this.Controls.Add(editCategory);
+                editCategory.Dock = DockStyle.None;
+
+                // Position the CategoryAdd UserControl in the center
+                editCategory.Location = new Point(
+                    (this.Width - editCategory.Width) / 2,
+                    (this.Height - editCategory.Height) / 2
+                );
+                editCategory.BringToFront();
+            }
+            else
+            {
+                // If it already exists, just bring it to the front
+                existingCategoryEdit.BringToFront();
+            }
         }
 
         private void DeleteCategory(int categoryId)
