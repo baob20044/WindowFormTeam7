@@ -195,10 +195,10 @@
     <Compile Include="Components\CartItem.Designer.cs">
       <DependentUpon>CartItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Components\CategoryAdd.cs">
+    <Compile Include="Components\Add\CategoryAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Components\CategoryAdd.Designer.cs">
+    <Compile Include="Components\Add\CategoryAdd.Designer.cs">
       <DependentUpon>CategoryAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\DetailItem.cs">
@@ -206,6 +206,12 @@
     </Compile>
     <Compile Include="Components\DetailItem.Designer.cs">
       <DependentUpon>DetailItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Edit\CategoryEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Edit\CategoryEdit.Designer.cs">
+      <DependentUpon>CategoryEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\ShopItem.cs">
       <SubType>UserControl</SubType>
@@ -344,11 +350,14 @@
     <EmbeddedResource Include="Components\CartItem.resx">
       <DependentUpon>CartItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Components\CategoryAdd.resx">
+    <EmbeddedResource Include="Components\Add\CategoryAdd.resx">
       <DependentUpon>CategoryAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\DetailItem.resx">
       <DependentUpon>DetailItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Edit\CategoryEdit.resx">
+      <DependentUpon>CategoryEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\ShopItem.resx">
       <DependentUpon>ShopItem.cs</DependentUpon>

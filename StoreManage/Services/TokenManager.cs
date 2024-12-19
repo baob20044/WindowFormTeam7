@@ -18,6 +18,12 @@ namespace StoreManage.Services
         {
             try
             {
+                // Remove the first and last characters of the token if the token has more than two characters.
+                if (!string.IsNullOrEmpty(token) && token.Length > 2)
+                {
+                    token = token.Substring(1, token.Length - 2);
+                }
+
                 Registry.SetValue(RegistryPath, TokenKey, token);
             }
             catch (Exception ex)
@@ -25,6 +31,7 @@ namespace StoreManage.Services
                 MessageBox.Show($"Error saving token: {ex.Message}");
             }
         }
+
 
         // Lấy token từ Registry
         public static string GetToken()

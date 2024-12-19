@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace StoreManage.Controllers
 {
@@ -42,11 +43,22 @@ namespace StoreManage.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}");
                 return null;
             }
         }
-
-
+        public async Task<CategoryDto> GetByIdAsync(int categoryId)
+        {
+            try
+            {
+                var result = await _apiService.GetAsync<CategoryDto>($"categories/{categoryId}", TokenManager.GetToken());
+                return result;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+                return null;
+            }
+        }
     }
 }

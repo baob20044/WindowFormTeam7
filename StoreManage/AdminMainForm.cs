@@ -14,7 +14,7 @@ namespace StoreManage
     public partial class AdminMainForm : Form
     {
         private AdminHomePage adminHomePage;
-        private AdminCategoryPage adminCategoryPage;
+        public AdminCategoryPage adminCategoryPage { get; private set; }
         private AdminSubcategoryPage adminSubcategoryPage;
         private AdminProductPage adminProductPage;
         private AdminSizePage adminSizePage;
@@ -33,12 +33,16 @@ namespace StoreManage
             flowLayoutPanel.Controls.Clear();
             flowLayoutPanel.Controls.Add(adminHomePage);
         }
-
-        private void btnCategory_Click(object sender, EventArgs e)
+        public void refreshCategory()
         {
             adminCategoryPage = new AdminCategoryPage();
             flowLayoutPanel.Controls.Clear();
             flowLayoutPanel.Controls.Add(adminCategoryPage);
+        }
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+
+            refreshCategory();
         }
 
         private void btnSubcategory_Click(object sender, EventArgs e)
