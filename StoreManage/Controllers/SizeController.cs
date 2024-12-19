@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace StoreManage.Controllers
 {
@@ -42,6 +43,33 @@ namespace StoreManage.Controllers
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");
+                return null;
+            }
+        }
+        public async Task<SizeCreateDto> CreateAsync(SizeCreateDto sizeCreateDto)
+        {
+            try
+            {
+                var result = await _apiService.PostAsync<SizeCreateDto>("sizes", sizeCreateDto, TokenManager.GetToken());
+                return result;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+                return null;
+            }
+
+        }
+        public async Task<SizeUpdateDto> UpdateAsync(int sizeId, SizeUpdateDto sizeUpdateDto)
+        {
+            try
+            {
+                var result = await _apiService.PutAsync<SizeUpdateDto>($"sizes/{sizeId}", sizeUpdateDto, TokenManager.GetToken());
+                return result;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
                 return null;
             }
         }

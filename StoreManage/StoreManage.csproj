@@ -189,6 +189,12 @@
     <Compile Include="AdminMainForm.Designer.cs">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\Add\SizeAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Add\SizeAdd.Designer.cs">
+      <DependentUpon>SizeAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\Add\SubcategoryAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -218,6 +224,12 @@
     </Compile>
     <Compile Include="Components\Edit\CategoryEdit.Designer.cs">
       <DependentUpon>CategoryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Edit\SizeEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Edit\SizeEdit.Designer.cs">
+      <DependentUpon>SizeEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\Edit\SubcategoryEdit.cs">
       <SubType>UserControl</SubType>
@@ -384,6 +396,9 @@
     <EmbeddedResource Include="AdminMainForm.resx">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Components\Add\SizeAdd.resx">
+      <DependentUpon>SizeAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\Add\SubcategoryAdd.resx">
       <DependentUpon>SubcategoryAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -398,6 +413,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Edit\CategoryEdit.resx">
       <DependentUpon>CategoryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Edit\SizeEdit.resx">
+      <DependentUpon>SizeEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Edit\SubcategoryEdit.resx">
       <DependentUpon>SubcategoryEdit.cs</DependentUpon>

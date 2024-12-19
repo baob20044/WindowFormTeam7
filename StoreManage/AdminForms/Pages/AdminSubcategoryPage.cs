@@ -26,7 +26,6 @@ namespace StoreManage.AdminForms.Pages
             InitializeComponent();
             subcategoryController = new SubcategoryController(new ApiService());
             cBNumber.SelectedIndexChanged += cBNumber_SelectedIndexChanged;
-            rBAsc.Checked = true; // Default sorting to ascending
             PopulateComboBox();
         }
         private async void AdminSubcategoryPage_Load(object sender, EventArgs e)
@@ -34,7 +33,7 @@ namespace StoreManage.AdminForms.Pages
             subcategories = await subcategoryController.GetAllAsync();
             if (subcategories == null || subcategories.Count < 1)
             {
-                MessageBox.Show("Not found Category");
+                MessageBox.Show("Not found subcategory");
                 return;
             }
 

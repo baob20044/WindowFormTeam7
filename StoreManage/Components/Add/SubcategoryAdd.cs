@@ -16,23 +16,41 @@ namespace StoreManage.Components.Add
     public partial class SubcategoryAdd : UserControl
     {
         private readonly SubcategoryController subcategoryController;
+        private readonly CategoryController categoryController;
         public SubcategoryAdd()
         {
             InitializeComponent();
             subcategoryController = new SubcategoryController(new ApiService());
+            categoryController = new CategoryController(new ApiService());
 
-            // Populate the Guna2ComboBox with numbers 1 to 23
-            for (int i = 1; i < 24; i++)
-            {
-                cBCategoryId.Items.Add(i.ToString()); // Add items as strings
-            }
+            PopulateCategoryComboBox();
 
             // Configure the ComboBox to show a scroll bar when needed
             cBCategoryId.MaxDropDownItems = 5;      // Show 5 items before scrolling
             cBCategoryId.IntegralHeight = false;   // Ensure scroll bar appears
             cBCategoryId.DropDownStyle = ComboBoxStyle.DropDownList; // Optional: Prevent typing
         }
+        private async void PopulateCategoryComboBox()
+        {
+            // Fetch categories from your service or database
+            var categories = await categoryController.GetAllAsync(); // Adjust this call to fetch the data
 
+            if (categories == null || categories.Count == 0)
+            {
+                MessageBox.Show("No categories found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Clear any existing items in the ComboBox
+            cBCategoryId.Items.Clear();
+
+            // Populate the ComboBox
+            cBCategoryId.DisplayMember = "Name";  // Display the Category Name
+            cBCategoryId.ValueMember = "CategoryId";      // Use CategoryId as the value
+
+            // Add the items to the ComboBox
+            cBCategoryId.DataSource = categories;  // Bind the data source
+        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Parent.Controls.Remove(this);
@@ -45,7 +63,7 @@ namespace StoreManage.Components.Add
             int categoryId = 0;
             if (cBCategoryId.SelectedItem != null)
             {
-                categoryId = (int)cBCategoryId.SelectedItem;
+                categoryId = (int)cBCategoryId.SelectedValue;
             }
             else
             {
