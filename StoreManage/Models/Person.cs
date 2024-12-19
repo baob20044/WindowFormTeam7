@@ -29,6 +29,6 @@ namespace StoreManage.Models
         
         [Required]
         [MinAge(18)]
-        public  DateTime DateOfBirth { get; set; }
+        public  string DateOfBirth { get; set; }
     }
 }
