@@ -1,4 +1,9 @@
-﻿using System;
+﻿using StoreManage.Controllers;
+using StoreManage.DTOs.Account;
+using StoreManage.DTOs.Customer;
+using StoreManage.DTOs.Employee;
+using StoreManage.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +17,59 @@ namespace StoreManage
 {
     public partial class SignupForm : Form
     {
+        private readonly AuthController _authController;
         private Timer fadeTimer; // Declare Timer globally - Dùng cho chuyển trang 
         public SignupForm()
         {
             InitializeComponent();
+            _authController = new AuthController(new ApiService());
+        }
 
+        private async void btnSubmit_Click(object sender, EventArgs e)
+        {
+            if (validating())
+            {
+                try
+                {
+                    btnSubmit.Enabled = false;
+                    var employee = new EmployeeRegisterDto
+                    {
+                        EmployeeInfo = new EmployeeCreateDto
+                        {
+                            PersonalInfo = new EmployeePersonalInfo
+                            {
+                                Address = txtAddress.Text,
+                                DateOfBirth = dtpBirthday.Value.ToString("yyyy-MM-dd"),
+                                FirstName = txtFirstName.Text,
+                                LastName = txtLastName.Text,
+                                Male = rBMale.Checked ? true : false,
+                                PhoneNumber = txtPhoneNumber.Text,
+                            },
+                            ContractUpTo = Int32.Parse(txtContractUpTo.Text),
+                            ParentPhoneNumber = txtParentPhoneNumber.Text,
+                            Salary = decimal.Parse(txtSalary.Text),
+                            StartDate = DateTime.Now.ToString("yyyy-MM-dd"),
+
+                        },
+                        Username = txtUsername.Text,
+                        Password = txtPassword.Text,
+                        Email = txtEmail.Text
+                    };
+
+                   var result =  await _authController.SignupAsync(employee);
+
+                    MessageBox.Show(result);
+                    NavigateToLoginForm();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Signup failed: {ex.Message}");
+                }
+                finally
+                {
+                    btnSubmit.Enabled = true;
+                }
+            }
         }
 
         private void lbLoginHere_Click(object sender, EventArgs e)
@@ -63,11 +116,12 @@ namespace StoreManage
             }
         }
 
-        private bool Validating()
+        private bool validating()
         {
             if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text) || string.IsNullOrEmpty(txtConfirmPassword.Text)
                 || string.IsNullOrEmpty(txtFirstName.Text) || string.IsNullOrEmpty(txtLastName.Text) || string.IsNullOrEmpty(txtEmail.Text)
-                || string.IsNullOrEmpty(txtPhoneNumber.Text) || string.IsNullOrEmpty(txtAddress.Text) || !CbAcceptTerm.Checked)
+                || string.IsNullOrEmpty(txtPhoneNumber.Text) || string.IsNullOrEmpty(txtAddress.Text) || !CbAcceptTerm.Checked 
+                || string.IsNullOrEmpty(txtContractUpTo.Text) || string.IsNullOrEmpty(txtParentPhoneNumber.Text) || string.IsNullOrEmpty(txtSalary.Text))
             {
                 lbError.Text = "Please fill in all required fields and accept the terms.";
                 lbError.Visible = true;
@@ -82,7 +136,10 @@ namespace StoreManage
                 return false;
             }
 
+
+
             return true;
         }
+
     }
 }
