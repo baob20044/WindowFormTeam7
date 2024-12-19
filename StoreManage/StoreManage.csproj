@@ -207,6 +207,18 @@
     <Compile Include="Components\DetailItem.Designer.cs">
       <DependentUpon>DetailItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\ProductAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ProductAdd.Designer.cs">
+      <DependentUpon>ProductAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ProductDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ProductDetail.Designer.cs">
+      <DependentUpon>ProductDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\ShopItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -332,6 +344,9 @@
     <EmbeddedResource Include="AdminForms\Pages\AdminCategoryPage.resx">
       <DependentUpon>AdminCategoryPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\Pages\AdminProductPage.resx">
+      <DependentUpon>AdminProductPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminMainForm.resx">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -343,6 +358,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\DetailItem.resx">
       <DependentUpon>DetailItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ProductAdd.resx">
+      <DependentUpon>ProductAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ProductDetail.resx">
+      <DependentUpon>ProductDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\ShopItem.resx">
       <DependentUpon>ShopItem.cs</DependentUpon>
