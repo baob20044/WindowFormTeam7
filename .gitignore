@@ -1,0 +1,12 @@
+# Loại trừ thư mục Visual Studio
+.vs/
+
+# Loại trừ thư mục bin và obj
+/bin/
+/obj/
+
+# Loại trừ file cấu hình tạm thời của Visual Studio
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
