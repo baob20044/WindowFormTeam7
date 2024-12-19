@@ -38,6 +38,19 @@ namespace StoreManage.Controllers
             }
         }
 
+        public async Task<string> SignupAsync(EmployeeRegisterDto employeeRegisterDto)
+        {
+            try
+            {
+                return await _apiService.SignupAsync("Account/employee-register", employeeRegisterDto);
+            }
+            catch (Exception ex)
+            {
+                // Xử lý ngoại lệ, thông báo lỗi cho người dùng
+                throw new Exception(ex.Message);
+            }
+        }
+
 
     }
 }
