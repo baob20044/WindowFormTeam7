@@ -18,6 +18,7 @@ namespace StoreManage
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
+          
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
@@ -29,6 +30,9 @@ namespace StoreManage
 
             try
             {
+                btnLogin.Enabled = false;
+                btnLogin.Text = "O";
+
                 // Gọi phương thức LoginAsync
                 var accessToken = await _authController.LoginAsync(username, password);
 
@@ -41,6 +45,12 @@ namespace StoreManage
             {
                 // Hiển thị lỗi
                 MessageBox.Show($"Login failed: {ex.Message}");
+            }
+            finally
+            {
+                btnLogin.Enabled = true;
+                btnLogin.Text = "Login";
+
             }
         }
 
@@ -120,6 +130,11 @@ namespace StoreManage
                 // Ensure the old form is completely removed from memory and taskbar
                 Application.DoEvents(); // Allow UI to refresh and clear pending events
             }
+        }
+
+        private void lbClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
