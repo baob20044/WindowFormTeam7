@@ -35,6 +35,7 @@
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lbClose = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -71,6 +72,7 @@
             this.lbforgot.Size = new System.Drawing.Size(125, 17);
             this.lbforgot.TabIndex = 8;
             this.lbforgot.Text = "Forgot password ?";
+            this.lbforgot.Click += new System.EventHandler(this.lbForgotpass_Click);
             // 
             // btnLogin
             // 
@@ -150,12 +152,26 @@
             this.txtPassword.TabIndex = 11;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
+            // lbClose
+            // 
+            this.lbClose.AutoSize = true;
+            this.lbClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.096F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbClose.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbClose.Location = new System.Drawing.Point(397, 9);
+            this.lbClose.Name = "lbClose";
+            this.lbClose.Size = new System.Drawing.Size(27, 25);
+            this.lbClose.TabIndex = 12;
+            this.lbClose.Text = "X";
+            this.lbClose.Click += new System.EventHandler(this.lbClose_Click);
+            // 
             // AdminLoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(436, 615);
+            this.Controls.Add(this.lbClose);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnLogin);
@@ -179,5 +195,6 @@
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        private System.Windows.Forms.Label lbClose;
     }
 }
