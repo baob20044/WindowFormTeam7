@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StoreManage.AdminForms.Pages
 {
-    public partial class AdminCustomerPage : UserControl
+    public partial class AdminEmployeePage : UserControl
     {
-        public AdminCustomerPage()
+        public AdminEmployeePage()
         {
             InitializeComponent();
         }

@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pBAvatarEdit = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.controlboxMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.controlboxTurnOff = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.btnCategory = new Guna.UI2.WinForms.Guna2Button();
-            this.btnProduct = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSubcategory = new Guna.UI2.WinForms.Guna2Button();
+            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnOrder = new Guna.UI2.WinForms.Guna2Button();
+            this.btnProvider = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEmployee = new Guna.UI2.WinForms.Guna2Button();
             this.btnColor = new Guna.UI2.WinForms.Guna2Button();
             this.btnSize = new Guna.UI2.WinForms.Guna2Button();
-            this.btnProvider = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCustomer = new Guna.UI2.WinForms.Guna2Button();
-            this.btnOrder = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnProduct = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSubcategory = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCategory = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
+            this.pBAvatarEdit = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBAvatarEdit)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +53,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(37)))), ((int)(((byte)(55)))));
             this.panel1.Controls.Add(this.btnOrder);
             this.panel1.Controls.Add(this.btnProvider);
-            this.panel1.Controls.Add(this.btnCustomer);
+            this.panel1.Controls.Add(this.btnEmployee);
             this.panel1.Controls.Add(this.btnColor);
             this.panel1.Controls.Add(this.btnSize);
             this.panel1.Controls.Add(this.btnProduct);
@@ -67,40 +67,17 @@
             this.panel1.Size = new System.Drawing.Size(223, 803);
             this.panel1.TabIndex = 0;
             // 
-            // pBAvatarEdit
+            // label1
             // 
-            this.pBAvatarEdit.AllowFocused = false;
-            this.pBAvatarEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pBAvatarEdit.AutoSizeHeight = true;
-            this.pBAvatarEdit.BorderRadius = 63;
-            this.pBAvatarEdit.Image = ((System.Drawing.Image)(resources.GetObject("pBAvatarEdit.Image")));
-            this.pBAvatarEdit.IsCircle = true;
-            this.pBAvatarEdit.Location = new System.Drawing.Point(48, 27);
-            this.pBAvatarEdit.Name = "pBAvatarEdit";
-            this.pBAvatarEdit.Size = new System.Drawing.Size(127, 127);
-            this.pBAvatarEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBAvatarEdit.TabIndex = 13;
-            this.pBAvatarEdit.TabStop = false;
-            this.pBAvatarEdit.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            // 
-            // btnHome
-            // 
-            this.btnHome.CheckedState.Parent = this.btnHome;
-            this.btnHome.CustomImages.Parent = this.btnHome;
-            this.btnHome.FillColor = System.Drawing.Color.Transparent;
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.HoverState.Parent = this.btnHome;
-            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHome.Location = new System.Drawing.Point(13, 211);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.PressedColor = System.Drawing.Color.Navy;
-            this.btnHome.ShadowDecoration.Parent = this.btnHome;
-            this.btnHome.Size = new System.Drawing.Size(161, 45);
-            this.btnHome.TabIndex = 14;
-            this.btnHome.Text = "Home";
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(66)))), ((int)(((byte)(61)))));
+            this.label1.Location = new System.Drawing.Point(18, 150);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(186, 32);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Administration";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // controlboxMinimize
             // 
@@ -128,62 +105,70 @@
             this.controlboxTurnOff.Size = new System.Drawing.Size(32, 27);
             this.controlboxTurnOff.TabIndex = 12;
             // 
-            // btnCategory
+            // flowLayoutPanel
             // 
-            this.btnCategory.CheckedState.Parent = this.btnCategory;
-            this.btnCategory.CustomImages.Parent = this.btnCategory;
-            this.btnCategory.FillColor = System.Drawing.Color.Transparent;
-            this.btnCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategory.ForeColor = System.Drawing.Color.White;
-            this.btnCategory.HoverState.Parent = this.btnCategory;
-            this.btnCategory.Image = ((System.Drawing.Image)(resources.GetObject("btnCategory.Image")));
-            this.btnCategory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCategory.Location = new System.Drawing.Point(13, 273);
-            this.btnCategory.Name = "btnCategory";
-            this.btnCategory.PressedColor = System.Drawing.Color.Navy;
-            this.btnCategory.ShadowDecoration.Parent = this.btnCategory;
-            this.btnCategory.Size = new System.Drawing.Size(181, 45);
-            this.btnCategory.TabIndex = 15;
-            this.btnCategory.Text = "Category";
-            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
+            this.flowLayoutPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.flowLayoutPanel.Location = new System.Drawing.Point(228, 48);
+            this.flowLayoutPanel.Name = "flowLayoutPanel";
+            this.flowLayoutPanel.Size = new System.Drawing.Size(1129, 755);
+            this.flowLayoutPanel.TabIndex = 14;
             // 
-            // btnProduct
+            // btnOrder
             // 
-            this.btnProduct.CheckedState.Parent = this.btnProduct;
-            this.btnProduct.CustomImages.Parent = this.btnProduct;
-            this.btnProduct.FillColor = System.Drawing.Color.Transparent;
-            this.btnProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProduct.ForeColor = System.Drawing.Color.White;
-            this.btnProduct.HoverState.Parent = this.btnProduct;
-            this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
-            this.btnProduct.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnProduct.Location = new System.Drawing.Point(13, 397);
-            this.btnProduct.Name = "btnProduct";
-            this.btnProduct.PressedColor = System.Drawing.Color.Navy;
-            this.btnProduct.ShadowDecoration.Parent = this.btnProduct;
-            this.btnProduct.Size = new System.Drawing.Size(181, 45);
-            this.btnProduct.TabIndex = 17;
-            this.btnProduct.Text = "Product";
-            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
+            this.btnOrder.CheckedState.Parent = this.btnOrder;
+            this.btnOrder.CustomImages.Parent = this.btnOrder;
+            this.btnOrder.FillColor = System.Drawing.Color.Transparent;
+            this.btnOrder.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrder.ForeColor = System.Drawing.Color.White;
+            this.btnOrder.HoverState.Parent = this.btnOrder;
+            this.btnOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnOrder.Image")));
+            this.btnOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnOrder.Location = new System.Drawing.Point(13, 707);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.PressedColor = System.Drawing.Color.Navy;
+            this.btnOrder.ShadowDecoration.Parent = this.btnOrder;
+            this.btnOrder.Size = new System.Drawing.Size(191, 45);
+            this.btnOrder.TabIndex = 22;
+            this.btnOrder.Text = "Order";
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
-            // btnSubcategory
+            // btnProvider
             // 
-            this.btnSubcategory.CheckedState.Parent = this.btnSubcategory;
-            this.btnSubcategory.CustomImages.Parent = this.btnSubcategory;
-            this.btnSubcategory.FillColor = System.Drawing.Color.Transparent;
-            this.btnSubcategory.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubcategory.ForeColor = System.Drawing.Color.White;
-            this.btnSubcategory.HoverState.Parent = this.btnSubcategory;
-            this.btnSubcategory.Image = ((System.Drawing.Image)(resources.GetObject("btnSubcategory.Image")));
-            this.btnSubcategory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSubcategory.Location = new System.Drawing.Point(13, 335);
-            this.btnSubcategory.Name = "btnSubcategory";
-            this.btnSubcategory.PressedColor = System.Drawing.Color.Navy;
-            this.btnSubcategory.ShadowDecoration.Parent = this.btnSubcategory;
-            this.btnSubcategory.Size = new System.Drawing.Size(191, 45);
-            this.btnSubcategory.TabIndex = 16;
-            this.btnSubcategory.Text = "SubCategory";
-            this.btnSubcategory.Click += new System.EventHandler(this.btnSubcategory_Click);
+            this.btnProvider.CheckedState.Parent = this.btnProvider;
+            this.btnProvider.CustomImages.Parent = this.btnProvider;
+            this.btnProvider.FillColor = System.Drawing.Color.Transparent;
+            this.btnProvider.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProvider.ForeColor = System.Drawing.Color.White;
+            this.btnProvider.HoverState.Parent = this.btnProvider;
+            this.btnProvider.Image = ((System.Drawing.Image)(resources.GetObject("btnProvider.Image")));
+            this.btnProvider.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnProvider.Location = new System.Drawing.Point(13, 645);
+            this.btnProvider.Name = "btnProvider";
+            this.btnProvider.PressedColor = System.Drawing.Color.Navy;
+            this.btnProvider.ShadowDecoration.Parent = this.btnProvider;
+            this.btnProvider.Size = new System.Drawing.Size(181, 45);
+            this.btnProvider.TabIndex = 21;
+            this.btnProvider.Text = "Provider";
+            this.btnProvider.Click += new System.EventHandler(this.btnProvider_Click);
+            // 
+            // btnEmployee
+            // 
+            this.btnEmployee.CheckedState.Parent = this.btnEmployee;
+            this.btnEmployee.CustomImages.Parent = this.btnEmployee;
+            this.btnEmployee.FillColor = System.Drawing.Color.Transparent;
+            this.btnEmployee.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnEmployee.HoverState.Parent = this.btnEmployee;
+            this.btnEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployee.Image")));
+            this.btnEmployee.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEmployee.Location = new System.Drawing.Point(13, 583);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.PressedColor = System.Drawing.Color.Navy;
+            this.btnEmployee.ShadowDecoration.Parent = this.btnEmployee;
+            this.btnEmployee.Size = new System.Drawing.Size(181, 45);
+            this.btnEmployee.TabIndex = 20;
+            this.btnEmployee.Text = "Employee";
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // btnColor
             // 
@@ -223,82 +208,97 @@
             this.btnSize.Text = "Size";
             this.btnSize.Click += new System.EventHandler(this.btnSize_Click);
             // 
-            // btnProvider
+            // btnProduct
             // 
-            this.btnProvider.CheckedState.Parent = this.btnProvider;
-            this.btnProvider.CustomImages.Parent = this.btnProvider;
-            this.btnProvider.FillColor = System.Drawing.Color.Transparent;
-            this.btnProvider.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProvider.ForeColor = System.Drawing.Color.White;
-            this.btnProvider.HoverState.Parent = this.btnProvider;
-            this.btnProvider.Image = ((System.Drawing.Image)(resources.GetObject("btnProvider.Image")));
-            this.btnProvider.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnProvider.Location = new System.Drawing.Point(13, 645);
-            this.btnProvider.Name = "btnProvider";
-            this.btnProvider.PressedColor = System.Drawing.Color.Navy;
-            this.btnProvider.ShadowDecoration.Parent = this.btnProvider;
-            this.btnProvider.Size = new System.Drawing.Size(181, 45);
-            this.btnProvider.TabIndex = 21;
-            this.btnProvider.Text = "Provider";
-            this.btnProvider.Click += new System.EventHandler(this.btnProvider_Click);
+            this.btnProduct.CheckedState.Parent = this.btnProduct;
+            this.btnProduct.CustomImages.Parent = this.btnProduct;
+            this.btnProduct.FillColor = System.Drawing.Color.Transparent;
+            this.btnProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduct.ForeColor = System.Drawing.Color.White;
+            this.btnProduct.HoverState.Parent = this.btnProduct;
+            this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
+            this.btnProduct.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnProduct.Location = new System.Drawing.Point(13, 397);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.PressedColor = System.Drawing.Color.Navy;
+            this.btnProduct.ShadowDecoration.Parent = this.btnProduct;
+            this.btnProduct.Size = new System.Drawing.Size(181, 45);
+            this.btnProduct.TabIndex = 17;
+            this.btnProduct.Text = "Product";
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
-            // btnCustomer
+            // btnSubcategory
             // 
-            this.btnCustomer.CheckedState.Parent = this.btnCustomer;
-            this.btnCustomer.CustomImages.Parent = this.btnCustomer;
-            this.btnCustomer.FillColor = System.Drawing.Color.Transparent;
-            this.btnCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnCustomer.HoverState.Parent = this.btnCustomer;
-            this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
-            this.btnCustomer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCustomer.Location = new System.Drawing.Point(13, 583);
-            this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.PressedColor = System.Drawing.Color.Navy;
-            this.btnCustomer.ShadowDecoration.Parent = this.btnCustomer;
-            this.btnCustomer.Size = new System.Drawing.Size(181, 45);
-            this.btnCustomer.TabIndex = 20;
-            this.btnCustomer.Text = "Customer";
-            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
+            this.btnSubcategory.CheckedState.Parent = this.btnSubcategory;
+            this.btnSubcategory.CustomImages.Parent = this.btnSubcategory;
+            this.btnSubcategory.FillColor = System.Drawing.Color.Transparent;
+            this.btnSubcategory.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubcategory.ForeColor = System.Drawing.Color.White;
+            this.btnSubcategory.HoverState.Parent = this.btnSubcategory;
+            this.btnSubcategory.Image = ((System.Drawing.Image)(resources.GetObject("btnSubcategory.Image")));
+            this.btnSubcategory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSubcategory.Location = new System.Drawing.Point(13, 335);
+            this.btnSubcategory.Name = "btnSubcategory";
+            this.btnSubcategory.PressedColor = System.Drawing.Color.Navy;
+            this.btnSubcategory.ShadowDecoration.Parent = this.btnSubcategory;
+            this.btnSubcategory.Size = new System.Drawing.Size(191, 45);
+            this.btnSubcategory.TabIndex = 16;
+            this.btnSubcategory.Text = "SubCategory";
+            this.btnSubcategory.Click += new System.EventHandler(this.btnSubcategory_Click);
             // 
-            // btnOrder
+            // btnCategory
             // 
-            this.btnOrder.CheckedState.Parent = this.btnOrder;
-            this.btnOrder.CustomImages.Parent = this.btnOrder;
-            this.btnOrder.FillColor = System.Drawing.Color.Transparent;
-            this.btnOrder.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrder.ForeColor = System.Drawing.Color.White;
-            this.btnOrder.HoverState.Parent = this.btnOrder;
-            this.btnOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnOrder.Image")));
-            this.btnOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnOrder.Location = new System.Drawing.Point(13, 707);
-            this.btnOrder.Name = "btnOrder";
-            this.btnOrder.PressedColor = System.Drawing.Color.Navy;
-            this.btnOrder.ShadowDecoration.Parent = this.btnOrder;
-            this.btnOrder.Size = new System.Drawing.Size(191, 45);
-            this.btnOrder.TabIndex = 22;
-            this.btnOrder.Text = "Order";
-            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            this.btnCategory.CheckedState.Parent = this.btnCategory;
+            this.btnCategory.CustomImages.Parent = this.btnCategory;
+            this.btnCategory.FillColor = System.Drawing.Color.Transparent;
+            this.btnCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategory.ForeColor = System.Drawing.Color.White;
+            this.btnCategory.HoverState.Parent = this.btnCategory;
+            this.btnCategory.Image = ((System.Drawing.Image)(resources.GetObject("btnCategory.Image")));
+            this.btnCategory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCategory.Location = new System.Drawing.Point(13, 273);
+            this.btnCategory.Name = "btnCategory";
+            this.btnCategory.PressedColor = System.Drawing.Color.Navy;
+            this.btnCategory.ShadowDecoration.Parent = this.btnCategory;
+            this.btnCategory.Size = new System.Drawing.Size(181, 45);
+            this.btnCategory.TabIndex = 15;
+            this.btnCategory.Text = "Category";
+            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
-            // label1
+            // btnHome
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(66)))), ((int)(((byte)(61)))));
-            this.label1.Location = new System.Drawing.Point(18, 150);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 32);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Administration";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHome.CheckedState.Parent = this.btnHome;
+            this.btnHome.CustomImages.Parent = this.btnHome;
+            this.btnHome.FillColor = System.Drawing.Color.Transparent;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.HoverState.Parent = this.btnHome;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHome.Location = new System.Drawing.Point(13, 211);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.PressedColor = System.Drawing.Color.Navy;
+            this.btnHome.ShadowDecoration.Parent = this.btnHome;
+            this.btnHome.Size = new System.Drawing.Size(161, 45);
+            this.btnHome.TabIndex = 14;
+            this.btnHome.Text = "Home";
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // flowLayoutPanel
+            // pBAvatarEdit
             // 
-            this.flowLayoutPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(228, 48);
-            this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(1129, 755);
-            this.flowLayoutPanel.TabIndex = 14;
+            this.pBAvatarEdit.AllowFocused = false;
+            this.pBAvatarEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pBAvatarEdit.AutoSizeHeight = true;
+            this.pBAvatarEdit.BorderRadius = 63;
+            this.pBAvatarEdit.Image = ((System.Drawing.Image)(resources.GetObject("pBAvatarEdit.Image")));
+            this.pBAvatarEdit.IsCircle = true;
+            this.pBAvatarEdit.Location = new System.Drawing.Point(48, 27);
+            this.pBAvatarEdit.Name = "pBAvatarEdit";
+            this.pBAvatarEdit.Size = new System.Drawing.Size(127, 127);
+            this.pBAvatarEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBAvatarEdit.TabIndex = 13;
+            this.pBAvatarEdit.TabStop = false;
+            this.pBAvatarEdit.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
             // AdminMainForm
             // 
@@ -331,7 +331,7 @@
         private Guna.UI2.WinForms.Guna2ControlBox controlboxTurnOff;
         private Guna.UI2.WinForms.Guna2Button btnCategory;
         private Guna.UI2.WinForms.Guna2Button btnProvider;
-        private Guna.UI2.WinForms.Guna2Button btnCustomer;
+        private Guna.UI2.WinForms.Guna2Button btnEmployee;
         private Guna.UI2.WinForms.Guna2Button btnColor;
         private Guna.UI2.WinForms.Guna2Button btnSize;
         private Guna.UI2.WinForms.Guna2Button btnProduct;

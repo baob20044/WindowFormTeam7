@@ -141,11 +141,11 @@
     <Compile Include="AdminForms\Pages\AdminColorPage.Designer.cs">
       <DependentUpon>AdminColorPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\Pages\AdminCustomerPage.cs">
+    <Compile Include="AdminForms\Pages\AdminEmployeePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AdminForms\Pages\AdminCustomerPage.Designer.cs">
-      <DependentUpon>AdminCustomerPage.cs</DependentUpon>
+    <Compile Include="AdminForms\Pages\AdminEmployeePage.Designer.cs">
+      <DependentUpon>AdminEmployeePage.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminForms\Pages\AdminHomePage.cs">
       <SubType>UserControl</SubType>
@@ -188,6 +188,12 @@
     </Compile>
     <Compile Include="AdminMainForm.Designer.cs">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Add\SubcategoryAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Add\SubcategoryAdd.Designer.cs">
+      <DependentUpon>SubcategoryAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\CartItem.cs">
       <SubType>UserControl</SubType>
@@ -344,8 +350,35 @@
     <EmbeddedResource Include="AdminForms\Pages\AdminCategoryPage.resx">
       <DependentUpon>AdminCategoryPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\Pages\AdminColorPage.resx">
+      <DependentUpon>AdminColorPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\Pages\AdminEmployeePage.resx">
+      <DependentUpon>AdminEmployeePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\Pages\AdminHomePage.resx">
+      <DependentUpon>AdminHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\Pages\AdminOrderPage.resx">
+      <DependentUpon>AdminOrderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\Pages\AdminProductPage.resx">
+      <DependentUpon>AdminProductPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\Pages\AdminProviderPage.resx">
+      <DependentUpon>AdminProviderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\Pages\AdminSizePage.resx">
+      <DependentUpon>AdminSizePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\Pages\AdminSubcategoryPage.resx">
+      <DependentUpon>AdminSubcategoryPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminMainForm.resx">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Add\SubcategoryAdd.resx">
+      <DependentUpon>SubcategoryAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\CartItem.resx">
       <DependentUpon>CartItem.cs</DependentUpon>

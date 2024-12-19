@@ -24,9 +24,9 @@ namespace StoreManage.Components.Edit
         public CategoryEdit(int categoryId)
         {
             InitializeComponent();
+            categoryController = new CategoryController(new ApiService());
             LoadCategory(categoryId);
             CategoryId = categoryId;
-            categoryController = new CategoryController(new ApiService());
         }
         public async void LoadCategory(int categoryId)
         {

@@ -22,10 +22,17 @@ namespace StoreManage.Components
         {
             InitializeComponent();
             categoryController = new CategoryController(new ApiService());
-            cBTargetCustomer.Items.Add(1);
-            cBTargetCustomer.Items.Add(2);
-            cBTargetCustomer.Items.Add(3);
 
+            var customers = new Dictionary<int, string>
+            {
+                { 1, "Nam" },
+                { 2, "Nữ" },
+                { 3, "Trẻ em" }
+            };
+
+            cBTargetCustomer.DataSource = new BindingSource(customers, null);
+            cBTargetCustomer.DisplayMember = "Value"; // Display "Male", "Female", "Child"
+            cBTargetCustomer.ValueMember = "Key";    // Store 1, 2, 3 as values
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -39,9 +46,9 @@ namespace StoreManage.Components
 
             // Ensure a valid selection from ComboBox
             int targetCustomerId = 0;
-            if (cBTargetCustomer.SelectedItem != null)
+            if (cBTargetCustomer.SelectedValue != null)
             {
-                targetCustomerId = (int)cBTargetCustomer.SelectedItem;
+                targetCustomerId = (int)cBTargetCustomer.SelectedValue;
             }
             else
             {

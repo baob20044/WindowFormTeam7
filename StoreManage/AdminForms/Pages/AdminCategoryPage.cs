@@ -38,33 +38,6 @@ namespace StoreManage.AdminForms.Pages
             }    
             DisplayCategories(categories);
         }
-        //private async Task<List<CategoryDto>> FetchCategoriesAsync()
-        //{
-        //    var client = new RestClient("http://localhost:5254");
-        //    var request = new RestRequest("/api/categories", Method.Get);
-        //    request.AddHeader("accept", "application/json");
-
-        //    try
-        //    {
-        //        var response = await client.ExecuteAsync(request);
-
-        //        if (response.IsSuccessful && response.Content != null)
-        //        {
-        //            var categories = JsonConvert.DeserializeObject<List<CategoryDto>>(response.Content);
-        //            return categories ?? new List<CategoryDto>();
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("Failed to fetch categories.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //            return new List<CategoryDto>();
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"Error fetching categories: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        return new List<CategoryDto>();
-        //    }
-        //}
         private void DisplayCategories(List<CategoryDto> categories)
         {
             flowLayoutPanel.Controls.Clear(); // Clear previous controls
@@ -192,7 +165,6 @@ namespace StoreManage.AdminForms.Pages
 
                 // Add controls to the row panel
                 rowPanel.Controls.Add(editIcon);
-                rowPanel.Controls.Add(deleteIcon);
                 rowPanel.Controls.Add(customerTypeLabel);
                 rowPanel.Controls.Add(nameLabel);
                 rowPanel.Controls.Add(idLabel);
