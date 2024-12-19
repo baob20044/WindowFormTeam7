@@ -107,8 +107,8 @@ namespace StoreManage.Services
         // PUT method cho tất cả các model
         public async Task<T> PutAsync<T>(string endpoint, object data, string token)
         {
-            var request = new RestRequest(endpoint, Method.Put)
-                .AddJsonBody(data).AddHeader("Authorization", $"Bearer {token}");
+            var request = new RestRequest(endpoint, Method.Put).
+               AddHeader("Authorization", $"Bearer {token}").AddJsonBody(data);
 
             var response = await _client.ExecuteAsync(request);
 
