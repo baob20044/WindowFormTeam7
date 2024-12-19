@@ -54,24 +54,12 @@ namespace StoreManage
             }
         }
 
-        private void lbForgotpass_Click(object sender, EventArgs e)
-        {
-            NavigateToForgotPass();
-        }
-
         //Chuyển trang 
         private void NavigateToMainPage()
         {
             fadeTimer = new Timer();
             fadeTimer.Interval = 10;
             fadeTimer.Tick += FadeToMainPage;
-            fadeTimer.Start();
-        }
-        private void NavigateToForgotPass()
-        {
-            fadeTimer = new Timer();
-            fadeTimer.Interval = 10;
-            fadeTimer.Tick += FadeToForgotPass;
             fadeTimer.Start();
         }
         private void FadeToMainPage(object sender, EventArgs e)
@@ -102,36 +90,6 @@ namespace StoreManage
                 Application.DoEvents(); // Allow UI to refresh and clear pending events
             }
         }
-
-        private void FadeToForgotPass(object sender, EventArgs e)
-        {
-            if (this.Opacity > 0)
-            {
-                this.Opacity -= 0.1; // Faster fade with larger decrement
-            }
-            else
-            {
-                fadeTimer.Stop();
-                fadeTimer.Dispose();
-
-                // Hide the current form before opening the SignupForm
-                this.Hide();
-
-                // Open SignupForm
-                ForgotPasswordForm fpPage = new ForgotPasswordForm();
-                fpPage.StartPosition = FormStartPosition.CenterScreen;
-                fpPage.Location = this.Location;
-                fpPage.ShowDialog();  // Show the new form
-
-                // After showing the new form, dispose of the current form
-                this.Close(); // Close the form
-                this.Dispose(); // Dispose of the form's resources
-
-                // Ensure the old form is completely removed from memory and taskbar
-                Application.DoEvents(); // Allow UI to refresh and clear pending events
-            }
-        }
-
         private void lbClose_Click(object sender, EventArgs e)
         {
             this.Close();

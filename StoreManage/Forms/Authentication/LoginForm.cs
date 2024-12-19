@@ -42,9 +42,10 @@ namespace StoreManage
 
             try
             {
+                btnLogin.Enabled = false;
                 // Gọi phương thức LoginAsync
                 var accessToken = await _authController.LoginAsync(username, password);
-               
+
                 TokenManager.SaveToken(accessToken);
                 MessageBox.Show("Login successful!");
 
@@ -54,6 +55,10 @@ namespace StoreManage
             {
                 // Hiển thị lỗi
                 MessageBox.Show($"Login failed: {ex.Message}");
+            }
+            finally
+            { 
+                btnLogin.Enabled = true;
             }
         }
 
