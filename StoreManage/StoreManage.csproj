@@ -236,6 +236,7 @@
     <Compile Include="DTOs\Account\AdminRegisterDto.cs" />
     <Compile Include="DTOs\Account\CustomerRegisterDto.cs" />
     <Compile Include="DTOs\Account\EmployeeRegisterDto.cs" />
+    <Compile Include="DTOs\Account\ForgotPasswordDto.cs" />
     <Compile Include="DTOs\Account\LoginDto.cs" />
     <Compile Include="DTOs\Account\NewPasswordDto.cs" />
     <Compile Include="DTOs\Category\CategoryCreateDto.cs" />

@@ -18,7 +18,7 @@ namespace StoreManage
     public partial class SignupForm : Form
     {
         private readonly AuthController _authController;
-        private Timer fadeTimer; // Declare Timer globally - Dùng cho chuyển trang 
+        private Timer fadeTimer; 
         public SignupForm()
         {
             InitializeComponent();

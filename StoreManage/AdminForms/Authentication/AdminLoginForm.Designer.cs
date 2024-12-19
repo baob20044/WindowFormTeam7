@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminLoginForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbforgot = new System.Windows.Forms.Label();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -60,19 +59,6 @@
             this.label2.Size = new System.Drawing.Size(172, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "Welcome back";
-            // 
-            // lbforgot
-            // 
-            this.lbforgot.AutoSize = true;
-            this.lbforgot.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbforgot.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.064F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbforgot.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lbforgot.Location = new System.Drawing.Point(299, 575);
-            this.lbforgot.Name = "lbforgot";
-            this.lbforgot.Size = new System.Drawing.Size(125, 17);
-            this.lbforgot.TabIndex = 8;
-            this.lbforgot.Text = "Forgot password ?";
-            this.lbforgot.Click += new System.EventHandler(this.lbForgotpass_Click);
             // 
             // btnLogin
             // 
@@ -175,7 +161,6 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.lbforgot);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -191,7 +176,6 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbforgot;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
