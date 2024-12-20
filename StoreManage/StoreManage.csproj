@@ -243,7 +243,7 @@
     </Compile>
     <Compile Include="Components\Edit\ProfileEdit.Designer.cs">
       <DependentUpon>ProfileEdit.cs</DependentUpon>
-
+  </Compile>
     <Compile Include="Components\Edit\SizeEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -428,9 +428,11 @@
     <EmbeddedResource Include="Components\Add\ProductAdd.resx">
       <DependentUpon>ProductAdd.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Components\Add\SizeAdd.resx">
       <DependentUpon>SizeAdd.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Components\Add\SubcategoryAdd.resx">
       <DependentUpon>SubcategoryAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -452,10 +454,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Edit\ProfileEdit.resx">
       <DependentUpon>ProfileEdit.cs</DependentUpon>
-
+   </EmbeddedResource>
     <EmbeddedResource Include="Components\Edit\SizeEdit.resx">
       <DependentUpon>SizeEdit.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Edit\SubcategoryEdit.resx">
       <DependentUpon>SubcategoryEdit.cs</DependentUpon>
