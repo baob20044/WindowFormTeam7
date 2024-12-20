@@ -128,7 +128,7 @@
             this.cBCategoryId.HoverState.Parent = this.cBCategoryId;
             this.cBCategoryId.ItemHeight = 30;
             this.cBCategoryId.ItemsAppearance.Parent = this.cBCategoryId;
-            this.cBCategoryId.Location = new System.Drawing.Point(400, 173);
+            this.cBCategoryId.Location = new System.Drawing.Point(400, 165);
             this.cBCategoryId.Name = "cBCategoryId";
             this.cBCategoryId.ShadowDecoration.Parent = this.cBCategoryId;
             this.cBCategoryId.Size = new System.Drawing.Size(266, 36);

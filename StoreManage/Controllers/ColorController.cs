@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace StoreManage.Controllers
 {
@@ -43,5 +44,34 @@ namespace StoreManage.Controllers
                 return null;
             }
         }
+
+        public async Task<ColorCreateDto> CreateAsync(ColorCreateDto colorCreateDto)
+        {
+            try
+            {
+                var result = await _apiservice.PostAsync<ColorCreateDto>("colors", colorCreateDto, TokenManager.GetToken());
+                return result;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+                return null;
+            }
+
+        }
+        public async Task<ColorUpdateDto> UpdateAsync(int colorId, ColorUpdateDto colorUpdateDto)
+        {
+            try
+            {
+                var result = await _apiservice.PutAsync<ColorUpdateDto>($"colors/{colorId}", colorUpdateDto, TokenManager.GetToken());
+                return result;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+                return null;
+            }
+        }
+
     }
 }
