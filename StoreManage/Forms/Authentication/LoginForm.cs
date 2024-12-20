@@ -47,6 +47,7 @@ namespace StoreManage
                 var accessToken = await _authController.LoginAsync(username, password);
 
                 TokenManager.SaveToken(accessToken);
+                TokenManager.SaveUsername(username);
                 MessageBox.Show("Login successful!");
 
                 NavigateToMainPage();

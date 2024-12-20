@@ -98,7 +98,6 @@
             this.btnPassword.CheckedState.Parent = this.btnPassword;
             this.btnPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPassword.CustomBorderColor = System.Drawing.Color.Gray;
-            this.btnPassword.CustomBorderThickness = new System.Windows.Forms.Padding(1, 0, 1, 1);
             this.btnPassword.CustomImages.Parent = this.btnPassword;
             this.btnPassword.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPassword.FillColor = System.Drawing.Color.White;
@@ -117,7 +116,6 @@
             // btnEditProfile
             // 
             this.btnEditProfile.BorderColor = System.Drawing.Color.Gray;
-            this.btnEditProfile.BorderThickness = 1;
             this.btnEditProfile.CheckedState.Parent = this.btnEditProfile;
             this.btnEditProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditProfile.CustomImages.Parent = this.btnEditProfile;

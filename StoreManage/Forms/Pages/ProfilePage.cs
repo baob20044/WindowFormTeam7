@@ -42,7 +42,7 @@ namespace StoreManage.Forms.Pages
 
         public void refeshPassword()
         {
-            passwordEdit = new PasswordEdit();
+            passwordEdit = new PasswordEdit(profileEdit);
             flowLayoutPanel1.Controls.Clear();
             flowLayoutPanel1.Controls.Add(passwordEdit);
         }

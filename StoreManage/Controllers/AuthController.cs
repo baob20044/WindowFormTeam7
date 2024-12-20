@@ -60,7 +60,20 @@ namespace StoreManage.Controllers
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Forgot failed: {ex.Message}");
+                MessageBox.Show($"Forgot failed: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public async Task<string> changePassWordAsync(NewPasswordDto changePasswordDto)
+        {
+            try
+            {
+                return await _apiService.PostAsync<string>("Account/change-password", changePasswordDto, TokenManager.GetToken());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed: {ex.Message}","Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return null;
             }
         }
