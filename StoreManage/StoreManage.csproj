@@ -266,13 +266,12 @@
     </Compile>
     <Compile Include="Components\Edit\ProfileEdit.Designer.cs">
       <DependentUpon>ProfileEdit.cs</DependentUpon>
- </Compile>
+    </Compile>
     <Compile Include="Components\Edit\SizeEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Components\Edit\SizeEdit.Designer.cs">
       <DependentUpon>SizeEdit.cs</DependentUpon>
-
     </Compile>
     <Compile Include="Components\Edit\SubcategoryEdit.cs">
       <SubType>UserControl</SubType>
@@ -297,6 +296,7 @@
     <Compile Include="Controllers\ColorController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\InventoryController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProviderController.cs" />
     <Compile Include="Controllers\SizeController.cs" />
@@ -453,7 +453,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Add\ProviderAdd.resx">
       <DependentUpon>ProviderAdd.cs</DependentUpon>
-  </EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\Add\ProductAdd.resx">
       <DependentUpon>ProductAdd.cs</DependentUpon>
     </EmbeddedResource>

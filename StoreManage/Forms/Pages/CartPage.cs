@@ -1,4 +1,6 @@
 ﻿using StoreManage.Components;
+using StoreManage.Controllers;
+using StoreManage.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +15,7 @@ namespace StoreManage.Forms.Pages
 {
     public partial class CartPage : UserControl
     {
+        private readonly OrderController orderController;
         public FlowLayoutPanel CartFlowLayout
         {
             get { return flowLayout; }
@@ -21,6 +24,7 @@ namespace StoreManage.Forms.Pages
         public CartPage()
         {
             InitializeComponent();
+            orderController = new OrderController(new ApiService());
         }
         public void UpdateCartTotals() /* Cart Page */
         {

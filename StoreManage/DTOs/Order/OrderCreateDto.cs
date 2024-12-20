@@ -6,7 +6,6 @@ namespace StoreManage.DTOs.Order
     public class OrderCreateDto
     {
         public int EmployeeId { get; set; }
-        public int CustomerId { get; set; }
         public string OrderNotice { get; set; }
         public ICollection<OrderDetailCreateDto> OrderDetails { get; set; }
     }
