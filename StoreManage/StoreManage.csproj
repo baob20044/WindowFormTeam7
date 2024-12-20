@@ -452,6 +452,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Add\ProviderAdd.resx">
       <DependentUpon>ProviderAdd.cs</DependentUpon>
+  </EmbeddedResource>
     <EmbeddedResource Include="Components\Add\ProductAdd.resx">
       <DependentUpon>ProductAdd.cs</DependentUpon>
     </EmbeddedResource>
