@@ -173,3 +173,4 @@ C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreMan.
 C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreManage.exe
 C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreManage.pdb
 C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreManage.Components.ProductDetail.resources
+C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreManage.Components.Add.ProductAdd.resources

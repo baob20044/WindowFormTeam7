@@ -87,6 +87,7 @@
             this.btnAdd.PressedState.Parent = this.btnAdd;
             this.btnAdd.Size = new System.Drawing.Size(38, 37);
             this.btnAdd.TabIndex = 50;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtSearch
             // 
@@ -172,7 +173,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtSearch);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminProductPage";
             this.Size = new System.Drawing.Size(853, 613);
             this.ResumeLayout(false);
