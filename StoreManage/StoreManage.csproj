@@ -200,6 +200,7 @@
     </Compile>
     <Compile Include="Components\Add\ProviderAdd.Designer.cs">
       <DependentUpon>ProviderAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\Add\ProductAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
