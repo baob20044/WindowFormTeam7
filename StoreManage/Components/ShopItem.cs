@@ -77,27 +77,31 @@ namespace StoreManage.Components
 
         private async void LoadProductData(ProductDto product)
         {
-                    if (product != null)
+            try
+            {
+                if (product != null)
+                {
+                    // Set product details
+                    ItemLabel = product.Name;
+                    ItemPrice = $"{product.Price:N0} VND";
+                    // Load the product image based on the first available color
+                    var imageUrl = product.Colors.FirstOrDefault()?.Images.FirstOrDefault()?.Url;
+                    if (!string.IsNullOrEmpty(imageUrl))
                     {
-                        // Set product details
-                        ItemLabel = product.Name;
-                        ItemPrice = $"{product.Price:N0} VND";
+                        await LoadProductImage(imageUrl);
 
-                        // Load the product image based on the first available color
-                        var imageUrl = product.Colors.FirstOrDefault()?.Images.FirstOrDefault()?.Url;
-                        if (!string.IsNullOrEmpty(imageUrl))
-                        {
-                            await LoadProductImage(imageUrl);
-                        }
-                        else
-                        {
-                            ShowFallbackImage();
-                        }
                     }
                     else
                     {
                         ShowFallbackImage();
                     }
+                }
+                else
+                {
+                    ShowFallbackImage();
+                }
+            }catch (Exception ex) { ShowFallbackImage(); } 
+
         }
 
 

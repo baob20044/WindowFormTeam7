@@ -8,7 +8,6 @@ namespace StoreManage.DTOs.Order
     {
         public int OrderId { get; set; }
         public string EmployeeName { get; set; }
-        public int CustomerId { get; set; }
         public DateTime OrderExportDateTime { get; set; }
         public string OrderNotice { get; set; }
         public ICollection<OrderDetailDto> OrderDetails { get; set; } = new List<OrderDetailDto>();
