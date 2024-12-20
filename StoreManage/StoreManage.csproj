@@ -416,146 +416,149 @@
     <EmbeddedResource Include="AdminForms\Authentication\AdminLoginForm.resx">
       <DependentUpon>AdminLoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\Pages\AdminCategoryPage.resx">
-      <DependentUpon>AdminCategoryPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\Pages\AdminColorPage.resx">
-      <DependentUpon>AdminColorPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\Pages\AdminEmployeePage.resx">
-      <DependentUpon>AdminEmployeePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\Pages\AdminHomePage.resx">
-      <DependentUpon>AdminHomePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\Pages\AdminOrderPage.resx">
-      <DependentUpon>AdminOrderPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\Pages\AdminProductPage.resx">
-      <DependentUpon>AdminProductPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\Pages\AdminProviderPage.resx">
-      <DependentUpon>AdminProviderPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\Pages\AdminSizePage.resx">
-      <DependentUpon>AdminSizePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\Pages\AdminSubcategoryPage.resx">
-      <DependentUpon>AdminSubcategoryPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminMainForm.resx">
-      <DependentUpon>AdminMainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Components\Add\ColorAdd.resx">
-      <DependentUpon>ColorAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Components\Add\ProviderAdd.resx">
-      <DependentUpon>ProviderAdd.cs</DependentUpon>
-    <EmbeddedResource Include="Components\Add\ProductAdd.resx">
-      <DependentUpon>ProductAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Components\Add\SizeAdd.resx">
-      <DependentUpon>SizeAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Components\Add\SubcategoryAdd.resx">
-      <DependentUpon>SubcategoryAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Components\CartItem.resx">
-      <DependentUpon>CartItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Components\Add\CategoryAdd.resx">
-      <DependentUpon>CategoryAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Components\DetailItem.resx">
-      <DependentUpon>DetailItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Components\Edit\CategoryEdit.resx">
-      <DependentUpon>CategoryEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Components\Edit\ColorEdit.resx">
-      <DependentUpon>ColorEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Components\Edit\ProviderEdit.resx">
-      <DependentUpon>ProviderEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Components\Edit\PasswordEdit.resx">
-      <DependentUpon>PasswordEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Components\Edit\ProfileEdit.resx">
-      <DependentUpon>ProfileEdit.cs</DependentUpon>
-    <EmbeddedResource Include="Components\Edit\SizeEdit.resx">
-      <DependentUpon>SizeEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Components\Edit\SubcategoryEdit.resx">
-      <DependentUpon>SubcategoryEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Components\ProductDetail.resx">
-      <DependentUpon>ProductDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Components\ShopItem.resx">
-      <DependentUpon>ShopItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Authentication\ForgotPasswordForm.resx">
-      <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Authentication\LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Authentication\SignupForm.resx">
-      <DependentUpon>SignupForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Pages\CartPage.resx">
-      <DependentUpon>CartPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Pages\CategoryPage.resx">
-      <DependentUpon>CategoryPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Pages\HomePage.resx">
-      <DependentUpon>HomePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Pages\ProfilePage.resx">
-      <DependentUpon>ProfilePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
+<ItemGroup>
+  <EmbeddedResource Include="AdminForms\Pages\AdminCategoryPage.resx">
+    <DependentUpon>AdminCategoryPage.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="AdminForms\Pages\AdminColorPage.resx">
+    <DependentUpon>AdminColorPage.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="AdminForms\Pages\AdminEmployeePage.resx">
+    <DependentUpon>AdminEmployeePage.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="AdminForms\Pages\AdminHomePage.resx">
+    <DependentUpon>AdminHomePage.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="AdminForms\Pages\AdminOrderPage.resx">
+    <DependentUpon>AdminOrderPage.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="AdminForms\Pages\AdminProductPage.resx">
+    <DependentUpon>AdminProductPage.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="AdminForms\Pages\AdminProviderPage.resx">
+    <DependentUpon>AdminProviderPage.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="AdminForms\Pages\AdminSizePage.resx">
+    <DependentUpon>AdminSizePage.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="AdminForms\Pages\AdminSubcategoryPage.resx">
+    <DependentUpon>AdminSubcategoryPage.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="AdminMainForm.resx">
+    <DependentUpon>AdminMainForm.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Components\Add\ColorAdd.resx">
+    <DependentUpon>ColorAdd.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Components\Add\ProviderAdd.resx">
+    <DependentUpon>ProviderAdd.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Components\Add\ProductAdd.resx">
+    <DependentUpon>ProductAdd.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Components\Add\SizeAdd.resx">
+    <DependentUpon>SizeAdd.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Components\Add\SubcategoryAdd.resx">
+    <DependentUpon>SubcategoryAdd.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Components\CartItem.resx">
+    <DependentUpon>CartItem.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Components\Add\CategoryAdd.resx">
+    <DependentUpon>CategoryAdd.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Components\DetailItem.resx">
+    <DependentUpon>DetailItem.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Components\Edit\CategoryEdit.resx">
+    <DependentUpon>CategoryEdit.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Components\Edit\ColorEdit.resx">
+    <DependentUpon>ColorEdit.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Components\Edit\ProviderEdit.resx">
+    <DependentUpon>ProviderEdit.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Components\Edit\PasswordEdit.resx">
+    <DependentUpon>PasswordEdit.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Components\Edit\ProfileEdit.resx">
+    <DependentUpon>ProfileEdit.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Components\Edit\SizeEdit.resx">
+    <DependentUpon>SizeEdit.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Components\Edit\SubcategoryEdit.resx">
+    <DependentUpon>SubcategoryEdit.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Components\ProductDetail.resx">
+    <DependentUpon>ProductDetail.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Components\ShopItem.resx">
+    <DependentUpon>ShopItem.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Forms\Authentication\ForgotPasswordForm.resx">
+    <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Forms\Authentication\LoginForm.resx">
+    <DependentUpon>LoginForm.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Forms\Authentication\SignupForm.resx">
+    <DependentUpon>SignupForm.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Forms\Pages\CartPage.resx">
+    <DependentUpon>CartPage.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Forms\Pages\CategoryPage.resx">
+    <DependentUpon>CategoryPage.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Forms\Pages\HomePage.resx">
+    <DependentUpon>HomePage.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Forms\Pages\ProfilePage.resx">
+    <DependentUpon>ProfilePage.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="MainForm.resx">
+    <DependentUpon>MainForm.cs</DependentUpon>
+  </EmbeddedResource>
+  <EmbeddedResource Include="Properties\licenses.licx" />
+  <EmbeddedResource Include="Properties\Resources.resx">
+    <Generator>ResXFileCodeGenerator</Generator>
+    <SubType>Designer</SubType>
+    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+  </EmbeddedResource>
+  <None Include="packages.config" />
+  <None Include="Properties\Settings.settings">
+    <Generator>SettingsSingleFileGenerator</Generator>
+    <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+  </None>
+  <Compile Include="Properties\Resources.Designer.cs">
+    <AutoGen>True</AutoGen>
+    <DesignTime>True</DesignTime>
+    <DependentUpon>Resources.resx</DependentUpon>
+  </Compile>
+  <Compile Include="Properties\Settings.Designer.cs">
+    <AutoGen>True</AutoGen>
+    <DependentUpon>Settings.settings</DependentUpon>
+    <DesignTimeSharedInput>True</DesignTimeSharedInput>
+  </Compile>
+</ItemGroup>
+<ItemGroup>
+  <None Include="App.config" />
+</ItemGroup>
+<ItemGroup>
+  <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+    <Visible>False</Visible>
+    <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+    <Install>true</Install>
+  </BootstrapperPackage>
+  <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+    <Visible>False</Visible>
+    <ProductName>.NET Framework 3.5 SP1</ProductName>
+    <Install>false</Install>
+  </BootstrapperPackage>
+</ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Edit1.png" />
     <Content Include="Resources\Icon\Logo-Yody-Yellow-1024x878.ico" />
