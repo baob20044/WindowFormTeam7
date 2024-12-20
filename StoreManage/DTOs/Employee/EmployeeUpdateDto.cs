@@ -7,12 +7,7 @@ namespace StoreManage.DTOs.Employee
     public class EmployeeUpdateDto
     {
         public EmployeePersonalInfo PersonalInfo { get; set; }
-        public decimal Salary { get; set; }
+        public string Email { get; set; }
 
-        public string StartDate { get; set; }
-
-        public int ContractUpTo { get; set; }
-
-        public string ParentPhoneNumber { get; set; }
     }
 }
