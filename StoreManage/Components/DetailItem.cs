@@ -29,7 +29,6 @@ namespace StoreManage.Components
         private MainForm _mainForm;
         private readonly ProductController _productController;
         private readonly InventoryController _inventoryController;
-        private int _inStock = 0;
 
         public DetailItem(int productId,MainForm mainForm )
         {
