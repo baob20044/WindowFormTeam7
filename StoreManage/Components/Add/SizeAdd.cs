@@ -15,7 +15,7 @@ namespace StoreManage.Components.Add
 {
     public partial class SizeAdd : UserControl
     {
-        SizeController sizeController;
+        private readonly SizeController sizeController;
         public SizeAdd()
         {
             InitializeComponent();

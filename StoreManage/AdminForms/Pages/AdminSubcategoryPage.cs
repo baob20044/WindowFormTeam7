@@ -27,6 +27,7 @@ namespace StoreManage.AdminForms.Pages
             subcategoryController = new SubcategoryController(new ApiService());
             cBNumber.SelectedIndexChanged += cBNumber_SelectedIndexChanged;
             PopulateComboBox();
+            ApplySortingAndFiltering();
         }
         private async void AdminSubcategoryPage_Load(object sender, EventArgs e)
         {

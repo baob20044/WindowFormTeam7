@@ -189,6 +189,18 @@
     <Compile Include="AdminMainForm.Designer.cs">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\Add\ColorAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Add\ColorAdd.Designer.cs">
+      <DependentUpon>ColorAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Add\ProviderAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Add\ProviderAdd.Designer.cs">
+      <DependentUpon>ProviderAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\Add\SizeAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -224,6 +236,18 @@
     </Compile>
     <Compile Include="Components\Edit\CategoryEdit.Designer.cs">
       <DependentUpon>CategoryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Edit\ColorEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Edit\ColorEdit.Designer.cs">
+      <DependentUpon>ColorEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Edit\ProviderEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Edit\ProviderEdit.Designer.cs">
+      <DependentUpon>ProviderEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\Edit\SizeEdit.cs">
       <SubType>UserControl</SubType>
@@ -396,6 +420,12 @@
     <EmbeddedResource Include="AdminMainForm.resx">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Components\Add\ColorAdd.resx">
+      <DependentUpon>ColorAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Add\ProviderAdd.resx">
+      <DependentUpon>ProviderAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\Add\SizeAdd.resx">
       <DependentUpon>SizeAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -413,6 +443,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Edit\CategoryEdit.resx">
       <DependentUpon>CategoryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Edit\ColorEdit.resx">
+      <DependentUpon>ColorEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Edit\ProviderEdit.resx">
+      <DependentUpon>ProviderEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Edit\SizeEdit.resx">
       <DependentUpon>SizeEdit.cs</DependentUpon>

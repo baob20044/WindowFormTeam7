@@ -30,7 +30,6 @@ namespace StoreManage.AdminForms.Pages
 
         private async void AdminCategoryPage_Load(object sender, EventArgs e)
         {
-            //categories = await FetchCategoriesAsync();
             categories = await categoryController.GetAllAsync();
             if (categories == null || categories.Count < 1)
             {
