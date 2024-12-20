@@ -243,7 +243,7 @@
     </Compile>
     <Compile Include="Components\Edit\ProfileEdit.Designer.cs">
       <DependentUpon>ProfileEdit.cs</DependentUpon>
-
+</Compile>
     <Compile Include="Components\Edit\SizeEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -452,7 +452,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Edit\ProfileEdit.resx">
       <DependentUpon>ProfileEdit.cs</DependentUpon>
-
+	 </EmbeddedResource>
     <EmbeddedResource Include="Components\Edit\SizeEdit.resx">
       <DependentUpon>SizeEdit.cs</DependentUpon>
 
