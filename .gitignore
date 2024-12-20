@@ -11,3 +11,5 @@ StoreManage\.vs/
 
 # Ignore AssemblyReference.cache
 /StoreManage/obj/Debug/StoreManage.csproj.AssemblyReference.cache
+/StoreManage/bin/Debug/StoreManage.exe
+/StoreManage/bin/Debug/StoreManage.exe
