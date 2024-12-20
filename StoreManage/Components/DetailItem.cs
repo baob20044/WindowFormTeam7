@@ -1,9 +1,11 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
+using StoreManage.Controllers;
 using StoreManage.DTOs.PColor;
 using StoreManage.DTOs.Product;
 using StoreManage.DTOs.Size;
 using StoreManage.Forms.Pages;
+using StoreManage.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,13 +23,19 @@ namespace StoreManage.Components
     public partial class DetailItem : UserControl
     {
         private Dictionary<string, ColorDto> colorMap; // Map color names to Color objects
+        private Dictionary<string, SizeDto> sizeMap;
+
         private int productId;  // Store productId for CartItem
         private MainForm _mainForm;
+        private readonly ProductController _productController;
+        private readonly InventoryController _inventoryController;
+
         public DetailItem(int productId,MainForm mainForm )
         {
             InitializeComponent();
+            _productController = new ProductController(new ApiService());
+            _inventoryController  = new InventoryController(new ApiService());  
             this.productId = productId;
-
             _mainForm = mainForm;
         }
         private void DetailItem_Load(object sender, EventArgs e)
@@ -35,32 +43,33 @@ namespace StoreManage.Components
             LoadProductDetails(productId);
             DropdownColor.SelectedIndexChanged += DropdownColor_SelectedIndexChanged; // Attach event handler
         }
-        public class ProductService
-        {
-            private readonly RestClient _client;
+        //public class ProductService
+        //{
+        //    private readonly RestClient _client;
 
-            public ProductService(string baseUrl)
-            {
-                _client = new RestClient(baseUrl);
-            }
+        //    public ProductService(string baseUrl)
+        //    {
+        //        _client = new RestClient(baseUrl);
+        //    }
 
-            public async Task<ProductDto> GetProductByIdAsync(int productId)
-            {
-                var request = new RestRequest($"/api/products/{productId}", Method.Get);
-                request.AddHeader("accept", "*/*");
-                var response = await _client.ExecuteAsync(request);
-                return response.IsSuccessful
-                    ? JsonConvert.DeserializeObject<ProductDto>(response.Content)
-                    : null;
-            }
-        }
+        //    public async Task<ProductDto> GetProductByIdAsync(int productId)
+        //    {
+        //        var request = new RestRequest($"/api/products/{productId}", Method.Get);
+        //        request.AddHeader("accept", "*/*");
+        //        var response = await _client.ExecuteAsync(request);
+        //        return response.IsSuccessful
+        //            ? JsonConvert.DeserializeObject<ProductDto>(response.Content)
+        //            : null;
+        //    }
+        //}
         private async void LoadProductDetails(int productId)
         {
             try
             {
-                var productService = new ProductService("http://localhost:5254");
-                var product = await productService.GetProductByIdAsync(productId);
+                //var productService = new ProductService("http://localhost:5254");
+                //var product = await productService.GetProductByIdAsync(productId);
 
+                var product = await _productController.GetByIdAsync(productId);
                 if (product != null)
                 {
                     UpdateUIWithProduct(product);
@@ -82,7 +91,7 @@ namespace StoreManage.Components
             lbPrice.Text = $"{product.Price:N0} VND";
             lbDescription.Text = product.Description ?? "No description available";
             lbCost.Text = $"Cost: {product.Price + product.Price * 10 / 100:N0} VND";
-            lbInStock.Text = $"Còn {product.InStock} sản phẩm trong kho";
+            //lbInStock.Text = $"Còn {product.InStock} sản phẩm trong kho";
 
             // Populate colors
             colorMap = new Dictionary<string, ColorDto>();
@@ -98,10 +107,12 @@ namespace StoreManage.Components
             }
 
             // Populate sizes
+            sizeMap  = new Dictionary<string, SizeDto>();
             DropdownSize.Items.Clear();
             foreach (var size in (product.Sizes ?? new HashSet<SizeDto>()).ToList())
             {
                 DropdownSize.Items.Add(size.SizeValue); // Add size values like "S", "M", etc.
+                sizeMap[size.SizeValue] = size;
             }
             if (DropdownSize.Items.Count > 0)
             {
@@ -154,6 +165,18 @@ namespace StoreManage.Components
         // Khi thay đổi dropdowncolor thì đổi cả label và đổi ảnh 
         private async void DropdownColor_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int selectedSizeId = 0;
+            int selectedColorId = 0;
+            if (DropdownSize.SelectedIndex >= 0)
+            {
+                string selectedSizeName = DropdownSize.SelectedItem.ToString();
+
+                // Lấy đối tượng ColorDto từ colorMap
+                if (sizeMap.TryGetValue(selectedSizeName, out var selectedSize))
+                    // Lấy ColorId
+                    selectedSizeId = selectedSize.SizeId;
+            }    
+
             if (DropdownColor.SelectedIndex >= 0)
             {
                 string selectedColorName = DropdownColor.SelectedItem.ToString();
@@ -162,11 +185,22 @@ namespace StoreManage.Components
                 {
                     // Update color label
                     lbColor.Text = $"Color: {selectedColor.Name}";
+                    selectedColorId = selectedColor.ColorId;
+
+                    if (selectedSizeId != 0 && selectedColorId != 0)
+                    {
+                        var inventory = await _inventoryController.GetByIdAsync(productId, selectedSizeId, selectedColorId);
+
+                        if (inventory != null)
+                            lbInStock.Text = $"Còn {inventory.InStock} sản phẩm trong kho";
+                    }
 
                     // Load the first image of the selected color
                     await LoadProductImage(selectedColor);
                 }
             }
+
+            
         }
         public void HandleCartItemClick(int productId)
         {

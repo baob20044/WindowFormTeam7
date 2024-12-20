@@ -200,6 +200,11 @@
     </Compile>
     <Compile Include="Components\Add\ProviderAdd.Designer.cs">
       <DependentUpon>ProviderAdd.cs</DependentUpon>
+    <Compile Include="Components\Add\ProductAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Add\ProductAdd.Designer.cs">
+      <DependentUpon>ProductAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\Add\SizeAdd.cs">
       <SubType>UserControl</SubType>
@@ -249,17 +254,35 @@
     <Compile Include="Components\Edit\ProviderEdit.Designer.cs">
       <DependentUpon>ProviderEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\Edit\PasswordEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Edit\PasswordEdit.Designer.cs">
+      <DependentUpon>PasswordEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Edit\ProfileEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Edit\ProfileEdit.Designer.cs">
+      <DependentUpon>ProfileEdit.cs</DependentUpon>
     <Compile Include="Components\Edit\SizeEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Components\Edit\SizeEdit.Designer.cs">
       <DependentUpon>SizeEdit.cs</DependentUpon>
+
     </Compile>
     <Compile Include="Components\Edit\SubcategoryEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Components\Edit\SubcategoryEdit.Designer.cs">
       <DependentUpon>SubcategoryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ProductDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ProductDetail.Designer.cs">
+      <DependentUpon>ProductDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\ShopItem.cs">
       <SubType>UserControl</SubType>
@@ -270,6 +293,9 @@
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ColorController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\InventoryController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProviderController.cs" />
     <Compile Include="Controllers\SizeController.cs" />
     <Compile Include="Controllers\SubcategoryController.cs" />
@@ -425,6 +451,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Add\ProviderAdd.resx">
       <DependentUpon>ProviderAdd.cs</DependentUpon>
+    <EmbeddedResource Include="Components\Add\ProductAdd.resx">
+      <DependentUpon>ProductAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Add\SizeAdd.resx">
       <DependentUpon>SizeAdd.cs</DependentUpon>
@@ -450,11 +478,19 @@
     <EmbeddedResource Include="Components\Edit\ProviderEdit.resx">
       <DependentUpon>ProviderEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Components\Edit\PasswordEdit.resx">
+      <DependentUpon>PasswordEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Edit\ProfileEdit.resx">
+      <DependentUpon>ProfileEdit.cs</DependentUpon>
     <EmbeddedResource Include="Components\Edit\SizeEdit.resx">
       <DependentUpon>SizeEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Edit\SubcategoryEdit.resx">
       <DependentUpon>SubcategoryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ProductDetail.resx">
+      <DependentUpon>ProductDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\ShopItem.resx">
       <DependentUpon>ShopItem.cs</DependentUpon>
