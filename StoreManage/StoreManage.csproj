@@ -219,6 +219,18 @@
     <Compile Include="Components\Edit\CategoryEdit.Designer.cs">
       <DependentUpon>CategoryEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\Edit\PasswordEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Edit\PasswordEdit.Designer.cs">
+      <DependentUpon>PasswordEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Edit\ProfileEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Edit\ProfileEdit.Designer.cs">
+      <DependentUpon>ProfileEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\Edit\SubcategoryEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -234,6 +246,7 @@
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ColorController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\InventoryController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProviderController.cs" />
@@ -400,6 +413,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Edit\CategoryEdit.resx">
       <DependentUpon>CategoryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Edit\PasswordEdit.resx">
+      <DependentUpon>PasswordEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Edit\ProfileEdit.resx">
+      <DependentUpon>ProfileEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Edit\SubcategoryEdit.resx">
       <DependentUpon>SubcategoryEdit.cs</DependentUpon>
