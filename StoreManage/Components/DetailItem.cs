@@ -30,6 +30,8 @@ namespace StoreManage.Components
         private readonly ProductController _productController;
         private readonly InventoryController _inventoryController;
 
+        private int SelectedColorId { get; set; } // Selected color
+        private int SelectedSizeId { get; set; }      // Selected size
         public DetailItem(int productId,MainForm mainForm )
         {
             InitializeComponent();
@@ -173,8 +175,13 @@ namespace StoreManage.Components
 
                 // Lấy đối tượng ColorDto từ colorMap
                 if (sizeMap.TryGetValue(selectedSizeName, out var selectedSize))
-                    // Lấy ColorId
+                {
                     selectedSizeId = selectedSize.SizeId;
+                    SelectedSizeId = selectedSizeId;
+                }
+                    // Lấy ColorId
+   
+                
             }    
 
             if (DropdownColor.SelectedIndex >= 0)
@@ -186,6 +193,7 @@ namespace StoreManage.Components
                     // Update color label
                     lbColor.Text = $"Color: {selectedColor.Name}";
                     selectedColorId = selectedColor.ColorId;
+                    SelectedColorId = selectedColorId;
 
                     if (selectedSizeId != 0 && selectedColorId != 0)
                     {
@@ -218,6 +226,7 @@ namespace StoreManage.Components
 
             string selectedColorName = DropdownColor.SelectedItem?.ToString();
             string selectedSize = DropdownSize.SelectedItem?.ToString();
+            
 
             if (string.IsNullOrEmpty(selectedColorName) || string.IsNullOrEmpty(selectedSize))
             {
@@ -243,7 +252,7 @@ namespace StoreManage.Components
 
             if (!productExistsInCart)
             {
-                var newCartItem = new CartItem(productId, selectedColorName, selectedSize, _mainForm)
+                var newCartItem = new CartItem(productId, selectedColorName, selectedSize, _mainForm,SelectedColorId,SelectedSizeId)
                 {
                     ItemLabel = lbName.Text,
                     ItemPrice = lbPrice.Text,

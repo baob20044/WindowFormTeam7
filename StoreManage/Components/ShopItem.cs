@@ -86,7 +86,7 @@ namespace StoreManage.Components
                     ItemPrice = $"{product.Price:N0} VND";
 
                     // Load the product image based on the first available color
-                    var imageUrl = product.Colors.FirstOrDefault()?.Images.FirstOrDefault().Url;
+                    var imageUrl = product.Colors.FirstOrDefault()?.Images.FirstOrDefault()?.Url;
                     if (!string.IsNullOrEmpty(imageUrl))
                     {
                         await LoadProductImage(imageUrl);

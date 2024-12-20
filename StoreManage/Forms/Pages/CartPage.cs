@@ -1,5 +1,7 @@
 ﻿using StoreManage.Components;
 using StoreManage.Controllers;
+using StoreManage.DTOs.Order;
+using StoreManage.DTOs.OrderDetail;
 using StoreManage.Services;
 using System;
 using System.Collections.Generic;
@@ -16,6 +18,7 @@ namespace StoreManage.Forms.Pages
     public partial class CartPage : UserControl
     {
         private readonly OrderController orderController;
+        List<OrderDetailCreateDto> orderDetailList;
         public FlowLayoutPanel CartFlowLayout
         {
             get { return flowLayout; }
@@ -25,6 +28,7 @@ namespace StoreManage.Forms.Pages
         {
             InitializeComponent();
             orderController = new OrderController(new ApiService());
+            orderDetailList = new List<OrderDetailCreateDto>();
         }
         public void UpdateCartTotals() /* Cart Page */
         {
@@ -74,12 +78,64 @@ namespace StoreManage.Forms.Pages
             UpdateCartTotals();
         }
 
-        private void btnOrder_Click(object sender, EventArgs e)
+        private async void btnOrder_Click(object sender, EventArgs e)
         {
+            DialogResult resulT = MessageBox.Show("Bạn có chắc chắn muốn mua hàng?", "Xác nhận", MessageBoxButtons.YesNo);
+
+            if (resulT == DialogResult.No)
+            {
+                return;
+            }
+
             var mainform = this.FindForm() as MainForm;
             var employeeId = mainform.employeeId;
 
-            MessageBox.Show(employeeId.ToString());
+            int productId;
+            int colorId;
+            int sizeId;
+            int quantity;
+            OrderDetailCreateDto orderDetail;
+            foreach (Control control in flowLayout.Controls)
+            {
+                if (control is CartItem cartItem)
+                {
+                    productId = cartItem.ProductId;
+                    colorId = cartItem.SelectedColorId;
+                    sizeId = cartItem.SelectedSizeId;
+                    quantity = cartItem.Quantity;
+                    orderDetail = new OrderDetailCreateDto()
+                    {
+                        ProductId = productId,
+                        ColorId = colorId,
+                        SizeId = sizeId,
+                        Quantity = quantity
+                    };
+                    orderDetailList.Add(orderDetail);
+                }
+            }
+            OrderCreateDto orderCreateDto = new OrderCreateDto()
+            {
+                EmployeeId = employeeId,
+                OrderDetails = orderDetailList
+            };
+            try
+            {
+                var response = await orderController.CreateAsync(orderCreateDto);
+                if (response != null) 
+                {
+                    MessageBox.Show("Order adding successfully!");
+                    flowLayout.Controls.Clear();
+                }
+                else
+                {
+                    Console.WriteLine("Error creating order");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
         }
     }
 }
