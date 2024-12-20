@@ -11,7 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace StoreManage
 {
@@ -74,7 +73,7 @@ namespace StoreManage
             flowLayoutPanel.Controls.Clear(); // Clear existing details
             flowLayoutPanel.Controls.Add(detail); // Add the new detail view
         }
-        private void NavigateToLoginForm()
+        public void NavigateToLoginForm()
         {
             // Initialize the Timer for fade-out
             fadeTimer = new Timer();
