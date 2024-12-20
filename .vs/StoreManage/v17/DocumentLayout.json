@@ -3,27 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|c:\\users\\hieutran\\documents\\test\\windowformteam7\\storemanage\\adminforms\\pages\\adminproductpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\adminforms\\pages\\adminproductpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|c:\\users\\hieutran\\documents\\test\\windowformteam7\\storemanage\\components\\add\\productadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\components\\add\\productadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|c:\\users\\hieutran\\documents\\test\\windowformteam7\\storemanage\\components\\productdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\components\\productdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|c:\\users\\hieutran\\documents\\test\\windowformteam7\\storemanage\\components\\add\\categoryadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\components\\add\\categoryadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|c:\\users\\hieutran\\documents\\test\\windowformteam7\\storemanage\\components\\productdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\components\\productdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|c:\\users\\hieutran\\documents\\test\\windowformteam7\\storemanage\\components\\add\\categoryadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\components\\add\\categoryadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|c:\\users\\hieutran\\documents\\test\\windowformteam7\\storemanage\\components\\add\\productadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\components\\add\\productadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\storemanage\\adminforms\\pages\\adminproductpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\adminforms\\pages\\adminproductpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|c:\\users\\hieutran\\documents\\test\\windowformteam7\\storemanage\\adminforms\\pages\\admincategorypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\adminforms\\pages\\admincategorypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|c:\\users\\hieutran\\documents\\test\\windowformteam7\\storemanage\\adminforms\\pages\\adminproductpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\adminforms\\pages\\adminproductpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\Resources\\Images\\cart.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\storemanage\\components\\productdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\components\\productdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\storemanage\\components\\productdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\components\\productdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -49,45 +58,70 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductDetail.cs",
-              "DocumentMoniker": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\ProductDetail.cs",
-              "RelativeDocumentMoniker": "StoreManage\\Components\\ProductDetail.cs",
-              "ToolTip": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\ProductDetail.cs",
-              "RelativeToolTip": "StoreManage\\Components\\ProductDetail.cs",
-              "ViewState": "AgIAAOwAAAAAAAAAAAAUwBoBAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "CategoryAdd.cs",
+              "DocumentMoniker": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\Add\\CategoryAdd.cs",
+              "RelativeDocumentMoniker": "StoreManage\\Components\\Add\\CategoryAdd.cs",
+              "ToolTip": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\Add\\CategoryAdd.cs",
+              "RelativeToolTip": "StoreManage\\Components\\Add\\CategoryAdd.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAlwCcAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T00:55:00.902Z",
+              "WhenOpened": "2024-12-20T01:35:35.331Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductDetail.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\ProductDetail.cs",
-              "RelativeDocumentMoniker": "StoreManage\\Components\\ProductDetail.cs",
-              "ToolTip": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\ProductDetail.cs [Design]",
-              "RelativeToolTip": "StoreManage\\Components\\ProductDetail.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "CategoryAdd.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\Add\\CategoryAdd.cs",
+              "RelativeDocumentMoniker": "StoreManage\\Components\\Add\\CategoryAdd.cs",
+              "ToolTip": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\Add\\CategoryAdd.cs [Design]",
+              "RelativeToolTip": "StoreManage\\Components\\Add\\CategoryAdd.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T00:54:15.348Z",
+              "WhenOpened": "2024-12-20T01:35:34.03Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ProductAdd.cs",
+              "DocumentMoniker": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\Add\\ProductAdd.cs",
+              "RelativeDocumentMoniker": "StoreManage\\Components\\Add\\ProductAdd.cs",
+              "ToolTip": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\Add\\ProductAdd.cs",
+              "RelativeToolTip": "StoreManage\\Components\\Add\\ProductAdd.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAADwvzgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T01:12:27.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductAdd.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\Add\\ProductAdd.cs",
+              "RelativeDocumentMoniker": "StoreManage\\Components\\Add\\ProductAdd.cs",
+              "ToolTip": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\Add\\ProductAdd.cs [Design]",
+              "RelativeToolTip": "StoreManage\\Components\\Add\\ProductAdd.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T01:06:01.016Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "AdminProductPage.cs",
               "DocumentMoniker": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\AdminForms\\Pages\\AdminProductPage.cs",
               "RelativeDocumentMoniker": "StoreManage\\AdminForms\\Pages\\AdminProductPage.cs",
               "ToolTip": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\AdminForms\\Pages\\AdminProductPage.cs",
               "RelativeToolTip": "StoreManage\\AdminForms\\Pages\\AdminProductPage.cs",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAmwL0AAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAOQAAAAAAAAAAAAqwPUAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T00:53:35.223Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AdminProductPage.cs [Design]",
               "DocumentMoniker": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\AdminForms\\Pages\\AdminProductPage.cs",
               "RelativeDocumentMoniker": "StoreManage\\AdminForms\\Pages\\AdminProductPage.cs",
@@ -99,24 +133,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AdminCategoryPage.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\AdminForms\\Pages\\AdminCategoryPage.cs",
-              "RelativeDocumentMoniker": "StoreManage\\AdminForms\\Pages\\AdminCategoryPage.cs",
-              "ToolTip": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\AdminForms\\Pages\\AdminCategoryPage.cs [Design]",
-              "RelativeToolTip": "StoreManage\\AdminForms\\Pages\\AdminCategoryPage.cs [Design]",
+              "DocumentIndex": 6,
+              "Title": "ProductDetail.cs",
+              "DocumentMoniker": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\ProductDetail.cs",
+              "RelativeDocumentMoniker": "StoreManage\\Components\\ProductDetail.cs",
+              "ToolTip": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\ProductDetail.cs",
+              "RelativeToolTip": "StoreManage\\Components\\ProductDetail.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAawIMAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T18:55:15.889Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-20T00:55:00.902Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "cart.png",
-              "DocumentMoniker": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\Resources\\Images\\cart.png",
-              "ToolTip": "D:\\Code\\RepoTeam10_Laptrinhtrucquan\\StoreManage\\StoreManage\\Resources\\Images\\cart.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-12-19T18:55:15.893Z"
+              "DocumentIndex": 7,
+              "Title": "ProductDetail.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\ProductDetail.cs",
+              "RelativeDocumentMoniker": "StoreManage\\Components\\ProductDetail.cs",
+              "ToolTip": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\ProductDetail.cs [Design]",
+              "RelativeToolTip": "StoreManage\\Components\\ProductDetail.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T00:54:15.348Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
