@@ -16,7 +16,7 @@ namespace StoreManage.Components.Edit
 {
     public partial class SizeEdit : UserControl
     {
-        SizeController sizeController;
+        private readonly SizeController sizeController;
         private int SizeId;
         public SizeEdit(int sizeId)
         {

@@ -1,4 +1,6 @@
-﻿using StoreManage.Components.Edit;
+﻿using StoreManage.Components;
+using StoreManage.Components.Add;
+using StoreManage.Components.Edit;
 using StoreManage.Controllers;
 using StoreManage.DTOs.PColor;
 using StoreManage.DTOs.Subcategory;
@@ -59,7 +61,7 @@ namespace StoreManage.AdminForms.Pages
                 Font = new Font("Arial", 12, FontStyle.Bold),
                 ForeColor = Color.White,
                 AutoSize = false,
-                Size = new Size(100, 40),
+                Size = new Size(140, 40),
                 TextAlign = ContentAlignment.MiddleCenter,
                 Dock = DockStyle.Left
             };
@@ -70,18 +72,18 @@ namespace StoreManage.AdminForms.Pages
                 Font = new Font("Arial", 12, FontStyle.Bold),
                 ForeColor = Color.White,
                 AutoSize = false,
-                Size = new Size(150, 40),
+                Size = new Size(175, 40),
                 TextAlign = ContentAlignment.MiddleLeft,
                 Dock = DockStyle.Left
             };
 
-            var categoryIdHeaderLabel = new Label
+            var hexacodeHeaderLabel = new Label
             {
                 Text = "HexaCode",
                 Font = new Font("Arial", 12, FontStyle.Bold),
                 ForeColor = Color.White,
                 AutoSize = false,
-                Size = new Size(140, 40),
+                Size = new Size(160, 40),
                 TextAlign = ContentAlignment.MiddleLeft,
                 Dock = DockStyle.Left
             };
@@ -92,13 +94,13 @@ namespace StoreManage.AdminForms.Pages
                 Font = new Font("Arial", 12, FontStyle.Bold),
                 ForeColor = Color.White,
                 AutoSize = false,
-                Size = new Size(100, 40),
+                Size = new Size(140, 40),
                 TextAlign = ContentAlignment.MiddleCenter,
                 Dock = DockStyle.Left
             };
 
             headerPanel.Controls.Add(colorDisplayHeaderLabel);
-            headerPanel.Controls.Add(categoryIdHeaderLabel);
+            headerPanel.Controls.Add(hexacodeHeaderLabel);
             headerPanel.Controls.Add(nameHeaderLabel);
             headerPanel.Controls.Add(idHeaderLabel);
 
@@ -126,7 +128,7 @@ namespace StoreManage.AdminForms.Pages
                     Text = color.ColorId.ToString(),
                     Font = new Font("Arial", 10, FontStyle.Bold),
                     AutoSize = false,
-                    Size = new Size(100, 50),
+                    Size = new Size(140, 50),
                     TextAlign = ContentAlignment.MiddleCenter,
                     Dock = DockStyle.Left
                 };
@@ -149,7 +151,7 @@ namespace StoreManage.AdminForms.Pages
                     Text = color.HexaCode,
                     Font = new Font("Arial", 10, FontStyle.Italic),
                     AutoSize = false,
-                    Size = new Size(190, 50),
+                    Size = new Size(250, 50),
                     TextAlign = ContentAlignment.MiddleCenter,
                     Dock = DockStyle.Left
                 };
@@ -185,7 +187,6 @@ namespace StoreManage.AdminForms.Pages
 
                 // Add controls to the row panel
                 rowPanel.Controls.Add(editIcon);
-                rowPanel.Controls.Add(deleteIcon);
                 rowPanel.Controls.Add(colorDisplayPanel);
                 rowPanel.Controls.Add(hexaCodeLabel);
                 rowPanel.Controls.Add(nameLabel);
@@ -210,28 +211,28 @@ namespace StoreManage.AdminForms.Pages
         }
         private void EditCategory(int subcategoryId)
         {
-            var existingCategoryEdit = this.Controls.OfType<SubcategoryEdit>().FirstOrDefault();
+            var existingColorEdit = this.Controls.OfType<ColorEdit>().FirstOrDefault();
 
-            if (existingCategoryEdit == null)
+            if (existingColorEdit == null)
             {
                 // Create an instance of the CategoryAdd UserControl
-                var editCategory = new SubcategoryEdit(subcategoryId);
+                var editColor= new ColorEdit(subcategoryId);
 
                 // Add the CategoryAdd UserControl to the same container
-                this.Controls.Add(editCategory);
-                editCategory.Dock = DockStyle.None;
+                this.Controls.Add(editColor);
+                editColor.Dock = DockStyle.None;
 
                 // Position the CategoryAdd UserControl in the center
-                editCategory.Location = new Point(
-                    (this.Width - editCategory.Width) / 2,
-                    (this.Height - editCategory.Height) / 2
+                editColor.Location = new Point(
+                    (this.Width - editColor.Width) / 2,
+                    (this.Height - editColor.Height) / 2
                 );
-                editCategory.BringToFront();
+                editColor.BringToFront();
             }
             else
             {
                 // If it already exists, just bring it to the front
-                existingCategoryEdit.BringToFront();
+                existingColorEdit.BringToFront();
             }
         }
 
@@ -334,6 +335,26 @@ namespace StoreManage.AdminForms.Pages
             if (string.IsNullOrEmpty(searchText))
             {
                 DisplayColors(colors);
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            var existingCategoryAdd = this.Controls.OfType<ColorAdd>().FirstOrDefault();
+            if (existingCategoryAdd == null) 
+            {
+                var addCategory = new ColorAdd();
+                this.Controls.Add(addCategory);
+                addCategory.Dock = DockStyle.None;
+                addCategory.Location = new Point(
+                    (this.Width - addCategory.Width) / 2,
+                    (this.Height - addCategory.Height) / 2
+                );
+                addCategory.BringToFront();
+            }
+            else
+            {
+                existingCategoryAdd.BringToFront();
             }
         }
     }

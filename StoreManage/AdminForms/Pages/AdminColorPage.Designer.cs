@@ -136,6 +136,7 @@
             this.btnAdd.PressedState.Parent = this.btnAdd;
             this.btnAdd.Size = new System.Drawing.Size(50, 46);
             this.btnAdd.TabIndex = 45;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtSearch
             // 
