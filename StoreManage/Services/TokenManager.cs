@@ -12,7 +12,7 @@ namespace StoreManage.Services
     {
         private const string RegistryPath = @"HKEY_CURRENT_USER\Software\StoreManage";  // Đường dẫn Registry
         private const string TokenKey = "AccessToken";  // Tên key lưu token
-
+        private const string UsernameKey = "Username";  // Tên key lưu username
         // Lưu token vào Registry
         public static void SaveToken(string token)
         {
@@ -28,7 +28,7 @@ namespace StoreManage.Services
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error saving token: {ex.Message}");
+                Console.WriteLine($"Error saving token: {ex.Message}");
             }
         }
 
@@ -42,7 +42,55 @@ namespace StoreManage.Services
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error retrieving token: {ex.Message}");
+                Console.WriteLine($"Error retrieving token: {ex.Message}");
+                return null;
+            }
+        }
+
+        // Xóa token khỏi Registry
+        public static void RemoveToken()
+        {
+            try
+            {
+                RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\StoreManage", true);
+                if (key != null && key.GetValue(TokenKey) != null)
+                {
+                    key.DeleteValue(TokenKey);
+                    Console.WriteLine("Token removed successfully.");
+                }
+                else
+                {
+                    Console.WriteLine("Token not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error removing token: {ex.Message}");
+            }
+        }
+
+
+        public static void SaveUsername(string username)
+        {
+            try
+            {
+                Registry.SetValue(RegistryPath, UsernameKey, username);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving username: {ex.Message}");
+            }
+        }
+
+        public static string GetUsername()
+        {
+            try
+            {
+                return (string)Registry.GetValue(RegistryPath, UsernameKey, null);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error retrieving username: {ex.Message}");
                 return null;
             }
         }

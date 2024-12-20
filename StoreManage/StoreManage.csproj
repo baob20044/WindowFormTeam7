@@ -70,8 +70,14 @@
     <Reference Include="Guna.UI2">
       <HintPath>..\..\..\Bai_tap_thay_Toan\StoreManagerPro\GunaUI2-Cracked-2020-2021-main\Guna.UI2 WinForms\4.0\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Features, Version=5.0.17.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Features.5.0.17\lib\net461\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=5.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.5.0.1\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -88,6 +94,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
     <Reference Include="System.Management" />
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
@@ -266,13 +275,12 @@
     </Compile>
     <Compile Include="Components\Edit\ProfileEdit.Designer.cs">
       <DependentUpon>ProfileEdit.cs</DependentUpon>
- </Compile>
+    </Compile>
     <Compile Include="Components\Edit\SizeEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Components\Edit\SizeEdit.Designer.cs">
       <DependentUpon>SizeEdit.cs</DependentUpon>
-
     </Compile>
     <Compile Include="Components\Edit\SubcategoryEdit.cs">
       <SubType>UserControl</SubType>
@@ -297,6 +305,7 @@
     <Compile Include="Controllers\ColorController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\InventoryController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProviderController.cs" />
     <Compile Include="Controllers\SizeController.cs" />
@@ -414,6 +423,7 @@
       <DependentUpon>SignupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\ApiService.cs" />
+    <Compile Include="Services\FromFile.cs" />
     <Compile Include="Services\TokenManager.cs" />
     <EmbeddedResource Include="AdminForms\Authentication\AdminLoginForm.resx">
       <DependentUpon>AdminLoginForm.cs</DependentUpon>
@@ -453,7 +463,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Add\ProviderAdd.resx">
       <DependentUpon>ProviderAdd.cs</DependentUpon>
-  </EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\Add\ProductAdd.resx">
       <DependentUpon>ProductAdd.cs</DependentUpon>
     </EmbeddedResource>
