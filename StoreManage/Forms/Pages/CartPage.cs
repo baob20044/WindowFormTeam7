@@ -80,6 +80,12 @@ namespace StoreManage.Forms.Pages
 
         private async void btnOrder_Click(object sender, EventArgs e)
         {
+            if (flowLayout.Controls.Count == 0)
+            {
+                MessageBox.Show("Hãy thêm sản phẩm vào giỏ hàng");
+                return;
+            }
+
             DialogResult resulT = MessageBox.Show("Bạn có chắc chắn muốn mua hàng?", "Xác nhận", MessageBoxButtons.YesNo);
 
             if (resulT == DialogResult.No)
@@ -90,52 +96,56 @@ namespace StoreManage.Forms.Pages
             var mainform = this.FindForm() as MainForm;
             var employeeId = mainform.employeeId;
 
-            int productId;
-            int colorId;
-            int sizeId;
-            int quantity;
-            OrderDetailCreateDto orderDetail;
+            List<OrderDetailCreateDto> orderDetailList = new List<OrderDetailCreateDto>();
+
             foreach (Control control in flowLayout.Controls)
             {
                 if (control is CartItem cartItem)
                 {
-                    productId = cartItem.ProductId;
-                    colorId = cartItem.SelectedColorId;
-                    sizeId = cartItem.SelectedSizeId;
-                    quantity = cartItem.Quantity;
-                    orderDetail = new OrderDetailCreateDto()
+                    int productId = cartItem.ProductId;
+                    int colorId = cartItem.SelectedColorId;
+                    int sizeId = cartItem.SelectedSizeId;
+                    int quantity = cartItem.Quantity;
+
+                    OrderDetailCreateDto orderDetail = new OrderDetailCreateDto()
                     {
                         ProductId = productId,
                         ColorId = colorId,
                         SizeId = sizeId,
                         Quantity = quantity
                     };
+
                     orderDetailList.Add(orderDetail);
                 }
             }
+
             OrderCreateDto orderCreateDto = new OrderCreateDto()
             {
                 EmployeeId = employeeId,
                 OrderDetails = orderDetailList
             };
+
             try
             {
                 var response = await orderController.CreateAsync(orderCreateDto);
-                if (response != null) 
+
+                if (response != null)
                 {
-                    MessageBox.Show("Order adding successfully!");
+                    MessageBox.Show("Order added successfully!");
                     flowLayout.Controls.Clear();
+                    var _mainForm = this.FindForm() as MainForm;
+                    _mainForm.cartInterface.UpdateCartTotals();
                 }
                 else
                 {
-                    Console.WriteLine("Error creating order");
+                    MessageBox.Show("Error creating order");
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                MessageBox.Show($"An error occurred: {ex.Message}");
+                Console.WriteLine(ex.StackTrace); // Log stack trace for debugging
             }
-
         }
     }
 }

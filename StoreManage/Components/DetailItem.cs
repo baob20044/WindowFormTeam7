@@ -45,32 +45,10 @@ namespace StoreManage.Components
             LoadProductDetails(productId);
             DropdownColor.SelectedIndexChanged += DropdownColor_SelectedIndexChanged; // Attach event handler
         }
-        //public class ProductService
-        //{
-        //    private readonly RestClient _client;
-
-        //    public ProductService(string baseUrl)
-        //    {
-        //        _client = new RestClient(baseUrl);
-        //    }
-
-        //    public async Task<ProductDto> GetProductByIdAsync(int productId)
-        //    {
-        //        var request = new RestRequest($"/api/products/{productId}", Method.Get);
-        //        request.AddHeader("accept", "*/*");
-        //        var response = await _client.ExecuteAsync(request);
-        //        return response.IsSuccessful
-        //            ? JsonConvert.DeserializeObject<ProductDto>(response.Content)
-        //            : null;
-        //    }
-        //}
         private async void LoadProductDetails(int productId)
         {
             try
             {
-                //var productService = new ProductService("http://localhost:5254");
-                //var product = await productService.GetProductByIdAsync(productId);
-
                 var product = await _productController.GetByIdAsync(productId);
                 if (product != null)
                 {
