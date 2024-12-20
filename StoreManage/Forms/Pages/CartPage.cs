@@ -76,7 +76,10 @@ namespace StoreManage.Forms.Pages
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
+            var mainform = this.FindForm() as MainForm;
+            var employeeId = mainform.employeeId;
 
+            MessageBox.Show(employeeId.ToString());
         }
     }
 }

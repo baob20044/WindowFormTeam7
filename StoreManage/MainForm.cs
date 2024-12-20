@@ -1,5 +1,6 @@
 ﻿using StoreManage.AdminForms.Pages;
 using StoreManage.Components;
+using StoreManage.Controllers;
 using StoreManage.Forms.Pages;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,8 @@ namespace StoreManage
 {
     public partial class MainForm : Form
     {
+        public int employeeId = 0;
+        private readonly EmployeeController _employeeController;
         public HomePage homeInterface { get; private set; }
         private CategoryPage categoryInterface;
         public CartPage cartInterface { get; private set; }
@@ -27,6 +30,9 @@ namespace StoreManage
             InitializeComponent();
             cartInterface = new CartPage();
             homeInterface = new HomePage();
+
+            _employeeController = new EmployeeController(new Services.ApiService());
+            getEmployeeId();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -108,6 +114,22 @@ namespace StoreManage
         private void btnLogout_Click(object sender, EventArgs e)
         {
             NavigateToLoginForm();
+        }
+        public async void getEmployeeId()
+        {
+            try
+            {
+                var result = await _employeeController.GetDetailsAsync();
+                if (result != null)
+                {
+                    employeeId = result.EmployeeId;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Failed : {ex.Message}");
+            }
+
         }
     }
 }
