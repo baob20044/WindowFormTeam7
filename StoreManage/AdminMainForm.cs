@@ -27,8 +27,14 @@ namespace StoreManage
         public AdminMainForm()
         {
             InitializeComponent();
+            refreshHome();
         }
-
+        public void refreshHome()
+        {
+            adminHomePage = new AdminHomePage();
+            flowLayoutPanel.Controls.Clear();
+            flowLayoutPanel.Controls.Add(adminHomePage);
+        }
         private void btnHome_Click(object sender, EventArgs e)
         {
             adminHomePage = new AdminHomePage();

@@ -63,7 +63,7 @@ namespace StoreManage.Forms.Pages
             {
                 // Apply discount and add transport fee
                 //decimal totalAfterDiscount = totalMoney * (1 - discount);
-                decimal finalTotal = totalMoney - discount + transportFee;
+                decimal finalTotal = totalMoney - discount;
 
                 // Update the labels on MainPage
                 lbTotalMoney.Text = $"{totalMoney:N0} VND"; // Total before discount
@@ -225,12 +225,9 @@ namespace StoreManage.Forms.Pages
                 totalsTable.Cell(2, 1).Range.Text = "Discount:";     // Change Transport Fee to Discount
                 totalsTable.Cell(2, 2).Range.Text = discount;        // Set discount in place of Transport Fee
 
-                totalsTable.Cell(3, 1).Range.Text = "Transport Fee:"; // Change Total Money to Transport Fee
-                totalsTable.Cell(3, 2).Range.Text = transportFee;    // Set transportFee in place of Total Money
-
                 // Add Total Bill row
-                totalsTable.Cell(4, 1).Range.Text = "Total Bill:";
-                totalsTable.Cell(4, 2).Range.Text = lbTotalOrder.Text;
+                totalsTable.Cell(3, 1).Range.Text = "Total Bill:";
+                totalsTable.Cell(3, 2).Range.Text = lbTotalOrder.Text;
 
                 // Footer for shop details
                 var footerParagraph = wordDoc.Content.Paragraphs.Add();
