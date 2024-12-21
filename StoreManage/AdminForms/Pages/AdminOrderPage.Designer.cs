@@ -41,7 +41,6 @@
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAdd = new Guna.UI2.WinForms.Guna2ImageButton();
             this.txtSearch = new Bunifu.UI.WinForms.BunifuTextBox();
             this.SuspendLayout();
             // 
@@ -52,6 +51,7 @@
             this.cBNumber.Name = "cBNumber";
             this.cBNumber.Size = new System.Drawing.Size(61, 24);
             this.cBNumber.TabIndex = 59;
+            this.cBNumber.SelectedIndexChanged += new System.EventHandler(this.cBNumber_SelectedIndexChanged);
             // 
             // rBDesc
             // 
@@ -71,6 +71,7 @@
             this.rBDesc.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.rBDesc.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.rBDesc.UseVisualStyleBackColor = true;
+            this.rBDesc.CheckedChanged += new System.EventHandler(this.SortOrderChanged);
             // 
             // rBAsc
             // 
@@ -92,6 +93,7 @@
             this.rBAsc.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.rBAsc.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.rBAsc.UseVisualStyleBackColor = true;
+            this.rBAsc.CheckedChanged += new System.EventHandler(this.SortOrderChanged);
             // 
             // flowLayoutPanel
             // 
@@ -120,20 +122,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1162, 2);
             this.panel1.TabIndex = 54;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.CheckedState.Parent = this.btnAdd;
-            this.btnAdd.HoverState.ImageSize = new System.Drawing.Size(50, 46);
-            this.btnAdd.HoverState.Parent = this.btnAdd;
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnAdd.Location = new System.Drawing.Point(31, 85);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.PressedState.Parent = this.btnAdd;
-            this.btnAdd.Size = new System.Drawing.Size(50, 46);
-            this.btnAdd.TabIndex = 53;
             // 
             // txtSearch
             // 
@@ -208,6 +196,8 @@
             this.txtSearch.TextPlaceholder = "Enter text";
             this.txtSearch.UseSystemPasswordChar = false;
             this.txtSearch.WordWrap = true;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // AdminOrderPage
             // 
@@ -219,10 +209,10 @@
             this.Controls.Add(this.flowLayoutPanel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtSearch);
             this.Name = "AdminOrderPage";
             this.Size = new System.Drawing.Size(1137, 755);
+            this.Load += new System.EventHandler(this.AdminOrderPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,7 +227,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2ImageButton btnAdd;
         private Bunifu.UI.WinForms.BunifuTextBox txtSearch;
     }
 }

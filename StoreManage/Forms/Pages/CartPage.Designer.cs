@@ -70,7 +70,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(21, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 38);
+            this.label2.Size = new System.Drawing.Size(128, 37);
             this.label2.TabIndex = 0;
             this.label2.Text = "Giỏ hàng";
             // 
@@ -92,7 +92,7 @@
             this.lbTransportFee.ForeColor = System.Drawing.Color.Black;
             this.lbTransportFee.Location = new System.Drawing.Point(261, 159);
             this.lbTransportFee.Name = "lbTransportFee";
-            this.lbTransportFee.Size = new System.Drawing.Size(118, 25);
+            this.lbTransportFee.Size = new System.Drawing.Size(110, 23);
             this.lbTransportFee.TabIndex = 35;
             this.lbTransportFee.Text = "$Vận chuyển";
             // 
@@ -103,9 +103,9 @@
             this.lbDiscount.ForeColor = System.Drawing.Color.Black;
             this.lbDiscount.Location = new System.Drawing.Point(261, 124);
             this.lbDiscount.Name = "lbDiscount";
-            this.lbDiscount.Size = new System.Drawing.Size(101, 25);
+            this.lbDiscount.Size = new System.Drawing.Size(127, 23);
             this.lbDiscount.TabIndex = 34;
-            this.lbDiscount.Text = "%Discount";
+            this.lbDiscount.Text = "%Tiền giảm giá";
             // 
             // lbTotalMoney
             // 
@@ -114,7 +114,7 @@
             this.lbTotalMoney.ForeColor = System.Drawing.Color.Black;
             this.lbTotalMoney.Location = new System.Drawing.Point(261, 87);
             this.lbTotalMoney.Name = "lbTotalMoney";
-            this.lbTotalMoney.Size = new System.Drawing.Size(103, 25);
+            this.lbTotalMoney.Size = new System.Drawing.Size(92, 23);
             this.lbTotalMoney.TabIndex = 33;
             this.lbTotalMoney.Text = "$Tổng tiền";
             // 
@@ -230,7 +230,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(117)))));
             this.label8.Location = new System.Drawing.Point(25, 159);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 25);
+            this.label8.Size = new System.Drawing.Size(101, 23);
             this.label8.TabIndex = 4;
             this.label8.Text = "Vận chuyển";
             // 
@@ -241,9 +241,9 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(117)))));
             this.label7.Location = new System.Drawing.Point(25, 124);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 25);
+            this.label7.Size = new System.Drawing.Size(78, 23);
             this.label7.TabIndex = 3;
-            this.label7.Text = "Mã giảm giá";
+            this.label7.Text = "Giảm giá";
             // 
             // label5
             // 
@@ -252,7 +252,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(117)))));
             this.label5.Location = new System.Drawing.Point(25, 87);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 25);
+            this.label5.Size = new System.Drawing.Size(83, 23);
             this.label5.TabIndex = 2;
             this.label5.Text = "Tổng tiền";
             // 
@@ -262,7 +262,7 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(23, 25);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(215, 35);
+            this.label6.Size = new System.Drawing.Size(206, 32);
             this.label6.TabIndex = 2;
             this.label6.Text = "Chi tiết đơn hàng";
             // 
@@ -272,7 +272,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(21, 24);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(191, 25);
+            this.label4.Size = new System.Drawing.Size(178, 23);
             this.label4.TabIndex = 1;
             this.label4.Text = "Sản phẩm nguyên giá";
             // 
@@ -309,7 +309,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(54, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(489, 25);
+            this.label3.Size = new System.Drawing.Size(463, 23);
             this.label3.TabIndex = 1;
             this.label3.Text = "Chúc mừng! Đơn hàng của bạn được Miễn phí vận chuyển";
             // 

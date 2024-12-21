@@ -364,6 +364,12 @@
     <Compile Include="Components\EmployeeDetail.Designer.cs">
       <DependentUpon>EmployeeDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\OrderDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\OrderDetail.Designer.cs">
+      <DependentUpon>OrderDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\ProductDetail.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -587,6 +593,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\EmployeeDetail.resx">
       <DependentUpon>EmployeeDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\OrderDetail.resx">
+      <DependentUpon>OrderDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\ProductDetail.resx">
       <DependentUpon>ProductDetail.cs</DependentUpon>
