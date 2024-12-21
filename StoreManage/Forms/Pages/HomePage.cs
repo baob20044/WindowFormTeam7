@@ -2,6 +2,7 @@
 using RestSharp;
 using StoreManage.Components;
 using StoreManage.DTOs.Product;
+using StoreManage.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,7 +35,7 @@ namespace StoreManage.Forms.Pages
 
         private void HomePage_Load(object sender, EventArgs e)
         {
-
+            lbName.Text = TokenManager.GetUsername();
         }
         private async void InitializeShopItems()
         {

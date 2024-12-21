@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbLogOut = new System.Windows.Forms.Label();
             this.btnOrder = new Guna.UI2.WinForms.Guna2Button();
             this.btnProvider = new Guna.UI2.WinForms.Guna2Button();
             this.btnEmployee = new Guna.UI2.WinForms.Guna2Button();
@@ -44,7 +45,6 @@
             this.controlboxMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.controlboxTurnOff = new Guna.UI2.WinForms.Guna2ControlBox();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.lbLogOut = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBAvatarEdit)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +68,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(223, 803);
             this.panel1.TabIndex = 0;
+            // 
+            // lbLogOut
+            // 
+            this.lbLogOut.AutoSize = true;
+            this.lbLogOut.BackColor = System.Drawing.Color.Transparent;
+            this.lbLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbLogOut.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLogOut.ForeColor = System.Drawing.Color.Red;
+            this.lbLogOut.Location = new System.Drawing.Point(3, 776);
+            this.lbLogOut.Name = "lbLogOut";
+            this.lbLogOut.Size = new System.Drawing.Size(60, 19);
+            this.lbLogOut.TabIndex = 24;
+            this.lbLogOut.Text = "Log out";
+            this.lbLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbLogOut.Click += new System.EventHandler(this.lbLogOut_Click);
             // 
             // btnOrder
             // 
@@ -299,24 +314,8 @@
             this.flowLayoutPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.flowLayoutPanel.Location = new System.Drawing.Point(228, 48);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-
             this.flowLayoutPanel.Size = new System.Drawing.Size(1129, 755);
             this.flowLayoutPanel.TabIndex = 14;
-            // 
-            // lbLogOut
-            // 
-            this.lbLogOut.AutoSize = true;
-            this.lbLogOut.BackColor = System.Drawing.Color.Transparent;
-            this.lbLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbLogOut.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLogOut.ForeColor = System.Drawing.Color.Red;
-            this.lbLogOut.Location = new System.Drawing.Point(3, 776);
-            this.lbLogOut.Name = "lbLogOut";
-            this.lbLogOut.Size = new System.Drawing.Size(60, 19);
-            this.lbLogOut.TabIndex = 24;
-            this.lbLogOut.Text = "Log out";
-            this.lbLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbLogOut.Click += new System.EventHandler(this.lbLogOut_Click);
             // 
             // AdminMainForm
             // 

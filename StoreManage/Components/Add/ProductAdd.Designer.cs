@@ -67,9 +67,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(61)))), ((int)(((byte)(93)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(781, 83);
+            this.panel1.Size = new System.Drawing.Size(1041, 102);
             this.panel1.TabIndex = 23;
             // 
             // label1
@@ -78,10 +78,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(276, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(368, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 37);
+            this.label1.Size = new System.Drawing.Size(214, 45);
             this.label1.TabIndex = 19;
             this.label1.Text = "Add Product";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -91,10 +90,17 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
             this.panel2.Controls.Add(this.btnClose);
             this.panel2.Controls.Add(this.btnSave);
+<<<<<<< HEAD
             this.panel2.Location = new System.Drawing.Point(541, 543);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(218, 58);
+=======
+            this.panel2.Location = new System.Drawing.Point(0, 738);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1035, 75);
+>>>>>>> main
             this.panel2.TabIndex = 24;
             // 
             // btnClose
@@ -109,11 +115,16 @@
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.HoverState.Parent = this.btnClose;
+<<<<<<< HEAD
             this.btnClose.Location = new System.Drawing.Point(115, 7);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.btnClose.Location = new System.Drawing.Point(159, 8);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+>>>>>>> main
             this.btnClose.Name = "btnClose";
             this.btnClose.ShadowDecoration.Parent = this.btnClose;
-            this.btnClose.Size = new System.Drawing.Size(90, 46);
+            this.btnClose.Size = new System.Drawing.Size(120, 57);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -130,11 +141,16 @@
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.HoverState.Parent = this.btnSave;
+<<<<<<< HEAD
             this.btnSave.Location = new System.Drawing.Point(12, 7);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.btnSave.Location = new System.Drawing.Point(33, 8);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+>>>>>>> main
             this.btnSave.Name = "btnSave";
             this.btnSave.ShadowDecoration.Parent = this.btnSave;
-            this.btnSave.Size = new System.Drawing.Size(90, 46);
+            this.btnSave.Size = new System.Drawing.Size(120, 57);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save";
             // 
@@ -151,11 +167,11 @@
             this.cBTargetCustomer.HoverState.Parent = this.cBTargetCustomer;
             this.cBTargetCustomer.ItemHeight = 30;
             this.cBTargetCustomer.ItemsAppearance.Parent = this.cBTargetCustomer;
-            this.cBTargetCustomer.Location = new System.Drawing.Point(195, 160);
-            this.cBTargetCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.cBTargetCustomer.Location = new System.Drawing.Point(260, 197);
+            this.cBTargetCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cBTargetCustomer.Name = "cBTargetCustomer";
             this.cBTargetCustomer.ShadowDecoration.Parent = this.cBTargetCustomer;
-            this.cBTargetCustomer.Size = new System.Drawing.Size(200, 36);
+            this.cBTargetCustomer.Size = new System.Drawing.Size(265, 36);
             this.cBTargetCustomer.TabIndex = 28;
             this.cBTargetCustomer.SelectedIndexChanged += new System.EventHandler(this.cBTargetCustomer_SelectedIndexChanged);
             // 
@@ -164,10 +180,9 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 100);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(33, 123);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 25);
+            this.label2.Size = new System.Drawing.Size(76, 31);
             this.label2.TabIndex = 26;
             this.label2.Text = "Name";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -185,13 +200,14 @@
             this.txtName.FocusedState.Parent = this.txtName;
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.HoverState.Parent = this.txtName;
-            this.txtName.Location = new System.Drawing.Point(195, 94);
+            this.txtName.Location = new System.Drawing.Point(260, 116);
+            this.txtName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
             this.txtName.ShadowDecoration.Parent = this.txtName;
-            this.txtName.Size = new System.Drawing.Size(200, 36);
+            this.txtName.Size = new System.Drawing.Size(267, 44);
             this.txtName.TabIndex = 25;
             // 
             // label4
@@ -199,10 +215,9 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 165);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(33, 203);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 25);
+            this.label4.Size = new System.Drawing.Size(186, 31);
             this.label4.TabIndex = 30;
             this.label4.Text = "Target Customer";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -212,10 +227,9 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 231);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(33, 284);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 25);
+            this.label5.Size = new System.Drawing.Size(110, 31);
             this.label5.TabIndex = 32;
             this.label5.Text = "Category";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -233,11 +247,11 @@
             this.cbCategory.HoverState.Parent = this.cbCategory;
             this.cbCategory.ItemHeight = 30;
             this.cbCategory.ItemsAppearance.Parent = this.cbCategory;
-            this.cbCategory.Location = new System.Drawing.Point(195, 226);
-            this.cbCategory.Margin = new System.Windows.Forms.Padding(2);
+            this.cbCategory.Location = new System.Drawing.Point(260, 278);
+            this.cbCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.ShadowDecoration.Parent = this.cbCategory;
-            this.cbCategory.Size = new System.Drawing.Size(200, 36);
+            this.cbCategory.Size = new System.Drawing.Size(265, 36);
             this.cbCategory.TabIndex = 31;
             this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
@@ -246,10 +260,9 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(25, 297);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(33, 366);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 25);
+            this.label6.Size = new System.Drawing.Size(150, 31);
             this.label6.TabIndex = 34;
             this.label6.Text = "SubCategory";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -267,11 +280,11 @@
             this.cbSubCategory.HoverState.Parent = this.cbSubCategory;
             this.cbSubCategory.ItemHeight = 30;
             this.cbSubCategory.ItemsAppearance.Parent = this.cbSubCategory;
-            this.cbSubCategory.Location = new System.Drawing.Point(195, 292);
-            this.cbSubCategory.Margin = new System.Windows.Forms.Padding(2);
+            this.cbSubCategory.Location = new System.Drawing.Point(260, 359);
+            this.cbSubCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbSubCategory.Name = "cbSubCategory";
             this.cbSubCategory.ShadowDecoration.Parent = this.cbSubCategory;
-            this.cbSubCategory.Size = new System.Drawing.Size(200, 36);
+            this.cbSubCategory.Size = new System.Drawing.Size(265, 36);
             this.cbSubCategory.TabIndex = 33;
             // 
             // label7
@@ -279,10 +292,9 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(400, 165);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(533, 203);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(145, 25);
+            this.label7.Size = new System.Drawing.Size(176, 31);
             this.label7.TabIndex = 36;
             this.label7.Text = "New Target Cus";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -300,13 +312,14 @@
             this.txtNewTarget.FocusedState.Parent = this.txtNewTarget;
             this.txtNewTarget.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewTarget.HoverState.Parent = this.txtNewTarget;
-            this.txtNewTarget.Location = new System.Drawing.Point(583, 160);
+            this.txtNewTarget.Location = new System.Drawing.Point(777, 197);
+            this.txtNewTarget.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNewTarget.Name = "txtNewTarget";
             this.txtNewTarget.PasswordChar = '\0';
             this.txtNewTarget.PlaceholderText = "";
             this.txtNewTarget.SelectedText = "";
             this.txtNewTarget.ShadowDecoration.Parent = this.txtNewTarget;
-            this.txtNewTarget.Size = new System.Drawing.Size(176, 36);
+            this.txtNewTarget.Size = new System.Drawing.Size(235, 44);
             this.txtNewTarget.TabIndex = 35;
             // 
             // label8
@@ -314,10 +327,9 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(400, 231);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(533, 284);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(135, 25);
+            this.label8.Size = new System.Drawing.Size(163, 31);
             this.label8.TabIndex = 38;
             this.label8.Text = "New Category";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -335,13 +347,14 @@
             this.txtNewCategory.FocusedState.Parent = this.txtNewCategory;
             this.txtNewCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewCategory.HoverState.Parent = this.txtNewCategory;
-            this.txtNewCategory.Location = new System.Drawing.Point(583, 226);
+            this.txtNewCategory.Location = new System.Drawing.Point(777, 278);
+            this.txtNewCategory.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNewCategory.Name = "txtNewCategory";
             this.txtNewCategory.PasswordChar = '\0';
             this.txtNewCategory.PlaceholderText = "";
             this.txtNewCategory.SelectedText = "";
             this.txtNewCategory.ShadowDecoration.Parent = this.txtNewCategory;
-            this.txtNewCategory.Size = new System.Drawing.Size(176, 36);
+            this.txtNewCategory.Size = new System.Drawing.Size(235, 44);
             this.txtNewCategory.TabIndex = 37;
             // 
             // label9
@@ -349,10 +362,9 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(400, 297);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(533, 366);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(167, 25);
+            this.label9.Size = new System.Drawing.Size(203, 31);
             this.label9.TabIndex = 40;
             this.label9.Text = "New SubCategory";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -370,13 +382,14 @@
             this.txtNewSubCategory.FocusedState.Parent = this.txtNewSubCategory;
             this.txtNewSubCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewSubCategory.HoverState.Parent = this.txtNewSubCategory;
-            this.txtNewSubCategory.Location = new System.Drawing.Point(583, 292);
+            this.txtNewSubCategory.Location = new System.Drawing.Point(777, 359);
+            this.txtNewSubCategory.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNewSubCategory.Name = "txtNewSubCategory";
             this.txtNewSubCategory.PasswordChar = '\0';
             this.txtNewSubCategory.PlaceholderText = "";
             this.txtNewSubCategory.SelectedText = "";
             this.txtNewSubCategory.ShadowDecoration.Parent = this.txtNewSubCategory;
-            this.txtNewSubCategory.Size = new System.Drawing.Size(176, 36);
+            this.txtNewSubCategory.Size = new System.Drawing.Size(235, 44);
             this.txtNewSubCategory.TabIndex = 39;
             // 
             // label10
@@ -384,10 +397,9 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(25, 362);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(33, 446);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 25);
+            this.label10.Size = new System.Drawing.Size(65, 31);
             this.label10.TabIndex = 42;
             this.label10.Text = "Price";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -405,13 +417,14 @@
             this.txtPrice.FocusedState.Parent = this.txtPrice;
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrice.HoverState.Parent = this.txtPrice;
-            this.txtPrice.Location = new System.Drawing.Point(195, 356);
+            this.txtPrice.Location = new System.Drawing.Point(260, 438);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PasswordChar = '\0';
             this.txtPrice.PlaceholderText = "";
             this.txtPrice.SelectedText = "";
             this.txtPrice.ShadowDecoration.Parent = this.txtPrice;
-            this.txtPrice.Size = new System.Drawing.Size(200, 36);
+            this.txtPrice.Size = new System.Drawing.Size(267, 44);
             this.txtPrice.TabIndex = 41;
             // 
             // label11
@@ -419,10 +432,9 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(25, 425);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(33, 523);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 25);
+            this.label11.Size = new System.Drawing.Size(60, 31);
             this.label11.TabIndex = 44;
             this.label11.Text = "Cost";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -440,13 +452,14 @@
             this.txtCost.FocusedState.Parent = this.txtCost;
             this.txtCost.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCost.HoverState.Parent = this.txtCost;
-            this.txtCost.Location = new System.Drawing.Point(195, 419);
+            this.txtCost.Location = new System.Drawing.Point(260, 516);
+            this.txtCost.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtCost.Name = "txtCost";
             this.txtCost.PasswordChar = '\0';
             this.txtCost.PlaceholderText = "";
             this.txtCost.SelectedText = "";
             this.txtCost.ShadowDecoration.Parent = this.txtCost;
-            this.txtCost.Size = new System.Drawing.Size(200, 36);
+            this.txtCost.Size = new System.Drawing.Size(267, 44);
             this.txtCost.TabIndex = 43;
             // 
             // label12
@@ -454,10 +467,9 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(25, 491);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(33, 604);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(84, 25);
+            this.label12.Size = new System.Drawing.Size(103, 31);
             this.label12.TabIndex = 46;
             this.label12.Text = "Provider";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -475,11 +487,11 @@
             this.cbProdivder.HoverState.Parent = this.cbProdivder;
             this.cbProdivder.ItemHeight = 30;
             this.cbProdivder.ItemsAppearance.Parent = this.cbProdivder;
-            this.cbProdivder.Location = new System.Drawing.Point(195, 486);
-            this.cbProdivder.Margin = new System.Windows.Forms.Padding(2);
+            this.cbProdivder.Location = new System.Drawing.Point(260, 598);
+            this.cbProdivder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbProdivder.Name = "cbProdivder";
             this.cbProdivder.ShadowDecoration.Parent = this.cbProdivder;
-            this.cbProdivder.Size = new System.Drawing.Size(200, 36);
+            this.cbProdivder.Size = new System.Drawing.Size(265, 36);
             this.cbProdivder.TabIndex = 45;
             // 
             // label3
@@ -487,10 +499,9 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 556);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(33, 684);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 25);
+            this.label3.Size = new System.Drawing.Size(134, 31);
             this.label3.TabIndex = 48;
             this.label3.Text = "Description";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -508,13 +519,14 @@
             this.txtDescription.FocusedState.Parent = this.txtDescription;
             this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDescription.HoverState.Parent = this.txtDescription;
-            this.txtDescription.Location = new System.Drawing.Point(195, 550);
+            this.txtDescription.Location = new System.Drawing.Point(260, 677);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PasswordChar = '\0';
             this.txtDescription.PlaceholderText = "";
             this.txtDescription.SelectedText = "";
             this.txtDescription.ShadowDecoration.Parent = this.txtDescription;
-            this.txtDescription.Size = new System.Drawing.Size(200, 36);
+            this.txtDescription.Size = new System.Drawing.Size(267, 44);
             this.txtDescription.TabIndex = 47;
             // 
             // label13
@@ -561,7 +573,7 @@
             // 
             // ProductAdd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label13);
@@ -590,8 +602,13 @@
             this.Controls.Add(this.cBTargetCustomer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtName);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ProductAdd";
+<<<<<<< HEAD
             this.Size = new System.Drawing.Size(780, 603);
+=======
+            this.Size = new System.Drawing.Size(1040, 818);
+>>>>>>> main
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

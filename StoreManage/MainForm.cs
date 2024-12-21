@@ -1,5 +1,6 @@
 ﻿using StoreManage.AdminForms.Pages;
 using StoreManage.Components;
+using StoreManage.Controllers;
 using StoreManage.Forms.Pages;
 using System;
 using System.Collections.Generic;
@@ -10,12 +11,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace StoreManage
 {
     public partial class MainForm : Form
     {
+        public int employeeId = 0;
+        private readonly EmployeeController _employeeController;
         public HomePage homeInterface { get; private set; }
         private CategoryPage categoryInterface;
         public CartPage cartInterface { get; private set; }
@@ -27,6 +29,9 @@ namespace StoreManage
             InitializeComponent();
             cartInterface = new CartPage();
             homeInterface = new HomePage();
+
+            _employeeController = new EmployeeController(new Services.ApiService());
+            getEmployeeId();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -68,7 +73,7 @@ namespace StoreManage
             flowLayoutPanel.Controls.Clear(); // Clear existing details
             flowLayoutPanel.Controls.Add(detail); // Add the new detail view
         }
-        private void NavigateToLoginForm()
+        public void NavigateToLoginForm()
         {
             // Initialize the Timer for fade-out
             fadeTimer = new Timer();
@@ -108,6 +113,22 @@ namespace StoreManage
         private void btnLogout_Click(object sender, EventArgs e)
         {
             NavigateToLoginForm();
+        }
+        public async void getEmployeeId()
+        {
+            try
+            {
+                var result = await _employeeController.GetDetailsAsync();
+                if (result != null)
+                {
+                    employeeId = result.EmployeeId;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Failed : {ex.Message}");
+            }
+
         }
     }
 }

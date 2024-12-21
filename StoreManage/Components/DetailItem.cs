@@ -29,8 +29,9 @@ namespace StoreManage.Components
         private MainForm _mainForm;
         private readonly ProductController _productController;
         private readonly InventoryController _inventoryController;
-        private int _inStock = 0;
 
+        private int SelectedColorId { get; set; } // Selected color
+        private int SelectedSizeId { get; set; }      // Selected size
         public DetailItem(int productId,MainForm mainForm )
         {
             InitializeComponent();
@@ -44,32 +45,10 @@ namespace StoreManage.Components
             LoadProductDetails(productId);
             DropdownColor.SelectedIndexChanged += DropdownColor_SelectedIndexChanged; // Attach event handler
         }
-        //public class ProductService
-        //{
-        //    private readonly RestClient _client;
-
-        //    public ProductService(string baseUrl)
-        //    {
-        //        _client = new RestClient(baseUrl);
-        //    }
-
-        //    public async Task<ProductDto> GetProductByIdAsync(int productId)
-        //    {
-        //        var request = new RestRequest($"/api/products/{productId}", Method.Get);
-        //        request.AddHeader("accept", "*/*");
-        //        var response = await _client.ExecuteAsync(request);
-        //        return response.IsSuccessful
-        //            ? JsonConvert.DeserializeObject<ProductDto>(response.Content)
-        //            : null;
-        //    }
-        //}
         private async void LoadProductDetails(int productId)
         {
             try
             {
-                //var productService = new ProductService("http://localhost:5254");
-                //var product = await productService.GetProductByIdAsync(productId);
-
                 var product = await _productController.GetByIdAsync(productId);
                 if (product != null)
                 {
@@ -174,8 +153,13 @@ namespace StoreManage.Components
 
                 // Lấy đối tượng ColorDto từ colorMap
                 if (sizeMap.TryGetValue(selectedSizeName, out var selectedSize))
-                    // Lấy ColorId
+                {
                     selectedSizeId = selectedSize.SizeId;
+                    SelectedSizeId = selectedSizeId;
+                }
+                    // Lấy ColorId
+   
+                
             }    
 
             if (DropdownColor.SelectedIndex >= 0)
@@ -187,6 +171,7 @@ namespace StoreManage.Components
                     // Update color label
                     lbColor.Text = $"Color: {selectedColor.Name}";
                     selectedColorId = selectedColor.ColorId;
+                    SelectedColorId = selectedColorId;
 
                     if (selectedSizeId != 0 && selectedColorId != 0)
                     {
@@ -219,6 +204,7 @@ namespace StoreManage.Components
 
             string selectedColorName = DropdownColor.SelectedItem?.ToString();
             string selectedSize = DropdownSize.SelectedItem?.ToString();
+            
 
             if (string.IsNullOrEmpty(selectedColorName) || string.IsNullOrEmpty(selectedSize))
             {
@@ -244,7 +230,7 @@ namespace StoreManage.Components
 
             if (!productExistsInCart)
             {
-                var newCartItem = new CartItem(productId, selectedColorName, selectedSize, _mainForm)
+                var newCartItem = new CartItem(productId, selectedColorName, selectedSize, _mainForm,SelectedColorId,SelectedSizeId)
                 {
                     ItemLabel = lbName.Text,
                     ItemPrice = lbPrice.Text,

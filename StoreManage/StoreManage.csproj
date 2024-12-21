@@ -70,8 +70,18 @@
     <Reference Include="Guna.UI2">
       <HintPath>..\..\..\Bai_tap_thay_Toan\StoreManagerPro\GunaUI2-Cracked-2020-2021-main\Guna.UI2 WinForms\4.0\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Features, Version=5.0.17.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Features.5.0.17\lib\net461\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=5.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.5.0.1\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -88,6 +98,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
     <Reference Include="System.Management" />
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
@@ -189,6 +202,18 @@
     <Compile Include="AdminMainForm.Designer.cs">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\Add\ColorAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Add\ColorAdd.Designer.cs">
+      <DependentUpon>ColorAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Add\ProviderAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Add\ProviderAdd.Designer.cs">
+      <DependentUpon>ProviderAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\Add\ProductAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -237,6 +262,30 @@
     <Compile Include="Components\Edit\CategoryEdit.Designer.cs">
       <DependentUpon>CategoryEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\Edit\ColorEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Edit\ColorEdit.Designer.cs">
+      <DependentUpon>ColorEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Edit\ProviderEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Edit\ProviderEdit.Designer.cs">
+      <DependentUpon>ProviderEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Edit\PasswordEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Edit\PasswordEdit.Designer.cs">
+      <DependentUpon>PasswordEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Edit\ProfileEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Edit\ProfileEdit.Designer.cs">
+      <DependentUpon>ProfileEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\Edit\SizeEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -264,7 +313,9 @@
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ColorController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\InventoryController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProviderController.cs" />
     <Compile Include="Controllers\SizeController.cs" />
@@ -382,6 +433,7 @@
       <DependentUpon>SignupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\ApiService.cs" />
+    <Compile Include="Services\FromFile.cs" />
     <Compile Include="Services\TokenManager.cs" />
     <EmbeddedResource Include="AdminForms\Authentication\AdminLoginForm.resx">
       <DependentUpon>AdminLoginForm.cs</DependentUpon>
@@ -416,6 +468,12 @@
     <EmbeddedResource Include="AdminMainForm.resx">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Components\Add\ColorAdd.resx">
+      <DependentUpon>ColorAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Add\ProviderAdd.resx">
+      <DependentUpon>ProviderAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\Add\ProductAdd.resx">
       <DependentUpon>ProductAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -439,6 +497,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Edit\CategoryEdit.resx">
       <DependentUpon>CategoryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Edit\ColorEdit.resx">
+      <DependentUpon>ColorEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Edit\ProviderEdit.resx">
+      <DependentUpon>ProviderEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Edit\PasswordEdit.resx">
+      <DependentUpon>PasswordEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Edit\ProfileEdit.resx">
+      <DependentUpon>ProfileEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Edit\SizeEdit.resx">
       <DependentUpon>SizeEdit.cs</DependentUpon>

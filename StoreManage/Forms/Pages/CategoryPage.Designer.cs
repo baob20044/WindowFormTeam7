@@ -77,6 +77,7 @@
             this.cbMiddle = new System.Windows.Forms.CheckBox();
             this.cbBelow350 = new System.Windows.Forms.CheckBox();
             this.flowLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox10)).BeginInit();
@@ -130,6 +131,7 @@
             this.panel9.Controls.Add(this.bunifuPictureBox9);
             this.panel9.Controls.Add(this.bunifuPictureBox10);
             this.panel9.Controls.Add(this.bunifuPictureBox11);
+            this.panel9.Controls.Add(this.flowLayoutPanel1);
             this.panel9.Controls.Add(this.bunifuPictureBox12);
             this.panel9.Controls.Add(this.bunifuPictureBox5);
             this.panel9.Controls.Add(this.bunifuPictureBox4);
@@ -169,7 +171,7 @@
             this.bunifuPictureBox9.BorderRadius = 12;
             this.bunifuPictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox9.Image")));
             this.bunifuPictureBox9.IsCircle = true;
-            this.bunifuPictureBox9.Location = new System.Drawing.Point(874, 15);
+            this.bunifuPictureBox9.Location = new System.Drawing.Point(828, 15);
             this.bunifuPictureBox9.Name = "bunifuPictureBox9";
             this.bunifuPictureBox9.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -186,7 +188,7 @@
             this.bunifuPictureBox10.BorderRadius = 12;
             this.bunifuPictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox10.Image")));
             this.bunifuPictureBox10.IsCircle = true;
-            this.bunifuPictureBox10.Location = new System.Drawing.Point(793, 15);
+            this.bunifuPictureBox10.Location = new System.Drawing.Point(747, 15);
             this.bunifuPictureBox10.Name = "bunifuPictureBox10";
             this.bunifuPictureBox10.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -203,7 +205,7 @@
             this.bunifuPictureBox11.BorderRadius = 12;
             this.bunifuPictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox11.Image")));
             this.bunifuPictureBox11.IsCircle = true;
-            this.bunifuPictureBox11.Location = new System.Drawing.Point(712, 15);
+            this.bunifuPictureBox11.Location = new System.Drawing.Point(666, 15);
             this.bunifuPictureBox11.Name = "bunifuPictureBox11";
             this.bunifuPictureBox11.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -220,7 +222,7 @@
             this.bunifuPictureBox12.BorderRadius = 12;
             this.bunifuPictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox12.Image")));
             this.bunifuPictureBox12.IsCircle = true;
-            this.bunifuPictureBox12.Location = new System.Drawing.Point(631, 15);
+            this.bunifuPictureBox12.Location = new System.Drawing.Point(585, 15);
             this.bunifuPictureBox12.Name = "bunifuPictureBox12";
             this.bunifuPictureBox12.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -237,7 +239,7 @@
             this.bunifuPictureBox5.BorderRadius = 12;
             this.bunifuPictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox5.Image")));
             this.bunifuPictureBox5.IsCircle = true;
-            this.bunifuPictureBox5.Location = new System.Drawing.Point(307, 15);
+            this.bunifuPictureBox5.Location = new System.Drawing.Point(261, 15);
             this.bunifuPictureBox5.Name = "bunifuPictureBox5";
             this.bunifuPictureBox5.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -254,7 +256,7 @@
             this.bunifuPictureBox4.BorderRadius = 12;
             this.bunifuPictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox4.Image")));
             this.bunifuPictureBox4.IsCircle = true;
-            this.bunifuPictureBox4.Location = new System.Drawing.Point(226, 15);
+            this.bunifuPictureBox4.Location = new System.Drawing.Point(183, 15);
             this.bunifuPictureBox4.Name = "bunifuPictureBox4";
             this.bunifuPictureBox4.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -271,7 +273,7 @@
             this.bunifuPictureBox7.BorderRadius = 12;
             this.bunifuPictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox7.Image")));
             this.bunifuPictureBox7.IsCircle = true;
-            this.bunifuPictureBox7.Location = new System.Drawing.Point(550, 15);
+            this.bunifuPictureBox7.Location = new System.Drawing.Point(504, 15);
             this.bunifuPictureBox7.Name = "bunifuPictureBox7";
             this.bunifuPictureBox7.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -288,7 +290,7 @@
             this.bunifuPictureBox8.BorderRadius = 12;
             this.bunifuPictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox8.Image")));
             this.bunifuPictureBox8.IsCircle = true;
-            this.bunifuPictureBox8.Location = new System.Drawing.Point(469, 15);
+            this.bunifuPictureBox8.Location = new System.Drawing.Point(423, 15);
             this.bunifuPictureBox8.Name = "bunifuPictureBox8";
             this.bunifuPictureBox8.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -305,7 +307,7 @@
             this.bunifuPictureBox6.BorderRadius = 12;
             this.bunifuPictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox6.Image")));
             this.bunifuPictureBox6.IsCircle = true;
-            this.bunifuPictureBox6.Location = new System.Drawing.Point(388, 15);
+            this.bunifuPictureBox6.Location = new System.Drawing.Point(342, 15);
             this.bunifuPictureBox6.Name = "bunifuPictureBox6";
             this.bunifuPictureBox6.Size = new System.Drawing.Size(25, 25);
             this.bunifuPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -755,6 +757,18 @@
             this.flowLayout.TabIndex = 59;
             this.flowLayout.WrapContents = false;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(14, 314);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1034, 450);
+            this.flowLayoutPanel1.TabIndex = 59;
+            this.flowLayoutPanel1.WrapContents = false;
+            // 
             // CategoryPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -836,5 +850,6 @@
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox7;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox8;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox6;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

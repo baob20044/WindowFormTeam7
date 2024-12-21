@@ -1,16 +1,8 @@
 ﻿using StoreManage.Controllers;
 using StoreManage.DTOs.Account;
-using StoreManage.DTOs.Customer;
 using StoreManage.DTOs.Employee;
 using StoreManage.Services;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StoreManage
@@ -38,22 +30,17 @@ namespace StoreManage
                         {
                             PersonalInfo = new EmployeePersonalInfo
                             {
-                                Address = txtAddress.Text,
-                                DateOfBirth = dtpBirthday.Value.ToString("yyyy-MM-dd"),
                                 FirstName = txtFirstName.Text,
                                 LastName = txtLastName.Text,
                                 Male = rBMale.Checked ? true : false,
+                                Address = txtAddress.Text,
                                 PhoneNumber = txtPhoneNumber.Text,
+                                DateOfBirth = dtpBirthday.Value.ToString("yyyy-MM-dd"),
                             },
-                            ContractUpTo = Int32.Parse(txtContractUpTo.Text),
-                            ParentPhoneNumber = txtParentPhoneNumber.Text,
-                            Salary = decimal.Parse(txtSalary.Text),
-                            StartDate = DateTime.Now.ToString("yyyy-MM-dd"),
-
+                            Email = txtEmail.Text
                         },
                         Username = txtUsername.Text,
                         Password = txtPassword.Text,
-                        Email = txtEmail.Text
                     };
 
                    var result =  await _authController.SignupAsync(employee);
@@ -121,7 +108,7 @@ namespace StoreManage
             if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text) || string.IsNullOrEmpty(txtConfirmPassword.Text)
                 || string.IsNullOrEmpty(txtFirstName.Text) || string.IsNullOrEmpty(txtLastName.Text) || string.IsNullOrEmpty(txtEmail.Text)
                 || string.IsNullOrEmpty(txtPhoneNumber.Text) || string.IsNullOrEmpty(txtAddress.Text) || !CbAcceptTerm.Checked 
-                || string.IsNullOrEmpty(txtContractUpTo.Text) || string.IsNullOrEmpty(txtParentPhoneNumber.Text) || string.IsNullOrEmpty(txtSalary.Text))
+               )
             {
                 lbError.Text = "Please fill in all required fields and accept the terms.";
                 lbError.Visible = true;

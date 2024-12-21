@@ -22,7 +22,11 @@ namespace StoreManage.Components
 
         public event Action<int> OnCartItemClick; // Event to notify when the item is clicked
         private MainForm _mainForm;
-        public CartItem(int productId, string selectedColorName, string selectedSize,MainForm mainForm)
+        public int SelectedColorId { get; set; } // Selected color
+        public int SelectedSizeId { get; set; }      // Selected size
+        public int Quantity { get; set; }
+        public string ProductNameTitle { get; set; }
+        public CartItem(int productId, string selectedColorName, string selectedSize, MainForm mainForm, int selectedColorId, int selectedSizeId)
         {
             InitializeComponent();
             ProductId = productId;
@@ -30,6 +34,10 @@ namespace StoreManage.Components
             SelectedColorName = selectedColorName;
             SelectedSize = selectedSize;
 
+            SelectedColorId = selectedColorId;
+            SelectedSizeId = selectedSizeId;
+
+            Quantity = Convert.ToInt32( NumericUpDown1.Value);
             pBProduct.Click += (s, e) => OnCartItemClick?.Invoke(ProductId);
             lbName.Click += (s, e) => OnCartItemClick?.Invoke(ProductId);
             lbPrice.Click += (s, e) => OnCartItemClick?.Invoke(ProductId);
@@ -40,6 +48,7 @@ namespace StoreManage.Components
         private void CartItem_Load(object sender, EventArgs e)
         {
             LoadProductData(ProductId);
+            ProductNameTitle = lbName.Text;
         }
         private async Task LoadProductImage(string imageUrl)
         {
@@ -190,6 +199,7 @@ namespace StoreManage.Components
         // Updagte khi thay đổi số lượng 
         private void NumericUpDown1_ValueChanged(object sender, EventArgs e)
         {
+            Quantity = Convert.ToInt32(NumericUpDown1.Value);
             _mainForm.cartInterface.UpdateCartTotals();
         }
     }

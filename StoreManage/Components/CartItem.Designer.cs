@@ -89,7 +89,7 @@
             // 
             this.pBDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBDelete.Image = ((System.Drawing.Image)(resources.GetObject("pBDelete.Image")));
-            this.pBDelete.Location = new System.Drawing.Point(518, 17);
+            this.pBDelete.Location = new System.Drawing.Point(552, 13);
             this.pBDelete.Name = "pBDelete";
             this.pBDelete.Size = new System.Drawing.Size(25, 25);
             this.pBDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -111,7 +111,7 @@
             this.NumericUpDown1.FocusedState.Parent = this.NumericUpDown1;
             this.NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NumericUpDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.NumericUpDown1.Location = new System.Drawing.Point(457, 116);
+            this.NumericUpDown1.Location = new System.Drawing.Point(491, 116);
             this.NumericUpDown1.Minimum = new decimal(new int[] {
             1,
             0,
@@ -187,7 +187,7 @@
             this.lbPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrice.Location = new System.Drawing.Point(156, 46);
             this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(44, 17);
+            this.lbPrice.Size = new System.Drawing.Size(48, 19);
             this.lbPrice.TabIndex = 34;
             this.lbPrice.Text = "$Price";
             // 
@@ -198,7 +198,7 @@
             this.lbName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.Location = new System.Drawing.Point(155, 17);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(108, 20);
+            this.lbName.Size = new System.Drawing.Size(115, 21);
             this.lbName.TabIndex = 33;
             this.lbName.Text = "Product Name";
             // 
@@ -225,7 +225,7 @@
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.pBProduct);
             this.Name = "CartItem";
-            this.Size = new System.Drawing.Size(558, 180);
+            this.Size = new System.Drawing.Size(610, 180);
             this.Load += new System.EventHandler(this.CartItem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pBDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericUpDown1)).EndInit();
