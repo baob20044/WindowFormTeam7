@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\storemanage\\components\\add\\categoryadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\components\\add\\categoryadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\storemanage\\components\\add\\productadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\components\\add\\productadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\storemanage\\components\\add\\categoryadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\components\\add\\categoryadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\storemanage\\components\\add\\productadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\components\\add\\productadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\storemanage\\adminforms\\pages\\adminproductpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -17,6 +17,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\storemanage\\adminforms\\pages\\adminproductpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\adminforms\\pages\\adminproductpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|c:\\users\\hieutran\\documents\\test\\windowformteam7\\storemanage\\components\\add\\sizeandquantityandimgadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\components\\add\\sizeandquantityandimgadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\storemanage\\components\\add\\sizeandquantityandimgadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|solutionrelative:storemanage\\components\\add\\sizeandquantityandimgadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37C2217F-0CDE-454C-A868-999F0BD773E4}|StoreManage\\StoreManage.csproj|C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\storemanage\\components\\productdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 387,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,27 +58,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CategoryAdd.cs",
-              "DocumentMoniker": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\Add\\CategoryAdd.cs",
-              "RelativeDocumentMoniker": "StoreManage\\Components\\Add\\CategoryAdd.cs",
-              "ToolTip": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\Add\\CategoryAdd.cs",
-              "RelativeToolTip": "StoreManage\\Components\\Add\\CategoryAdd.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAlwCcAAAAuAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "SizeAndQuantityAndImgAdd.cs",
+              "DocumentMoniker": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\Add\\SizeAndQuantityAndImgAdd.cs",
+              "RelativeDocumentMoniker": "StoreManage\\Components\\Add\\SizeAndQuantityAndImgAdd.cs",
+              "ToolTip": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\Add\\SizeAndQuantityAndImgAdd.cs",
+              "RelativeToolTip": "StoreManage\\Components\\Add\\SizeAndQuantityAndImgAdd.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwBoAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T01:35:35.331Z",
+              "WhenOpened": "2024-12-20T18:04:37.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SizeAndQuantityAndImgAdd.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\Add\\SizeAndQuantityAndImgAdd.cs",
+              "RelativeDocumentMoniker": "StoreManage\\Components\\Add\\SizeAndQuantityAndImgAdd.cs",
+              "ToolTip": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\Add\\SizeAndQuantityAndImgAdd.cs [Design]",
+              "RelativeToolTip": "StoreManage\\Components\\Add\\SizeAndQuantityAndImgAdd.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T08:22:45.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductAdd.cs",
+              "DocumentMoniker": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\Add\\ProductAdd.cs",
+              "RelativeDocumentMoniker": "StoreManage\\Components\\Add\\ProductAdd.cs",
+              "ToolTip": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\Add\\ProductAdd.cs",
+              "RelativeToolTip": "StoreManage\\Components\\Add\\ProductAdd.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAADIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T01:49:54.982Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CategoryAdd.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\Add\\CategoryAdd.cs",
-              "RelativeDocumentMoniker": "StoreManage\\Components\\Add\\CategoryAdd.cs",
-              "ToolTip": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\Add\\CategoryAdd.cs [Design]",
-              "RelativeToolTip": "StoreManage\\Components\\Add\\CategoryAdd.cs [Design]",
+              "Title": "ProductAdd.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\Add\\ProductAdd.cs",
+              "RelativeDocumentMoniker": "StoreManage\\Components\\Add\\ProductAdd.cs",
+              "ToolTip": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\Add\\ProductAdd.cs [Design]",
+              "RelativeToolTip": "StoreManage\\Components\\Add\\ProductAdd.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T01:35:34.03Z",
+              "WhenOpened": "2024-12-20T01:49:51.553Z",
               "EditorCaption": " [Design]"
             },
             {
@@ -81,9 +113,10 @@
               "RelativeDocumentMoniker": "StoreManage\\AdminForms\\Pages\\AdminProductPage.cs",
               "ToolTip": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\AdminForms\\Pages\\AdminProductPage.cs",
               "RelativeToolTip": "StoreManage\\AdminForms\\Pages\\AdminProductPage.cs",
-              "ViewState": "AgIAAOQAAAAAAAAAAAAqwPUAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAOIAAAAAAAAAAAD4vwEBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T00:53:35.223Z"
+              "WhenOpened": "2024-12-20T00:53:35.223Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -94,11 +127,12 @@
               "ToolTip": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\AdminForms\\Pages\\AdminProductPage.cs [Design]",
               "RelativeToolTip": "StoreManage\\AdminForms\\Pages\\AdminProductPage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T18:55:15.888Z"
+              "WhenOpened": "2024-12-19T18:55:15.888Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ProductDetail.cs",
               "DocumentMoniker": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\ProductDetail.cs",
               "RelativeDocumentMoniker": "StoreManage\\Components\\ProductDetail.cs",
@@ -110,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "ProductDetail.cs [Design]",
               "DocumentMoniker": "C:\\Users\\hieutran\\Documents\\test\\WindowFormTeam7\\StoreManage\\Components\\ProductDetail.cs",
               "RelativeDocumentMoniker": "StoreManage\\Components\\ProductDetail.cs",
