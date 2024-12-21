@@ -32,6 +32,7 @@ namespace StoreManage.Components
 
         private int SelectedColorId { get; set; } // Selected color
         private int SelectedSizeId { get; set; }      // Selected size
+        private decimal discountPrice;
         public DetailItem(int productId,MainForm mainForm )
         {
             InitializeComponent();
@@ -69,11 +70,11 @@ namespace StoreManage.Components
         private void UpdateUIWithProduct(ProductDto product)
         {
             lbName.Text = product.Name;
-            lbPrice.Text = $"{product.Price:N0} VND";
+            lbPrice.Text = $"{product.Price - product.Price*product.DiscountPercentage:N0} VND";
             lbDescription.Text = product.Description ?? "No description available";
-            lbCost.Text = $"Cost: {product.Price + product.Price * 10 / 100:N0} VND";
+            lbCost.Text = $"Cost: {product.Price:N0} VND";
             //lbInStock.Text = $"Còn {product.InStock} sản phẩm trong kho";
-
+            discountPrice = product.Price * product.DiscountPercentage;
             // Populate colors
             colorMap = new Dictionary<string, ColorDto>();
             DropdownColor.Items.Clear();
@@ -243,9 +244,10 @@ namespace StoreManage.Components
                 var newCartItem = new CartItem(productId, selectedColorName, selectedSize, _mainForm,SelectedColorId,SelectedSizeId)
                 {
                     ItemLabel = lbName.Text,
-                    ItemPrice = lbPrice.Text,
+                    ItemPrice = lbCost.Text,
                     ProductImage = pBProduct.Image,
-                    NumericValue = NumericUpDown1.Value
+                    NumericValue = NumericUpDown1.Value,
+                    ItemDiscoundPrice= discountPrice
                 };
                 newCartItem.OnCartItemClick += HandleCartItemClick; // Subscribe to the click event
                 cartPage.CartFlowLayout.Controls.Add(newCartItem);

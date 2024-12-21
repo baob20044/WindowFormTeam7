@@ -39,8 +39,15 @@ namespace StoreManage
             _timer.Interval = 1 * 60 * 1000;
             _timer.Tick += timer1_Tick;
             _timer.Start();
+            
+            refreshHome();
         }
-
+        public void refreshHome()
+        {
+            adminHomePage = new AdminHomePage();
+            flowLayoutPanel.Controls.Clear();
+            flowLayoutPanel.Controls.Add(adminHomePage);
+        }
         private void btnHome_Click(object sender, EventArgs e)
         {
             adminHomePage = new AdminHomePage();
