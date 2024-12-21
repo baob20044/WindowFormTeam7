@@ -130,12 +130,14 @@ namespace StoreManage.AdminForms.Pages
                 };
 
                 // View Detail Icon with a hover effect
-                var viewDetailIcon = new Guna.UI2.WinForms.Guna2ImageButton
+                var viewDetailIcon = new Label
                 {
-                    Image = Properties.Resources.ViewDetails,  // Replace with actual icon
-                    Size = new Size(30, 30),
+                    Text = "Detail",  // Replace with actual icon
+                    Font = new Font("Arial", 10, FontStyle.Regular),
+                    Size = new Size(60, 30),
                     Dock = DockStyle.Right,
                     BackColor = Color.Transparent,
+                    TextAlign = ContentAlignment.MiddleCenter,
                 };
 
                 // Add hover effect for the icon

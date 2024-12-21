@@ -26,6 +26,7 @@ namespace StoreManage.Components
         public int SelectedSizeId { get; set; }      // Selected size
         public int Quantity { get; set; }
         public string ProductNameTitle { get; set; }
+        public decimal discoundPrice{get;set;}
         public CartItem(int productId, string selectedColorName, string selectedSize, MainForm mainForm, int selectedColorId, int selectedSizeId)
         {
             InitializeComponent();
@@ -174,7 +175,11 @@ namespace StoreManage.Components
             get { return lbPrice.Text; }
             set { lbPrice.Text = value; }  // Set product price
         }
-
+        public decimal ItemDiscoundPrice
+        {
+            get { return discoundPrice; }
+            set { discoundPrice = value; }  // Set product price
+        }
         public Image ProductImage
         {
             get { return pBProduct.Image; }

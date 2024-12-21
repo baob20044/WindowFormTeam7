@@ -79,7 +79,7 @@
             this.lbTotalOrder.AutoSize = true;
             this.lbTotalOrder.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTotalOrder.ForeColor = System.Drawing.Color.Black;
-            this.lbTotalOrder.Location = new System.Drawing.Point(261, 220);
+            this.lbTotalOrder.Location = new System.Drawing.Point(261, 184);
             this.lbTotalOrder.Name = "lbTotalOrder";
             this.lbTotalOrder.Size = new System.Drawing.Size(121, 19);
             this.lbTotalOrder.TabIndex = 36;
@@ -90,11 +90,12 @@
             this.lbTransportFee.AutoSize = true;
             this.lbTransportFee.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTransportFee.ForeColor = System.Drawing.Color.Black;
-            this.lbTransportFee.Location = new System.Drawing.Point(261, 159);
+            this.lbTransportFee.Location = new System.Drawing.Point(851, 558);
             this.lbTransportFee.Name = "lbTransportFee";
             this.lbTransportFee.Size = new System.Drawing.Size(110, 23);
             this.lbTransportFee.TabIndex = 35;
             this.lbTransportFee.Text = "$Vận chuyển";
+            this.lbTransportFee.Visible = false;
             // 
             // lbDiscount
             // 
@@ -122,7 +123,6 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.lbTotalOrder);
-            this.panel4.Controls.Add(this.lbTransportFee);
             this.panel4.Controls.Add(this.lbDiscount);
             this.panel4.Controls.Add(this.lbTotalMoney);
             this.panel4.Controls.Add(this.pBMomo);
@@ -133,19 +133,18 @@
             this.panel4.Controls.Add(this.pBVisa);
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Controls.Add(this.pBZalo);
-            this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Location = new System.Drawing.Point(641, 91);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(412, 432);
+            this.panel4.Size = new System.Drawing.Size(412, 356);
             this.panel4.TabIndex = 6;
             // 
             // pBMomo
             // 
             this.pBMomo.Image = ((System.Drawing.Image)(resources.GetObject("pBMomo.Image")));
-            this.pBMomo.Location = new System.Drawing.Point(346, 351);
+            this.pBMomo.Location = new System.Drawing.Point(346, 291);
             this.pBMomo.Name = "pBMomo";
             this.pBMomo.Size = new System.Drawing.Size(49, 31);
             this.pBMomo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -157,7 +156,7 @@
             this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(175)))), ((int)(((byte)(23)))));
             this.btnOrder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOrder.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrder.Location = new System.Drawing.Point(24, 271);
+            this.btnOrder.Location = new System.Drawing.Point(24, 224);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(374, 52);
             this.btnOrder.TabIndex = 21;
@@ -168,7 +167,7 @@
             // pBVNPay
             // 
             this.pBVNPay.Image = ((System.Drawing.Image)(resources.GetObject("pBVNPay.Image")));
-            this.pBVNPay.Location = new System.Drawing.Point(263, 351);
+            this.pBVNPay.Location = new System.Drawing.Point(263, 291);
             this.pBVNPay.Name = "pBVNPay";
             this.pBVNPay.Size = new System.Drawing.Size(77, 31);
             this.pBVNPay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -178,7 +177,7 @@
             // bpMasterCard
             // 
             this.bpMasterCard.Image = ((System.Drawing.Image)(resources.GetObject("bpMasterCard.Image")));
-            this.bpMasterCard.Location = new System.Drawing.Point(180, 351);
+            this.bpMasterCard.Location = new System.Drawing.Point(180, 291);
             this.bpMasterCard.Name = "bpMasterCard";
             this.bpMasterCard.Size = new System.Drawing.Size(77, 31);
             this.bpMasterCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -189,7 +188,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(23, 220);
+            this.label9.Location = new System.Drawing.Point(23, 184);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(113, 19);
             this.label9.TabIndex = 5;
@@ -198,7 +197,7 @@
             // pBVisa
             // 
             this.pBVisa.Image = ((System.Drawing.Image)(resources.GetObject("pBVisa.Image")));
-            this.pBVisa.Location = new System.Drawing.Point(109, 351);
+            this.pBVisa.Location = new System.Drawing.Point(109, 291);
             this.pBVisa.Name = "pBVisa";
             this.pBVisa.Size = new System.Drawing.Size(65, 31);
             this.pBVisa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -208,7 +207,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Location = new System.Drawing.Point(24, 207);
+            this.panel6.Location = new System.Drawing.Point(24, 166);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(374, 1);
             this.panel6.TabIndex = 3;
@@ -216,7 +215,7 @@
             // pBZalo
             // 
             this.pBZalo.Image = ((System.Drawing.Image)(resources.GetObject("pBZalo.Image")));
-            this.pBZalo.Location = new System.Drawing.Point(26, 351);
+            this.pBZalo.Location = new System.Drawing.Point(26, 291);
             this.pBZalo.Name = "pBZalo";
             this.pBZalo.Size = new System.Drawing.Size(77, 31);
             this.pBZalo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -228,11 +227,12 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(117)))));
-            this.label8.Location = new System.Drawing.Point(25, 159);
+            this.label8.Location = new System.Drawing.Point(664, 558);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(101, 23);
             this.label8.TabIndex = 4;
             this.label8.Text = "Vận chuyển";
+            this.label8.Visible = false;
             // 
             // label7
             // 
@@ -329,10 +329,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.lbTransportFee);
             this.Controls.Add(this.flowLayout);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.label8);
             this.Name = "CartPage";
             this.Size = new System.Drawing.Size(1070, 798);
             this.panel4.ResumeLayout(false);
@@ -349,6 +351,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
