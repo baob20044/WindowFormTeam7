@@ -35,5 +35,19 @@ namespace StoreManage.Controllers
             }
         }
 
+        public async Task<List<ProductDto>> GetAllAsyncs()
+        {
+            try
+            {
+                var result = await _apiService.GetAsync<List<ProductDto>>("products");
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Load product failed : " + ex.Message);
+                return null;
+            }
+        }
+
     }
 }
