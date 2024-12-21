@@ -133,7 +133,7 @@ namespace StoreManage.Forms.Pages
                 if (response != null)
                 {
                     MessageBox.Show("Order added successfully!");
-                    ExportOrderToWord(orderCreateDto, lbTotalMoney.Text, lbDiscount.Text, lbTransportFee.Text);
+                    ExportOrderToWord(response, lbTotalMoney.Text, lbDiscount.Text, lbTransportFee.Text);
                     flowLayout.Controls.Clear();
                     var _mainForm = this.FindForm() as MainForm;
                     _mainForm.cartInterface.UpdateCartTotals();
@@ -161,7 +161,7 @@ namespace StoreManage.Forms.Pages
 
                 // Add shop name and order date
                 var headerParagraph = wordDoc.Content.Paragraphs.Add();
-                headerParagraph.Range.Text = "Yody Clothing Shop\nOrder Details";
+                headerParagraph.Range.Text = $"Yody Clothing Shop #{order.OrderId}\nOrder Details";
                 headerParagraph.Range.Font.Bold = 1;
                 headerParagraph.Range.Font.Size = 16;
                 headerParagraph.Range.ParagraphFormat.Alignment = Microsoft.Office.Interop.Word.WdParagraphAlignment.wdAlignParagraphCenter;
@@ -226,7 +226,6 @@ namespace StoreManage.Forms.Pages
                 totalsTable.Cell(3, 1).Range.Text = "Transport Fee:"; // Change Total Money to Transport Fee
                 totalsTable.Cell(3, 2).Range.Text = transportFee;    // Set transportFee in place of Total Money
 
-
                 // Add Total Bill row
                 totalsTable.Cell(4, 1).Range.Text = "Total Bill:";
                 totalsTable.Cell(4, 2).Range.Text = lbTotalOrder.Text;
@@ -239,43 +238,43 @@ namespace StoreManage.Forms.Pages
                 footerParagraph.Range.ParagraphFormat.Alignment = Microsoft.Office.Interop.Word.WdParagraphAlignment.wdAlignParagraphCenter;
                 footerParagraph.Range.InsertParagraphAfter();
 
-                // Determine the save path
+                // Determine the save path for Word file
                 string appBasePath = AppDomain.CurrentDomain.BaseDirectory;
-                string savePath = Path.Combine(appBasePath, @"Resources\OrderDetails.docx");
+                string wordSavePath = Path.Combine(appBasePath, @"Resources\OrderDetails.docx");
 
                 // Ensure the directory exists
-                string saveDirectory = Path.GetDirectoryName(savePath);
+                string saveDirectory = Path.GetDirectoryName(wordSavePath);
                 if (!Directory.Exists(saveDirectory))
                 {
                     Directory.CreateDirectory(saveDirectory);
                 }
 
                 // Save the Word document
-                wordDoc.SaveAs2(savePath);
+                wordDoc.SaveAs2(wordSavePath);
+
+                // Save the document as PDF
+                string pdfSavePath = Path.Combine(appBasePath, @"Resources\OrderDetails.pdf");
+                wordDoc.ExportAsFixedFormat(pdfSavePath, Microsoft.Office.Interop.Word.WdExportFormat.wdExportFormatPDF);
+
+                // Close the Word application
                 wordDoc.Close();
                 wordApp.Quit();
 
-                MessageBox.Show($"Order details exported to Word successfully at {savePath}");
+                // Notify user about the export completion
+                MessageBox.Show($"Order details exported to Word and PDF successfully at:\nWord: {wordSavePath}\nPDF: {pdfSavePath}");
 
-                // Open the saved Word document
+                // Optionally, open the saved PDF file
                 System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
                 {
-                    FileName = savePath,
+                    FileName = pdfSavePath,
                     UseShellExecute = true
                 });
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred while exporting to Word: {ex.Message}");
+                MessageBox.Show($"An error occurred while exporting to Word and PDF: {ex.Message}");
                 Console.WriteLine(ex.StackTrace);
             }
         }
-
-
-
-
-
-
-
     }
 }

@@ -180,7 +180,7 @@
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.HoverState.Parent = this.txtName;
             this.txtName.Location = new System.Drawing.Point(260, 116);
-            this.txtName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtName.Margin = new System.Windows.Forms.Padding(5);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
@@ -291,7 +291,7 @@
             this.txtNewTarget.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewTarget.HoverState.Parent = this.txtNewTarget;
             this.txtNewTarget.Location = new System.Drawing.Point(777, 197);
-            this.txtNewTarget.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNewTarget.Margin = new System.Windows.Forms.Padding(5);
             this.txtNewTarget.Name = "txtNewTarget";
             this.txtNewTarget.PasswordChar = '\0';
             this.txtNewTarget.PlaceholderText = "";
@@ -326,7 +326,7 @@
             this.txtNewCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewCategory.HoverState.Parent = this.txtNewCategory;
             this.txtNewCategory.Location = new System.Drawing.Point(777, 278);
-            this.txtNewCategory.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNewCategory.Margin = new System.Windows.Forms.Padding(5);
             this.txtNewCategory.Name = "txtNewCategory";
             this.txtNewCategory.PasswordChar = '\0';
             this.txtNewCategory.PlaceholderText = "";
@@ -361,7 +361,7 @@
             this.txtNewSubCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewSubCategory.HoverState.Parent = this.txtNewSubCategory;
             this.txtNewSubCategory.Location = new System.Drawing.Point(777, 359);
-            this.txtNewSubCategory.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNewSubCategory.Margin = new System.Windows.Forms.Padding(5);
             this.txtNewSubCategory.Name = "txtNewSubCategory";
             this.txtNewSubCategory.PasswordChar = '\0';
             this.txtNewSubCategory.PlaceholderText = "";
@@ -396,7 +396,7 @@
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrice.HoverState.Parent = this.txtPrice;
             this.txtPrice.Location = new System.Drawing.Point(260, 438);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(5);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PasswordChar = '\0';
             this.txtPrice.PlaceholderText = "";
@@ -431,7 +431,7 @@
             this.txtCost.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCost.HoverState.Parent = this.txtCost;
             this.txtCost.Location = new System.Drawing.Point(260, 516);
-            this.txtCost.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtCost.Margin = new System.Windows.Forms.Padding(5);
             this.txtCost.Name = "txtCost";
             this.txtCost.PasswordChar = '\0';
             this.txtCost.PlaceholderText = "";
@@ -498,7 +498,7 @@
             this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDescription.HoverState.Parent = this.txtDescription;
             this.txtDescription.Location = new System.Drawing.Point(260, 677);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(5);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PasswordChar = '\0';
             this.txtDescription.PlaceholderText = "";
@@ -535,7 +535,7 @@
             this.Controls.Add(this.cBTargetCustomer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtName);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProductAdd";
             this.Size = new System.Drawing.Size(1040, 818);
             this.panel1.ResumeLayout(false);
