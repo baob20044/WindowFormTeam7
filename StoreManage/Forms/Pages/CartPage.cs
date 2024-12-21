@@ -35,7 +35,7 @@ namespace StoreManage.Forms.Pages
         {
             decimal totalMoney = 0;
             decimal transportFee = 30000;  // Static transport fee (VND)
-            decimal discount = 0.20m;      // 20% discount
+            decimal discount = 0;      // 20% discount
 
             // Calculate the total money based on the items in the cart
             foreach (Control control in flowLayout.Controls)
@@ -43,9 +43,11 @@ namespace StoreManage.Forms.Pages
                 if (control is CartItem cartItem)
                 {
                     // For each CartItem, calculate the price and quantity
-                    decimal price = decimal.Parse(cartItem.ItemPrice.Replace(" VND", "").Replace(",", ""));
+                    decimal price = decimal.Parse(cartItem.ItemPrice.Replace(" VND", "").Replace(",", "").Replace("Cost: ",""));
                     decimal quantity = cartItem.NumericValue;
                     totalMoney += price * quantity;
+
+                    discount += cartItem.ItemDiscoundPrice *quantity;
                 }
             }
 
@@ -60,12 +62,12 @@ namespace StoreManage.Forms.Pages
             else
             {
                 // Apply discount and add transport fee
-                decimal totalAfterDiscount = totalMoney * (1 - discount);
-                decimal finalTotal = totalAfterDiscount + transportFee;
+                //decimal totalAfterDiscount = totalMoney * (1 - discount);
+                decimal finalTotal = totalMoney - discount + transportFee;
 
                 // Update the labels on MainPage
                 lbTotalMoney.Text = $"{totalMoney:N0} VND"; // Total before discount
-                lbDiscount.Text = $"{discount * 100}%";     // Discount percentage
+                lbDiscount.Text = $"{discount:N0} VND";     // Discount percentage
                 lbTransportFee.Text = $"{transportFee:N0} VND"; // Transport fee
                 lbTotalOrder.Text = $"{finalTotal:N0} VND"; // Final total after discount and transport fee
             }
