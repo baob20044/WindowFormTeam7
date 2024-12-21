@@ -90,17 +90,10 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
             this.panel2.Controls.Add(this.btnClose);
             this.panel2.Controls.Add(this.btnSave);
-<<<<<<< HEAD
-            this.panel2.Location = new System.Drawing.Point(541, 543);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(218, 58);
-=======
             this.panel2.Location = new System.Drawing.Point(0, 738);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1035, 75);
->>>>>>> main
             this.panel2.TabIndex = 24;
             // 
             // btnClose
@@ -115,13 +108,8 @@
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.HoverState.Parent = this.btnClose;
-<<<<<<< HEAD
-            this.btnClose.Location = new System.Drawing.Point(115, 7);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.btnClose.Location = new System.Drawing.Point(159, 8);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> main
             this.btnClose.Name = "btnClose";
             this.btnClose.ShadowDecoration.Parent = this.btnClose;
             this.btnClose.Size = new System.Drawing.Size(120, 57);
@@ -141,13 +129,8 @@
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.HoverState.Parent = this.btnSave;
-<<<<<<< HEAD
-            this.btnSave.Location = new System.Drawing.Point(12, 7);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.btnSave.Location = new System.Drawing.Point(33, 8);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> main
             this.btnSave.Name = "btnSave";
             this.btnSave.ShadowDecoration.Parent = this.btnSave;
             this.btnSave.Size = new System.Drawing.Size(120, 57);
@@ -604,11 +587,7 @@
             this.Controls.Add(this.txtName);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProductAdd";
-<<<<<<< HEAD
-            this.Size = new System.Drawing.Size(780, 603);
-=======
             this.Size = new System.Drawing.Size(1040, 818);
->>>>>>> main
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
