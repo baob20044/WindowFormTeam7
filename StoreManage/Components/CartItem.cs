@@ -25,6 +25,7 @@ namespace StoreManage.Components
         public int SelectedColorId { get; set; } // Selected color
         public int SelectedSizeId { get; set; }      // Selected size
         public int Quantity { get; set; }
+        public string ProductNameTitle { get; set; }
         public CartItem(int productId, string selectedColorName, string selectedSize, MainForm mainForm, int selectedColorId, int selectedSizeId)
         {
             InitializeComponent();
@@ -47,6 +48,7 @@ namespace StoreManage.Components
         private void CartItem_Load(object sender, EventArgs e)
         {
             LoadProductData(ProductId);
+            ProductNameTitle = lbName.Text;
         }
         private async Task LoadProductImage(string imageUrl)
         {
