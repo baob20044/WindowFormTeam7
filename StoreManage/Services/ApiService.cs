@@ -1,11 +1,11 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
 using StoreManage.DTOs.Account;
-using StoreManage.DTOs.Token;
 using System;
 using System.Threading.Tasks;
 using System.Linq;
 using System.Windows.Forms;
+using System.Net;
 
 
 
@@ -14,11 +14,19 @@ namespace StoreManage.Services
     public class ApiService
     {
         private readonly RestClient _client;
-
+        private readonly CookieContainer _cookieContainer;
         public ApiService()
         {
             var baseUrl = System.Configuration.ConfigurationManager.AppSettings["ApiBaseUrl"];
-            _client = new RestClient(baseUrl);
+
+            _cookieContainer = new CookieContainer();
+
+            var options = new RestClientOptions(baseUrl)
+            {
+                CookieContainer = _cookieContainer
+            };
+
+            _client = new RestClient(options);
         }
 
         public async Task<string> LoginAsync(string endpoint , LoginDto loginDto)
@@ -32,8 +40,11 @@ namespace StoreManage.Services
 
             if (response.IsSuccessful)
             {
-                //var refreshTokenCookie = response.Cookies.AsQueryable();
-
+                foreach (Cookie cookie in _cookieContainer.GetCookies(new Uri("https://localhost:5254")))
+                {
+                    if (cookie.Name == "refreshToken")
+                        TokenManager.SaveRefreshToken(cookie.Value);
+                }
                 return response.Content;
             }
 
@@ -86,18 +97,38 @@ namespace StoreManage.Services
         }
 
         // POST method cho tất cả các model
-        public async Task<T> PostAsync<T>(string endpoint, object data, string token = null)
+        public async Task<T> PostAsync<T>(string endpoint, object data = null, string token = null)
         {
-            var request = new RestRequest(endpoint, Method.Post)
-                .AddJsonBody(data);
+            var request = new RestRequest(endpoint, Method.Post);
+
+            if (data != null)
+                request.AddJsonBody(data);
+            else
+                request.AddHeader("Cookie", $"refreshToken={TokenManager.GetRefreshToken()}");
 
             if (!String.IsNullOrEmpty(token))
                 request.AddHeader("Authorization", $"Bearer {token}");
 
+            Console.WriteLine("Request Headers:");
+            foreach (var header in request.Parameters.Where(p => p.Type == ParameterType.HttpHeader))
+            {
+                Console.WriteLine($"{header.Name}: {header.Value}");
+            }
+
             var response = await _client.ExecuteAsync(request);
+
+            
 
             if (response.IsSuccessful)
             {
+                if (data == null)
+                {
+                    foreach (Cookie cookie in _cookieContainer.GetCookies(new Uri("https://localhost:5254")))
+                    {
+                        if (cookie.Name == "refreshToken")
+                            TokenManager.SaveRefreshToken(cookie.Value);
+                    }
+                }    
                 return JsonConvert.DeserializeObject<T>(response.Content);
             }
 

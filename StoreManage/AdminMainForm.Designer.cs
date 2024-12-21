@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbLogOut = new System.Windows.Forms.Label();
@@ -45,6 +46,7 @@
             this.controlboxMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.controlboxTurnOff = new Guna.UI2.WinForms.Guna2ControlBox();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBAvatarEdit)).BeginInit();
             this.SuspendLayout();
@@ -278,7 +280,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(66)))), ((int)(((byte)(61)))));
             this.label1.Location = new System.Drawing.Point(18, 150);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 32);
+            this.label1.Size = new System.Drawing.Size(191, 35);
             this.label1.TabIndex = 12;
             this.label1.Text = "Administration";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -357,5 +359,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
         private System.Windows.Forms.Label lbLogOut;
+        private System.Windows.Forms.Timer timer1;
     }
 }

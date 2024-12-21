@@ -77,5 +77,18 @@ namespace StoreManage.Controllers
                 return null;
             }
         }
+
+        public async Task<TokenDto> refreshTokenAsync()
+        {
+            try
+            {
+                return await _apiService.PostAsync<TokenDto>("Token/refresh", null,TokenManager.GetToken());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"refresh token failed : {ex.Message}");
+                return null;
+            }
+        }
     }
 }

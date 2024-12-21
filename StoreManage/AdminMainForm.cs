@@ -1,4 +1,6 @@
 ﻿using StoreManage.AdminForms.Pages;
+using StoreManage.Controllers;
+using StoreManage.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,9 +26,20 @@ namespace StoreManage
         private AdminOrderPage adminOrderPage;
 
         private Timer fadeTimer; // Declare Timer globally - Dùng cho chuyển trang
+        private Timer _timer; // dùng cho refreshToken
+        private readonly AuthController _authController;
+
+
         public AdminMainForm()
         {
             InitializeComponent();
+            _authController = new AuthController(new Services.ApiService());
+
+            _timer = new Timer();
+            _timer.Interval = 1 * 60 * 1000;
+            _timer.Tick += timer1_Tick;
+            _timer.Start();
+            
             refreshHome();
         }
         public void refreshHome()
@@ -157,7 +170,30 @@ namespace StoreManage
         }
         private void lbLogOut_Click(object sender, EventArgs e)
         {
+            TokenManager.RemoveToken();
             NavigateToLoginForm();
+        }
+
+        private async void timer1_Tick(object sender, EventArgs e)
+        {
+            if (TokenManager.GetToken() != null)
+            {
+                var token = await _authController.refreshTokenAsync();
+
+                if (token != null)
+                {
+                    TokenManager.SaveToken(token.AccessToken);
+                    Console.WriteLine("Refresh token succeeded.");
+                }
+                else
+                {
+                    Console.WriteLine("Refresh token failed.");
+                    MessageBox.Show("Session expired", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TokenManager.RemoveToken();
+                    NavigateToLoginForm();
+                }
+            }
+
         }
     }
 }

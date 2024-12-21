@@ -13,15 +13,16 @@ namespace StoreManage.Services
         private const string RegistryPath = @"HKEY_CURRENT_USER\Software\StoreManage";  // Đường dẫn Registry
         private const string TokenKey = "AccessToken";  // Tên key lưu token
         private const string UsernameKey = "Username";  // Tên key lưu username
+        private const string RefreshTokenKey = "RefreshToken";
+
         // Lưu token vào Registry
         public static void SaveToken(string token)
         {
             try
             {
-                // Remove the first and last characters of the token if the token has more than two characters.
-                if (!string.IsNullOrEmpty(token) && token.Length > 2)
+                if (!string.IsNullOrEmpty(token))
                 {
-                    token = token.Substring(1, token.Length - 2);
+                    token = token.Trim('"');
                 }
 
                 Registry.SetValue(RegistryPath, TokenKey, token);
@@ -91,6 +92,31 @@ namespace StoreManage.Services
             catch (Exception ex)
             {
                 Console.WriteLine($"Error retrieving username: {ex.Message}");
+                return null;
+            }
+        }
+
+        public static void SaveRefreshToken(string refreshtoken)
+        {
+            try
+            {
+                Registry.SetValue(RegistryPath, RefreshTokenKey, refreshtoken);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving refreshtoken: {ex.Message}");
+            }
+        }
+
+        public static string GetRefreshToken()
+        {
+            try
+            {
+                return (string)Registry.GetValue(RegistryPath, RefreshTokenKey, null);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error retrieving refreshtoken: {ex.Message}");
                 return null;
             }
         }

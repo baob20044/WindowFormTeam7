@@ -63,7 +63,7 @@ namespace StoreManage.Forms.Pages
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error load product" + ex.Message);
             }
         }
         private void LoadPage(int pageIndex) /* Home Page */
