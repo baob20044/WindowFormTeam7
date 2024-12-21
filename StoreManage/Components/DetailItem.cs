@@ -50,6 +50,7 @@ namespace StoreManage.Components
             try
             {
                 var product = await _productController.GetByIdAsync(productId);
+
                 if (product != null)
                 {
                     UpdateUIWithProduct(product);
@@ -158,8 +159,6 @@ namespace StoreManage.Components
                     SelectedSizeId = selectedSizeId;
                 }
                     // Lấy ColorId
-   
-                
             }    
 
             if (DropdownColor.SelectedIndex >= 0)
@@ -178,16 +177,27 @@ namespace StoreManage.Components
                         var inventory = await _inventoryController.GetByIdAsync(productId, selectedSizeId, selectedColorId);
 
                         if (inventory != null)
+                        {
+                            lbInStock.ForeColor = Color.Black;
                             lbInStock.Text = $"Còn {inventory.InStock} sản phẩm trong kho";
+                            btnAddToCart.Enabled = true;
+                            btnBuy.Enabled = true;
+                        }
+                        else
+                        {
+                            lbInStock.ForeColor = Color.Red;
+                            lbInStock.Text = "Hết hàng";
+                            btnAddToCart.Enabled = false;
+                            btnBuy.Enabled = false;
+                        }
                     }
 
                     // Load the first image of the selected color
                     await LoadProductImage(selectedColor);
                 }
             }
-
-            
         }
+
         public void HandleCartItemClick(int productId)
         {
             DetailItem detail = new DetailItem(productId,_mainForm);
