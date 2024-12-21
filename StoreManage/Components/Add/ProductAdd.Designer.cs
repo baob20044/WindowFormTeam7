@@ -55,6 +55,9 @@
             this.cbProdivder = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cbColor = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -88,10 +91,10 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
             this.panel2.Controls.Add(this.btnClose);
             this.panel2.Controls.Add(this.btnSave);
-            this.panel2.Location = new System.Drawing.Point(2, 635);
+            this.panel2.Location = new System.Drawing.Point(541, 543);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(776, 69);
+            this.panel2.Size = new System.Drawing.Size(218, 58);
             this.panel2.TabIndex = 24;
             // 
             // btnClose
@@ -106,7 +109,7 @@
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.HoverState.Parent = this.btnClose;
-            this.btnClose.Location = new System.Drawing.Point(124, 12);
+            this.btnClose.Location = new System.Drawing.Point(115, 7);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.ShadowDecoration.Parent = this.btnClose;
@@ -127,7 +130,7 @@
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.HoverState.Parent = this.btnSave;
-            this.btnSave.Location = new System.Drawing.Point(29, 12);
+            this.btnSave.Location = new System.Drawing.Point(12, 7);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.ShadowDecoration.Parent = this.btnSave;
@@ -154,6 +157,7 @@
             this.cBTargetCustomer.ShadowDecoration.Parent = this.cBTargetCustomer;
             this.cBTargetCustomer.Size = new System.Drawing.Size(200, 36);
             this.cBTargetCustomer.TabIndex = 28;
+            this.cBTargetCustomer.SelectedIndexChanged += new System.EventHandler(this.cBTargetCustomer_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -235,6 +239,7 @@
             this.cbCategory.ShadowDecoration.Parent = this.cbCategory;
             this.cbCategory.Size = new System.Drawing.Size(200, 36);
             this.cbCategory.TabIndex = 31;
+            this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -512,10 +517,55 @@
             this.txtDescription.Size = new System.Drawing.Size(200, 36);
             this.txtDescription.TabIndex = 47;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(400, 362);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(58, 25);
+            this.label13.TabIndex = 50;
+            this.label13.Text = "Color";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cbColor
+            // 
+            this.cbColor.BackColor = System.Drawing.Color.Transparent;
+            this.cbColor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbColor.FocusedColor = System.Drawing.Color.Empty;
+            this.cbColor.FocusedState.Parent = this.cbColor;
+            this.cbColor.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbColor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbColor.FormattingEnabled = true;
+            this.cbColor.HoverState.Parent = this.cbColor;
+            this.cbColor.ItemHeight = 30;
+            this.cbColor.ItemsAppearance.Parent = this.cbColor;
+            this.cbColor.Location = new System.Drawing.Point(583, 356);
+            this.cbColor.Margin = new System.Windows.Forms.Padding(2);
+            this.cbColor.Name = "cbColor";
+            this.cbColor.ShadowDecoration.Parent = this.cbColor;
+            this.cbColor.Size = new System.Drawing.Size(176, 36);
+            this.cbColor.TabIndex = 49;
+            this.cbColor.SelectedIndexChanged += new System.EventHandler(this.cbColor_SelectedIndexChanged);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(415, 419);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(344, 103);
+            this.flowLayoutPanel1.TabIndex = 51;
+            // 
             // ProductAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.cbColor);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.label12);
@@ -541,7 +591,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtName);
             this.Name = "ProductAdd";
-            this.Size = new System.Drawing.Size(780, 706);
+            this.Size = new System.Drawing.Size(780, 603);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -579,5 +629,8 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbProdivder;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txtDescription;
+        private System.Windows.Forms.Label label13;
+        private Guna.UI2.WinForms.Guna2ComboBox cbColor;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

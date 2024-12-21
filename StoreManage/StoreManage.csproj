@@ -201,6 +201,12 @@
     <Compile Include="Components\Add\SizeAdd.Designer.cs">
       <DependentUpon>SizeAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\Add\SizeAndQuantityAndImgAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Add\SizeAndQuantityAndImgAdd.Designer.cs">
+      <DependentUpon>SizeAndQuantityAndImgAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\Add\SubcategoryAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -415,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Add\SizeAdd.resx">
       <DependentUpon>SizeAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Add\SizeAndQuantityAndImgAdd.resx">
+      <DependentUpon>SizeAndQuantityAndImgAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Add\SubcategoryAdd.resx">
       <DependentUpon>SubcategoryAdd.cs</DependentUpon>
