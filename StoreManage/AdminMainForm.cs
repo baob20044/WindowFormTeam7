@@ -36,7 +36,7 @@ namespace StoreManage
             _authController = new AuthController(new Services.ApiService());
 
             _timer = new Timer();
-            _timer.Interval = 1 * 60 * 1000;
+            _timer.Interval = 25 * 60 * 1000;
             _timer.Tick += timer1_Tick;
             _timer.Start();
             
