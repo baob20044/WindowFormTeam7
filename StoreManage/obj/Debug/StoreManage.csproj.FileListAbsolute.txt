@@ -135,8 +135,6 @@ C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\bin\Debug\System.Te
 C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\bin\Debug\System.ValueTuple.xml
 C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreManage.csproj.AssemblyReference.cache
-C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreManage.csproj.SuggestedBindingRedirects.cache
-C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreManage.exe.config
 C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreManage.AdminLoginForm.resources
 C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreManage.AdminForms.Pages.AdminCategoryPage.resources
 C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreManage.AdminForms.Pages.AdminColorPage.resources
@@ -175,3 +173,15 @@ C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreMana
 C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreManage.Components.ProductDetail.resources
 C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreManage.Components.Add.ProductAdd.resources
 C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreManage.Components.Add.SizeAndQuantityAndImgAdd.resources
+C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\bin\Debug\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\bin\Debug\System.IO.Pipelines.dll
+C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\bin\Debug\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\bin\Debug\System.IO.Pipelines.xml
+C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreManage.Components.Add.ColorAdd.resources
+C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreManage.Components.Add.ProviderAdd.resources
+C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreManage.Components.Edit.ColorEdit.resources
+C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreManage.Components.Edit.ProviderEdit.resources
+C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreManage.Components.Edit.PasswordEdit.resources
+C:\Users\hieutran\Documents\test\WindowFormTeam7\StoreManage\obj\Debug\StoreManage.Components.Edit.ProfileEdit.resources
