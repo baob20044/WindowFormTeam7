@@ -17,8 +17,8 @@ namespace StoreManage
             Console.WriteLine("Hello");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new AdminMainForm());
-            Application.Run(new MainForm());
+            Application.Run(new AdminMainForm());
+            //Application.Run(new MainForm());
             //Application.Run(new LoginForm());
             //Application.Run(new AdminLoginForm());
         }
