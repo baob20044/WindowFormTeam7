@@ -33,11 +33,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtHexacode = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtHexacode = new Guna.UI2.WinForms.Guna2TextBox();
+            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -46,9 +46,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(61)))), ((int)(((byte)(93)))));
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-5, -5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(704, 102);
+            this.panel1.Size = new System.Drawing.Size(695, 102);
             this.panel1.TabIndex = 30;
             // 
             // label1
@@ -69,9 +70,10 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
             this.panel2.Controls.Add(this.btnClose);
             this.panel2.Controls.Add(this.btnSave);
-            this.panel2.Location = new System.Drawing.Point(-5, 391);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 386);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(704, 85);
+            this.panel2.Size = new System.Drawing.Size(695, 85);
             this.panel2.TabIndex = 31;
             // 
             // btnClose
@@ -114,51 +116,6 @@
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // flowLayoutPanel
-            // 
-            this.flowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(391, 155);
-            this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(262, 176);
-            this.flowLayoutPanel.TabIndex = 36;
-            // 
-            // txtHexacode
-            // 
-            this.txtHexacode.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHexacode.DefaultText = "#";
-            this.txtHexacode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtHexacode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtHexacode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHexacode.DisabledState.Parent = this.txtHexacode;
-            this.txtHexacode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHexacode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHexacode.FocusedState.Parent = this.txtHexacode;
-            this.txtHexacode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHexacode.HoverState.Parent = this.txtHexacode;
-            this.txtHexacode.Location = new System.Drawing.Point(35, 287);
-            this.txtHexacode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtHexacode.Name = "txtHexacode";
-            this.txtHexacode.PasswordChar = '\0';
-            this.txtHexacode.PlaceholderText = "";
-            this.txtHexacode.SelectedText = "";
-            this.txtHexacode.SelectionStart = 1;
-            this.txtHexacode.ShadowDecoration.Parent = this.txtHexacode;
-            this.txtHexacode.Size = new System.Drawing.Size(267, 44);
-            this.txtHexacode.TabIndex = 35;
-            this.txtHexacode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtHexacode_KeyDown);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 240);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 31);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "Hexacode";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -194,6 +151,51 @@
             this.txtName.Size = new System.Drawing.Size(267, 44);
             this.txtName.TabIndex = 32;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(29, 240);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(118, 31);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "Hexacode";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtHexacode
+            // 
+            this.txtHexacode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHexacode.DefaultText = "#";
+            this.txtHexacode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtHexacode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtHexacode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHexacode.DisabledState.Parent = this.txtHexacode;
+            this.txtHexacode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHexacode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHexacode.FocusedState.Parent = this.txtHexacode;
+            this.txtHexacode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHexacode.HoverState.Parent = this.txtHexacode;
+            this.txtHexacode.Location = new System.Drawing.Point(35, 287);
+            this.txtHexacode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHexacode.Name = "txtHexacode";
+            this.txtHexacode.PasswordChar = '\0';
+            this.txtHexacode.PlaceholderText = "";
+            this.txtHexacode.SelectedText = "";
+            this.txtHexacode.SelectionStart = 1;
+            this.txtHexacode.ShadowDecoration.Parent = this.txtHexacode;
+            this.txtHexacode.Size = new System.Drawing.Size(267, 44);
+            this.txtHexacode.TabIndex = 35;
+            this.txtHexacode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtHexacode_KeyDown);
+            // 
+            // flowLayoutPanel
+            // 
+            this.flowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel.Location = new System.Drawing.Point(391, 155);
+            this.flowLayoutPanel.Name = "flowLayoutPanel";
+            this.flowLayoutPanel.Size = new System.Drawing.Size(262, 176);
+            this.flowLayoutPanel.TabIndex = 36;
+            // 
             // ColorEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -223,10 +225,10 @@
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private Guna.UI2.WinForms.Guna2Button btnSave;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
-        private Guna.UI2.WinForms.Guna2TextBox txtHexacode;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtName;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2TextBox txtHexacode;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
     }
 }

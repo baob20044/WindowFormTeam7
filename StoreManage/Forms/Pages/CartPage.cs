@@ -35,7 +35,7 @@ namespace StoreManage.Forms.Pages
         {
             decimal totalMoney = 0;
             decimal transportFee = 30000;  // Static transport fee (VND)
-            decimal discount = 0.20m;      // 20% discount
+            decimal discount = 0;      // 20% discount
 
             // Calculate the total money based on the items in the cart
             foreach (Control control in flowLayout.Controls)
@@ -43,9 +43,11 @@ namespace StoreManage.Forms.Pages
                 if (control is CartItem cartItem)
                 {
                     // For each CartItem, calculate the price and quantity
-                    decimal price = decimal.Parse(cartItem.ItemPrice.Replace(" VND", "").Replace(",", ""));
+                    decimal price = decimal.Parse(cartItem.ItemPrice.Replace(" VND", "").Replace(",", "").Replace("Cost: ",""));
                     decimal quantity = cartItem.NumericValue;
                     totalMoney += price * quantity;
+
+                    discount += cartItem.ItemDiscoundPrice *quantity;
                 }
             }
 
@@ -60,12 +62,12 @@ namespace StoreManage.Forms.Pages
             else
             {
                 // Apply discount and add transport fee
-                decimal totalAfterDiscount = totalMoney * (1 - discount);
-                decimal finalTotal = totalAfterDiscount + transportFee;
+                //decimal totalAfterDiscount = totalMoney * (1 - discount);
+                decimal finalTotal = totalMoney - discount;
 
                 // Update the labels on MainPage
                 lbTotalMoney.Text = $"{totalMoney:N0} VND"; // Total before discount
-                lbDiscount.Text = $"{discount * 100}%";     // Discount percentage
+                lbDiscount.Text = $"{discount:N0} VND";     // Discount percentage
                 lbTransportFee.Text = $"{transportFee:N0} VND"; // Transport fee
                 lbTotalOrder.Text = $"{finalTotal:N0} VND"; // Final total after discount and transport fee
             }
@@ -133,7 +135,7 @@ namespace StoreManage.Forms.Pages
                 if (response != null)
                 {
                     MessageBox.Show("Order added successfully!");
-                    ExportOrderToWord(orderCreateDto, lbTotalMoney.Text, lbDiscount.Text, lbTransportFee.Text);
+                    ExportOrderToWord(response, lbTotalMoney.Text, lbDiscount.Text, lbTransportFee.Text);
                     flowLayout.Controls.Clear();
                     var _mainForm = this.FindForm() as MainForm;
                     _mainForm.cartInterface.UpdateCartTotals();
@@ -161,7 +163,7 @@ namespace StoreManage.Forms.Pages
 
                 // Add shop name and order date
                 var headerParagraph = wordDoc.Content.Paragraphs.Add();
-                headerParagraph.Range.Text = "Yody Clothing Shop\nOrder Details";
+                headerParagraph.Range.Text = $"Yody Clothing Shop #{order.OrderId}\nOrder Details";
                 headerParagraph.Range.Font.Bold = 1;
                 headerParagraph.Range.Font.Size = 16;
                 headerParagraph.Range.ParagraphFormat.Alignment = Microsoft.Office.Interop.Word.WdParagraphAlignment.wdAlignParagraphCenter;
@@ -223,13 +225,9 @@ namespace StoreManage.Forms.Pages
                 totalsTable.Cell(2, 1).Range.Text = "Discount:";     // Change Transport Fee to Discount
                 totalsTable.Cell(2, 2).Range.Text = discount;        // Set discount in place of Transport Fee
 
-                totalsTable.Cell(3, 1).Range.Text = "Transport Fee:"; // Change Total Money to Transport Fee
-                totalsTable.Cell(3, 2).Range.Text = transportFee;    // Set transportFee in place of Total Money
-
-
                 // Add Total Bill row
-                totalsTable.Cell(4, 1).Range.Text = "Total Bill:";
-                totalsTable.Cell(4, 2).Range.Text = lbTotalOrder.Text;
+                totalsTable.Cell(3, 1).Range.Text = "Total Bill:";
+                totalsTable.Cell(3, 2).Range.Text = lbTotalOrder.Text;
 
                 // Footer for shop details
                 var footerParagraph = wordDoc.Content.Paragraphs.Add();
@@ -239,43 +237,43 @@ namespace StoreManage.Forms.Pages
                 footerParagraph.Range.ParagraphFormat.Alignment = Microsoft.Office.Interop.Word.WdParagraphAlignment.wdAlignParagraphCenter;
                 footerParagraph.Range.InsertParagraphAfter();
 
-                // Determine the save path
+                // Determine the save path for Word file
                 string appBasePath = AppDomain.CurrentDomain.BaseDirectory;
-                string savePath = Path.Combine(appBasePath, @"Resources\OrderDetails.docx");
+                string wordSavePath = Path.Combine(appBasePath, @"Resources\OrderDetails.docx");
 
                 // Ensure the directory exists
-                string saveDirectory = Path.GetDirectoryName(savePath);
+                string saveDirectory = Path.GetDirectoryName(wordSavePath);
                 if (!Directory.Exists(saveDirectory))
                 {
                     Directory.CreateDirectory(saveDirectory);
                 }
 
                 // Save the Word document
-                wordDoc.SaveAs2(savePath);
+                wordDoc.SaveAs2(wordSavePath);
+
+                // Save the document as PDF
+                string pdfSavePath = Path.Combine(appBasePath, @"Resources\OrderDetails.pdf");
+                wordDoc.ExportAsFixedFormat(pdfSavePath, Microsoft.Office.Interop.Word.WdExportFormat.wdExportFormatPDF);
+
+                // Close the Word application
                 wordDoc.Close();
                 wordApp.Quit();
 
-                MessageBox.Show($"Order details exported to Word successfully at {savePath}");
+                // Notify user about the export completion
+                MessageBox.Show($"Order details exported to Word and PDF successfully at:\nWord: {wordSavePath}\nPDF: {pdfSavePath}");
 
-                // Open the saved Word document
+                // Optionally, open the saved PDF file
                 System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
                 {
-                    FileName = savePath,
+                    FileName = pdfSavePath,
                     UseShellExecute = true
                 });
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred while exporting to Word: {ex.Message}");
+                MessageBox.Show($"An error occurred while exporting to Word and PDF: {ex.Message}");
                 Console.WriteLine(ex.StackTrace);
             }
         }
-
-
-
-
-
-
-
     }
 }

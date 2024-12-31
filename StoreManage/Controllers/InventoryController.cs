@@ -43,7 +43,7 @@ namespace StoreManage.Controllers
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}");
+                Console.WriteLine($"Error: {ex.Message}");
                 return null;
             }
         }

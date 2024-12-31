@@ -75,6 +75,30 @@
             this.panel1.Size = new System.Drawing.Size(781, 83);
             this.panel1.TabIndex = 23;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(368, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(214, 45);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Add Product";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
+            this.panel2.Controls.Add(this.btnClose);
+            this.panel2.Controls.Add(this.btnSave);
+            this.panel2.Location = new System.Drawing.Point(0, 738);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1035, 75);
+            this.panel2.TabIndex = 24;
+            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
@@ -89,6 +113,7 @@
             this.btnClose.HoverState.Parent = this.btnClose;
             this.btnClose.Location = new System.Drawing.Point(689, 20);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+
             this.btnClose.Name = "btnClose";
             this.btnClose.ShadowDecoration.Parent = this.btnClose;
             this.btnClose.Size = new System.Drawing.Size(90, 46);
@@ -124,6 +149,7 @@
             this.btnSave.HoverState.Parent = this.btnSave;
             this.btnSave.Location = new System.Drawing.Point(3, 20);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+
             this.btnSave.Name = "btnSave";
             this.btnSave.ShadowDecoration.Parent = this.btnSave;
             this.btnSave.Size = new System.Drawing.Size(90, 46);
@@ -178,8 +204,9 @@
             this.txtName.FocusedState.Parent = this.txtName;
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.HoverState.Parent = this.txtName;
-            this.txtName.Location = new System.Drawing.Point(195, 94);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+
+            this.txtName.Location = new System.Drawing.Point(260, 116);
+            this.txtName.Margin = new System.Windows.Forms.Padding(5);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
@@ -294,8 +321,9 @@
             this.txtNewTarget.FocusedState.Parent = this.txtNewTarget;
             this.txtNewTarget.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewTarget.HoverState.Parent = this.txtNewTarget;
-            this.txtNewTarget.Location = new System.Drawing.Point(583, 160);
-            this.txtNewTarget.Margin = new System.Windows.Forms.Padding(4);
+
+            this.txtNewTarget.Location = new System.Drawing.Point(777, 197);
+            this.txtNewTarget.Margin = new System.Windows.Forms.Padding(5);
             this.txtNewTarget.Name = "txtNewTarget";
             this.txtNewTarget.PasswordChar = '\0';
             this.txtNewTarget.PlaceholderText = "";
@@ -330,8 +358,9 @@
             this.txtNewCategory.FocusedState.Parent = this.txtNewCategory;
             this.txtNewCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewCategory.HoverState.Parent = this.txtNewCategory;
-            this.txtNewCategory.Location = new System.Drawing.Point(583, 226);
-            this.txtNewCategory.Margin = new System.Windows.Forms.Padding(4);
+
+            this.txtNewCategory.Location = new System.Drawing.Point(777, 278);
+            this.txtNewCategory.Margin = new System.Windows.Forms.Padding(5);
             this.txtNewCategory.Name = "txtNewCategory";
             this.txtNewCategory.PasswordChar = '\0';
             this.txtNewCategory.PlaceholderText = "";
@@ -366,8 +395,9 @@
             this.txtNewSubCategory.FocusedState.Parent = this.txtNewSubCategory;
             this.txtNewSubCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewSubCategory.HoverState.Parent = this.txtNewSubCategory;
-            this.txtNewSubCategory.Location = new System.Drawing.Point(583, 292);
-            this.txtNewSubCategory.Margin = new System.Windows.Forms.Padding(4);
+
+            this.txtNewSubCategory.Location = new System.Drawing.Point(777, 359);
+            this.txtNewSubCategory.Margin = new System.Windows.Forms.Padding(5);
             this.txtNewSubCategory.Name = "txtNewSubCategory";
             this.txtNewSubCategory.PasswordChar = '\0';
             this.txtNewSubCategory.PlaceholderText = "";
@@ -402,8 +432,10 @@
             this.txtPrice.FocusedState.Parent = this.txtPrice;
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrice.HoverState.Parent = this.txtPrice;
-            this.txtPrice.Location = new System.Drawing.Point(195, 356);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
+
+            this.txtPrice.Location = new System.Drawing.Point(260, 438);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(5);
+
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PasswordChar = '\0';
             this.txtPrice.PlaceholderText = "";
@@ -438,8 +470,10 @@
             this.txtCost.FocusedState.Parent = this.txtCost;
             this.txtCost.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCost.HoverState.Parent = this.txtCost;
-            this.txtCost.Location = new System.Drawing.Point(195, 419);
-            this.txtCost.Margin = new System.Windows.Forms.Padding(4);
+
+            this.txtCost.Location = new System.Drawing.Point(260, 516);
+            this.txtCost.Margin = new System.Windows.Forms.Padding(5);
+
             this.txtCost.Name = "txtCost";
             this.txtCost.PasswordChar = '\0';
             this.txtCost.PlaceholderText = "";
@@ -507,8 +541,10 @@
             this.txtDescription.FocusedState.Parent = this.txtDescription;
             this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDescription.HoverState.Parent = this.txtDescription;
-            this.txtDescription.Location = new System.Drawing.Point(195, 550);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
+
+            this.txtDescription.Location = new System.Drawing.Point(260, 677);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(5);
+
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PasswordChar = '\0';
             this.txtDescription.PlaceholderText = "";
@@ -631,8 +667,11 @@
             this.Controls.Add(this.cBTargetCustomer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtName);
+
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProductAdd";
-            this.Size = new System.Drawing.Size(780, 596);
+            this.Size = new System.Drawing.Size(1040, 818);
+
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).EndInit();

@@ -84,7 +84,31 @@ namespace StoreManage.Controllers
             }
         }
 
-
-
+        public async Task<List<EmployeeDto>> GetAllAsync()
+        {
+            try
+            {
+                var result = await _apiservice.GetAsync<List<EmployeeDto>>("Employee", TokenManager.GetToken());
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return null;
+            }
+        }
+        public async Task<EmployeeDto> GetByIdAsync(int employeeId)
+        {
+            try
+            {
+                var result = await _apiservice.GetAsync<EmployeeDto>($"Employee/{employeeId}", TokenManager.GetToken());
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return null;
+            }
+        }
     }
 }

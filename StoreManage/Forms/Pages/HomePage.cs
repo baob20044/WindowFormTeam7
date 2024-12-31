@@ -1,16 +1,14 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
 using StoreManage.Components;
+using StoreManage.Controllers;
 using StoreManage.DTOs.Product;
 using StoreManage.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -24,10 +22,12 @@ namespace StoreManage.Forms.Pages
         private int currentPage = 0;      // Current page index
         private int pageSize = 15;         // Number of items per page
         private int totalProduct = 50;
+        private readonly ProductController _productController;
 
         public HomePage()
         {
             InitializeComponent();
+            _productController = new ProductController(new ApiService());
             InitializeShopItems();
             filteredItems = new List<ShopItem>(shopItems); // Initially, no filtering
             LoadPage(0);
@@ -35,37 +35,35 @@ namespace StoreManage.Forms.Pages
 
         private void HomePage_Load(object sender, EventArgs e)
         {
-            lbName.Text = TokenManager.GetUsername();
+
         }
         private async void InitializeShopItems()
         {
             shopItems = new List<ShopItem>();
             try
             {
-                var client = new RestClient("http://localhost:5254");
-                var request = new RestRequest($"/api/products/", Method.Get);
-                request.AddHeader("accept", "*/*");
+                products = await _productController.GetAllAsyncs();
 
-                var response = await client.ExecuteAsync(request);
-
-                if (response.IsSuccessful)
+                if (products != null)
                 {
-                    products = JsonConvert.DeserializeObject<List<ProductDto>>(response.Content);
+                    foreach (var item in products) 
+                    {
+                        Console.WriteLine("Hi" +item);
+                        var shopItem = new ShopItem(item);
+                        shopItem.OnShopItemClick += HandleShopItemClick; // Subscribe to the click event
+                        shopItems.Add(shopItem); // Add to the list
+                        flowLayoutPanel.Controls.Add(shopItem);
+                    }
                 }
-                else Console.WriteLine("Wrong");
-                 
-                foreach (var item in products) 
+                else
                 {
-                    Console.WriteLine("Hi" +item);
-                    var shopItem = new ShopItem(item);
-                    shopItem.OnShopItemClick += HandleShopItemClick; // Subscribe to the click event
-                    shopItems.Add(shopItem); // Add to the list
-                    flowLayoutPanel.Controls.Add(shopItem);
+                    Console.WriteLine($"Faild : {products}" );
                 }
+                    
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error load product" + ex.Message);
             }
         }
         private void LoadPage(int pageIndex) /* Home Page */

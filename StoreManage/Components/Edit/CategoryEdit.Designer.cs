@@ -43,9 +43,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(61)))), ((int)(((byte)(93)))));
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-1, -1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(578, 102);
+            this.panel1.Size = new System.Drawing.Size(576, 102);
             this.panel1.TabIndex = 23;
             // 
             // label1
@@ -66,9 +67,10 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
             this.panel2.Controls.Add(this.btnClose);
             this.panel2.Controls.Add(this.btnSave);
-            this.panel2.Location = new System.Drawing.Point(-1, 395);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 392);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(578, 85);
+            this.panel2.Size = new System.Drawing.Size(576, 85);
             this.panel2.TabIndex = 24;
             // 
             // btnClose
