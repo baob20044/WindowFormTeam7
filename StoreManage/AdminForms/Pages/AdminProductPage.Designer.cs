@@ -30,16 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminProductPage));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRight = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnLeft = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnAdd = new Guna.UI2.WinForms.Guna2ImageButton();
             this.txtSearch = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.lbCountPage = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // flowLayoutPanel
@@ -72,6 +75,38 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(872, 2);
             this.panel1.TabIndex = 51;
+            // 
+            // btnRight
+            // 
+            this.btnRight.BackColor = System.Drawing.Color.Transparent;
+            this.btnRight.CheckedState.Parent = this.btnRight;
+            this.btnRight.HoverState.ImageSize = new System.Drawing.Size(50, 46);
+            this.btnRight.HoverState.Parent = this.btnRight;
+            this.btnRight.Image = global::StoreManage.Properties.Resources.right_arrow_svgrepo_com;
+            this.btnRight.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnRight.Location = new System.Drawing.Point(213, 69);
+            this.btnRight.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRight.Name = "btnRight";
+            this.btnRight.PressedState.Parent = this.btnRight;
+            this.btnRight.Size = new System.Drawing.Size(38, 37);
+            this.btnRight.TabIndex = 55;
+            this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
+            // 
+            // btnLeft
+            // 
+            this.btnLeft.BackColor = System.Drawing.Color.Transparent;
+            this.btnLeft.CheckedState.Parent = this.btnLeft;
+            this.btnLeft.HoverState.ImageSize = new System.Drawing.Size(50, 46);
+            this.btnLeft.HoverState.Parent = this.btnLeft;
+            this.btnLeft.Image = global::StoreManage.Properties.Resources.left_arrow_svgrepo_com;
+            this.btnLeft.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnLeft.Location = new System.Drawing.Point(104, 69);
+            this.btnLeft.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLeft.Name = "btnLeft";
+            this.btnLeft.PressedState.Parent = this.btnLeft;
+            this.btnLeft.Size = new System.Drawing.Size(38, 37);
+            this.btnLeft.TabIndex = 54;
+            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
             // 
             // btnAdd
             // 
@@ -123,26 +158,26 @@
             this.txtSearch.Modified = false;
             this.txtSearch.Multiline = false;
             this.txtSearch.Name = "txtSearch";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearch.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtSearch.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearch.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearch.OnIdleState = stateProperties4;
+            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearch.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtSearch.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearch.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearch.OnIdleState = stateProperties8;
             this.txtSearch.Padding = new System.Windows.Forms.Padding(2);
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.DarkGray;
@@ -164,10 +199,26 @@
             this.txtSearch.UseSystemPasswordChar = false;
             this.txtSearch.WordWrap = true;
             // 
+            // lbCountPage
+            // 
+            this.lbCountPage.AutoSize = true;
+            this.lbCountPage.BackColor = System.Drawing.Color.Transparent;
+            this.lbCountPage.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCountPage.Location = new System.Drawing.Point(166, 76);
+            this.lbCountPage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbCountPage.Name = "lbCountPage";
+            this.lbCountPage.Size = new System.Drawing.Size(26, 30);
+            this.lbCountPage.TabIndex = 56;
+            this.lbCountPage.Text = "1";
+            this.lbCountPage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // AdminProductPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbCountPage);
+            this.Controls.Add(this.btnRight);
+            this.Controls.Add(this.btnLeft);
             this.Controls.Add(this.flowLayoutPanel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -189,5 +240,8 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2ImageButton btnAdd;
         private Bunifu.UI.WinForms.BunifuTextBox txtSearch;
+        private Guna.UI2.WinForms.Guna2ImageButton btnLeft;
+        private Guna.UI2.WinForms.Guna2ImageButton btnRight;
+        private System.Windows.Forms.Label lbCountPage;
     }
 }
