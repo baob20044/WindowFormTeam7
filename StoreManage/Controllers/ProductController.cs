@@ -50,11 +50,13 @@ namespace StoreManage.Controllers
             }
         }
 
-        public async Task<ProductCreateDto> CreateAsync(ProductCreateDto productCreateDto)
+        public async Task<string> CreateAsync(ProductCreateDto productCreateDto)
         {
             try
             {
-                var result = await _apiService.PostAsync<ProductCreateDto>("products", productCreateDto, TokenManager.GetToken());
+                var result = await _apiService.PostAsync<string>("products", productCreateDto, TokenManager.GetToken());
+                MessageBox.Show($"Success: {result}", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 return result;
             }
             catch (Exception ex)
@@ -68,7 +70,7 @@ namespace StoreManage.Controllers
         {
             try
             {
-                var result = await _apiService.PutAsync<ProductUpdateDto>("products", productUpdateDto, TokenManager.GetToken());
+                var result = await _apiService.PutAsync<ProductUpdateDto>($"products/{productId}", productUpdateDto, TokenManager.GetToken());
                 return result;
             }
             catch (Exception ex)
@@ -77,6 +79,18 @@ namespace StoreManage.Controllers
                 return null;
             }
         }
-
+        public async Task<bool> DeleteAsync(int productId)
+        {
+            try
+            {
+                var result = await _apiService.DeleteAsync($"products/{productId}", TokenManager.GetToken());
+                return result;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error delete product: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
     }
 }

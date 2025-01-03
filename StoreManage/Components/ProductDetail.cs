@@ -261,7 +261,6 @@ namespace StoreManage.Components
                             if (selectedColor != null)
                             {
                                 var imageUrl = selectedColor.Images.FirstOrDefault()?.Url ?? "default-image.png";
-                                MessageBox.Show(imageUrl);
                                 _pictureBox.ImageLocation = imageUrl;
 
                             }

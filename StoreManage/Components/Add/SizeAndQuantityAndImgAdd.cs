@@ -62,7 +62,7 @@ namespace StoreManage.Components.Add
             }
         }
 
-        public void LoadData(List<(string size, int quantity)> data, List<string> imageUrls)
+        public void LoadData(List<(SizeDto size, int quantity)> data, List<string> imageUrls)
         {
             flowLayoutPanel1.Controls.Clear(); 
 
@@ -76,7 +76,7 @@ namespace StoreManage.Components.Add
 
                 Label lblSize = new Label
                 {
-                    Text = $"Size: {item.size}",
+                    Text = $"Size: {item.size.SizeValue}",
                     AutoSize = true,
                     Location = new Point(5, 5)
                 };
@@ -193,7 +193,7 @@ namespace StoreManage.Components.Add
             this.Parent.Controls.Remove(this);
         }
 
-        public event Action<ColorDto, List<string>, List<(string size, int quantity)>> OnSave;
+        public event Action<ColorDto, List<string>, List<(SizeDto size, int quantity)>> OnSave;
 
         public void SetColor(ColorDto color)
         {
@@ -202,7 +202,7 @@ namespace StoreManage.Components.Add
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            List<(string size, int quantity)> data = new List<(string size, int quantity)>();
+            List<(SizeDto size, int quantity)> data = new List<(SizeDto size, int quantity)>();
 
             foreach (Control control in flowLayoutPanel1.Controls)
             {
@@ -213,7 +213,7 @@ namespace StoreManage.Components.Add
 
                     if (lblSize != null && lblQuantity != null)
                     {
-                        string size = lblSize.Text.Replace("Size: ", "").Trim();
+                        SizeDto size = cbSize.Items.OfType<SizeDto>().FirstOrDefault(s => s.SizeValue == lblSize.Text.Replace("Size: ", "").Trim());
                         int quantity = int.Parse(lblQuantity.Text.Replace("Quantity: ", "").Trim());
 
                         data.Add((size, quantity));
