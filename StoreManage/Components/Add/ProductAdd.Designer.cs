@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.cBTargetCustomer = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -72,6 +72,20 @@
             this.panel1.Size = new System.Drawing.Size(784, 83);
             this.panel1.TabIndex = 23;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(292, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(179, 37);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Add Product";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
@@ -92,20 +106,6 @@
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(292, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 37);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Add Product";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnSave
             // 
@@ -315,6 +315,7 @@
             this.txtNewCategory.ShadowDecoration.Parent = this.txtNewCategory;
             this.txtNewCategory.Size = new System.Drawing.Size(176, 36);
             this.txtNewCategory.TabIndex = 37;
+            this.txtNewCategory.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNewCategory_KeyDown);
             // 
             // label9
             // 
@@ -354,6 +355,7 @@
             this.txtNewSubCategory.ShadowDecoration.Parent = this.txtNewSubCategory;
             this.txtNewSubCategory.Size = new System.Drawing.Size(176, 36);
             this.txtNewSubCategory.TabIndex = 39;
+            this.txtNewSubCategory.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNewSubCategory_KeyDown);
             // 
             // label10
             // 

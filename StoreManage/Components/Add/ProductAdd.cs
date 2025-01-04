@@ -25,6 +25,7 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using StoreManage.DTOs.Size;
+using StoreManage.DTOs.Subcategory;
 
 namespace StoreManage.Components.Add
 {
@@ -32,6 +33,8 @@ namespace StoreManage.Components.Add
     {
         private readonly ProviderController _providerController;
         private readonly ProductController _productController;
+        private readonly CategoryController _categoryController;
+        private readonly SubcategoryController _subcategoryController;
 
         List<ProviderDto> providers;
         public ProductAdd()
@@ -39,6 +42,8 @@ namespace StoreManage.Components.Add
             InitializeComponent();
             _providerController = new ProviderController(new ApiService());
             _productController = new ProductController(new ApiService());
+            _categoryController = new CategoryController(new ApiService());
+            _subcategoryController = new SubcategoryController(new ApiService());
             LoadTargetCustomers();
             LoadProviders();
         }
@@ -283,6 +288,99 @@ namespace StoreManage.Components.Add
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi khi lưu sản phẩm: {ex.Message}");
+            }
+        }
+
+        private async void txtNewCategory_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) 
+            {
+                string newCategoryName = txtNewCategory.Text.Trim();
+
+                if (string.IsNullOrWhiteSpace(newCategoryName))
+                {
+                    MessageBox.Show("Vui lòng nhập tên danh mục trước khi nhấn Enter.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (cBTargetCustomer.Items.Count == 0 || cBTargetCustomer.SelectedValue == null)
+                {
+                    MessageBox.Show("Không tìm thấy khách hàng mục tiêu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                int targetCustomerId = (int)cBTargetCustomer.SelectedValue;
+
+                try
+                {
+                    var newCategory = new CategoryCreateDto
+                    {
+                        Name = newCategoryName,
+                        TargetCustomerId = targetCustomerId
+                    };
+
+                    await _categoryController.CreateAsync(newCategory);
+
+                    MessageBox.Show("Danh mục mới đã được thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    txtNewCategory.Text = string.Empty;
+
+                    await LoadCategories(targetCustomerId);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi khi thêm danh mục mới: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                e.Handled = true;
+                e.SuppressKeyPress = true; 
+            }
+        }
+
+        private async void txtNewSubCategory_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                string newSubCategoryName = txtNewSubCategory.Text.Trim();
+
+                if (string.IsNullOrWhiteSpace(newSubCategoryName))
+                {
+                    MessageBox.Show("Vui lòng nhập tên danh mục con trước khi nhấn Enter.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (cBTargetCustomer.Items.Count == 0 || cBTargetCustomer.SelectedValue == null)
+                {
+                    MessageBox.Show("Không tìm thấy khách hàng mục tiêu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                int categoryId = (int)cbCategory.SelectedValue;
+
+                try
+                {
+                    var newSubCategory = new SubcategoryCreateDto
+                    {
+                        SubcategoryName = newSubCategoryName,
+                        Description = "stringstri",
+                        CategoryId = categoryId
+                    };
+
+                    await _subcategoryController.CreateAsync(newSubCategory);
+
+                    MessageBox.Show("Danh mục con mới đã được thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    txtNewSubCategory.Text = string.Empty;
+
+                    await LoadSubCategories(categoryId);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi khi thêm danh mục con mới: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                e.Handled = true;
+                e.SuppressKeyPress = true;
             }
         }
     }
