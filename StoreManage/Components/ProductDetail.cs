@@ -1,4 +1,5 @@
-﻿using StoreManage.DTOs.Inventory;
+﻿using StoreManage.Controllers;
+using StoreManage.DTOs.Inventory;
 using StoreManage.DTOs.PColor;
 using StoreManage.DTOs.Product;
 using StoreManage.DTOs.Size;
@@ -7,6 +8,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -20,11 +22,14 @@ namespace StoreManage.Components
     {
         private int _productId;
         private PictureBox _pictureBox;
+        private readonly ProviderController _providerController;
+        private readonly SubcategoryController _subcategoryController;
         public ProductDetail(int productId)
         {
             InitializeComponent();
             _productId = productId;
-
+            _providerController = new ProviderController(new Services.ApiService());
+            _subcategoryController = new SubcategoryController(new Services.ApiService());
             LoadProductDetails();
             LoadColorsForProduct();
         }
@@ -49,24 +54,35 @@ namespace StoreManage.Components
 
                     if (product != null)
                     {
+                        var providerName = await _providerController.GetByIdAsync(product.ProviderId);
+                        var subCateName = await _subcategoryController.GetByIdAsync(product.SubcategoryId);
+
                         txtName.Text = product.Name;
-                        txtPrice.Text = $"{product.Price:C}";
-                        if (_pictureBox == null)
+                        txtPrice.Text = string.Format(new CultureInfo("vi-VN"), "{0:C0}", product.Price);
+                        txtCost.Text = string.Format(new CultureInfo("vi-VN"), "{0:C0}", product.Cost);
+                        txtProviderName.Text = providerName.ProviderCompanyName.ToString();
+                        txtDescription.Text = product.Description;
+                        txtDiscount.Text = $"{product.DiscountPercentage}";
+                        txtSubCate.Text = subCateName.SubcategoryName.ToString();
+                        txtInStock.Text = product.InStock.ToString();
+
+                        flowLayoutPanel1.Controls.Clear(); 
+
+                        foreach (var color in product.Colors)
                         {
-                            _pictureBox = new PictureBox
+                            foreach (var image in color.Images)
                             {
-                                Width = 100,
-                                Height = 140,
-                                SizeMode = PictureBoxSizeMode.StretchImage,
-                                Location = new Point(400, 100)
-                            };
-                            this.Controls.Add(_pictureBox);
+                                var pictureBox = new PictureBox
+                                {
+                                    Width = 100,
+                                    Height = 140,
+                                    SizeMode = PictureBoxSizeMode.StretchImage,
+                                    ImageLocation = image.Url
+                                };
+
+                                flowLayoutPanel1.Controls.Add(pictureBox);
+                            }
                         }
-
-                        var firstColor = product.Colors.FirstOrDefault();
-                        var firstImageUrl = firstColor?.Images.FirstOrDefault()?.Url ?? "default-image.png";
-
-                        _pictureBox.ImageLocation = firstImageUrl;
                     }
                 }
             }
