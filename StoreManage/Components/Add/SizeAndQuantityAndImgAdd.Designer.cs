@@ -53,9 +53,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(61)))), ((int)(((byte)(93)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(888, 105);
+            this.panel1.Size = new System.Drawing.Size(592, 85);
             this.panel1.TabIndex = 23;
             // 
             // label1
@@ -64,9 +64,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(239, 21);
+            this.label1.Location = new System.Drawing.Point(127, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(368, 45);
+            this.label1.Size = new System.Drawing.Size(305, 37);
             this.label1.TabIndex = 19;
             this.label1.Text = "Add Size Quantity Img";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,10 +77,10 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
             this.panel2.Controls.Add(this.btnClose);
             this.panel2.Controls.Add(this.btnSave);
-            this.panel2.Location = new System.Drawing.Point(0, 465);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(0, 378);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(900, 85);
+            this.panel2.Size = new System.Drawing.Size(594, 69);
             this.panel2.TabIndex = 24;
             // 
             // btnClose
@@ -94,11 +95,11 @@
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.HoverState.Parent = this.btnClose;
-            this.btnClose.Location = new System.Drawing.Point(165, 15);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Location = new System.Drawing.Point(124, 12);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.ShadowDecoration.Parent = this.btnClose;
-            this.btnClose.Size = new System.Drawing.Size(120, 57);
+            this.btnClose.Size = new System.Drawing.Size(90, 46);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -115,11 +116,11 @@
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.HoverState.Parent = this.btnSave;
-            this.btnSave.Location = new System.Drawing.Point(39, 15);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Location = new System.Drawing.Point(29, 12);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.ShadowDecoration.Parent = this.btnSave;
-            this.btnSave.Size = new System.Drawing.Size(120, 57);
+            this.btnSave.Size = new System.Drawing.Size(90, 46);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -127,8 +128,10 @@
             // cbSize
             // 
             this.cbSize.BackColor = System.Drawing.Color.Transparent;
+            this.cbSize.BorderColor = System.Drawing.Color.Aqua;
             this.cbSize.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSize.FillColor = System.Drawing.Color.LightCyan;
             this.cbSize.FocusedColor = System.Drawing.Color.Empty;
             this.cbSize.FocusedState.Parent = this.cbSize;
             this.cbSize.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -137,11 +140,11 @@
             this.cbSize.HoverState.Parent = this.cbSize;
             this.cbSize.ItemHeight = 30;
             this.cbSize.ItemsAppearance.Parent = this.cbSize;
-            this.cbSize.Location = new System.Drawing.Point(105, 130);
-            this.cbSize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbSize.Location = new System.Drawing.Point(79, 106);
+            this.cbSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbSize.Name = "cbSize";
             this.cbSize.ShadowDecoration.Parent = this.cbSize;
-            this.cbSize.Size = new System.Drawing.Size(184, 36);
+            this.cbSize.Size = new System.Drawing.Size(139, 36);
             this.cbSize.TabIndex = 28;
             // 
             // label3
@@ -149,9 +152,10 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(39, 137);
+            this.label3.Location = new System.Drawing.Point(29, 111);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 31);
+            this.label3.Size = new System.Drawing.Size(46, 25);
             this.label3.TabIndex = 27;
             this.label3.Text = "Size";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -161,15 +165,17 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(336, 138);
+            this.label2.Location = new System.Drawing.Point(235, 112);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 31);
+            this.label2.Size = new System.Drawing.Size(87, 25);
             this.label2.TabIndex = 26;
             this.label2.Text = "Quantity";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtQuantity
             // 
+            this.txtQuantity.BorderColor = System.Drawing.Color.Aqua;
             this.txtQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtQuantity.DefaultText = "";
             this.txtQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -177,27 +183,28 @@
             this.txtQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtQuantity.DisabledState.Parent = this.txtQuantity;
             this.txtQuantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQuantity.FillColor = System.Drawing.Color.LightCyan;
             this.txtQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuantity.FocusedState.Parent = this.txtQuantity;
             this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuantity.HoverState.Parent = this.txtQuantity;
-            this.txtQuantity.Location = new System.Drawing.Point(476, 130);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtQuantity.Location = new System.Drawing.Point(340, 106);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.PasswordChar = '\0';
             this.txtQuantity.PlaceholderText = "";
             this.txtQuantity.SelectedText = "";
             this.txtQuantity.ShadowDecoration.Parent = this.txtQuantity;
-            this.txtQuantity.Size = new System.Drawing.Size(184, 44);
+            this.txtQuantity.Size = new System.Drawing.Size(138, 36);
             this.txtQuantity.TabIndex = 25;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(29, 188);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.LightCyan;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(22, 153);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(836, 107);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(531, 87);
             this.flowLayoutPanel1.TabIndex = 29;
             // 
             // openFileDialog1
@@ -216,11 +223,11 @@
             this.btnOk.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnOk.ForeColor = System.Drawing.Color.White;
             this.btnOk.HoverState.Parent = this.btnOk;
-            this.btnOk.Location = new System.Drawing.Point(699, 130);
-            this.btnOk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOk.Location = new System.Drawing.Point(507, 106);
+            this.btnOk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOk.Name = "btnOk";
             this.btnOk.ShadowDecoration.Parent = this.btnOk;
-            this.btnOk.Size = new System.Drawing.Size(107, 49);
+            this.btnOk.Size = new System.Drawing.Size(80, 40);
             this.btnOk.TabIndex = 4;
             this.btnOk.Text = "OK";
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
@@ -230,15 +237,17 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(39, 310);
+            this.label4.Location = new System.Drawing.Point(29, 252);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 31);
+            this.label4.Size = new System.Drawing.Size(95, 25);
             this.label4.TabIndex = 36;
             this.label4.Text = "Url image";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtImageUrl
             // 
+            this.txtImageUrl.BorderColor = System.Drawing.Color.Aqua;
             this.txtImageUrl.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtImageUrl.DefaultText = "";
             this.txtImageUrl.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -246,18 +255,19 @@
             this.txtImageUrl.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtImageUrl.DisabledState.Parent = this.txtImageUrl;
             this.txtImageUrl.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtImageUrl.FillColor = System.Drawing.Color.LightCyan;
             this.txtImageUrl.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtImageUrl.FocusedState.Parent = this.txtImageUrl;
             this.txtImageUrl.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtImageUrl.HoverState.Parent = this.txtImageUrl;
-            this.txtImageUrl.Location = new System.Drawing.Point(179, 302);
-            this.txtImageUrl.Margin = new System.Windows.Forms.Padding(5);
+            this.txtImageUrl.Location = new System.Drawing.Point(134, 245);
+            this.txtImageUrl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtImageUrl.Name = "txtImageUrl";
             this.txtImageUrl.PasswordChar = '\0';
             this.txtImageUrl.PlaceholderText = "";
             this.txtImageUrl.SelectedText = "";
             this.txtImageUrl.ShadowDecoration.Parent = this.txtImageUrl;
-            this.txtImageUrl.Size = new System.Drawing.Size(184, 44);
+            this.txtImageUrl.Size = new System.Drawing.Size(138, 36);
             this.txtImageUrl.TabIndex = 35;
             // 
             // btnOkImgUrl
@@ -272,11 +282,11 @@
             this.btnOkImgUrl.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnOkImgUrl.ForeColor = System.Drawing.Color.White;
             this.btnOkImgUrl.HoverState.Parent = this.btnOkImgUrl;
-            this.btnOkImgUrl.Location = new System.Drawing.Point(396, 301);
-            this.btnOkImgUrl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOkImgUrl.Location = new System.Drawing.Point(297, 245);
+            this.btnOkImgUrl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOkImgUrl.Name = "btnOkImgUrl";
             this.btnOkImgUrl.ShadowDecoration.Parent = this.btnOkImgUrl;
-            this.btnOkImgUrl.Size = new System.Drawing.Size(107, 49);
+            this.btnOkImgUrl.Size = new System.Drawing.Size(80, 40);
             this.btnOkImgUrl.TabIndex = 37;
             this.btnOkImgUrl.Text = "OK";
             this.btnOkImgUrl.Click += new System.EventHandler(this.btnOkImgUrl_Click);
@@ -284,15 +294,15 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(29, 352);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.LightCyan;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(22, 286);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(836, 107);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(531, 87);
             this.flowLayoutPanel2.TabIndex = 30;
             // 
             // SizeAndQuantityAndImgAdd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.btnOkImgUrl);
@@ -306,9 +316,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtQuantity);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SizeAndQuantityAndImgAdd";
-            this.Size = new System.Drawing.Size(891, 550);
+            this.Size = new System.Drawing.Size(594, 447);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
