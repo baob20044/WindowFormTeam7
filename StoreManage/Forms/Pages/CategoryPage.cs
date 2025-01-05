@@ -339,5 +339,14 @@ namespace StoreManage.Forms.Pages
             }
         }
 
+        private void btnRight_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLeft_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

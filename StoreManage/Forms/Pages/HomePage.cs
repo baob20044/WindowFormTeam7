@@ -6,9 +6,9 @@ using StoreManage.DTOs.Product;
 using StoreManage.Services;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Linq;
+using System.Net.Http;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,113 +16,141 @@ namespace StoreManage.Forms.Pages
 {
     public partial class HomePage : UserControl
     {
-        private List<ProductDto> products = new List<ProductDto>();
-        private List<ShopItem> shopItems; // All items
-        private List<ShopItem> filteredItems; // Filtered items based on search
-        private int currentPage = 0;      // Current page index
-        private int pageSize = 15;         // Number of items per page
-        private int totalProduct = 50;
+        private int currentPage = 0; // Current page index
+        private int pageSize = 15; // Number of items per page
+        private bool isLastPage = false; // Flag to track if this is the last page
         private readonly ProductController _productController;
 
         public HomePage()
         {
             InitializeComponent();
             _productController = new ProductController(new ApiService());
-            InitializeShopItems();
-            filteredItems = new List<ShopItem>(shopItems); // Initially, no filtering
-            LoadPage(0);
+            LoadProducts();
         }
-
-        private void HomePage_Load(object sender, EventArgs e)
+        public async Task<List<ProductDto>> GetAllProductsAsync(string apiUrl)
         {
+            using (var client = new HttpClient())
+            {
+                try
+                {
+                    var response = await client.GetAsync(apiUrl);
+                    response.EnsureSuccessStatusCode();
 
+                    var json = await response.Content.ReadAsStringAsync();
+                    return System.Text.Json.JsonSerializer.Deserialize<List<ProductDto>>(json, new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    }) ?? new List<ProductDto>();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi khi gọi API: {ex.Message}");
+                    return new List<ProductDto>();
+                }
+            }
         }
-        private async void InitializeShopItems()
+        private async void LoadProducts(string query="")
         {
-            shopItems = new List<ShopItem>();
+            flowLayoutPanel.Controls.Clear(); // Clear existing items from the flow panel
+            string apiUrl = $"http://localhost:5254/api/products?Offset={currentPage * pageSize}&PageSize={pageSize}&Name={query}";
+
             try
             {
-                products = await _productController.GetAllAsyncs();
+                var products = await GetAllProductsAsync(apiUrl);
 
-                if (products != null)
+                if (products.Any())
                 {
-                    foreach (var item in products) 
+                    foreach (var product in products)
                     {
-                        Console.WriteLine("Hi" +item);
-                        var shopItem = new ShopItem(item);
+                        var shopItem = new ShopItem(product);
                         shopItem.OnShopItemClick += HandleShopItemClick; // Subscribe to the click event
-                        shopItems.Add(shopItem); // Add to the list
                         flowLayoutPanel.Controls.Add(shopItem);
                     }
+
+                    // Update pagination buttons
+                    isLastPage = products.Count < pageSize;
+                    UpdatePaginationButtons();
+                    UpdatePageLabel();
                 }
                 else
                 {
-                    Console.WriteLine($"Faild : {products}" );
+                    MessageBox.Show("Không tìm thấy sản phẩm");
+                    isLastPage = true; // Không có sản phẩm -> trang cuối
+                    UpdatePaginationButtons(isLastPage);
+                    UpdatePageLabel();
                 }
-                    
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error load product" + ex.Message);
+                MessageBox.Show($"Error loading products: {ex.Message}");
             }
         }
-        private void LoadPage(int pageIndex) /* Home Page */
+        private void UpdatePaginationButtons(bool isLastPage)
         {
-            flowLayoutPanel.Controls.Clear(); // Clear existing controlsy
-            // Calculate the range of items to display
-            int startIndex = pageIndex * pageSize;
-            int endIndex = Math.Min(startIndex + pageSize, filteredItems.Count);
-
-            // Reuse preloaded controls from filtered list
-            for (int i = startIndex; i < endIndex; i++)
-            {
-                flowLayoutPanel.Controls.Add(filteredItems[i]);
-            }
-            // Update navigation buttons
-            btnPrevious.Enabled = pageIndex > 0;
-            btnNext.Enabled = endIndex < filteredItems.Count;
-
-            int totalPage = (filteredItems.Count % pageSize) == 0 ? filteredItems.Count / pageSize : (filteredItems.Count / pageSize) + 1;
-            lbPageNumber.Text = $"{currentPage + 1}/{totalPage}";
+            btnNext.Enabled = currentPage > 0;
+            btnPrevious.Enabled = !isLastPage;
         }
-        private void btnNext_Click(object sender, EventArgs e) /* Home Page */
+        private void UpdatePaginationButtons()
         {
-            if ((currentPage + 1) * pageSize < filteredItems.Count)
+            btnPrevious.Enabled = currentPage > 0;
+            btnNext.Enabled = !isLastPage;
+        }
+
+        private void UpdatePageLabel()
+        {
+            lbPageNumber.Text = $"Page {currentPage + 1}";
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (!isLastPage)
             {
                 currentPage++;
-                LoadPage(currentPage);
+                LoadProducts();
             }
         }
 
-        // Trang trước 
-        private void btnPrevious_Click(object sender, EventArgs e) /* Home Page */
+        private void btnPrevious_Click(object sender, EventArgs e)
         {
             if (currentPage > 0)
             {
                 currentPage--;
-                LoadPage(currentPage);
+                LoadProducts();
             }
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            string searchText = txtSearch.Text.ToLower();
 
-            // Filter the items based on the search text
-            filteredItems = shopItems
-                .Where(item => item.ItemLabel.ToLower().Contains(searchText)) // Assuming ItemLabel is a property of ShopItem
-                .ToList();
-
-            // Reset current page and reload the page
-            currentPage = 0;
-            LoadPage(currentPage);
         }
 
-        public void HandleShopItemClick(int productId)
+        private void HandleShopItemClick(int productId)
         {
             var mainForm = this.FindForm() as MainForm;
-            DetailItem detail = new DetailItem(productId,mainForm);
-            mainForm?.handleClickedShopItem(detail);
+            if (mainForm != null)
+            {
+                var detailItem = new DetailItem(productId, mainForm);
+                mainForm.handleClickedShopItem(detailItem);
+            }
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                string searchText = txtSearch.Text;
+                currentPage = 0; // Reset current page when performing a search
+
+                // Use a filtered API call or locally filter the list if data is preloaded
+                // Update API URL if filtering server-side
+                LoadProducts(searchText); // Reload products based on search criteria
+            }
+        }
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            txtSearch.Text = "";
+            LoadProducts();
         }
     }
 }

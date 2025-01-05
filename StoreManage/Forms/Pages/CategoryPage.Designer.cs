@@ -66,6 +66,7 @@
             this.cbSizeXl = new System.Windows.Forms.CheckBox();
             this.cbSizeL = new System.Windows.Forms.CheckBox();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.btnFilter = new Guna.UI2.WinForms.Guna2Button();
             this.cbSubCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbTarget = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -81,7 +82,9 @@
             this.cbMiddle = new System.Windows.Forms.CheckBox();
             this.cbBelow350 = new System.Windows.Forms.CheckBox();
             this.flowLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnFilter = new Guna.UI2.WinForms.Guna2Button();
+            this.lbCountPage = new System.Windows.Forms.Label();
+            this.btnRight = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnLeft = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox10)).BeginInit();
@@ -640,6 +643,22 @@
             this.panel10.Size = new System.Drawing.Size(1034, 120);
             this.panel10.TabIndex = 57;
             // 
+            // btnFilter
+            // 
+            this.btnFilter.CheckedState.Parent = this.btnFilter;
+            this.btnFilter.CustomImages.Parent = this.btnFilter;
+            this.btnFilter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(82)))), ((int)(((byte)(34)))));
+            this.btnFilter.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilter.ForeColor = System.Drawing.Color.White;
+            this.btnFilter.HoverState.Parent = this.btnFilter;
+            this.btnFilter.Location = new System.Drawing.Point(894, 61);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.ShadowDecoration.Parent = this.btnFilter;
+            this.btnFilter.Size = new System.Drawing.Size(110, 36);
+            this.btnFilter.TabIndex = 58;
+            this.btnFilter.Text = "Lọc";
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
+            // 
             // cbSubCategory
             // 
             this.cbSubCategory.BackColor = System.Drawing.Color.Transparent;
@@ -747,6 +766,9 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.SystemColors.Window;
+            this.panel11.Controls.Add(this.lbCountPage);
+            this.panel11.Controls.Add(this.btnRight);
+            this.panel11.Controls.Add(this.btnLeft);
             this.panel11.Controls.Add(this.label34);
             this.panel11.Controls.Add(this.label33);
             this.panel11.Controls.Add(this.label32);
@@ -837,21 +859,49 @@
             this.flowLayout.TabIndex = 59;
             this.flowLayout.WrapContents = false;
             // 
-            // btnFilter
+            // lbCountPage
             // 
-            this.btnFilter.CheckedState.Parent = this.btnFilter;
-            this.btnFilter.CustomImages.Parent = this.btnFilter;
-            this.btnFilter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(82)))), ((int)(((byte)(34)))));
-            this.btnFilter.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFilter.ForeColor = System.Drawing.Color.White;
-            this.btnFilter.HoverState.Parent = this.btnFilter;
-            this.btnFilter.Location = new System.Drawing.Point(894, 61);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.ShadowDecoration.Parent = this.btnFilter;
-            this.btnFilter.Size = new System.Drawing.Size(110, 36);
-            this.btnFilter.TabIndex = 58;
-            this.btnFilter.Text = "Lọc";
-            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
+            this.lbCountPage.AutoSize = true;
+            this.lbCountPage.BackColor = System.Drawing.Color.Transparent;
+            this.lbCountPage.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCountPage.Location = new System.Drawing.Point(907, 5);
+            this.lbCountPage.Name = "lbCountPage";
+            this.lbCountPage.Size = new System.Drawing.Size(33, 38);
+            this.lbCountPage.TabIndex = 59;
+            this.lbCountPage.Text = "1";
+            this.lbCountPage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnRight
+            // 
+            this.btnRight.BackColor = System.Drawing.Color.Transparent;
+            this.btnRight.CheckedState.Parent = this.btnRight;
+            this.btnRight.HoverState.ImageSize = new System.Drawing.Size(50, 46);
+            this.btnRight.HoverState.Parent = this.btnRight;
+            this.btnRight.Image = global::StoreManage.Properties.Resources.right_arrow_svgrepo_com;
+            this.btnRight.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnRight.Location = new System.Drawing.Point(946, 2);
+            this.btnRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRight.Name = "btnRight";
+            this.btnRight.PressedState.Parent = this.btnRight;
+            this.btnRight.Size = new System.Drawing.Size(51, 46);
+            this.btnRight.TabIndex = 58;
+            this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
+            // 
+            // btnLeft
+            // 
+            this.btnLeft.BackColor = System.Drawing.Color.Transparent;
+            this.btnLeft.CheckedState.Parent = this.btnLeft;
+            this.btnLeft.HoverState.ImageSize = new System.Drawing.Size(50, 46);
+            this.btnLeft.HoverState.Parent = this.btnLeft;
+            this.btnLeft.Image = global::StoreManage.Properties.Resources.left_arrow_svgrepo_com;
+            this.btnLeft.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnLeft.Location = new System.Drawing.Point(850, 2);
+            this.btnLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLeft.Name = "btnLeft";
+            this.btnLeft.PressedState.Parent = this.btnLeft;
+            this.btnLeft.Size = new System.Drawing.Size(51, 46);
+            this.btnLeft.TabIndex = 57;
+            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
             // 
             // CategoryPage
             // 
@@ -939,5 +989,8 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbSubCategory;
         private Guna.UI2.WinForms.Guna2ComboBox cbCategory;
         private Guna.UI2.WinForms.Guna2Button btnFilter;
+        private System.Windows.Forms.Label lbCountPage;
+        private Guna.UI2.WinForms.Guna2ImageButton btnRight;
+        private Guna.UI2.WinForms.Guna2ImageButton btnLeft;
     }
 }
