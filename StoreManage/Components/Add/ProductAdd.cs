@@ -289,6 +289,7 @@ namespace StoreManage.Components.Add
             {
                 MessageBox.Show($"Lỗi khi lưu sản phẩm: {ex.Message}");
             }
+            this.Parent.Controls.Remove(this);
         }
 
         private async void txtNewCategory_KeyDown(object sender, KeyEventArgs e)
