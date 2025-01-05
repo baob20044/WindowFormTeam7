@@ -192,6 +192,7 @@
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
             this.txtPassword.Size = new System.Drawing.Size(306, 43);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.IconRightClick += new System.EventHandler(this.txtPassword_IconRightClick);
             // 
             // txtUsername
             // 

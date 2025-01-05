@@ -188,7 +188,7 @@
             this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpBirthday.Location = new System.Drawing.Point(388, 432);
             this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(306, 27);
+            this.dtpBirthday.Size = new System.Drawing.Size(306, 26);
             this.dtpBirthday.TabIndex = 12;
             // 
             // rBMale
@@ -434,6 +434,7 @@
             this.txtConfirmPassword.ShadowDecoration.Parent = this.txtConfirmPassword;
             this.txtConfirmPassword.Size = new System.Drawing.Size(306, 43);
             this.txtConfirmPassword.TabIndex = 3;
+            this.txtConfirmPassword.IconRightClick += new System.EventHandler(this.txtConfirmPassword_IconRightClick);
             // 
             // txtPassword
             // 
@@ -464,6 +465,7 @@
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
             this.txtPassword.Size = new System.Drawing.Size(306, 43);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.IconRightClick += new System.EventHandler(this.txtPassword_IconRightClick);
             // 
             // txtUsername
             // 

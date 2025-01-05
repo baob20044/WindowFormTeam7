@@ -3,6 +3,7 @@ using StoreManage.DTOs.Account;
 using StoreManage.DTOs.Employee;
 using StoreManage.Services;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace StoreManage
@@ -128,5 +129,32 @@ namespace StoreManage
             return true;
         }
 
+        private void txtPassword_IconRightClick(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '\0')
+            {
+                txtPassword.PasswordChar = '*';
+                txtPassword.IconRight = Image.FromFile(@"..\..\Resources\Images\Closed_Eye.png");
+            }
+            else
+            {
+                txtPassword.PasswordChar = '\0';
+                txtPassword.IconRight = Image.FromFile(@"..\..\Resources\Images\Eye.png");
+            }
+        }
+
+        private void txtConfirmPassword_IconRightClick(object sender, EventArgs e)
+        {
+            if (txtConfirmPassword.PasswordChar == '\0')
+            {
+                txtConfirmPassword.PasswordChar = '*';
+                txtConfirmPassword.IconRight = Image.FromFile(@"..\..\Resources\Images\Closed_Eye.png");
+            }
+            else
+            {
+                txtConfirmPassword.PasswordChar = '\0';
+                txtConfirmPassword.IconRight = Image.FromFile(@"..\..\Resources\Images\Eye.png");
+            }
+        }
     }
 }

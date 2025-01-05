@@ -183,6 +183,18 @@ namespace StoreManage
             }
         }
 
-        
+        private void txtPassword_IconRightClick(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '\0')
+            {
+                txtPassword.PasswordChar = '*';
+                txtPassword.IconRight = Image.FromFile(@"..\..\Resources\Images\Closed_Eye.png");
+            }
+            else
+            {
+                txtPassword.PasswordChar = '\0';
+                txtPassword.IconRight = Image.FromFile(@"..\..\Resources\Images\Eye.png");
+            }
+        }
     }
 }
