@@ -120,4 +120,16 @@
   <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnAddQuantity.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAASdJREFUeF7t
+        2LFtg1AARVE2oY+X8CbZL16CzexPlwKZREb4KjlHet2nQJeGPwEAAPAj89iys/UMJ7mM3Xf2McZJBIkR
+        JEaQGEFiBIkRJEaQGEFiBIkRJEaQGEFiBIkRJEaQGEFiBIkRJEaQGEFiBIkRJEaQGEFiBIkRJEaQGEFi
+        BIkRJEaQGEFiBIkRJOZfB1lf7Brb59hWhO9bz2w9+84d8pHcxrZe2H6/r7GXCXLcBIlNkNgEiU2Q2ASJ
+        TZDYDgnix/C4/dnbA3dZMYLECBIjSIwgMYLECBIjSIwgMYLECBIjSIwgMYLECBIjSIwgMYLECBIjSIwg
+        MYLECBIjSIwgMYLECBIjSIwgMYLECBIjSIwgMYLECBIjSMw8tuxsPQMAAMBT0/QAiLownKX/KrYAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
 </root>

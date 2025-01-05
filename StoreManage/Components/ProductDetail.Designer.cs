@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductDetail));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,6 +57,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtCost = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnAddQuantity = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -76,7 +78,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(355, 25);
+            this.label1.Location = new System.Drawing.Point(367, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(242, 45);
             this.label1.TabIndex = 19;
@@ -537,10 +539,29 @@
             this.txtCost.Size = new System.Drawing.Size(187, 44);
             this.txtCost.TabIndex = 55;
             // 
+            // btnAddQuantity
+            // 
+            this.btnAddQuantity.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddQuantity.CheckedState.Parent = this.btnAddQuantity;
+            this.btnAddQuantity.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddQuantity.CustomImages.Parent = this.btnAddQuantity;
+            this.btnAddQuantity.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddQuantity.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddQuantity.ForeColor = System.Drawing.Color.White;
+            this.btnAddQuantity.HoverState.Parent = this.btnAddQuantity;
+            this.btnAddQuantity.Image = ((System.Drawing.Image)(resources.GetObject("btnAddQuantity.Image")));
+            this.btnAddQuantity.Location = new System.Drawing.Point(370, 449);
+            this.btnAddQuantity.Name = "btnAddQuantity";
+            this.btnAddQuantity.ShadowDecoration.Parent = this.btnAddQuantity;
+            this.btnAddQuantity.Size = new System.Drawing.Size(43, 31);
+            this.btnAddQuantity.TabIndex = 57;
+            this.btnAddQuantity.Click += new System.EventHandler(this.btnAddQuantity_Click);
+            // 
             // ProductDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnAddQuantity);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtCost);
             this.Controls.Add(this.txtDescription);
@@ -607,5 +628,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2TextBox txtCost;
+        private Guna.UI2.WinForms.Guna2Button btnAddQuantity;
     }
 }

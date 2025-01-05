@@ -1,4 +1,5 @@
-﻿using StoreManage.Controllers;
+﻿using StoreManage.Components.Add;
+using StoreManage.Controllers;
 using StoreManage.DTOs.Inventory;
 using StoreManage.DTOs.PColor;
 using StoreManage.DTOs.Product;
@@ -292,6 +293,19 @@ namespace StoreManage.Components
             }
         }
 
+        private void btnAddQuantity_Click(object sender, EventArgs e)
+        {
+            var addAddAmountForm = new AmountAdd(Convert.ToInt32(cbColor.SelectedValue), Convert.ToInt32(cbSize.SelectedValue), _productId);
+            this.Controls.Add(addAddAmountForm);
+
+            addAddAmountForm.Dock = DockStyle.None;
+            addAddAmountForm.Location = new Point(
+                (this.Width - addAddAmountForm.Width) / 2,
+                (this.Height - addAddAmountForm.Height) / 2
+            );
+
+            addAddAmountForm.BringToFront();
+        }
     }
 
 }

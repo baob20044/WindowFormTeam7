@@ -47,7 +47,19 @@ namespace StoreManage.Controllers
                 return null;
             }
         }
-
+        public async Task<string> UpdateAsync(InventoryUpdateDto inventoryUpdateDto)
+        {
+            try
+            {
+                var result = await _apiService.PutAsync<string>($"inventories", inventoryUpdateDto, TokenManager.GetToken());
+                return result;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
 
 
     }

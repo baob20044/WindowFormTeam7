@@ -307,7 +307,30 @@ namespace StoreManage.AdminForms.Pages
 
                 addEditForm.BringToFront();
             };
+            var btnAddAmount = new Guna.UI2.WinForms.Guna2Button
+            {
+                Image = Properties.Resources.Plus4,
+                ImageSize = new Size(25, 25),
+                Size = new Size(40, 40),
+                BackColor = Color.Transparent,
+                BorderRadius = 5,
+                Anchor = AnchorStyles.Top | AnchorStyles.Right,
+                Location = new Point(650, 10)
+            };
+            //btnAddAmount.Click += (s, e) =>
+            //{
+            //    var addAddAmountForm = new AmountAdd();
+            //    this.Controls.Add(addAddAmountForm);
 
+            //    addAddAmountForm.Dock = DockStyle.None;
+            //    addAddAmountForm.Location = new Point(
+            //        (this.Width - addAddAmountForm.Width) / 2,
+            //        (this.Height - addAddAmountForm.Height) / 2
+            //    );
+
+            //    addAddAmountForm.BringToFront();
+            //};
+            //rowPanel.Controls.Add(btnAddAmount);
             rowPanel.Controls.Add(btnEdit);
             rowPanel.Controls.Add(deleteIcon);
             rowPanel.Controls.Add(btnDetails);

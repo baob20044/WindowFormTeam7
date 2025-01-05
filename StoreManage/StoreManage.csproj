@@ -258,6 +258,12 @@
     <Compile Include="AdminMainForm.Designer.cs">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\Add\AmountAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Add\AmountAdd.Designer.cs">
+      <DependentUpon>AmountAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\Add\ColorAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -555,6 +561,9 @@
     <EmbeddedResource Include="AdminMainForm.resx">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Components\Add\AmountAdd.resx">
+      <DependentUpon>AmountAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\Add\ColorAdd.resx">
       <DependentUpon>ColorAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -725,6 +734,7 @@
     <None Include="Resources\left-arrow-svgrepo-com.png" />
     <None Include="Resources\right-arrow-svgrepo-com.png" />
     <None Include="Resources\Logo %282%29.png" />
+    <Content Include="Resources\Plus4.png" />
     <Content Include="Resources\ViewDetails.png" />
     <Content Include="Resources\Images\visa-card.png" />
     <Content Include="Resources\Images\vnpay-qr.png" />
