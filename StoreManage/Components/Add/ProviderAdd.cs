@@ -53,7 +53,7 @@ namespace StoreManage.Components.Add
                 {
                     MessageBox.Show("Created provider successfully");
                     var adminMainForm = this.FindForm() as AdminMainForm;
-                    adminMainForm.refreshColor();
+                    adminMainForm.refreshProvider();
                     this.Parent.Controls.Remove(this);
                 }
                 else

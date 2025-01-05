@@ -16,6 +16,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Guna.UI2.Native.WinApi;
 
 namespace StoreManage.Components.Add
 {
@@ -268,7 +269,10 @@ namespace StoreManage.Components.Add
                         var result = await _inventoryController.CreateAsync(inventoryCreateDto);
                     }
                 }
-
+                MessageBox.Show($"Thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var mainpage = this.FindForm() as AdminMainForm;
+                mainpage.refreshProduct();
+                this.Parent.Controls.Remove(this);
             }
             catch (Exception ex)
             {

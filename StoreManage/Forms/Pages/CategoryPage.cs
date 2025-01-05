@@ -1,7 +1,11 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
 using StoreManage.Components;
+using StoreManage.Controllers;
+using StoreManage.DTOs.Category;
 using StoreManage.DTOs.Product;
+using StoreManage.DTOs.Subcategory;
+using StoreManage.DTOs.TargetCustomer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +13,9 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -21,17 +27,131 @@ namespace StoreManage.Forms.Pages
         private List<ShopItem> shopItems; // All items
         private List<ShopItem> filteredItems; // Filtered items based on search
         private int totalProduct = 50;
+        private readonly TargetCustomerController targetCustomerController;
+        private readonly CategoryController categoryController;
+        private readonly SubcategoryController subcategoryController;
+        private Dictionary<string, TargetCustomerDto> targetMap;
+        private Dictionary<string, CategoryDto> categoryMap;
+        private Dictionary<string, SubcategoryDto> subcategoryMap;
         public CategoryPage()
         {
             InitializeComponent();
+            targetCustomerController = new TargetCustomerController(new Services.ApiService());
+            categoryController = new CategoryController(new Services.ApiService());
+            subcategoryController = new SubcategoryController(new Services.ApiService());
+
             InitializeShopItems();
             filteredItems = new List<ShopItem>(shopItems); // Initially, no filtering
-            //LoadPage();
+                                                           //LoadPage();
+            LoadTargetCustomers();
         }
 
         private void CategoryPage_Load(object sender, EventArgs e)
         {
 
+        }
+        private async void LoadTargetCustomers()
+        {
+            try
+            {
+                string apiUrl = "http://localhost:5254/api/targetCustomers";
+
+                using (var client = new HttpClient())
+                {
+                    var response = await client.GetAsync(apiUrl);
+                    response.EnsureSuccessStatusCode();
+
+                    var json = await response.Content.ReadAsStringAsync();
+
+                    var targetCustomers = System.Text.Json.JsonSerializer.Deserialize<List<TargetCustomerDto>>(json, new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
+
+
+                    cbTarget.DataSource = targetCustomers;
+                    cbTarget.DisplayMember = "TargetCustomerName";
+                    cbTarget.ValueMember = "TargetCustomerId";
+
+                    if (targetCustomers != null && targetCustomers.Count > 0)
+                    {
+                        int firstTargetCustomerId = targetCustomers[0].TargetCustomerId;
+                        await LoadCategories(firstTargetCustomerId);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tải danh sách targetCustomers: {ex.Message}");
+            }
+        }
+        private async Task LoadCategories(int targetCustomerId)
+        {
+            try
+            {
+                string apiUrl = $"http://localhost:5254/api/targetCustomers/{targetCustomerId}";
+
+                using (var client = new HttpClient())
+                {
+                    var response = await client.GetAsync(apiUrl);
+                    response.EnsureSuccessStatusCode();
+
+                    var json = await response.Content.ReadAsStringAsync();
+
+                    var targetCustomer = System.Text.Json.JsonSerializer.Deserialize<TargetCustomerDto>(json, new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
+
+                    if (targetCustomer != null && targetCustomer.Categories != null)
+                    {
+                        cbCategory.DataSource = targetCustomer.Categories.ToList();
+                        cbCategory.DisplayMember = "Name";
+                        cbCategory.ValueMember = "CategoryId";
+
+                        if (targetCustomer.Categories.Count > 0)
+                        {
+                            int firstCategoryId = targetCustomer.Categories.First().CategoryId;
+                            await LoadSubCategories(firstCategoryId);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tải danh sách danh mục: {ex.Message}");
+            }
+        }
+        private async Task LoadSubCategories(int categoryId)
+        {
+            try
+            {
+                string apiUrl = $"http://localhost:5254/api/categories/{categoryId}";
+
+                using (var client = new HttpClient())
+                {
+                    var response = await client.GetAsync(apiUrl);
+                    response.EnsureSuccessStatusCode();
+
+                    var json = await response.Content.ReadAsStringAsync();
+
+                    var category = System.Text.Json.JsonSerializer.Deserialize<CategoryDto>(json, new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
+
+                    if (category != null && category.Subcategories != null)
+                    {
+                        cbSubCategory.DataSource = category.Subcategories.ToList();
+                        cbSubCategory.DisplayMember = "SubcategoryName";
+                        cbSubCategory.ValueMember = "SubcategoryId";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tải danh sách danh mục con: {ex.Message}");
+            }
         }
         private async void InitializeShopItems()
         {
@@ -176,5 +296,48 @@ namespace StoreManage.Forms.Pages
             ApplyCategoryFilters();  // Apply the filter logic
             LoadFilteredItems();     // Update the UI with filtered items
         }
+
+        private async void cbTarget_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbTarget.SelectedValue is int selectedTargetCustomerId)
+            {
+                await LoadCategories(selectedTargetCustomerId);
+            }
+        }
+
+        private async void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbCategory.SelectedValue is int selectedCategoryId)
+            {
+                await LoadSubCategories(selectedCategoryId);
+            }
+        }
+
+        private void cbSubCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            // Ensure a subcategory is selected
+            if (cbSubCategory.SelectedValue is int selectedSubcategoryId)
+            {
+                // Filter items based on the selected subcategory
+                filteredItems = shopItems
+                    .Where(shopItem =>
+                        shopItem.LoadedProduct != null && // Ensure product is loaded
+                        shopItem.LoadedProduct.SubcategoryId == selectedSubcategoryId)
+                    .ToList();
+
+                // Update the UI with filtered items
+                LoadFilteredItems();
+            }
+            else
+            {
+                MessageBox.Show("Please select a valid subcategory.", "Filter Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
     }
 }

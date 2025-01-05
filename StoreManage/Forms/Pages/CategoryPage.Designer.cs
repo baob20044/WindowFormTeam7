@@ -36,6 +36,7 @@
             this.bunifuPictureBox9 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPictureBox10 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPictureBox11 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuPictureBox12 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPictureBox5 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPictureBox4 = new Bunifu.UI.WinForms.BunifuPictureBox();
@@ -65,6 +66,9 @@
             this.cbSizeXl = new System.Windows.Forms.CheckBox();
             this.cbSizeL = new System.Windows.Forms.CheckBox();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.cbSubCategory = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbCategory = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbTarget = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbSizeM = new System.Windows.Forms.CheckBox();
             this.cbSizeS = new System.Windows.Forms.CheckBox();
             this.label30 = new System.Windows.Forms.Label();
@@ -77,7 +81,7 @@
             this.cbMiddle = new System.Windows.Forms.CheckBox();
             this.cbBelow350 = new System.Windows.Forms.CheckBox();
             this.flowLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnFilter = new Guna.UI2.WinForms.Guna2Button();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox10)).BeginInit();
@@ -212,6 +216,18 @@
             this.bunifuPictureBox11.TabIndex = 57;
             this.bunifuPictureBox11.TabStop = false;
             this.bunifuPictureBox11.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(14, 314);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1034, 450);
+            this.flowLayoutPanel1.TabIndex = 59;
+            this.flowLayoutPanel1.WrapContents = false;
             // 
             // bunifuPictureBox12
             // 
@@ -423,7 +439,7 @@
             this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(12, 26);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(91, 30);
+            this.label18.Size = new System.Drawing.Size(83, 28);
             this.label18.TabIndex = 13;
             this.label18.Text = "Màu sắc";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -606,6 +622,10 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.SystemColors.Window;
+            this.panel10.Controls.Add(this.btnFilter);
+            this.panel10.Controls.Add(this.cbSubCategory);
+            this.panel10.Controls.Add(this.cbCategory);
+            this.panel10.Controls.Add(this.cbTarget);
             this.panel10.Controls.Add(this.guna2TextBox4);
             this.panel10.Controls.Add(this.guna2TextBox2);
             this.panel10.Controls.Add(this.guna2TextBox1);
@@ -619,6 +639,66 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(1034, 120);
             this.panel10.TabIndex = 57;
+            // 
+            // cbSubCategory
+            // 
+            this.cbSubCategory.BackColor = System.Drawing.Color.Transparent;
+            this.cbSubCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbSubCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSubCategory.FocusedColor = System.Drawing.Color.Empty;
+            this.cbSubCategory.FocusedState.Parent = this.cbSubCategory;
+            this.cbSubCategory.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbSubCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbSubCategory.FormattingEnabled = true;
+            this.cbSubCategory.HoverState.Parent = this.cbSubCategory;
+            this.cbSubCategory.ItemHeight = 30;
+            this.cbSubCategory.ItemsAppearance.Parent = this.cbSubCategory;
+            this.cbSubCategory.Location = new System.Drawing.Point(565, 61);
+            this.cbSubCategory.Name = "cbSubCategory";
+            this.cbSubCategory.ShadowDecoration.Parent = this.cbSubCategory;
+            this.cbSubCategory.Size = new System.Drawing.Size(323, 36);
+            this.cbSubCategory.TabIndex = 57;
+            this.cbSubCategory.SelectedIndexChanged += new System.EventHandler(this.cbSubCategory_SelectedIndexChanged);
+            // 
+            // cbCategory
+            // 
+            this.cbCategory.BackColor = System.Drawing.Color.Transparent;
+            this.cbCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategory.FocusedColor = System.Drawing.Color.Empty;
+            this.cbCategory.FocusedState.Parent = this.cbCategory;
+            this.cbCategory.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.HoverState.Parent = this.cbCategory;
+            this.cbCategory.ItemHeight = 30;
+            this.cbCategory.ItemsAppearance.Parent = this.cbCategory;
+            this.cbCategory.Location = new System.Drawing.Point(729, 3);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.ShadowDecoration.Parent = this.cbCategory;
+            this.cbCategory.Size = new System.Drawing.Size(275, 36);
+            this.cbCategory.TabIndex = 56;
+            this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
+            // 
+            // cbTarget
+            // 
+            this.cbTarget.BackColor = System.Drawing.Color.Transparent;
+            this.cbTarget.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbTarget.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTarget.FocusedColor = System.Drawing.Color.Empty;
+            this.cbTarget.FocusedState.Parent = this.cbTarget;
+            this.cbTarget.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbTarget.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbTarget.FormattingEnabled = true;
+            this.cbTarget.HoverState.Parent = this.cbTarget;
+            this.cbTarget.ItemHeight = 30;
+            this.cbTarget.ItemsAppearance.Parent = this.cbTarget;
+            this.cbTarget.Location = new System.Drawing.Point(565, 3);
+            this.cbTarget.Name = "cbTarget";
+            this.cbTarget.ShadowDecoration.Parent = this.cbTarget;
+            this.cbTarget.Size = new System.Drawing.Size(140, 36);
+            this.cbTarget.TabIndex = 55;
+            this.cbTarget.SelectedIndexChanged += new System.EventHandler(this.cbTarget_SelectedIndexChanged);
             // 
             // cbSizeM
             // 
@@ -648,7 +728,7 @@
             this.label30.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.Location = new System.Drawing.Point(12, 26);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(112, 30);
+            this.label30.Size = new System.Drawing.Size(105, 28);
             this.label30.TabIndex = 13;
             this.label30.Text = "Kích thước";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -659,7 +739,7 @@
             this.label31.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.Location = new System.Drawing.Point(12, 9);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(93, 30);
+            this.label31.Size = new System.Drawing.Size(87, 28);
             this.label31.TabIndex = 13;
             this.label31.Text = "Theo giá";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -685,7 +765,7 @@
             this.label34.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.Location = new System.Drawing.Point(701, 14);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(124, 25);
+            this.label34.Size = new System.Drawing.Size(116, 23);
             this.label34.TabIndex = 54;
             this.label34.Text = "Trên 750.000đ";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -696,7 +776,7 @@
             this.label33.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.Location = new System.Drawing.Point(423, 14);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(204, 25);
+            this.label33.Size = new System.Drawing.Size(187, 23);
             this.label33.TabIndex = 53;
             this.label33.Text = "Từ 350.000đ - 750.000đ";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -707,7 +787,7 @@
             this.label32.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.Location = new System.Drawing.Point(224, 14);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(131, 25);
+            this.label32.Size = new System.Drawing.Size(119, 23);
             this.label32.TabIndex = 52;
             this.label32.Text = "Dưới 350.000đ";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -757,17 +837,21 @@
             this.flowLayout.TabIndex = 59;
             this.flowLayout.WrapContents = false;
             // 
-            // flowLayoutPanel1
+            // btnFilter
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(14, 314);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1034, 450);
-            this.flowLayoutPanel1.TabIndex = 59;
-            this.flowLayoutPanel1.WrapContents = false;
+            this.btnFilter.CheckedState.Parent = this.btnFilter;
+            this.btnFilter.CustomImages.Parent = this.btnFilter;
+            this.btnFilter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(82)))), ((int)(((byte)(34)))));
+            this.btnFilter.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilter.ForeColor = System.Drawing.Color.White;
+            this.btnFilter.HoverState.Parent = this.btnFilter;
+            this.btnFilter.Location = new System.Drawing.Point(894, 61);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.ShadowDecoration.Parent = this.btnFilter;
+            this.btnFilter.Size = new System.Drawing.Size(110, 36);
+            this.btnFilter.TabIndex = 58;
+            this.btnFilter.Text = "Lọc";
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // CategoryPage
             // 
@@ -851,5 +935,9 @@
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox8;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox6;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbTarget;
+        private Guna.UI2.WinForms.Guna2ComboBox cbSubCategory;
+        private Guna.UI2.WinForms.Guna2ComboBox cbCategory;
+        private Guna.UI2.WinForms.Guna2Button btnFilter;
     }
 }

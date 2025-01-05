@@ -209,7 +209,7 @@ namespace StoreManage.AdminForms.Pages
 
                 // Thêm thông tin thu nhập tổng
                 Microsoft.Office.Interop.Word.Paragraph totalIncomeParagraph = wordDoc.Paragraphs.Add();
-                totalIncomeParagraph.Range.Text = $"Tổng Thu Nhập: {totalIncome:C}";  // Hiển thị tổng thu nhập theo định dạng tiền tệ
+                totalIncomeParagraph.Range.Text = $"Tổng Thu Nhập: {totalIncome:N0} VND";
                 totalIncomeParagraph.Range.Font.Size = 16;  // Cỡ chữ cho thông tin thu nhập tổng
                 totalIncomeParagraph.Range.Font.Bold = 1;   // Làm đậm văn bản thu nhập tổng
                 totalIncomeParagraph.Alignment = Microsoft.Office.Interop.Word.WdParagraphAlignment.wdAlignParagraphCenter;

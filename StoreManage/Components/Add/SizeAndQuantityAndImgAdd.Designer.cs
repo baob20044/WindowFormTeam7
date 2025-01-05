@@ -186,7 +186,7 @@
             this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuantity.HoverState.Parent = this.txtQuantity;
             this.txtQuantity.Location = new System.Drawing.Point(304, 118);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(5);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.PasswordChar = '\0';
             this.txtQuantity.PlaceholderText = "";
@@ -200,7 +200,7 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.LightCyan;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(17, 180);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(480, 107);
             this.flowLayoutPanel1.TabIndex = 29;
@@ -258,7 +258,7 @@
             this.txtImageUrl.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtImageUrl.HoverState.Parent = this.txtImageUrl;
             this.txtImageUrl.Location = new System.Drawing.Point(140, 297);
-            this.txtImageUrl.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtImageUrl.Margin = new System.Windows.Forms.Padding(5);
             this.txtImageUrl.Name = "txtImageUrl";
             this.txtImageUrl.PasswordChar = '\0';
             this.txtImageUrl.PlaceholderText = "";
@@ -293,7 +293,7 @@
             this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.LightCyan;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(17, 352);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(480, 107);
             this.flowLayoutPanel2.TabIndex = 30;
@@ -304,17 +304,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.btnOkImgUrl);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtImageUrl);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cbSize);
+            this.Controls.Add(this.txtQuantity);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtQuantity);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SizeAndQuantityAndImgAdd";
             this.Size = new System.Drawing.Size(537, 550);
             this.panel1.ResumeLayout(false);

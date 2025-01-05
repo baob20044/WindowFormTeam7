@@ -283,7 +283,8 @@ namespace StoreManage.Components.Add
                 };
 
                 await _productController.CreateAsync(productDto);
-
+                var mainpage = this.FindForm() as AdminMainForm;
+                mainpage.refreshProduct();
             }
             catch (Exception ex)
             {
