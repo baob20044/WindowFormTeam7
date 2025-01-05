@@ -74,24 +74,33 @@ namespace StoreManage
             NavigateToForgotPass();
         }
         //Chuyển trang 
+        private bool isNavigatingSignUp = false; // Prevent repeated navigation
         private void NavigateToSignupForm()
         {
+            if (isNavigatingSignUp) return; // Prevent multiple triggers
+            isNavigatingSignUp = true; // Set flag to prevent subsequent triggers
             // Initialize the Timer for fade-out
             fadeTimer = new Timer();
             fadeTimer.Interval = 10; // Faster updates for smoother fade
             fadeTimer.Tick += FadeToSignup;
             fadeTimer.Start();
         }
+        private bool isNavigatingMainPage = false; // Prevent repeated navigation
         private void NavigateToMainPage()
         {
+            if (isNavigatingMainPage) return; // Prevent multiple triggers
+            isNavigatingMainPage = true; // Set flag to prevent subsequent triggers
             // Initialize the Timer for fade-out
             fadeTimer = new Timer();
             fadeTimer.Interval = 10; // Faster updates for smoother fade
             fadeTimer.Tick += FadeToMainPage;
             fadeTimer.Start();
         }
+        private bool isNavigatingForgot = false; // Prevent repeated navigation
         private void NavigateToForgotPass()
         {
+            if (isNavigatingForgot) return; // Prevent multiple triggers
+            isNavigatingForgot = true; // Set flag to prevent subsequent triggers
             // Initialize the Timer for fade-out
             fadeTimer = new Timer();
             fadeTimer.Interval = 10; // Faster updates for smoother fade

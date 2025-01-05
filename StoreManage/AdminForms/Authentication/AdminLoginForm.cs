@@ -55,8 +55,11 @@ namespace StoreManage
         }
 
         //Chuyển trang 
+        private bool isNavigatingMainPage = false; // Prevent repeated navigation
         private void NavigateToMainPage()
         {
+            if (isNavigatingMainPage) return; // Prevent multiple triggers
+            isNavigatingMainPage = true; // Set flag to prevent subsequent triggers
             fadeTimer = new Timer();
             fadeTimer.Interval = 10;
             fadeTimer.Tick += FadeToMainPage;

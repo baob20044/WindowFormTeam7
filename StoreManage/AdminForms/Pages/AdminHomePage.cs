@@ -23,13 +23,14 @@ namespace StoreManage.AdminForms.Pages
         public AdminHomePage()
         {
             InitializeComponent();
-
+            flowLayoutPanel1.AutoScroll = true;
             // Initialize OrderController
             orderController = new OrderController(new ApiService());
 
             // Load chart data
             LoadProductChart();
             LoadTotalAmountChart();
+
         }
 
         private async void LoadProductChart()

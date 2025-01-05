@@ -131,8 +131,11 @@ namespace StoreManage
             flowLayoutPanel.Controls.Clear();
             flowLayoutPanel.Controls.Add(adminOrderPage);
         }
+        private bool isNavigatingLogin = false; // Prevent repeated navigation
         private void NavigateToLoginForm()
         {
+            if (isNavigatingLogin) return; // Prevent multiple triggers
+            isNavigatingLogin = true; // Set flag to prevent subsequent triggers
             // Initialize the Timer for fade-out
             fadeTimer = new Timer();
             fadeTimer.Interval = 10; // Faster updates for smoother fade

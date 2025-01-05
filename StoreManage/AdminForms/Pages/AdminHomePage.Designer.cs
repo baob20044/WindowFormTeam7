@@ -29,35 +29,37 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartProducts = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartTotalAmount = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.chartProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartTotalAmount)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // chartProducts
             // 
             this.chartProducts.BorderlineColor = System.Drawing.Color.Black;
             this.chartProducts.BorderlineWidth = 3;
-            chartArea1.Name = "ChartArea1";
-            this.chartProducts.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartProducts.Legends.Add(legend1);
-            this.chartProducts.Location = new System.Drawing.Point(0, 116);
+            chartArea3.Name = "ChartArea1";
+            this.chartProducts.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartProducts.Legends.Add(legend3);
+            this.chartProducts.Location = new System.Drawing.Point(3, 3);
             this.chartProducts.Name = "chartProducts";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartProducts.Series.Add(series1);
-            this.chartProducts.Size = new System.Drawing.Size(557, 500);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartProducts.Series.Add(series3);
+            this.chartProducts.Size = new System.Drawing.Size(1054, 742);
             this.chartProducts.TabIndex = 0;
             this.chartProducts.Text = "chart1";
             // 
@@ -65,18 +67,18 @@
             // 
             this.chartTotalAmount.BorderlineColor = System.Drawing.Color.Black;
             this.chartTotalAmount.BorderlineWidth = 3;
-            chartArea2.Name = "ChartArea1";
-            this.chartTotalAmount.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartTotalAmount.Legends.Add(legend2);
-            this.chartTotalAmount.Location = new System.Drawing.Point(563, 116);
+            chartArea4.Name = "ChartArea1";
+            this.chartTotalAmount.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartTotalAmount.Legends.Add(legend4);
+            this.chartTotalAmount.Location = new System.Drawing.Point(3, 751);
             this.chartTotalAmount.Name = "chartTotalAmount";
             this.chartTotalAmount.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartTotalAmount.Series.Add(series2);
-            this.chartTotalAmount.Size = new System.Drawing.Size(571, 500);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartTotalAmount.Series.Add(series4);
+            this.chartTotalAmount.Size = new System.Drawing.Size(1054, 768);
             this.chartTotalAmount.TabIndex = 1;
             this.chartTotalAmount.Text = "chartTotalAmount";
             // 
@@ -87,25 +89,35 @@
             this.btnPrint.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.Color.White;
             this.btnPrint.HoverState.Parent = this.btnPrint;
-            this.btnPrint.Location = new System.Drawing.Point(408, 18);
+            this.btnPrint.Location = new System.Drawing.Point(33, 3);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.ShadowDecoration.Parent = this.btnPrint;
-            this.btnPrint.Size = new System.Drawing.Size(320, 78);
+            this.btnPrint.Size = new System.Drawing.Size(1057, 93);
             this.btnPrint.TabIndex = 2;
             this.btnPrint.Text = "Doanh thu tổng";
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.chartProducts);
+            this.flowLayoutPanel1.Controls.Add(this.chartTotalAmount);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(33, 102);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1080, 634);
+            this.flowLayoutPanel1.TabIndex = 3;
             // 
             // AdminHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btnPrint);
-            this.Controls.Add(this.chartTotalAmount);
-            this.Controls.Add(this.chartProducts);
             this.Name = "AdminHomePage";
             this.Size = new System.Drawing.Size(1137, 755);
             ((System.ComponentModel.ISupportInitialize)(this.chartProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartTotalAmount)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -116,5 +128,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chartTotalAmount;
         private Guna.UI2.WinForms.Guna2Button btnPrint;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

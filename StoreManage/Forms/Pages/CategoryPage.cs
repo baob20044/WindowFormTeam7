@@ -1,4 +1,23 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.Office.Interop.Word;
+using Newtonsoft.Json;
+using RestSharp;
+using StoreManage.Components;
+using StoreManage.Controllers;
+using StoreManage.DTOs.Category;
+using StoreManage.DTOs.Product;
+using StoreManage.DTOs.Subcategory;
+using StoreManage.DTOs.TargetCustomer;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Net.Http;
+using System.Text.Json;
+using System.Windows.Forms;
+using System;
+using System.Linq;
+
+using iText.Kernel.Geom;
+using Microsoft.Office.Interop.Word;
+using Newtonsoft.Json;
 using RestSharp;
 using StoreManage.Components;
 using StoreManage.Controllers;
@@ -33,6 +52,9 @@ namespace StoreManage.Forms.Pages
         private Dictionary<string, TargetCustomerDto> targetMap;
         private Dictionary<string, CategoryDto> categoryMap;
         private Dictionary<string, SubcategoryDto> subcategoryMap;
+        private int currentPage = 0; // Current page index
+        private int pageSize = 15; // Number of items per page
+        private bool isLastPage = false; // Flag to track if this is the last page
         public CategoryPage()
         {
             InitializeComponent();
@@ -68,24 +90,18 @@ namespace StoreManage.Forms.Pages
                         PropertyNameCaseInsensitive = true
                     });
 
-
                     cbTarget.DataSource = targetCustomers;
                     cbTarget.DisplayMember = "TargetCustomerName";
                     cbTarget.ValueMember = "TargetCustomerId";
-
-                    if (targetCustomers != null && targetCustomers.Count > 0)
-                    {
-                        int firstTargetCustomerId = targetCustomers[0].TargetCustomerId;
-                        await LoadCategories(firstTargetCustomerId);
-                    }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Lỗi khi tải danh sách targetCustomers: {ex.Message}");
+                //MessageBox.Show($"Lỗi khi tải danh sách targetCustomers: {ex.Message}");
             }
         }
-        private async Task LoadCategories(int targetCustomerId)
+
+        private async void LoadCategories(int targetCustomerId)
         {
             try
             {
@@ -109,20 +125,21 @@ namespace StoreManage.Forms.Pages
                         cbCategory.DisplayMember = "Name";
                         cbCategory.ValueMember = "CategoryId";
 
+                        // Select the first category and trigger loading subcategories
                         if (targetCustomer.Categories.Count > 0)
                         {
-                            int firstCategoryId = targetCustomer.Categories.First().CategoryId;
-                            await LoadSubCategories(firstCategoryId);
+                            cbCategory.SelectedIndex = 0;
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Lỗi khi tải danh sách danh mục: {ex.Message}");
+                //MessageBox.Show($"Lỗi khi tải danh sách danh mục: {ex.Message}");
             }
         }
-        private async Task LoadSubCategories(int categoryId)
+
+        private async void LoadSubCategories(int categoryId)
         {
             try
             {
@@ -145,21 +162,47 @@ namespace StoreManage.Forms.Pages
                         cbSubCategory.DataSource = category.Subcategories.ToList();
                         cbSubCategory.DisplayMember = "SubcategoryName";
                         cbSubCategory.ValueMember = "SubcategoryId";
+
+                        // Select the first subcategory if available
+                        if (category.Subcategories.Count > 0)
+                        {
+                            cbSubCategory.SelectedIndex = 0;
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Lỗi khi tải danh sách danh mục con: {ex.Message}");
+                //MessageBox.Show($"Lỗi khi tải danh sách danh mục con: {ex.Message}");
             }
         }
-        private async void InitializeShopItems()
+        private async void InitializeShopItems(string subcategoryId= "")
         {
-            shopItems = new List<ShopItem>();
+            shopItems = new List<ShopItem>(); // Ensure it's initialized
+            filteredItems = new List<ShopItem>(); // Initialize filteredItems
+            flowLayout.Controls.Clear(); // Clear the flow layout before loading new items
+
             try
             {
-                var client = new RestClient("http://localhost:5254");
-                var request = new RestRequest($"/api/products/", Method.Get);
+                // Apply filters
+                ApplyCategoryFilters();
+
+                // Build the API URL with the filters
+                string apiUrl = $"http://localhost:5254/api/products?Offset={currentPage * pageSize}&PageSize={pageSize}&SubcategoryId={subcategoryId}";
+
+                var filters = new List<string>();
+
+                // Filter logic as you've already implemented...
+                // Add filters for target, category, subcategory, colors, sizes, price, etc.
+
+                if (filters.Any())
+                {
+                    apiUrl += "&" + string.Join("&", filters);
+                }
+
+                // Call the API and parse the response
+                var client = new RestClient(apiUrl);
+                var request = new RestRequest();
                 request.AddHeader("accept", "*/*");
 
                 var response = await client.ExecuteAsync(request);
@@ -167,26 +210,119 @@ namespace StoreManage.Forms.Pages
                 if (response.IsSuccessful)
                 {
                     products = JsonConvert.DeserializeObject<List<ProductDto>>(response.Content);
-                }
-                else Console.WriteLine("Wrong");
+                    if (products != null && products.Any())
+                    {
+                        foreach (var item in products)
+                        {
+                            var shopItem = new ShopItem(item);
+                            shopItem.OnShopItemClick += HandleShopItemClick; // Subscribe to the click event
+                            shopItems.Add(shopItem); // Add to the list
+                            flowLayout.Controls.Add(shopItem); // Add to the UI
+                        }
 
-                foreach (var item in products)
+                        isLastPage = products.Count < pageSize;
+                        UpdatePaginationButtons();
+                        UpdatePageLabel();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No products available to display.");
+                        isLastPage = true;
+                        UpdatePaginationButtons();
+                        UpdatePageLabel();
+                    }
+                }
+                else
                 {
-                    Console.WriteLine("Hi" + item);
-                    var shopItem = new ShopItem(item);
-                    shopItem.OnShopItemClick += HandleShopItemClick; // Subscribe to the click event
-                    shopItems.Add(shopItem); // Add to the list
-                    flowLayout.Controls.Add(shopItem);
+                    //MessageBox.Show($"Error loading products: {response.Content}");
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                //MessageBox.Show($"An error occurred: {ex.Message}");
             }
         }
+
+        private List<string> GetSelectedColors()
+        {
+            var selectedColors = new List<string>();
+
+            if (cbRed.Checked) selectedColors.Add("Red");
+            if (cbBlack.Checked) selectedColors.Add("Black");
+            if (cbYellow.Checked) selectedColors.Add("Yellow");
+            if (cbOrange.Checked) selectedColors.Add("Orange");
+            if (cbGray.Checked) selectedColors.Add("Gray");
+            if (cbPink.Checked) selectedColors.Add("LightPink");
+            if (cbPurple.Checked) selectedColors.Add("Purple");
+            if (cbBrown.Checked) selectedColors.Add("Brown");
+            if (cbWhite.Checked) selectedColors.Add("White");
+
+            return selectedColors;
+        }
+
+        private List<string> GetSelectedSizes()
+        {
+            var selectedSizes = new List<string>();
+
+            if (cbSizeS.Checked) selectedSizes.Add("S");
+            if (cbSizeM.Checked) selectedSizes.Add("M");
+            if (cbSizeL.Checked) selectedSizes.Add("L");
+            if (cbSizeXl.Checked) selectedSizes.Add("XL");
+
+            return selectedSizes;
+        }
+        private string GetSelectedPriceRange()
+        {
+            if (cbBelow350.Checked)
+            {
+                return "0-349999";
+            }
+            if (cbMiddle.Checked)
+            {
+                return "350000-749999";
+            }
+            if (cbAbove750.Checked)
+            {
+                return "750000-9999999"; // Adjust the upper limit based on your requirement
+            }
+
+            return string.Empty; // No price range selected
+        }
+
+
+        private void UpdatePaginationButtons()
+        {
+            btnLeft.Enabled = currentPage > 0;
+            btnRight.Enabled = !isLastPage;
+        }
+        private void UpdatePageLabel()
+        {
+            lbCountPage.Text = $"{currentPage + 1}";
+        }
+        private async void btnNext_Click(object sender, EventArgs e)
+        {
+            flowLayout.Controls.Clear();
+            if (!isLastPage)
+            {
+                currentPage++;
+                InitializeShopItems(); // Re-load products for the next page
+            }
+        }
+
+        private async void btnPrevious_Click(object sender, EventArgs e)
+        {
+            flowLayout.Controls.Clear();
+            if (currentPage > 0)
+            {
+                currentPage--;
+                InitializeShopItems(); // Re-load products for the previous page
+            }
+        }
+
+
         private void LoadPage()
         {
-            flowLayout.Controls.Clear(); 
+            flowLayout.Controls.Clear();
             for (int i = 0; i < totalProduct; i++)
             {
                 flowLayout.Controls.Add(filteredItems[i]);
@@ -263,7 +399,7 @@ namespace StoreManage.Forms.Pages
                 Label noProductLabel = new Label
                 {
                     Text = "No product found",
-                    Font = new Font("Arial", 16, FontStyle.Bold), // Big text
+                    Font = new System.Drawing.Font("Arial", 16, FontStyle.Bold), // Big text
                     ForeColor = Color.OrangeRed, // Warning color
                     AutoSize = false, // Allows custom size and alignment
                     TextAlign = ContentAlignment.MiddleCenter,
@@ -273,7 +409,7 @@ namespace StoreManage.Forms.Pages
                 };
 
                 // Manually center the label in the flow layout
-                noProductLabel.Location = new Point(
+                noProductLabel.Location = new System.Drawing.Point(
                     (flowLayout.Width - noProductLabel.Width) / 2,
                     (flowLayout.Height - noProductLabel.Height) / 2
                 );
@@ -301,15 +437,20 @@ namespace StoreManage.Forms.Pages
         {
             if (cbTarget.SelectedValue is int selectedTargetCustomerId)
             {
-                await LoadCategories(selectedTargetCustomerId);
+                LoadCategories(selectedTargetCustomerId);
             }
+            else
+            {
+                //MessageBox.Show("Invalid Target Customer selected.");
+            }
+
         }
 
         private async void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbCategory.SelectedValue is int selectedCategoryId)
             {
-                await LoadSubCategories(selectedCategoryId);
+                LoadSubCategories(selectedCategoryId);
             }
         }
 
@@ -321,32 +462,7 @@ namespace StoreManage.Forms.Pages
         private void btnFilter_Click(object sender, EventArgs e)
         {
             // Ensure a subcategory is selected
-            if (cbSubCategory.SelectedValue is int selectedSubcategoryId)
-            {
-                // Filter items based on the selected subcategory
-                filteredItems = shopItems
-                    .Where(shopItem =>
-                        shopItem.LoadedProduct != null && // Ensure product is loaded
-                        shopItem.LoadedProduct.SubcategoryId == selectedSubcategoryId)
-                    .ToList();
-
-                // Update the UI with filtered items
-                LoadFilteredItems();
-            }
-            else
-            {
-                MessageBox.Show("Please select a valid subcategory.", "Filter Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void btnRight_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLeft_Click(object sender, EventArgs e)
-        {
-
+            InitializeShopItems(cbSubCategory.SelectedValue.ToString());
         }
     }
 }

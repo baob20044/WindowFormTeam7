@@ -654,7 +654,7 @@
             this.btnFilter.Location = new System.Drawing.Point(894, 61);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.ShadowDecoration.Parent = this.btnFilter;
-            this.btnFilter.Size = new System.Drawing.Size(110, 36);
+            this.btnFilter.Size = new System.Drawing.Size(119, 43);
             this.btnFilter.TabIndex = 58;
             this.btnFilter.Text = "Lọc";
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
@@ -885,7 +885,7 @@
             this.btnRight.PressedState.Parent = this.btnRight;
             this.btnRight.Size = new System.Drawing.Size(51, 46);
             this.btnRight.TabIndex = 58;
-            this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
+            this.btnRight.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // btnLeft
             // 
@@ -901,7 +901,7 @@
             this.btnLeft.PressedState.Parent = this.btnLeft;
             this.btnLeft.Size = new System.Drawing.Size(51, 46);
             this.btnLeft.TabIndex = 57;
-            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
+            this.btnLeft.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
             // CategoryPage
             // 
