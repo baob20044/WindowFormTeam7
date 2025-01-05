@@ -299,8 +299,35 @@ namespace StoreManage.Forms.Pages
         {
             lbCountPage.Text = $"{currentPage + 1}";
         }
+        private void UncheckAllCheckboxesIfChecked()
+        {
+            // Uncheck all color checkboxes if they are checked
+            if (cbRed.Checked) cbRed.Checked = false;
+            if (cbBlack.Checked) cbBlack.Checked = false;
+            if (cbYellow.Checked) cbYellow.Checked = false;
+            if (cbOrange.Checked) cbOrange.Checked = false;
+            if (cbGray.Checked) cbGray.Checked = false;
+            if (cbPink.Checked) cbPink.Checked = false;
+            if (cbPurple.Checked) cbPurple.Checked = false;
+            if (cbBrown.Checked) cbBrown.Checked = false;
+            if (cbWhite.Checked) cbWhite.Checked = false;
+
+            // Uncheck all size checkboxes if they are checked
+            if (cbSizeS.Checked) cbSizeS.Checked = false;
+            if (cbSizeM.Checked) cbSizeM.Checked = false;
+            if (cbSizeL.Checked) cbSizeL.Checked = false;
+            if (cbSizeXl.Checked) cbSizeXl.Checked = false;
+
+            // Uncheck all range checkboxes if they are checked
+            if (cbBelow350.Checked) cbBelow350.Checked = false;
+            if (cbMiddle.Checked) cbMiddle.Checked = false;
+            if (cbAbove750.Checked) cbAbove750.Checked = false;
+        }
+
+
         private async void btnNext_Click(object sender, EventArgs e)
         {
+            UncheckAllCheckboxesIfChecked();
             flowLayout.Controls.Clear();
             if (!isLastPage)
             {
@@ -311,6 +338,7 @@ namespace StoreManage.Forms.Pages
 
         private async void btnPrevious_Click(object sender, EventArgs e)
         {
+            UncheckAllCheckboxesIfChecked();
             flowLayout.Controls.Clear();
             if (currentPage > 0)
             {
