@@ -130,7 +130,7 @@
             this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuantity.HoverState.Parent = this.txtQuantity;
             this.txtQuantity.Location = new System.Drawing.Point(179, 443);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(5);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.PasswordChar = '\0';
             this.txtQuantity.PlaceholderText = "";
@@ -168,7 +168,7 @@
             this.cbSize.ItemHeight = 30;
             this.cbSize.ItemsAppearance.Parent = this.cbSize;
             this.cbSize.Location = new System.Drawing.Point(179, 378);
-            this.cbSize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbSize.Margin = new System.Windows.Forms.Padding(4);
             this.cbSize.Name = "cbSize";
             this.cbSize.ShadowDecoration.Parent = this.cbSize;
             this.cbSize.Size = new System.Drawing.Size(185, 36);
@@ -202,7 +202,7 @@
             this.cbColor.ItemHeight = 30;
             this.cbColor.ItemsAppearance.Parent = this.cbColor;
             this.cbColor.Location = new System.Drawing.Point(179, 314);
-            this.cbColor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbColor.Margin = new System.Windows.Forms.Padding(4);
             this.cbColor.Name = "cbColor";
             this.cbColor.ShadowDecoration.Parent = this.cbColor;
             this.cbColor.Size = new System.Drawing.Size(185, 36);
@@ -249,7 +249,7 @@
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrice.HoverState.Parent = this.txtPrice;
             this.txtPrice.Location = new System.Drawing.Point(179, 187);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(5);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PasswordChar = '\0';
             this.txtPrice.PlaceholderText = "";
@@ -287,7 +287,7 @@
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.HoverState.Parent = this.txtName;
             this.txtName.Location = new System.Drawing.Point(179, 124);
-            this.txtName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtName.Margin = new System.Windows.Forms.Padding(5);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
@@ -303,7 +303,7 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.LightCyan;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(392, 124);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(564, 194);
             this.flowLayoutPanel1.TabIndex = 44;
@@ -324,7 +324,7 @@
             this.txtProviderName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProviderName.HoverState.Parent = this.txtProviderName;
             this.txtProviderName.Location = new System.Drawing.Point(179, 567);
-            this.txtProviderName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtProviderName.Margin = new System.Windows.Forms.Padding(5);
             this.txtProviderName.Name = "txtProviderName";
             this.txtProviderName.PasswordChar = '\0';
             this.txtProviderName.PlaceholderText = "";
@@ -362,7 +362,7 @@
             this.txtInStock.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtInStock.HoverState.Parent = this.txtInStock;
             this.txtInStock.Location = new System.Drawing.Point(179, 506);
-            this.txtInStock.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtInStock.Margin = new System.Windows.Forms.Padding(5);
             this.txtInStock.Name = "txtInStock";
             this.txtInStock.PasswordChar = '\0';
             this.txtInStock.PlaceholderText = "";
@@ -400,7 +400,7 @@
             this.txtDiscount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiscount.HoverState.Parent = this.txtDiscount;
             this.txtDiscount.Location = new System.Drawing.Point(525, 342);
-            this.txtDiscount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDiscount.Margin = new System.Windows.Forms.Padding(5);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.PasswordChar = '\0';
             this.txtDiscount.PlaceholderText = "";
@@ -438,7 +438,7 @@
             this.txtSubCate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSubCate.HoverState.Parent = this.txtSubCate;
             this.txtSubCate.Location = new System.Drawing.Point(525, 406);
-            this.txtSubCate.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtSubCate.Margin = new System.Windows.Forms.Padding(5);
             this.txtSubCate.Name = "txtSubCate";
             this.txtSubCate.PasswordChar = '\0';
             this.txtSubCate.PlaceholderText = "";
@@ -476,14 +476,15 @@
             this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDescription.HoverState.Parent = this.txtDescription;
             this.txtDescription.Location = new System.Drawing.Point(525, 471);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(5);
+            this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PasswordChar = '\0';
             this.txtDescription.PlaceholderText = "";
             this.txtDescription.ReadOnly = true;
             this.txtDescription.SelectedText = "";
             this.txtDescription.ShadowDecoration.Parent = this.txtDescription;
-            this.txtDescription.Size = new System.Drawing.Size(431, 44);
+            this.txtDescription.Size = new System.Drawing.Size(431, 136);
             this.txtDescription.TabIndex = 54;
             // 
             // label11
@@ -526,7 +527,7 @@
             this.txtCost.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCost.HoverState.Parent = this.txtCost;
             this.txtCost.Location = new System.Drawing.Point(179, 249);
-            this.txtCost.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtCost.Margin = new System.Windows.Forms.Padding(5);
             this.txtCost.Name = "txtCost";
             this.txtCost.PasswordChar = '\0';
             this.txtCost.PlaceholderText = "";
@@ -565,7 +566,7 @@
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtName);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProductDetail";
             this.Size = new System.Drawing.Size(983, 705);
             this.panel1.ResumeLayout(false);
